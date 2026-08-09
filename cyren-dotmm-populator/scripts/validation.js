@@ -42,6 +42,8 @@ export function validateLevelData(data) {
       if (!token.actorKey) errors.push(`Missing actorKey in ${encounter.id}.`);
       if (!token.actor) errors.push(`Missing actor name in ${encounter.id}/${token.actorKey ?? "unknown"}.`);
       if (!Number.isInteger(token.count) || token.count < 1) errors.push(`Invalid count in ${encounter.id}/${token.actorKey}.`);
+      if (token.tokenWidth !== undefined && (!Number.isFinite(token.tokenWidth) || token.tokenWidth <= 0)) errors.push(`Invalid tokenWidth in ${encounter.id}/${token.actorKey}.`);
+      if (token.tokenHeight !== undefined && (!Number.isFinite(token.tokenHeight) || token.tokenHeight <= 0)) errors.push(`Invalid tokenHeight in ${encounter.id}/${token.actorKey}.`);
       for (let instance = 1; instance <= (token.count ?? 0); instance += 1) {
         const key = `${encounter.id}|${token.actorKey}|${instance}`;
         if (instances.has(key)) errors.push(`Duplicate token instance id: ${key}`);

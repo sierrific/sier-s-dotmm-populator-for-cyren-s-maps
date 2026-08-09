@@ -39,9 +39,12 @@ function snap(value, grid) {
   return Math.round(value / grid) * grid;
 }
 
-function tokenDimensions(actor) {
+function tokenDimensions(actor, spec = {}) {
   const proto = actor.prototypeToken ?? {};
-  return { width: Number(proto.width ?? 1), height: Number(proto.height ?? 1) };
+  return {
+    width: Number(spec.tokenWidth ?? proto.width ?? 1),
+    height: Number(spec.tokenHeight ?? proto.height ?? 1)
+  };
 }
 
 function existingRects(scene, { ignoreModuleTokens = false } = {}) {
@@ -55,9 +58,9 @@ function existingRects(scene, { ignoreModuleTokens = false } = {}) {
     }));
 }
 
-function findPosition({ scene, anchor, actor, radius, occupied, allowStack }) {
+function findPosition({ scene, anchor, actor, spec, radius, occupied, allowStack }) {
   const grid = Number(scene.grid.size);
-  const dims = tokenDimensions(actor);
+  const dims = tokenDimensions(actor, spec);
   const walls = wallSegments(scene);
   const maxX = Number(scene.width) - dims.width * grid;
   const maxY = Number(scene.height) - dims.height * grid;
@@ -132,7 +135,7 @@ export function planPopulation(scene, levelData, actors, anchors, { areas = null
           }
           position = { x: host.x, y: host.y, width: host.width, height: host.height, rect: host.rect };
         } else {
-          position = findPosition({ scene, anchor, actor: resolution.document, radius: encounter.radius ?? anchor.radius ?? 4, occupied, allowStack: spec.allowStack });
+          position = findPosition({ scene, anchor, actor: resolution.document, spec, radius: encounter.radius ?? anchor.radius ?? 4, occupied, allowStack: spec.allowStack });
         }
         if (!position) {
           skipped.push({ encounterId: encounter.id, area: encounter.area, actorKey: spec.actorKey, instance, reason: "no-collision-free-position" });

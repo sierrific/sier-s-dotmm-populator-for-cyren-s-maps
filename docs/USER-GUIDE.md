@@ -2,7 +2,7 @@
 
 ## Open the correct Scene
 
-The current release supports Level 1. In the Scenes directory, right-click **Level 01** or the authorized test copy and choose **View Scene**. The target Scene must be active before placement can be previewed.
+The current release supports Levels 1 and 2. In the Scenes directory, right-click **Level 01**, **Level 02**, or an authorized test copy and choose **View Scene**. The target Scene must be active before placement can be previewed.
 
 The module verifies the Scene's source metadata, name, dimensions, and grid. It blocks when multiple plausible Scenes remain or the geometry is unexpected.
 
@@ -10,7 +10,7 @@ The module verifies the Scene's source metadata, name, dimensions, and grid. It 
 
 As a GM, select the Token controls and click **Sier's DotMM Populator for Cyren's Maps**. The same panel is available under **Game Settings → Configure Settings → Module Settings**.
 
-Select **Refresh review** after changing Actors, compendium preferences, or anchors.
+Choose the level in the panel, then select **Refresh review** after changing Actors, compendium preferences, or anchors. When the active Scene matches a supported level, the panel selects that level automatically.
 
 ## Resolve Actors
 
@@ -28,7 +28,7 @@ If Plutonium is active, select **Open Plutonium** to import a missing creature a
 
 ## Review anchors and placement
 
-Area anchors normally come from numbered Cyren tiles or the validated Level 1 metadata. If an anchor is missing, select the area and use the anchor-authoring action to choose a point on the active Scene.
+Area anchors normally come from numbered Cyren tiles or the validated metadata for the selected level. If an anchor is missing, select the area and use the anchor-authoring action to choose a point on the active Scene.
 
 Select **Preview without saving** to draw temporary placement boxes. The preview does not create Scene documents and disappears when cleared or when the panel closes.
 
@@ -39,7 +39,7 @@ Some encounters are marked conditional or for human review. Confirm their narrat
 - **Create missing** creates only deterministic module Tokens that do not already exist.
 - **Reconcile** removes orphaned module Tokens and creates missing expected Tokens.
 - **Rebuild area** replaces module Tokens in one selected area.
-- **Rebuild Level 1** replaces all module Tokens for the level.
+- **Rebuild Level** replaces all module Tokens for the selected level.
 - **Remove module Tokens** removes only Tokens owned by this module.
 
 Rebuild and removal actions require confirmation. Unmarked Scene Tokens are outside the module's ownership boundary.

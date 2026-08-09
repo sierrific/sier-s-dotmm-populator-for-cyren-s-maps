@@ -1,8 +1,8 @@
 {
   "id": "cyren-dotmm-populator",
   "title": "Sier's DotMM Populator for Cyren's Maps",
-  "description": "Safely prepares Level 1 encounters on CyrensMaps for Undermountain using Actors already available in the World.",
-  "version": "0.1.2",
+  "description": "Safely prepares Level 1 and Level 2 encounters on CyrensMaps for Undermountain using Actors already available in the World.",
+  "version": "0.2.0",
   "authors": [
     {
       "name": "Sierrific",
@@ -34,7 +34,7 @@
   },
   "url": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps",
   "manifest": "https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/main/cyren-dotmm-populator/module.json",
-  "download": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/releases/download/v0.1.2/cyren-dotmm-populator-0.1.2.zip",
+  "download": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/releases/download/v0.2.0/cyren-dotmm-populator-0.2.0.zip",
   "relationships": {
     "requires": [
       {

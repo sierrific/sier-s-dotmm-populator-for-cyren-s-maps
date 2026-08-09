@@ -2,6 +2,15 @@
 
 All notable changes are documented here.
 
+## 0.2.0 — 2026-08-09
+
+- Added Level 2 (Arcane Chambers) with 48 static encounter groups, 183 intended instances, 46 Actor types, and 47 area anchors.
+- Added level selection and automatic active-Scene level detection while preserving the Level 1 workflow.
+- Added ordered modern-equivalent Actor names and optional token-size overrides.
+- Imported and validated the 2025 Ghoul, Ghast, and Tough equivalents through Plutonium in the test World.
+- Verified 179 safe Level 2 placements, zero duplicates on a repeated run, and complete owned-token cleanup on `Level 02 (Copy)`.
+- Documented four collision-safe manual-review placements that are intentionally not assigned arbitrary fallback coordinates.
+
 ## 0.1.2 — 2026-08-09
 
 - Renamed the public module and toolbar label to **Sier's DotMM Populator for Cyren's Maps**.

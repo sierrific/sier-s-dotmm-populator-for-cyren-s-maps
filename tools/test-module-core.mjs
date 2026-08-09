@@ -2,30 +2,37 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 
 globalThis.foundry = { utils: { lineSegmentIntersects: () => false } };
-const { normalizeActorName } = await import("../cyren-dotmm-populator/scripts/actor-resolver.js");
+const { normalizeActorName, actorSpecs } = await import("../cyren-dotmm-populator/scripts/actor-resolver.js");
 const { expectedPopulationKeys, planPopulation } = await import("../cyren-dotmm-populator/scripts/placement-engine.js");
 const { validateLevelData, verifyTokenOnlyMutation } = await import("../cyren-dotmm-populator/scripts/validation.js");
 
-const level = JSON.parse(fs.readFileSync("cyren-dotmm-populator/data/level-01.json", "utf8"));
 assert.equal(normalizeActorName("Kélim—the Weasel"), "kelim the weasel");
-assert.equal(validateLevelData(level).ok, true);
-assert.equal(expectedPopulationKeys(level).size, 133);
 
-const actors = new Map();
-for (const encounter of level.encounters) for (const spec of encounter.tokens) {
-  actors.set(spec.actorKey, { status: "resolved", document: { prototypeToken: { width: 1, height: 1 } } });
+const expected = new Map([[1, 133], [2, 183]]);
+const plans = [];
+for (const [levelNumber, tokenCount] of expected) {
+  const level = JSON.parse(fs.readFileSync(`cyren-dotmm-populator/data/level-${String(levelNumber).padStart(2, "0")}.json`, "utf8"));
+  assert.equal(validateLevelData(level).ok, true);
+  assert.equal(expectedPopulationKeys(level).size, tokenCount);
+
+  const actors = new Map();
+  for (const spec of actorSpecs(level).values()) {
+    actors.set(spec.actorKey, { status: "resolved", document: { prototypeToken: { width: 1, height: 1 } } });
+  }
+  const anchors = new Map(Object.entries(level.anchors).map(([area, anchor]) => [area, { status: "resolved", area, ...anchor }]));
+  const scene = { width: level.scene.width, height: level.scene.height, grid: { size: level.scene.grid }, tokens: [], walls: [] };
+  const completePlan = planPopulation(scene, level, actors, anchors);
+  assert.equal(completePlan.placements.length, tokenCount, `Level ${levelNumber} should place every token on an empty wall-free Scene.`);
+  assert.deepEqual(completePlan.skipped, []);
+
+  const firstArea = level.encounters[0].area;
+  const missingAnchor = new Map(anchors);
+  missingAnchor.set(firstArea, { status: "unresolved", area: firstArea });
+  const guardedPlan = planPopulation(scene, level, actors, missingAnchor);
+  assert(guardedPlan.placements.length < completePlan.placements.length);
+  assert(guardedPlan.skipped.every((item) => item.area === firstArea && item.reason === "anchor-unresolved"));
+  plans.push({ level: levelNumber, complete: completePlan.placements.length, guarded: guardedPlan.placements.length });
 }
-const anchors = new Map(Object.entries(level.anchors).map(([area, anchor]) => [area, { status: "resolved", area, ...anchor }]));
-const scene = { width: level.scene.width, height: level.scene.height, grid: { size: level.scene.grid }, tokens: [], walls: [] };
-const completePlan = planPopulation(scene, level, actors, anchors);
-assert.equal(completePlan.placements.length, 133);
-assert.deepEqual(completePlan.skipped, []);
-
-const missingAnchor = new Map(anchors);
-missingAnchor.set("39", { status: "unresolved", area: "39" });
-const guardedPlan = planPopulation(scene, level, actors, missingAnchor);
-assert.equal(guardedPlan.placements.length, 132);
-assert.deepEqual(guardedPlan.skipped.map((item) => item.reason), ["anchor-unresolved"]);
 
 const safe = verifyTokenOnlyMutation(
   { tokens: ["a"], walls: ["w"], lights: [], tiles: [], notes: [], sounds: [], drawings: [], regions: [] },
@@ -39,4 +46,4 @@ const unsafe = verifyTokenOnlyMutation(
 );
 assert.equal(unsafe.ok, false);
 
-console.log(JSON.stringify({ ok: true, completePlan: completePlan.placements.length, guardedPlan: guardedPlan.placements.length }, null, 2));
+console.log(JSON.stringify({ ok: true, plans }, null, 2));

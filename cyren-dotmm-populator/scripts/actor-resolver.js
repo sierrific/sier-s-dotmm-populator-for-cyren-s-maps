@@ -18,6 +18,7 @@ export function actorSpecs(levelData) {
           actorKey: token.actorKey,
           actor: token.actor,
           aliases: token.aliases ?? [],
+          resolutionNames: token.resolutionNames ?? [],
           sourcePreference: token.sourcePreference ?? levelData.actorSourcePreference ?? []
         });
       }
@@ -121,7 +122,9 @@ export async function resolveActorSpec(spec, options = {}) {
   const override = await resolveOverride(spec.actorKey, overrides);
   if (override) return { ...override, requestedName: spec.actor, aliases: spec.aliases ?? [] };
 
-  const names = [spec.actor, ...(spec.aliases ?? [])];
+  const names = spec.resolutionNames?.length
+    ? Array.from(new Set(spec.resolutionNames))
+    : [spec.actor, ...(spec.aliases ?? [])];
   const worldActors = Array.from(game.actors ?? []);
   let ambiguousWorld = null;
   for (const name of names) {

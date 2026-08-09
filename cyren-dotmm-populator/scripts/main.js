@@ -30,9 +30,16 @@ Hooks.once("init", () => {
     type: Object,
     default: {}
   });
+  game.settings.register(MODULE_ID, SETTINGS.selectedLevel, {
+    name: "Selected dungeon level",
+    scope: "client",
+    config: false,
+    type: Number,
+    default: 1
+  });
   game.settings.registerMenu(MODULE_ID, "controlPanel", {
     name: "Sier's DotMM Populator for Cyren's Maps",
-    label: "Open Level 1 Review",
+    label: "Open Encounter Review",
     hint: "Review Actor mappings and deterministic placement before creating any Tokens.",
     icon: "fas fa-users-viewfinder",
     type: CyrenPopulatorApp,

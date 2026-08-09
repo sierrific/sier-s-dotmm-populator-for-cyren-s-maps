@@ -24,7 +24,7 @@ Foundry must be able to access the repository and release without signing into G
 
 ## Install from the release ZIP
 
-1. Download `cyren-dotmm-populator-0.1.2.zip` from the GitHub release.
+1. Download `cyren-dotmm-populator-0.2.0.zip` from the GitHub release.
 2. Stop Foundry.
 3. Locate the Foundry user-data directory.
 4. Extract the archive so `module.json` is located at:
@@ -44,7 +44,7 @@ Run PowerShell from the repository or place the installer beside the downloaded 
 ```powershell
 .\installer\install.ps1 `
   -FoundryUserData "C:\FoundryData" `
-  -PackagePath ".\cyren-dotmm-populator-0.1.2.zip"
+  -PackagePath ".\cyren-dotmm-populator-0.2.0.zip"
 ```
 
 Use `-Force` only when replacing an existing installation. The script moves the current module into a timestamped backup directory instead of deleting it.
@@ -55,7 +55,7 @@ Use `-Force` only when replacing an existing installation. The script moves the 
 chmod +x installer/install.sh
 ./installer/install.sh \
   /home/foundry/.local/share/FoundryVTT \
-  ./cyren-dotmm-populator-0.1.2.zip
+  ./cyren-dotmm-populator-0.2.0.zip
 ```
 
 Add `--force` as the third argument to replace an existing installation. The prior module directory is retained as a timestamped backup.

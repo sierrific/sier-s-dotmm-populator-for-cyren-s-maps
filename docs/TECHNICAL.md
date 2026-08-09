@@ -27,9 +27,11 @@ The resolver uses multiple independent signals:
 
 Ambiguity blocks the operation. Geometry fallback is accepted only when all expected dimensions match.
 
+Level datasets are loaded independently from `data/level-01.json` and `data/level-02.json`. The selected level is stored as a client setting, and a compatible active Scene can update that selection automatically.
+
 ## Actor resolution
 
-Actors are referenced by logical keys and names, never bundled documents. The resolver supports aliases for newer equivalents and ranks preferred source codes in this order:
+Actors are referenced by logical keys and names, never bundled documents. The resolver supports ordered resolution names and aliases for newer equivalents, then ranks preferred source codes in this order:
 
 ```text
 XMM → MPMM → MM

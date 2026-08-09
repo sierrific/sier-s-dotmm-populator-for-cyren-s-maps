@@ -1,16 +1,18 @@
 # Sier's DotMM Populator for Cyren's Maps
 
-A safety-first Foundry VTT module for preparing the static Level 1 encounters from *Dungeon of the Mad Mage* on maps supplied by **CyrensMaps for Undermountain**.
+A safety-first Foundry VTT module for preparing the static Level 1 and Level 2 encounters from *Dungeon of the Mad Mage* on maps supplied by **CyrensMaps for Undermountain**.
 
 It reviews Scene compatibility, resolves existing World Actors, previews deterministic token placement, and creates only explicitly flagged Tokens. It never bundles maps, artwork, adventure prose, journals, or creature stat blocks.
 
-> **Current scope:** Level 1 only. Foundry VTT 12.331 and D&D5e 3.1.2–3.2.1.
+> **Current scope:** Levels 1–2. Foundry VTT 12.331 and D&D5e 3.1.2–3.2.1.
 
 ![Level 1 review panel](docs/images/level-01-review.png)
 
+![Level 2 populated test scene](docs/images/level-02-populated.png)
+
 ## Features
 
-- Detects the correct Cyren Level 1 Scene by source metadata, name, geometry, and grid.
+- Selects Level 1 or Level 2 and detects the matching Cyren Scene by source metadata, name, geometry, and grid.
 - Resolves World Actors without silently choosing ambiguous matches.
 - Prefers newer equivalent creature sources in the order XMM, MPMM, then MM.
 - Opens Plutonium's creature importer when Plutonium is available.
@@ -34,7 +36,7 @@ The repository and release must be publicly accessible for Foundry's manifest in
 
 ### Release ZIP
 
-Download `cyren-dotmm-populator-0.1.2.zip` from the latest release and extract it into:
+Download `cyren-dotmm-populator-0.2.0.zip` from the latest release and extract it into:
 
 ```text
 <FoundryUserData>/Data/modules/cyren-dotmm-populator
@@ -56,9 +58,9 @@ Actors are not distributed by this project. Import or create the required Actors
 ## Quick start
 
 1. Install and enable CyrensMaps for Undermountain, D&D5e, and this module.
-2. Open the Level 1 Scene. If using a copy, right-click it in the Scenes directory and choose **View Scene**.
+2. Open the Level 1 or Level 2 Scene. If using a copy, right-click it in the Scenes directory and choose **View Scene**.
 3. Open **Sier's DotMM Populator for Cyren's Maps** from the Token controls or Module Settings.
-4. Select **Refresh review** and resolve every Actor or anchor warning.
+4. Choose the desired level, select **Refresh review**, and resolve every Actor or anchor warning.
 5. Use **Open Plutonium** for missing creatures, preferring XMM, then MPMM, then MM when equivalent entries exist.
 6. Run **Preview without saving** and inspect the Scene.
 7. Select **Create missing** only after the review is clear.
@@ -90,6 +92,7 @@ See [Development and releases](docs/DEVELOPMENT.md).
 - [User Guide](docs/USER-GUIDE.md)
 - [Technical Notes](docs/TECHNICAL.md)
 - [Validation](docs/VALIDATION.md)
+- [Level 2 notes](docs/LEVEL-02.md)
 - [Development and releases](docs/DEVELOPMENT.md)
 - [Changelog](CHANGELOG.md)
 - [Security policy](SECURITY.md)

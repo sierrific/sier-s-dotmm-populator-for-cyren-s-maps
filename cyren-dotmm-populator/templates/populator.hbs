@@ -1,5 +1,6 @@
 <form class="cyren-populator" autocomplete="off">
   <header class="summary">
+    <div><strong>Level:</strong> <select name="selectedLevel">{{#each supportedLevels}}<option value="{{level}}" {{#if selected}}selected{{/if}}>Level {{level}}</option>{{/each}}</select> — {{levelTitle}}</div>
     <div><strong>Cena:</strong> {{sceneName}} <span class="status status-{{sceneStatus}}">{{sceneStatus}}</span></div>
     <div><strong>Actors:</strong> {{actorResolved}}/{{actorTotal}} · <strong>Âncoras:</strong> {{anchorResolved}}/{{anchorTotal}} · <strong>Plano:</strong> {{planCount}} novos · {{moduleCounts.total}} já marcados</div>
   </header>
@@ -75,7 +76,7 @@
       <hr>
       <div class="form-group"><label>Área para rebuild</label><select name="selectedArea">{{#each anchorRows}}<option value="{{area}}">{{area}}</option>{{/each}}</select></div>
       <button class="danger" type="button" data-action="rebuild-area" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild da área</button>
-      <button class="danger" type="button" data-action="rebuild-level" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild do Level 1</button>
+      <button class="danger" type="button" data-action="rebuild-level" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild do Level {{level}}</button>
       <button class="danger" type="button" data-action="remove"><i class="fas fa-trash-can"></i> Remover Tokens do módulo</button>
     </div>
   </section>

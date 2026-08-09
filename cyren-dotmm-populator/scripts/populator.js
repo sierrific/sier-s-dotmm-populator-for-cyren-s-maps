@@ -15,6 +15,8 @@ async function tokenDataForPlacement(placement) {
   data.y = placement.y;
   data.hidden = Boolean(placement.spec.hidden);
   data.disposition = Number(placement.spec.disposition ?? -1);
+  if (placement.spec.tokenWidth) data.width = Number(placement.spec.tokenWidth);
+  if (placement.spec.tokenHeight) data.height = Number(placement.spec.tokenHeight);
   if (placement.spec.tokenName) data.name = placement.spec.tokenName;
   data.flags ??= {};
   data.flags[MODULE_ID] = placement.flag;
