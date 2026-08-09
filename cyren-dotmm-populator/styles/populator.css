@@ -1,0 +1,20 @@
+#cyren-dotmm-populator-app .window-content { padding: 0; }
+.cyren-populator { height: 100%; display: flex; flex-direction: column; gap: 8px; padding: 10px; }
+.cyren-populator .summary { display: flex; justify-content: space-between; gap: 16px; padding: 8px; background: rgba(0, 0, 0, 0.12); }
+.cyren-populator .tabs { flex: 0 0 auto; }
+.cyren-populator .content { flex: 1 1 auto; min-height: 0; overflow: auto; }
+.cyren-populator table { width: 100%; margin: 6px 0; }
+.cyren-populator th { text-align: left; position: sticky; top: 0; background: var(--color-cool-5, #333); color: white; }
+.cyren-populator td, .cyren-populator th { padding: 4px 6px; vertical-align: top; }
+.cyren-populator td input { width: 100%; }
+.cyren-populator small { display: block; opacity: 0.75; }
+.cyren-populator .notice { border-left: 4px solid; padding: 5px 9px; }
+.cyren-populator .notice p { margin: 3px 0; }
+.cyren-populator .notice.error { border-color: #b42318; background: rgba(180, 35, 24, 0.12); }
+.cyren-populator .notice.warning { border-color: #b7791f; background: rgba(183, 121, 31, 0.12); }
+.cyren-populator .status-resolved { color: #08783e; font-weight: 600; }
+.cyren-populator .status-unresolved, .cyren-populator .status-ambiguous, .cyren-populator .status-requiresImport, .cyren-populator .status-invalidOverride { color: #a61b1b; font-weight: 600; }
+.cyren-populator .plutonium-box { display: grid; grid-template-columns: minmax(260px, 0.6fr) 1fr; gap: 8px; align-items: center; margin: 8px 0; }
+.cyren-populator .actions button { margin: 4px; width: auto; }
+.cyren-populator button.danger { border-color: #a61b1b; }
+.cyren-populator footer { flex: 0 0 auto; }

@@ -1,0 +1,8 @@
+.discovery-temp/
+.pnpm-store/
+node_modules/
+dist/
+*.zip
+reports/
+.env
+.env.*

@@ -1,0 +1,76 @@
+{
+  "id": "cyren-dotmm-populator",
+  "title": "Sier's DotMM Populator for Cyren's Maps",
+  "description": "Safely prepares Level 1 encounters on CyrensMaps for Undermountain using Actors already available in the World.",
+  "version": "0.1.2",
+  "authors": [
+    {
+      "name": "Sierrific",
+      "url": "https://github.com/sierrific"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/populator.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12.331",
+    "maximum": "12"
+  },
+  "url": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps",
+  "manifest": "https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/main/cyren-dotmm-populator/module.json",
+  "download": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/releases/download/v0.1.2/cyren-dotmm-populator-0.1.2.zip",
+  "relationships": {
+    "requires": [
+      {
+        "id": "cyrensmaps-wdmm",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.0.0",
+          "maximum": "1.0.0"
+        }
+      }
+    ],
+    "recommends": [
+      {
+        "id": "plutonium",
+        "type": "module",
+        "compatibility": {
+          "minimum": "2.1.3",
+          "maximum": "2.1.3"
+        }
+      }
+    ],
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.1.2",
+          "maximum": "3.2.1"
+        }
+      }
+    ]
+  },
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "hbs", "js", "json"],
+      "paths": ["scripts", "styles", "templates", "data", "lang"]
+    }
+  }
+}

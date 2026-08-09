@@ -1,0 +1,45 @@
+name: Release module
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate module
+        run: npm run validate
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build Foundry package
+        run: npm run build
+
+      - name: Verify tag and manifest version
+        shell: bash
+        run: |
+          version="$(node -p "require('./cyren-dotmm-populator/module.json').version")"
+          test "${GITHUB_REF_NAME}" = "v${version}"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            dist/cyren-dotmm-populator-*.zip
+            installer/install.ps1
+            installer/install.sh
