@@ -1,6 +1,6 @@
 {
   "name": "siers-dotmm-populator-for-cyrens-maps",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Development, validation, and release tooling for Sier's DotMM Populator for Cyren's Maps.",
   "private": true,
   "type": "module",
@@ -12,6 +12,7 @@
     "node": ">=20"
   },
   "scripts": {
+    "audit": "node tools/audit-release.mjs",
     "build": "node tools/build-package.mjs",
     "inspect:leveldb": "node tools/inspect-leveldb.mjs",
     "validate": "node tools/validate-module.mjs",

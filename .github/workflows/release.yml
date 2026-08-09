@@ -29,6 +29,9 @@ jobs:
       - name: Build Foundry package
         run: npm run build
 
+      - name: Audit release package
+        run: npm run audit
+
       - name: Verify tag and manifest version
         shell: bash
         run: |
@@ -41,5 +44,6 @@ jobs:
           generate_release_notes: true
           files: |
             dist/cyren-dotmm-populator-*.zip
+            dist/cyren-dotmm-populator-*.zip.sha256
             installer/install.ps1
             installer/install.sh

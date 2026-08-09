@@ -2,6 +2,16 @@
 
 All notable changes are documented here.
 
+## 0.2.1 — 2026-08-09
+
+- Strengthened mutation fingerprints to detect content changes in Walls, Lights, Tiles, Notes, Sounds, Drawings, and Regions.
+- Fixed partial recovery of stacked Tokens when the corresponding host Token already exists.
+- Allowed manual anchors to override validated fallback coordinates when no numbered Cyren tile is present.
+- Made release ZIPs reproducible and added a SHA-256 checksum asset.
+- Recorded portable Unix file permissions in release ZIPs so direct Linux extraction produces readable module assets.
+- Added transactional rollback to both helper installers when a forced update fails.
+- Added a release audit covering version consistency, package structure, checksum, documentation links, installer targets, and workflow assets.
+
 ## 0.2.0 — 2026-08-09
 
 - Added Level 2 (Arcane Chambers) with 48 static encounter groups, 183 intended instances, 46 Actor types, and 47 area anchors.

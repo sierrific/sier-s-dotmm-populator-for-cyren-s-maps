@@ -24,16 +24,17 @@ Foundry must be able to access the repository and release without signing into G
 
 ## Install from the release ZIP
 
-1. Download `cyren-dotmm-populator-0.2.0.zip` from the GitHub release.
-2. Stop Foundry.
-3. Locate the Foundry user-data directory.
-4. Extract the archive so `module.json` is located at:
+1. Download `cyren-dotmm-populator-0.2.1.zip` from the GitHub release.
+2. Optionally download the adjacent `.sha256` file and verify the package before installation.
+3. Stop Foundry.
+4. Locate the Foundry user-data directory.
+5. Extract the archive so `module.json` is located at:
 
    ```text
    <FoundryUserData>/Data/modules/cyren-dotmm-populator/module.json
    ```
 
-5. Start Foundry, open the World, select **Manage Modules**, and enable the module.
+6. Start Foundry, open the World, select **Manage Modules**, and enable the module.
 
 Do not create an extra nested directory such as `cyren-dotmm-populator/cyren-dotmm-populator/module.json`.
 
@@ -44,7 +45,7 @@ Run PowerShell from the repository or place the installer beside the downloaded 
 ```powershell
 .\installer\install.ps1 `
   -FoundryUserData "C:\FoundryData" `
-  -PackagePath ".\cyren-dotmm-populator-0.2.0.zip"
+  -PackagePath ".\cyren-dotmm-populator-0.2.1.zip"
 ```
 
 Use `-Force` only when replacing an existing installation. The script moves the current module into a timestamped backup directory instead of deleting it.
@@ -55,10 +56,10 @@ Use `-Force` only when replacing an existing installation. The script moves the 
 chmod +x installer/install.sh
 ./installer/install.sh \
   /home/foundry/.local/share/FoundryVTT \
-  ./cyren-dotmm-populator-0.2.0.zip
+  ./cyren-dotmm-populator-0.2.1.zip
 ```
 
-Add `--force` as the third argument to replace an existing installation. The prior module directory is retained as a timestamped backup.
+Add `--force` as the third argument to replace an existing installation. The prior module directory is retained as a timestamped backup. If extraction or validation fails, the installer restores that prior directory automatically.
 
 Run the script as the operating-system account that owns the Foundry user-data directory. Restart the Foundry service after installation.
 

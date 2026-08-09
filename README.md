@@ -36,13 +36,13 @@ The repository and release must be publicly accessible for Foundry's manifest in
 
 ### Release ZIP
 
-Download `cyren-dotmm-populator-0.2.0.zip` from the latest release and extract it into:
+Download `cyren-dotmm-populator-0.2.1.zip` from the latest release and extract it into:
 
 ```text
 <FoundryUserData>/Data/modules/cyren-dotmm-populator
 ```
 
-Windows and Linux helper scripts are provided in [`installer/`](installer/). Full instructions are in [Installation](docs/INSTALLATION.md).
+Windows and Linux helper scripts are provided in [`installer/`](installer/). Each release includes the ZIP, both helper installers, and a SHA-256 checksum for the package. Full instructions are in [Installation](docs/INSTALLATION.md).
 
 ## Requirements
 
@@ -80,9 +80,10 @@ npm install
 npm run validate
 npm test
 npm run build
+npm run audit
 ```
 
-The build command creates a Foundry-ready ZIP in `dist/`. Release tags named `v<version>` are validated, packaged, and published by GitHub Actions.
+The build command creates a reproducible Foundry-ready ZIP and SHA-256 checksum in `dist/`. Release tags named `v<version>` are validated, packaged, audited, and published by GitHub Actions.
 
 See [Development and releases](docs/DEVELOPMENT.md).
 

@@ -1,11 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import zlib from "node:zlib";
+import crypto from "node:crypto";
 
 const moduleDirectory = path.resolve("cyren-dotmm-populator");
 const manifest = JSON.parse(fs.readFileSync(path.join(moduleDirectory, "module.json"), "utf8"));
 const outputDirectory = path.resolve("dist");
 const outputPath = path.join(outputDirectory, `${manifest.id}-${manifest.version}.zip`);
+const checksumPath = `${outputPath}.sha256`;
+const archiveDate = new Date(Date.UTC(1980, 0, 1, 0, 0, 0));
 
 function crc32(buffer) {
   let crc = 0xffffffff;
@@ -19,9 +22,9 @@ function crc32(buffer) {
 }
 
 function dosTimestamp(date) {
-  const year = Math.max(1980, date.getFullYear());
-  const time = (date.getHours() << 11) | (date.getMinutes() << 5) | Math.floor(date.getSeconds() / 2);
-  const day = ((year - 1980) << 9) | ((date.getMonth() + 1) << 5) | date.getDate();
+  const year = Math.max(1980, date.getUTCFullYear());
+  const time = (date.getUTCHours() << 11) | (date.getUTCMinutes() << 5) | Math.floor(date.getUTCSeconds() / 2);
+  const day = ((year - 1980) << 9) | ((date.getUTCMonth() + 1) << 5) | date.getUTCDate();
   return { time, day };
 }
 
@@ -44,7 +47,7 @@ for (const file of listFiles(moduleDirectory)) {
   const source = fs.readFileSync(file.absolute);
   const compressed = zlib.deflateRawSync(source, { level: 9 });
   const checksum = crc32(source);
-  const { time, day } = dosTimestamp(fs.statSync(file.absolute).mtime);
+  const { time, day } = dosTimestamp(archiveDate);
 
   const localHeader = Buffer.alloc(30);
   localHeader.writeUInt32LE(0x04034b50, 0);
@@ -76,7 +79,7 @@ for (const file of listFiles(moduleDirectory)) {
   centralHeader.writeUInt16LE(0, 32);
   centralHeader.writeUInt16LE(0, 34);
   centralHeader.writeUInt16LE(0, 36);
-  centralHeader.writeUInt32LE(0, 38);
+  centralHeader.writeUInt32LE((0o100644 << 16) >>> 0, 38);
   centralHeader.writeUInt32LE(offset, 42);
   centralRecords.push(centralHeader, name);
 
@@ -95,5 +98,8 @@ end.writeUInt32LE(offset, 16);
 end.writeUInt16LE(0, 20);
 
 fs.mkdirSync(outputDirectory, { recursive: true });
-fs.writeFileSync(outputPath, Buffer.concat([...localRecords, centralDirectory, end]));
-console.log(JSON.stringify({ output: outputPath, files: centralRecords.length / 2, bytes: fs.statSync(outputPath).size }, null, 2));
+const archive = Buffer.concat([...localRecords, centralDirectory, end]);
+const sha256 = crypto.createHash("sha256").update(archive).digest("hex");
+fs.writeFileSync(outputPath, archive);
+fs.writeFileSync(checksumPath, `${sha256}  ${path.basename(outputPath)}\n`, "utf8");
+console.log(JSON.stringify({ output: outputPath, checksum: checksumPath, sha256, files: centralRecords.length / 2, bytes: archive.length }, null, 2));

@@ -58,6 +58,15 @@ function existingRects(scene, { ignoreModuleTokens = false } = {}) {
     }));
 }
 
+function positionForToken(scene, token) {
+  const grid = Number(scene.grid.size);
+  const width = Number(token.width ?? 1);
+  const height = Number(token.height ?? 1);
+  const x = Number(token.x);
+  const y = Number(token.y);
+  return { x, y, width, height, rect: rectFor(x, y, width, height, grid), token };
+}
+
 function findPosition({ scene, anchor, actor, spec, radius, occupied, allowStack }) {
   const grid = Number(scene.grid.size);
   const dims = tokenDimensions(actor, spec);
@@ -116,19 +125,22 @@ export function planPopulation(scene, levelData, actors, anchors, { areas = null
         skipped.push({ encounterId: encounter.id, area: encounter.area, actorKey: spec.actorKey, reason: `actor-${resolution?.status ?? "unresolved"}` });
         continue;
       }
-      const placedForActor = [];
+      const placedForActor = new Map();
       byActor.set(spec.actorKey, placedForActor);
       for (let instance = 1; instance <= spec.count; instance += 1) {
         const flag = makeTokenFlag({ level: levelData.level, area: encounter.area, encounterId: encounter.id, actorKey: spec.actorKey, instance });
         const key = populationKey(flag);
         if (existing.has(key)) {
-          skipped.push({ encounterId: encounter.id, area: encounter.area, actorKey: spec.actorKey, instance, reason: "already-present", tokenId: existing.get(key).id });
+          const token = existing.get(key);
+          placedForActor.set(instance, positionForToken(scene, token));
+          skipped.push({ encounterId: encounter.id, area: encounter.area, actorKey: spec.actorKey, instance, reason: "already-present", tokenId: token.id });
           continue;
         }
 
         let position;
         if (spec.stackWith) {
-          const host = byActor.get(spec.stackWith)?.[instance - 1] ?? byActor.get(spec.stackWith)?.[0];
+          const hosts = byActor.get(spec.stackWith);
+          const host = hosts?.get(instance) ?? hosts?.get(1) ?? hosts?.values().next().value;
           if (!host) {
             skipped.push({ encounterId: encounter.id, area: encounter.area, actorKey: spec.actorKey, instance, reason: "stack-host-unavailable" });
             continue;
@@ -143,7 +155,7 @@ export function planPopulation(scene, levelData, actors, anchors, { areas = null
         }
         const placement = { key, flag, encounter, spec, actor: resolution.document, actorResolution: resolution, anchor, instance, ...position };
         placements.push(placement);
-        placedForActor.push(placement);
+        placedForActor.set(instance, placement);
         if (!spec.stackWith) occupied.push(position.rect);
       }
     }

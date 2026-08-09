@@ -53,12 +53,12 @@ export function resolveAnchors(scene, levelData) {
       results.set(area, { status: "resolved", area, ...discovered.get(area) });
       continue;
     }
-    if (isExactSceneGeometry(scene, levelData.scene) && levelData.anchors?.[area]) {
-      results.set(area, { status: "resolved", area, ...levelData.anchors[area], radius: null, source: "verified-fallback" });
-      continue;
-    }
     if (manual[area]) {
       results.set(area, { status: "resolved", area, ...manual[area], source: "manual" });
+      continue;
+    }
+    if (isExactSceneGeometry(scene, levelData.scene) && levelData.anchors?.[area]) {
+      results.set(area, { status: "resolved", area, ...levelData.anchors[area], radius: null, source: "verified-fallback" });
       continue;
     }
     results.set(area, { status: "unresolved", area });

@@ -18,15 +18,16 @@ npm install
 npm run validate
 npm test
 npm run build
+npm run audit
 ```
 
-`npm run build` creates `dist/cyren-dotmm-populator-<version>.zip`. The archive contains the contents of the module directory at its root, including `module.json`.
+`npm run build` creates `dist/cyren-dotmm-populator-<version>.zip` and its `.sha256` checksum. The archive is reproducible and contains the contents of the module directory at its root, including `module.json`. `npm run audit` checks version consistency, archive contents, checksum, documentation links, installer targeting, and release assets.
 
 ## Release procedure
 
 1. Update `version` and `download` in `cyren-dotmm-populator/module.json`.
 2. Add the release notes to `CHANGELOG.md`.
-3. Run validation, tests, and the package build.
+3. Run validation, tests, the package build, and the release audit.
 4. Create and push a tag named `v<version>`.
 5. The release workflow repeats the checks, builds the package, and publishes the ZIP and installer scripts as GitHub release assets.
 

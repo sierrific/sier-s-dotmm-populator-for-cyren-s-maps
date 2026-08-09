@@ -1,6 +1,6 @@
 # Validation
 
-Version 0.2.0 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
+Version 0.2.1 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
 
 ## Automated checks
 
@@ -14,13 +14,22 @@ Version 0.2.0 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and
 - no protected prose/stat-block fields or packaged image/PDF assets;
 - idempotent plan behavior;
 - mutation guard rejects unrelated embedded-document changes.
+- partial stacked-token recovery uses an existing host Token correctly;
+- manual anchors override verified fallbacks when no numbered Cyren tile exists;
+- unrelated embedded collections are compared by document content as well as IDs;
+- release ZIP contents, documentation links, installer targets, and SHA-256 checksum are audited.
+- release ZIP entries carry Unix `0644` file permissions for direct extraction on Linux hosts.
 
 Run locally with:
 
 ```bash
 npm run validate
 npm test
+npm run build
+npm run audit
 ```
+
+Both helper installers were tested for a clean installation, forced upgrade with timestamped backup, and restoration of the prior module after a deliberately invalid package. The Linux script also passed shell syntax validation. The release archive was extracted on the Oracle Linux host and its module manifest, scripts, styles, and translations were verified as readable by the Foundry process.
 
 ## Foundry integration test
 

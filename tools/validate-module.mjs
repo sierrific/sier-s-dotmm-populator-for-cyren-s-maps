@@ -3,6 +3,8 @@ import path from "node:path";
 
 const root = path.resolve("cyren-dotmm-populator");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "module.json"), "utf8"));
+const packageMetadata = JSON.parse(fs.readFileSync(path.resolve("package.json"), "utf8"));
+const constants = fs.readFileSync(path.join(root, "scripts", "constants.js"), "utf8");
 const expectedLevels = new Map([
   [1, { encounters: 33, staticTokens: 133, anchors: 33 }],
   [2, { encounters: 48, staticTokens: 183, anchors: 47 }]
@@ -14,7 +16,8 @@ const errors = [];
 
 if (manifest.id !== "cyren-dotmm-populator") errors.push("Unexpected module id.");
 if (manifest.title !== "Sier's DotMM Populator for Cyren's Maps") errors.push("Unexpected public module title.");
-if (manifest.version !== "0.2.0") errors.push("Unexpected module version.");
+if (manifest.version !== packageMetadata.version) errors.push("package.json and module.json versions differ.");
+if (constants.match(/MODULE_VERSION\s*=\s*"([^"]+)"/)?.[1] !== manifest.version) errors.push("MODULE_VERSION and module.json versions differ.");
 if (manifest.compatibility?.verified !== "12.331") errors.push("Foundry verified version must be 12.331.");
 const repository = "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps";
 if (manifest.url !== repository) errors.push("Unexpected project URL.");

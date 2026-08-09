@@ -1,6 +1,6 @@
 # Level 2 — Arcane Chambers
 
-Level 2 is included in module version 0.2.0. Its dataset contains 48 static encounter groups, 183 intended Token instances, 46 logical Actor types, and 47 validated Cyren area anchors.
+Level 2 is included in module version 0.2.1. Its dataset contains 48 static encounter groups, 183 intended Token instances, 46 logical Actor types, and 47 validated Cyren area anchors.
 
 ## Tested workflow
 

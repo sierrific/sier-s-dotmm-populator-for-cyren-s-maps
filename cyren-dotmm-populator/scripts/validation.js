@@ -65,16 +65,20 @@ export function validateLevelData(data) {
 
 export function fingerprintScene(scene) {
   const ids = (collection) => Array.from(collection ?? [], (document) => document.id).sort();
+  const snapshots = (collection) => Array.from(collection ?? [], (document) => ({
+    id: document.id,
+    data: document.toObject?.() ?? {}
+  })).sort((left, right) => left.id.localeCompare(right.id));
   return {
     sceneId: scene.id,
     tokens: ids(scene.tokens),
-    walls: ids(scene.walls),
-    lights: ids(scene.lights),
-    tiles: ids(scene.tiles),
-    notes: ids(scene.notes),
-    sounds: ids(scene.sounds),
-    drawings: ids(scene.drawings),
-    regions: ids(scene.regions)
+    walls: snapshots(scene.walls),
+    lights: snapshots(scene.lights),
+    tiles: snapshots(scene.tiles),
+    notes: snapshots(scene.notes),
+    sounds: snapshots(scene.sounds),
+    drawings: snapshots(scene.drawings),
+    regions: snapshots(scene.regions)
   };
 }
 

@@ -17,7 +17,7 @@ https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps
 
 ## Current scope
 
-Version 0.2.0 covers Levels 1 and 2.
+Version 0.2.1 covers Levels 1 and 2.
 
 ## Disclaimer
 
