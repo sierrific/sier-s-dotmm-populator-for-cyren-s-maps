@@ -2,6 +2,12 @@
 
 All notable changes are documented here.
 
+## 0.3.1 — 2026-08-09
+
+- Fixed **Rebuild area** reading the selector from the Anchors tab instead of the selected **Area to rebuild** value.
+- Gave anchor authoring and area rebuild independent form controls.
+- Added release validation that rejects the legacy shared selector wiring.
+
 ## 0.3.0 — 2026-08-09
 
 - Added Levels 3–23, completing all 23 Undermountain floors across 25 map descriptors.
