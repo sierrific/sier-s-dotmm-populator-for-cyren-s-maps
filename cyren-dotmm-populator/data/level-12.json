@@ -1,0 +1,1852 @@
+{
+  "schemaVersion": 1,
+  "level": 12,
+  "title": "Maze Level",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 12",
+      "Level 12 (Copy)"
+    ],
+    "sourceId": "Scene.kgNwEXkgQ27nwZnK",
+    "width": 7700,
+    "height": 10500,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "13": {
+      "x": 9170,
+      "y": 4760
+    },
+    "2a": {
+      "x": 7910,
+      "y": 11270
+    },
+    "7a": {
+      "x": 4970,
+      "y": 12180
+    },
+    "7b": {
+      "x": 4340,
+      "y": 10640
+    },
+    "8a": {
+      "x": 3220,
+      "y": 9485
+    },
+    "8b": {
+      "x": 2380,
+      "y": 9660
+    },
+    "9a": {
+      "x": 7700,
+      "y": 10640
+    },
+    "12a": {
+      "x": 9100,
+      "y": 6510
+    },
+    "12b": {
+      "x": 8120,
+      "y": 6090
+    },
+    "12c": {
+      "x": 7210,
+      "y": 5320
+    },
+    "12d": {
+      "x": 7280,
+      "y": 3850
+    },
+    "17a": {
+      "x": 6300,
+      "y": 4900
+    },
+    "17b": {
+      "x": 4585,
+      "y": 3955
+    },
+    "17c": {
+      "x": 2660,
+      "y": 3500
+    },
+    "17d": {
+      "x": 5110,
+      "y": 8680
+    },
+    "17e": {
+      "x": 6930,
+      "y": 8750
+    },
+    "18a": {
+      "x": 6790,
+      "y": 7420
+    },
+    "18b": {
+      "x": 5530,
+      "y": 5320
+    },
+    "18c": {
+      "x": 2905,
+      "y": 5250
+    },
+    "18d": {
+      "x": 4830,
+      "y": 7910
+    },
+    "18e": {
+      "x": 6020,
+      "y": 7770
+    },
+    "18f": {
+      "x": 6510,
+      "y": 6370
+    },
+    "18g": {
+      "x": 5075,
+      "y": 5005
+    },
+    "18h": {
+      "x": 3500,
+      "y": 6300
+    },
+    "18i": {
+      "x": 3850,
+      "y": 4830
+    },
+    "19a": {
+      "x": 4970,
+      "y": 5950
+    },
+    "19c": {
+      "x": 4830,
+      "y": 7140
+    },
+    "19d": {
+      "x": 4200,
+      "y": 6930
+    },
+    "19e": {
+      "x": 4830,
+      "y": 6370
+    },
+    "19f": {
+      "x": 5110,
+      "y": 6790
+    },
+    "19g": {
+      "x": 5180,
+      "y": 6265
+    },
+    "19h": {
+      "x": 4550,
+      "y": 6230
+    },
+    "19j": {
+      "x": 4340,
+      "y": 6230
+    }
+  },
+  "encounters": [
+    {
+      "id": "l12-a2a",
+      "area": "2a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "will-o-wisp",
+          "actor": "Will-o'-Wisp",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7910,
+              "y": 11410
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l12-a7a",
+      "area": "7a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "minotaur",
+          "actor": "Minotaur",
+          "count": 7,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 11550
+            },
+            {
+              "x": 4690,
+              "y": 11690
+            },
+            {
+              "x": 4550,
+              "y": 11830
+            },
+            {
+              "x": 4270,
+              "y": 12040
+            },
+            {
+              "x": 4760,
+              "y": 12180
+            },
+            {
+              "x": 4410,
+              "y": 12460
+            },
+            {
+              "x": 4830,
+              "y": 12600
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a7b",
+      "area": "7b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "minotaur",
+          "actor": "Minotaur",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 10360
+            },
+            {
+              "x": 4550,
+              "y": 10500
+            },
+            {
+              "x": 3990,
+              "y": 10710
+            },
+            {
+              "x": 4410,
+              "y": 10850
+            },
+            {
+              "x": 4200,
+              "y": 10990
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a8a",
+      "area": "8a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "minotaur",
+          "actor": "Minotaur",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 8960
+            }
+          ],
+          "tokenName": "Maku",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "minotaur-2",
+          "actor": "Minotaur",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 8820
+            },
+            {
+              "x": 2660,
+              "y": 8960
+            },
+            {
+              "x": 3290,
+              "y": 8960
+            },
+            {
+              "x": 3290,
+              "y": 9310
+            },
+            {
+              "x": 3080,
+              "y": 9450
+            },
+            {
+              "x": 2870,
+              "y": 9520
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a8b",
+      "area": "8b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "minotaur",
+          "actor": "Minotaur",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 8820
+            },
+            {
+              "x": 2380,
+              "y": 9030
+            },
+            {
+              "x": 2660,
+              "y": 9240
+            },
+            {
+              "x": 2660,
+              "y": 9520
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a9a",
+      "area": "9a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7490,
+              "y": 10290
+            }
+          ],
+          "tokenName": "Llorelve Dalambra"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7630,
+              "y": 10360
+            }
+          ],
+          "tokenName": "Vorljas Imphiz’zal"
+        },
+        {
+          "actorKey": "incubus",
+          "actor": "Incubus",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 10220
+            }
+          ],
+          "tokenName": "Ezvir"
+        },
+        {
+          "actorKey": "incubus-2",
+          "actor": "Incubus",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 10290
+            }
+          ],
+          "tokenName": "Zaldo"
+        }
+      ]
+    },
+    {
+      "id": "l12-a12a",
+      "area": "12a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9310,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Hexab Do’ett"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9310,
+              "y": 7210
+            }
+          ],
+          "tokenName": "Moltar Barrek’zorn"
+        },
+        {
+          "actorKey": "drow-elite-warrior-3",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9240,
+              "y": 7070
+            }
+          ],
+          "tokenName": "Tanimar Freth"
+        },
+        {
+          "actorKey": "drow-elite-warrior-4",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9310,
+              "y": 7070
+            }
+          ],
+          "tokenName": "Xaphtal Freth"
+        },
+        {
+          "actorKey": "minotaur-skeleton",
+          "actor": "Minotaur Skeleton",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8960,
+              "y": 6090
+            },
+            {
+              "x": 8820,
+              "y": 6230
+            },
+            {
+              "x": 8960,
+              "y": 6230
+            },
+            {
+              "x": 9100,
+              "y": 6230
+            },
+            {
+              "x": 9240,
+              "y": 6230
+            },
+            {
+              "x": 8960,
+              "y": 6370
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a12b",
+      "area": "12b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 5810
+            }
+          ],
+          "tokenName": "Freb",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 5880
+            }
+          ],
+          "tokenName": "Rylzzt",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-3",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 5950
+            }
+          ],
+          "tokenName": "Urlimar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-4",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 5950
+            }
+          ],
+          "tokenName": "Vanalfein",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a12c",
+      "area": "12c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "quaggoth",
+          "actor": "Quaggoth",
+          "count": 9,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7350,
+              "y": 4900
+            },
+            {
+              "x": 7140,
+              "y": 4970
+            },
+            {
+              "x": 7000,
+              "y": 5040
+            },
+            {
+              "x": 7560,
+              "y": 5040
+            },
+            {
+              "x": 7280,
+              "y": 5180
+            },
+            {
+              "x": 7560,
+              "y": 5250
+            },
+            {
+              "x": 7350,
+              "y": 5390
+            },
+            {
+              "x": 7560,
+              "y": 5390
+            },
+            {
+              "x": 7070,
+              "y": 5460
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a12d",
+      "area": "12d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 4270
+            }
+          ],
+          "tokenName": "Beleth",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7210,
+              "y": 4130
+            }
+          ],
+          "tokenName": "Cazimir",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-3",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7350,
+              "y": 4060
+            }
+          ],
+          "tokenName": "Ryldgar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-4",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 4130
+            }
+          ],
+          "tokenName": "Talabsyn Freth",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-5",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 4270
+            }
+          ],
+          "tokenName": "Zakth",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "giant-lizard-variant",
+          "actor": "Giant Lizard (variant)",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 3640
+            },
+            {
+              "x": 7280,
+              "y": 3710
+            },
+            {
+              "x": 7070,
+              "y": 3780
+            },
+            {
+              "x": 7560,
+              "y": 3780
+            },
+            {
+              "x": 6930,
+              "y": 3850
+            },
+            {
+              "x": 7210,
+              "y": 3920
+            },
+            {
+              "x": 7070,
+              "y": 3990
+            },
+            {
+              "x": 6930,
+              "y": 4060
+            },
+            {
+              "x": 7280,
+              "y": 4130
+            },
+            {
+              "x": 7070,
+              "y": 4200
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2,
+          "aliases": [
+            "Giant Lizard"
+          ],
+          "tokenName": "Giant Lizard (variant)"
+        }
+      ]
+    },
+    {
+      "id": "l12-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bore-worm",
+          "actor": "Bore Worm",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 4690
+            }
+          ],
+          "tokenWidth": 4,
+          "tokenHeight": 4
+        }
+      ]
+    },
+    {
+      "id": "l12-a17a",
+      "area": "17a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vrock",
+          "actor": "Vrock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6230,
+              "y": 4900
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a17b",
+      "area": "17b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vrock",
+          "actor": "Vrock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 3990
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a17c",
+      "area": "17c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vrock",
+          "actor": "Vrock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 3500
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a17d",
+      "area": "17d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vrock",
+          "actor": "Vrock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 8610
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a17e",
+      "area": "17e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vrock",
+          "actor": "Vrock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 8680
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l12-a18a",
+      "area": "18a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 7210
+            },
+            {
+              "x": 6720,
+              "y": 7210
+            },
+            {
+              "x": 6790,
+              "y": 7210
+            },
+            {
+              "x": 6650,
+              "y": 7280
+            },
+            {
+              "x": 6720,
+              "y": 7280
+            },
+            {
+              "x": 6790,
+              "y": 7280
+            },
+            {
+              "x": 6720,
+              "y": 7350
+            },
+            {
+              "x": 6790,
+              "y": 7350
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Llaxdorl Freth"
+        }
+      ]
+    },
+    {
+      "id": "l12-a18b",
+      "area": "18b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5530,
+              "y": 5320
+            },
+            {
+              "x": 5600,
+              "y": 5320
+            },
+            {
+              "x": 5670,
+              "y": 5320
+            },
+            {
+              "x": 5530,
+              "y": 5390
+            },
+            {
+              "x": 5600,
+              "y": 5390
+            },
+            {
+              "x": 5670,
+              "y": 5390
+            },
+            {
+              "x": 5600,
+              "y": 5460
+            },
+            {
+              "x": 5670,
+              "y": 5460
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5530,
+              "y": 5460
+            }
+          ],
+          "tokenName": "Ulvir Barrek’zorn"
+        }
+      ]
+    },
+    {
+      "id": "l12-a18c",
+      "area": "18c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3010,
+              "y": 5320
+            },
+            {
+              "x": 3080,
+              "y": 5320
+            },
+            {
+              "x": 3150,
+              "y": 5320
+            },
+            {
+              "x": 3010,
+              "y": 5390
+            },
+            {
+              "x": 3080,
+              "y": 5390
+            },
+            {
+              "x": 3150,
+              "y": 5390
+            },
+            {
+              "x": 3080,
+              "y": 5460
+            },
+            {
+              "x": 3150,
+              "y": 5460
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 5320
+            }
+          ],
+          "tokenName": "Vrebbeth Imphiz’zal"
+        }
+      ]
+    },
+    {
+      "id": "l12-a18d",
+      "area": "18d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 7840
+            },
+            {
+              "x": 4970,
+              "y": 7840
+            },
+            {
+              "x": 5040,
+              "y": 7840
+            },
+            {
+              "x": 4900,
+              "y": 7910
+            },
+            {
+              "x": 4970,
+              "y": 7910
+            },
+            {
+              "x": 5040,
+              "y": 7910
+            },
+            {
+              "x": 4970,
+              "y": 7980
+            },
+            {
+              "x": 5040,
+              "y": 7980
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 7770
+            }
+          ],
+          "tokenName": "Yrrlcheb Beltorzza"
+        }
+      ]
+    },
+    {
+      "id": "l12-a18e",
+      "area": "18e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 7630
+            },
+            {
+              "x": 5740,
+              "y": 7630
+            },
+            {
+              "x": 5810,
+              "y": 7630
+            },
+            {
+              "x": 5880,
+              "y": 7630
+            },
+            {
+              "x": 5950,
+              "y": 7630
+            },
+            {
+              "x": 5670,
+              "y": 7700
+            },
+            {
+              "x": 5740,
+              "y": 7700
+            },
+            {
+              "x": 5810,
+              "y": 7700
+            },
+            {
+              "x": 5880,
+              "y": 7700
+            },
+            {
+              "x": 5950,
+              "y": 7700
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a18f",
+      "area": "18f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6300,
+              "y": 6090
+            },
+            {
+              "x": 6370,
+              "y": 6090
+            },
+            {
+              "x": 6440,
+              "y": 6090
+            },
+            {
+              "x": 6300,
+              "y": 6160
+            },
+            {
+              "x": 6370,
+              "y": 6160
+            },
+            {
+              "x": 6440,
+              "y": 6160
+            },
+            {
+              "x": 6300,
+              "y": 6230
+            },
+            {
+              "x": 6370,
+              "y": 6230
+            },
+            {
+              "x": 6440,
+              "y": 6230
+            },
+            {
+              "x": 6370,
+              "y": 6300
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a18g",
+      "area": "18g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4690,
+              "y": 5040
+            },
+            {
+              "x": 4830,
+              "y": 5040
+            },
+            {
+              "x": 4970,
+              "y": 5040
+            },
+            {
+              "x": 4690,
+              "y": 5180
+            },
+            {
+              "x": 4830,
+              "y": 5180
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "minotaur",
+          "actor": "Minotaur",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 5110
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 5040
+            },
+            {
+              "x": 4830,
+              "y": 5110
+            },
+            {
+              "x": 5110,
+              "y": 5110
+            },
+            {
+              "x": 4760,
+              "y": 5250
+            },
+            {
+              "x": 4970,
+              "y": 5250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a18h",
+      "area": "18h",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 5950
+            },
+            {
+              "x": 3570,
+              "y": 5950
+            },
+            {
+              "x": 3430,
+              "y": 6020
+            },
+            {
+              "x": 3500,
+              "y": 6020
+            },
+            {
+              "x": 3570,
+              "y": 6020
+            },
+            {
+              "x": 3430,
+              "y": 6090
+            },
+            {
+              "x": 3500,
+              "y": 6090
+            },
+            {
+              "x": 3640,
+              "y": 6090
+            },
+            {
+              "x": 3500,
+              "y": 6160
+            },
+            {
+              "x": 3570,
+              "y": 6160
+            },
+            {
+              "x": 3640,
+              "y": 6160
+            },
+            {
+              "x": 3570,
+              "y": 6230
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a18i",
+      "area": "18i",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 5110
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3640,
+              "y": 4830
+            },
+            {
+              "x": 3920,
+              "y": 4830
+            }
+          ]
+        },
+        {
+          "actorKey": "troglodyte-2",
+          "actor": "Troglodyte",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 4690
+            },
+            {
+              "x": 3710,
+              "y": 4900
+            },
+            {
+              "x": 3780,
+              "y": 4970
+            },
+            {
+              "x": 3850,
+              "y": 4970
+            }
+          ],
+          "tokenName": "Troglodyte (child)",
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l12-a19a",
+      "area": "19a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 6020
+            }
+          ],
+          "tokenName": "Ilanlue Freth"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 6020
+            }
+          ],
+          "tokenName": "Sabatrin Freth"
+        }
+      ]
+    },
+    {
+      "id": "l12-a19c",
+      "area": "19c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 6930
+            }
+          ],
+          "tokenName": "Rilna Freth"
+        }
+      ]
+    },
+    {
+      "id": "l12-a19d",
+      "area": "19d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "barlgura",
+          "actor": "Barlgura",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6860
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 6650
+            }
+          ],
+          "tokenName": "Chaszantar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6720
+            }
+          ],
+          "tokenName": "Ulgreth",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-priestess-of-lolth",
+          "actor": "Drow Priestess of Lolth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6650
+            }
+          ],
+          "tokenName": "Erelal Freth"
+        },
+        {
+          "actorKey": "yochlol",
+          "actor": "Yochlol",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 6790
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a19e",
+      "area": "19e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 6230
+            }
+          ],
+          "tokenName": "Elendar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a19f",
+      "area": "19f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "assassin",
+          "actor": "Assassin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 6580
+            }
+          ],
+          "tokenName": "Tendra Nightblade"
+        },
+        {
+          "actorKey": "mage",
+          "actor": "Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 6720
+            }
+          ],
+          "tokenName": "Maleen Shadowdusk"
+        }
+      ]
+    },
+    {
+      "id": "l12-a19g",
+      "area": "19g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 6300
+            }
+          ],
+          "tokenName": "Farril",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 6020
+            }
+          ],
+          "tokenName": "Iymn Vrindolin"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 6020
+            }
+          ],
+          "tokenName": "Mircolar Do’ett"
+        }
+      ]
+    },
+    {
+      "id": "l12-a19h",
+      "area": "19h",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drivvin-freth",
+          "actor": "Drivvin Freth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4410,
+              "y": 6510
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l12-a19j",
+      "area": "19j",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4200,
+              "y": 6230
+            }
+          ],
+          "tokenName": "Hatchrin Alet’taz",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 6300
+            }
+          ],
+          "tokenName": "Varrn Telenna",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ]
+    }
+  ]
+}

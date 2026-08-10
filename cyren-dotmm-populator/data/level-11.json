@@ -1,0 +1,1565 @@
+{
+  "schemaVersion": 1,
+  "level": 11,
+  "title": "Troglodyte Warrens",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 11",
+      "Level 11 (Copy)"
+    ],
+    "sourceId": "Scene.Wdza3CovtkueMPzI",
+    "width": 7700,
+    "height": 10220,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 8330,
+      "y": 10080
+    },
+    "3": {
+      "x": 7350,
+      "y": 10535
+    },
+    "5": {
+      "x": 5880,
+      "y": 6860
+    },
+    "6": {
+      "x": 5670,
+      "y": 7910
+    },
+    "12": {
+      "x": 4165,
+      "y": 7385
+    },
+    "14": {
+      "x": 4830,
+      "y": 10010
+    },
+    "2a": {
+      "x": 8120,
+      "y": 11410
+    },
+    "2c": {
+      "x": 6930,
+      "y": 11830
+    },
+    "7a": {
+      "x": 8190,
+      "y": 6860
+    },
+    "7b": {
+      "x": 7630,
+      "y": 5810
+    },
+    "7c": {
+      "x": 8540,
+      "y": 5670
+    },
+    "7d": {
+      "x": 9380,
+      "y": 6860
+    },
+    "7e": {
+      "x": 8890,
+      "y": 7700
+    },
+    "7f": {
+      "x": 8750,
+      "y": 8400
+    },
+    "7g": {
+      "x": 8190,
+      "y": 8470
+    },
+    "8b": {
+      "x": 8260,
+      "y": 4340
+    },
+    "8c": {
+      "x": 7490,
+      "y": 3430
+    },
+    "9a": {
+      "x": 6020,
+      "y": 4200
+    },
+    "9b": {
+      "x": 5635,
+      "y": 3360
+    },
+    "10a": {
+      "x": 4690,
+      "y": 4130
+    },
+    "10b": {
+      "x": 3990,
+      "y": 5950
+    },
+    "11b": {
+      "x": 2730,
+      "y": 4480
+    },
+    "15b": {
+      "x": 6230,
+      "y": 11970
+    },
+    "17c": {
+      "x": 2905,
+      "y": 10885
+    }
+  },
+  "encounters": [
+    {
+      "id": "l11-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8400,
+              "y": 9590
+            },
+            {
+              "x": 8330,
+              "y": 9660
+            },
+            {
+              "x": 8470,
+              "y": 9660
+            },
+            {
+              "x": 8610,
+              "y": 9730
+            },
+            {
+              "x": 8750,
+              "y": 9730
+            },
+            {
+              "x": 8750,
+              "y": 9870
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8610,
+              "y": 9800
+            }
+          ],
+          "tokenName": "Ventrid Xil’talan"
+        }
+      ]
+    },
+    {
+      "id": "l11-a2a",
+      "area": "2a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 20,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7770,
+              "y": 11270
+            },
+            {
+              "x": 7840,
+              "y": 11270
+            },
+            {
+              "x": 7910,
+              "y": 11270
+            },
+            {
+              "x": 7980,
+              "y": 11270
+            },
+            {
+              "x": 7770,
+              "y": 11340
+            },
+            {
+              "x": 7840,
+              "y": 11340
+            },
+            {
+              "x": 7910,
+              "y": 11340
+            },
+            {
+              "x": 7980,
+              "y": 11340
+            },
+            {
+              "x": 7770,
+              "y": 11410
+            },
+            {
+              "x": 7840,
+              "y": 11410
+            },
+            {
+              "x": 7910,
+              "y": 11410
+            },
+            {
+              "x": 7980,
+              "y": 11410
+            },
+            {
+              "x": 7770,
+              "y": 11480
+            },
+            {
+              "x": 7840,
+              "y": 11480
+            },
+            {
+              "x": 7910,
+              "y": 11480
+            },
+            {
+              "x": 7980,
+              "y": 11480
+            },
+            {
+              "x": 7770,
+              "y": 11550
+            },
+            {
+              "x": 7840,
+              "y": 11550
+            },
+            {
+              "x": 7910,
+              "y": 11550
+            },
+            {
+              "x": 7980,
+              "y": 11550
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a2c",
+      "area": "2c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 11760
+            },
+            {
+              "x": 6860,
+              "y": 11900
+            },
+            {
+              "x": 6930,
+              "y": 11900
+            },
+            {
+              "x": 6930,
+              "y": 11970
+            },
+            {
+              "x": 7000,
+              "y": 11970
+            }
+          ]
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 11830
+            }
+          ],
+          "tokenName": "Tsabdrar Do’ett"
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 12180
+            },
+            {
+              "x": 6720,
+              "y": 12180
+            },
+            {
+              "x": 6790,
+              "y": 12180
+            },
+            {
+              "x": 6720,
+              "y": 12250
+            },
+            {
+              "x": 6790,
+              "y": 12250
+            },
+            {
+              "x": 6720,
+              "y": 12320
+            },
+            {
+              "x": 6790,
+              "y": 12320
+            },
+            {
+              "x": 6720,
+              "y": 12390
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l11-a3",
+      "area": "3",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "deep-gnome-svirfneblin",
+          "actor": "Deep Gnome (Svirfneblin)",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 10290
+            }
+          ],
+          "tokenName": "Xlorp"
+        },
+        {
+          "actorKey": "troll",
+          "actor": "Troll",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 10080
+            }
+          ],
+          "tokenName": "Xlorp",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l11-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "five-armed-troll",
+          "actor": "Five-armed Troll",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 6860
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 6790
+            },
+            {
+              "x": 5670,
+              "y": 6860
+            },
+            {
+              "x": 5880,
+              "y": 6860
+            },
+            {
+              "x": 5950,
+              "y": 6930
+            },
+            {
+              "x": 5670,
+              "y": 7000
+            },
+            {
+              "x": 5810,
+              "y": 7000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "piercer",
+          "actor": "Piercer",
+          "count": 26,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 7490
+            },
+            {
+              "x": 5530,
+              "y": 7560
+            },
+            {
+              "x": 5110,
+              "y": 7700
+            },
+            {
+              "x": 5600,
+              "y": 7700
+            },
+            {
+              "x": 5740,
+              "y": 7700
+            },
+            {
+              "x": 5250,
+              "y": 7770
+            },
+            {
+              "x": 5390,
+              "y": 7770
+            },
+            {
+              "x": 5460,
+              "y": 7910
+            },
+            {
+              "x": 5740,
+              "y": 7910
+            },
+            {
+              "x": 5460,
+              "y": 8050
+            },
+            {
+              "x": 5600,
+              "y": 8050
+            },
+            {
+              "x": 5740,
+              "y": 8050
+            },
+            {
+              "x": 5950,
+              "y": 8050
+            },
+            {
+              "x": 5460,
+              "y": 8190
+            },
+            {
+              "x": 5600,
+              "y": 8190
+            },
+            {
+              "x": 5740,
+              "y": 8260
+            },
+            {
+              "x": 5880,
+              "y": 8330
+            },
+            {
+              "x": 5460,
+              "y": 8400
+            },
+            {
+              "x": 5600,
+              "y": 8400
+            },
+            {
+              "x": 6020,
+              "y": 8400
+            },
+            {
+              "x": 5740,
+              "y": 8470
+            },
+            {
+              "x": 5390,
+              "y": 8540
+            },
+            {
+              "x": 5670,
+              "y": 8610
+            },
+            {
+              "x": 5880,
+              "y": 8610
+            },
+            {
+              "x": 5460,
+              "y": 8680
+            },
+            {
+              "x": 5600,
+              "y": 8750
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a7a",
+      "area": "7a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 7070
+            }
+          ],
+          "tokenName": "Kol’daan"
+        },
+        {
+          "actorKey": "troglodyte-2",
+          "actor": "Troglodyte",
+          "count": 14,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8190,
+              "y": 6370
+            },
+            {
+              "x": 8260,
+              "y": 6370
+            },
+            {
+              "x": 7770,
+              "y": 6790
+            },
+            {
+              "x": 7840,
+              "y": 6790
+            },
+            {
+              "x": 8400,
+              "y": 6790
+            },
+            {
+              "x": 7840,
+              "y": 6860
+            },
+            {
+              "x": 8470,
+              "y": 6860
+            },
+            {
+              "x": 7980,
+              "y": 6930
+            },
+            {
+              "x": 8050,
+              "y": 6930
+            },
+            {
+              "x": 8050,
+              "y": 7000
+            },
+            {
+              "x": 7490,
+              "y": 7070
+            },
+            {
+              "x": 7560,
+              "y": 7140
+            },
+            {
+              "x": 8190,
+              "y": 7140
+            },
+            {
+              "x": 8260,
+              "y": 7210
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a7b",
+      "area": "7b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 6230
+            },
+            {
+              "x": 7700,
+              "y": 6300
+            },
+            {
+              "x": 7420,
+              "y": 6510
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a7c",
+      "area": "7c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8400,
+              "y": 5600
+            },
+            {
+              "x": 8330,
+              "y": 5740
+            },
+            {
+              "x": 8400,
+              "y": 5740
+            },
+            {
+              "x": 8470,
+              "y": 5740
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a7d",
+      "area": "7d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-fire-beetle",
+          "actor": "Giant Fire Beetle",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9240,
+              "y": 6860
+            },
+            {
+              "x": 9310,
+              "y": 6930
+            },
+            {
+              "x": 9240,
+              "y": 7000
+            },
+            {
+              "x": 9170,
+              "y": 7070
+            },
+            {
+              "x": 9310,
+              "y": 7070
+            },
+            {
+              "x": 9170,
+              "y": 7140
+            }
+          ]
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9100,
+              "y": 6860
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a7e",
+      "area": "7e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 14,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9240,
+              "y": 7770
+            },
+            {
+              "x": 9310,
+              "y": 7770
+            },
+            {
+              "x": 9240,
+              "y": 7840
+            },
+            {
+              "x": 9240,
+              "y": 7840
+            },
+            {
+              "x": 9310,
+              "y": 7840
+            },
+            {
+              "x": 9380,
+              "y": 7840
+            },
+            {
+              "x": 9240,
+              "y": 7910
+            },
+            {
+              "x": 9310,
+              "y": 7910
+            },
+            {
+              "x": 9380,
+              "y": 7910
+            },
+            {
+              "x": 9100,
+              "y": 7980
+            },
+            {
+              "x": 9310,
+              "y": 7980
+            },
+            {
+              "x": 9450,
+              "y": 7980
+            },
+            {
+              "x": 9170,
+              "y": 8050
+            },
+            {
+              "x": 9380,
+              "y": 8050
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l11-a7f",
+      "area": "7f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8680,
+              "y": 8050
+            },
+            {
+              "x": 8610,
+              "y": 8120
+            }
+          ]
+        },
+        {
+          "actorKey": "troglodyte-2",
+          "actor": "Troglodyte",
+          "count": 9,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8820,
+              "y": 8120
+            },
+            {
+              "x": 9030,
+              "y": 8120
+            },
+            {
+              "x": 9240,
+              "y": 8120
+            },
+            {
+              "x": 8750,
+              "y": 8190
+            },
+            {
+              "x": 8820,
+              "y": 8190
+            },
+            {
+              "x": 8960,
+              "y": 8190
+            },
+            {
+              "x": 9310,
+              "y": 8190
+            },
+            {
+              "x": 8750,
+              "y": 8260
+            },
+            {
+              "x": 8890,
+              "y": 8260
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l11-a7g",
+      "area": "7g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8190,
+              "y": 8330
+            },
+            {
+              "x": 8050,
+              "y": 8400
+            },
+            {
+              "x": 8260,
+              "y": 8400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a8b",
+      "area": "8b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "zombie",
+          "actor": "Zombie",
+          "count": 9,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 3850
+            },
+            {
+              "x": 8330,
+              "y": 3920
+            },
+            {
+              "x": 8050,
+              "y": 3990
+            },
+            {
+              "x": 8190,
+              "y": 3990
+            },
+            {
+              "x": 8470,
+              "y": 3990
+            },
+            {
+              "x": 8260,
+              "y": 4060
+            },
+            {
+              "x": 8330,
+              "y": 4060
+            },
+            {
+              "x": 8610,
+              "y": 4130
+            },
+            {
+              "x": 8540,
+              "y": 4200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a8c",
+      "area": "8c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7770,
+              "y": 3430
+            }
+          ],
+          "tokenName": "Orl Telenna"
+        }
+      ]
+    },
+    {
+      "id": "l11-a9a",
+      "area": "9a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 3710
+            }
+          ],
+          "tokenName": "Eilthymmar"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 3710
+            }
+          ],
+          "tokenName": "Zaztorrl"
+        }
+      ]
+    },
+    {
+      "id": "l11-a9b",
+      "area": "9b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 3360
+            },
+            {
+              "x": 5250,
+              "y": 3430
+            },
+            {
+              "x": 5320,
+              "y": 3430
+            },
+            {
+              "x": 5250,
+              "y": 3500
+            },
+            {
+              "x": 5320,
+              "y": 3500
+            },
+            {
+              "x": 5320,
+              "y": 3570
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "shadow-demon",
+          "actor": "Shadow Demon",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 3360
+            },
+            {
+              "x": 5460,
+              "y": 3430
+            },
+            {
+              "x": 5530,
+              "y": 3430
+            },
+            {
+              "x": 5600,
+              "y": 3430
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l11-a10a",
+      "area": "10a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "stirge",
+          "actor": "Stirge",
+          "count": 12,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4375,
+              "y": 3850
+            },
+            {
+              "x": 4410,
+              "y": 3920
+            },
+            {
+              "x": 4375,
+              "y": 3955
+            },
+            {
+              "x": 4270,
+              "y": 3990
+            },
+            {
+              "x": 4340,
+              "y": 3990
+            },
+            {
+              "x": 4410,
+              "y": 3990
+            },
+            {
+              "x": 4270,
+              "y": 4060
+            },
+            {
+              "x": 4340,
+              "y": 4060
+            },
+            {
+              "x": 4410,
+              "y": 4060
+            },
+            {
+              "x": 4270,
+              "y": 4130
+            },
+            {
+              "x": 4340,
+              "y": 4130
+            },
+            {
+              "x": 4410,
+              "y": 4130
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l11-a10b",
+      "area": "10b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "swarm-of-insects",
+          "actor": "Swarm of Insects",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 6020
+            }
+          ]
+        },
+        {
+          "actorKey": "troll",
+          "actor": "Troll",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 5880
+            }
+          ],
+          "tokenName": "Mutated Troll",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l11-a11b",
+      "area": "11b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troll",
+          "actor": "Troll",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 4200
+            },
+            {
+              "x": 2520,
+              "y": 4270
+            },
+            {
+              "x": 2870,
+              "y": 4340
+            },
+            {
+              "x": 3080,
+              "y": 4410
+            },
+            {
+              "x": 2800,
+              "y": 4480
+            },
+            {
+              "x": 3010,
+              "y": 4550
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l11-a12",
+      "area": "12",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "chasme",
+          "actor": "Chasme",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 7000
+            },
+            {
+              "x": 4410,
+              "y": 7070
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 21,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6650
+            },
+            {
+              "x": 4410,
+              "y": 6720
+            },
+            {
+              "x": 4550,
+              "y": 6720
+            },
+            {
+              "x": 4270,
+              "y": 6790
+            },
+            {
+              "x": 4340,
+              "y": 6790
+            },
+            {
+              "x": 4620,
+              "y": 6790
+            },
+            {
+              "x": 4480,
+              "y": 6860
+            },
+            {
+              "x": 4480,
+              "y": 6930
+            },
+            {
+              "x": 4550,
+              "y": 6930
+            },
+            {
+              "x": 4060,
+              "y": 7140
+            },
+            {
+              "x": 3780,
+              "y": 7210
+            },
+            {
+              "x": 3990,
+              "y": 7280
+            },
+            {
+              "x": 4200,
+              "y": 7280
+            },
+            {
+              "x": 3710,
+              "y": 7350
+            },
+            {
+              "x": 4340,
+              "y": 7350
+            },
+            {
+              "x": 3850,
+              "y": 7420
+            },
+            {
+              "x": 3920,
+              "y": 7420
+            },
+            {
+              "x": 4200,
+              "y": 7420
+            },
+            {
+              "x": 3920,
+              "y": 7560
+            },
+            {
+              "x": 4060,
+              "y": 7560
+            },
+            {
+              "x": 4200,
+              "y": 7560
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 6650
+            }
+          ],
+          "tokenName": "Spirreth Dalambra"
+        },
+        {
+          "actorKey": "drow-priestess-of-lolth",
+          "actor": "Drow Priestess of Lolth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 7490
+            }
+          ],
+          "tokenName": "Shindreer Argonrae"
+        },
+        {
+          "actorKey": "hezrou",
+          "actor": "Hezrou",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 7070
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l11-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 10150
+            }
+          ],
+          "tokenName": "Akora"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 10360
+            }
+          ],
+          "tokenName": "Danafay"
+        },
+        {
+          "actorKey": "giant-lizard-variant",
+          "actor": "Giant Lizard (variant)",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 10080
+            },
+            {
+              "x": 4690,
+              "y": 10290
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2,
+          "aliases": [
+            "Giant Lizard"
+          ],
+          "tokenName": "Giant Lizard (variant)"
+        }
+      ]
+    },
+    {
+      "id": "l11-a15b",
+      "area": "15b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 12250
+            },
+            {
+              "x": 6650,
+              "y": 12320
+            },
+            {
+              "x": 6650,
+              "y": 12390
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "troll",
+          "actor": "Troll",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 11830
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l11-a17c",
+      "area": "17c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "behir",
+          "actor": "Behir",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 10710
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    }
+  ]
+}

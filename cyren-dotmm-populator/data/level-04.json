@@ -1,0 +1,1233 @@
+{
+  "schemaVersion": 1,
+  "level": 4,
+  "title": "Twisted Caverns",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 04",
+      "Level 04 (Copy)"
+    ],
+    "sourceId": "Scene.EZ8zhdQXnDRhnigw",
+    "width": 7700,
+    "height": 9940,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 2380,
+      "y": 3220
+    },
+    "2": {
+      "x": 1505,
+      "y": 2730
+    },
+    "4": {
+      "x": 3430,
+      "y": 1960
+    },
+    "5": {
+      "x": 2310,
+      "y": 3850
+    },
+    "6": {
+      "x": 4270,
+      "y": 3290
+    },
+    "7": {
+      "x": 5460,
+      "y": 2310
+    },
+    "10": {
+      "x": 8120,
+      "y": 2870
+    },
+    "13": {
+      "x": 7525,
+      "y": 6230
+    },
+    "14": {
+      "x": 7070,
+      "y": 7630
+    },
+    "17": {
+      "x": 3570,
+      "y": 8890
+    },
+    "20": {
+      "x": 3570,
+      "y": 5390
+    },
+    "22": {
+      "x": 1680,
+      "y": 7490
+    },
+    "23": {
+      "x": 2100,
+      "y": 9310
+    },
+    "11a": {
+      "x": 6860,
+      "y": 4725
+    },
+    "11b": {
+      "x": 7840,
+      "y": 4060
+    },
+    "11c": {
+      "x": 7840,
+      "y": 4900
+    },
+    "12a": {
+      "x": 5635,
+      "y": 4900
+    },
+    "12b": {
+      "x": 6510,
+      "y": 5880
+    },
+    "16a": {
+      "x": 5530,
+      "y": 7420
+    },
+    "16b": {
+      "x": 4970,
+      "y": 8120
+    },
+    "16c": {
+      "x": 4655,
+      "y": 8925
+    },
+    "21a": {
+      "x": 3115,
+      "y": 5810
+    },
+    "21b": {
+      "x": 3115,
+      "y": 6755
+    },
+    "24a": {
+      "x": 2625,
+      "y": 10640
+    },
+    "24b": {
+      "x": 4025,
+      "y": 10780
+    },
+    "24c": {
+      "x": 4620,
+      "y": 10290
+    },
+    "24e": {
+      "x": 6230,
+      "y": 10710
+    }
+  },
+  "encounters": [
+    {
+      "id": "l04-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "piercer",
+          "actor": "Piercer",
+          "count": 8,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 3080
+            },
+            {
+              "x": 2800,
+              "y": 3150
+            },
+            {
+              "x": 2940,
+              "y": 3150
+            },
+            {
+              "x": 2870,
+              "y": 3220
+            },
+            {
+              "x": 2940,
+              "y": 3220
+            },
+            {
+              "x": 2870,
+              "y": 3290
+            },
+            {
+              "x": 2800,
+              "y": 3360
+            },
+            {
+              "x": 2870,
+              "y": 3430
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a2",
+      "area": "2",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ettin",
+          "actor": "Ettin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1120,
+              "y": 2870
+            }
+          ],
+          "tokenName": "Jibber and Jabber",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a4",
+      "area": "4",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3570,
+              "y": 2100
+            }
+          ],
+          "tokenName": "The Alchemist"
+        },
+        {
+          "actorKey": "green-slaad",
+          "actor": "Green Slaad",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3570,
+              "y": 1960
+            }
+          ],
+          "tokenName": "The Alchemist",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "xorn",
+          "actor": "Xorn",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 3990
+            },
+            {
+              "x": 2100,
+              "y": 4060
+            },
+            {
+              "x": 2030,
+              "y": 4130
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "roper",
+          "actor": "Roper",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 2730
+            },
+            {
+              "x": 3990,
+              "y": 3500
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "darribeth-meltimer",
+          "actor": "Darribeth Meltimer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 2170
+            }
+          ],
+          "aliases": [
+            "Mage"
+          ],
+          "tokenName": "Darribeth Meltimer"
+        },
+        {
+          "actorKey": "quasit",
+          "actor": "Quasit",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 2240
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l04-a10",
+      "area": "10",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drider",
+          "actor": "Drider",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7840,
+              "y": 2520
+            },
+            {
+              "x": 7700,
+              "y": 2590
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 5,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 2940
+            },
+            {
+              "x": 7770,
+              "y": 3080
+            },
+            {
+              "x": 7910,
+              "y": 3080
+            },
+            {
+              "x": 8050,
+              "y": 3080
+            },
+            {
+              "x": 7840,
+              "y": 3220
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a11a",
+      "area": "11a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 4760
+            }
+          ],
+          "tokenName": "Altonrel",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 4900
+            }
+          ],
+          "tokenName": "Rezz",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 4830
+            }
+          ],
+          "tokenName": "Balryn"
+        }
+      ]
+    },
+    {
+      "id": "l04-a11b",
+      "area": "11b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 4060
+            }
+          ],
+          "tokenName": "Thirza"
+        },
+        {
+          "actorKey": "drow-priestess-of-lolth",
+          "actor": "Drow Priestess of Lolth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7840,
+              "y": 4130
+            }
+          ],
+          "tokenName": "Melith"
+        }
+      ]
+    },
+    {
+      "id": "l04-a11c",
+      "area": "11c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 4760
+            }
+          ],
+          "tokenName": "Kalanszar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7630,
+              "y": 4830
+            }
+          ],
+          "tokenName": "Tsabalin",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 5040
+            }
+          ],
+          "tokenName": "Talafaere"
+        }
+      ]
+    },
+    {
+      "id": "l04-a12a",
+      "area": "12a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 5320
+            }
+          ],
+          "tokenName": "Llauzdrar"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 5320
+            }
+          ],
+          "tokenName": "Ryld"
+        }
+      ]
+    },
+    {
+      "id": "l04-a12b",
+      "area": "12b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "quaggoth",
+          "actor": "Quaggoth",
+          "count": 8,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6300,
+              "y": 5250
+            },
+            {
+              "x": 6160,
+              "y": 5320
+            },
+            {
+              "x": 6090,
+              "y": 5390
+            },
+            {
+              "x": 6370,
+              "y": 5390
+            },
+            {
+              "x": 6300,
+              "y": 5530
+            },
+            {
+              "x": 6370,
+              "y": 5530
+            },
+            {
+              "x": 6090,
+              "y": 5600
+            },
+            {
+              "x": 6160,
+              "y": 5600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "awakened-tree",
+          "actor": "Awakened Tree",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 5670
+            },
+            {
+              "x": 7700,
+              "y": 5740
+            },
+            {
+              "x": 7910,
+              "y": 6090
+            },
+            {
+              "x": 7980,
+              "y": 6370
+            }
+          ],
+          "tokenName": "Zurkhwood",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "carrion-crawler",
+          "actor": "Carrion Crawler",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 6650
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "darkmantle",
+          "actor": "Darkmantle",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 7700
+            },
+            {
+              "x": 6930,
+              "y": 7770
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a16a",
+      "area": "16a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "aboleth",
+          "actor": "Aboleth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 7070
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "chuul",
+          "actor": "Chuul",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 7700
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "chuul-2",
+          "actor": "Chuul",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 7420
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "otyugh",
+          "actor": "Otyugh",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 7420
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a16b",
+      "area": "16b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "chuul",
+          "actor": "Chuul",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 8260
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a16c",
+      "area": "16c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "kuo-toa",
+          "actor": "Kuo-toa",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 8610
+            },
+            {
+              "x": 4270,
+              "y": 8890
+            }
+          ]
+        },
+        {
+          "actorKey": "kuo-toa-whip",
+          "actor": "Kuo-toa Whip",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 8750
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a17",
+      "area": "17",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "chuul",
+          "actor": "Chuul",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 8610
+            },
+            {
+              "x": 3360,
+              "y": 8890
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a20",
+      "area": "20",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "kuo-toa",
+          "actor": "Kuo-toa",
+          "count": 19,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3640,
+              "y": 5110
+            },
+            {
+              "x": 3710,
+              "y": 5180
+            },
+            {
+              "x": 3780,
+              "y": 5250
+            },
+            {
+              "x": 3850,
+              "y": 5250
+            },
+            {
+              "x": 3640,
+              "y": 5320
+            },
+            {
+              "x": 3570,
+              "y": 5460
+            },
+            {
+              "x": 3710,
+              "y": 5460
+            },
+            {
+              "x": 3920,
+              "y": 5460
+            },
+            {
+              "x": 3430,
+              "y": 5530
+            },
+            {
+              "x": 3780,
+              "y": 5530
+            },
+            {
+              "x": 3500,
+              "y": 5600
+            },
+            {
+              "x": 3920,
+              "y": 5600
+            },
+            {
+              "x": 3990,
+              "y": 5600
+            },
+            {
+              "x": 3570,
+              "y": 5670
+            },
+            {
+              "x": 3640,
+              "y": 5670
+            },
+            {
+              "x": 3710,
+              "y": 5670
+            },
+            {
+              "x": 3850,
+              "y": 5670
+            },
+            {
+              "x": 3780,
+              "y": 5810
+            },
+            {
+              "x": 3710,
+              "y": 5880
+            }
+          ]
+        },
+        {
+          "actorKey": "kuo-toa-whip",
+          "actor": "Kuo-toa Whip",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3640,
+              "y": 5250
+            },
+            {
+              "x": 3710,
+              "y": 5950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a21a",
+      "area": "21a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "kuo-toa-archpriest",
+          "actor": "Kuo-toa Archpriest",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3220,
+              "y": 5880
+            }
+          ],
+          "tokenName": "Noolgaloop"
+        },
+        {
+          "actorKey": "kuo-toa-whip",
+          "actor": "Kuo-toa Whip",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 5810
+            },
+            {
+              "x": 3360,
+              "y": 6020
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a21b",
+      "area": "21b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "kuo-toa",
+          "actor": "Kuo-toa",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 6580
+            },
+            {
+              "x": 3010,
+              "y": 6650
+            },
+            {
+              "x": 2800,
+              "y": 6790
+            },
+            {
+              "x": 2870,
+              "y": 6790
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a22",
+      "area": "22",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hook-horror",
+          "actor": "Hook Horror",
+          "count": 7,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1610,
+              "y": 7070
+            },
+            {
+              "x": 1400,
+              "y": 7280
+            },
+            {
+              "x": 1470,
+              "y": 7560
+            },
+            {
+              "x": 1470,
+              "y": 7910
+            },
+            {
+              "x": 1120,
+              "y": 8120
+            },
+            {
+              "x": 1540,
+              "y": 8120
+            },
+            {
+              "x": 1540,
+              "y": 8400
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a23",
+      "area": "23",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hook-horror",
+          "actor": "Hook Horror",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1680,
+              "y": 9240
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l04-a24a",
+      "area": "24a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 10360
+            },
+            {
+              "x": 2730,
+              "y": 10500
+            },
+            {
+              "x": 2870,
+              "y": 10500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a24b",
+      "area": "24b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 10430
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a24c",
+      "area": "24c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 11,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 10150
+            },
+            {
+              "x": 4900,
+              "y": 10150
+            },
+            {
+              "x": 4760,
+              "y": 10220
+            },
+            {
+              "x": 4200,
+              "y": 10290
+            },
+            {
+              "x": 4410,
+              "y": 10290
+            },
+            {
+              "x": 4620,
+              "y": 10360
+            },
+            {
+              "x": 4760,
+              "y": 10360
+            },
+            {
+              "x": 4900,
+              "y": 10360
+            },
+            {
+              "x": 4830,
+              "y": 10430
+            },
+            {
+              "x": 4480,
+              "y": 10570
+            },
+            {
+              "x": 4550,
+              "y": 10570
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l04-a24e",
+      "area": "24e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 10570
+            },
+            {
+              "x": 6090,
+              "y": 10570
+            },
+            {
+              "x": 6020,
+              "y": 10640
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

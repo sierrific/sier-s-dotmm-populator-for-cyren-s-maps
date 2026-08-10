@@ -2,17 +2,29 @@
 
 ## Open the correct Scene
 
-The current release supports Levels 1 and 2. In the Scenes directory, right-click **Level 01**, **Level 02**, or an authorized test copy and choose **View Scene**. The target Scene must be active before placement can be previewed.
+The module supports Levels 1–23. In the Scenes directory, right-click the intended map or test copy and choose **View Scene** before opening the panel.
 
-The module verifies the Scene's source metadata, name, dimensions, and grid. It blocks when multiple plausible Scenes remain or the geometry is unexpected.
+Level 3 is split across three maps:
+
+- `Level 03 (1)`
+- `Level 03 (2)`
+- `Level 03 (3)`
+
+All other supported levels use one Cyren map. The active Scene determines both the level and, when applicable, the map segment. The module checks source metadata, name, dimensions, padding, and grid, and blocks when multiple plausible Scenes remain.
+
+## Create safety copies
+
+Back up the World before the first production run. From the **Execute** tab, **Create missing safety copies (Levels 3–23)** creates one `(Copy)` Scene for each source map that does not already have one. Existing copies and source Scenes are left unchanged.
+
+Open a copy with **View Scene** before testing. Population actions always target the currently resolved Scene; they do not batch-edit every map in the World.
 
 ## Open the review panel
 
 As a GM, select the Token controls and click **Sier's DotMM Populator for Cyren's Maps**. The same panel is available under **Game Settings → Configure Settings → Module Settings**.
 
-Choose the level in the panel, then select **Refresh review** after changing Actors, compendium preferences, or anchors. When the active Scene matches a supported level, the panel selects that level automatically.
+Choose a level, then select **Refresh review** after changing Actors, compendium preferences, or anchors. A compatible active Scene selects its level automatically.
 
-## Resolve Actors
+## Resolve and import Actors
 
 The panel reports every required Actor and its selected source. Resolution checks:
 
@@ -22,33 +34,33 @@ The panel reports every required Actor and its selected source. Resolution check
 4. the D&D5e monster compendium;
 5. other available Actor compendiums.
 
-Ambiguous World matches are never selected silently. Enter an Actor UUID override and save the settings when the intended Actor cannot be chosen unambiguously.
+When multiple World Actors have the same name, the dedicated `Sier's DotMM Populator Imports` folder is preferred, followed by `Monster Manual` and `Creatures`. Other ambiguous matches remain blocked.
 
-If Plutonium is active, select **Open Plutonium** to import a missing creature as a World Actor. When equivalent creatures exist, prefer XMM, then MPMM, then MM. Close the importer and refresh the review afterward.
+**Import unambiguous matches** copies only clear compendium matches into the dedicated World folder. It preserves the XMM → MPMM → MM source preference and removes only redundant Actors previously created in that folder. It never deletes user-managed Actors elsewhere.
+
+If Plutonium is active, **Open Plutonium** opens its creature importer for unresolved entries. Close the importer and refresh the review afterward. Named creatures and adventure variants keep their token names while using a compatible official base Actor where one is defined.
 
 ## Review anchors and placement
 
-Area anchors normally come from numbered Cyren tiles or the validated metadata for the selected level. If an anchor is missing, select the area and use the anchor-authoring action to choose a point on the active Scene.
+Area anchors normally come from numbered Cyren tiles or validated level metadata. If an anchor is missing, select the area and use the anchor-authoring action to choose a point on the active Scene.
+
+Exact placements from the level dataset are retained. Deterministic fallback placement is used only where an exact source coordinate is unavailable. Candidates must remain within the padded Scene canvas and avoid unrelated existing Tokens and walls.
 
 Select **Preview without saving** to draw temporary placement boxes. The preview does not create Scene documents and disappears when cleared or when the panel closes.
-
-Some encounters are marked conditional or for human review. Confirm their narrative state and exact position before persisting Tokens.
 
 ## Create and maintain Tokens
 
 - **Create missing** creates only deterministic module Tokens that do not already exist.
 - **Reconcile** removes orphaned module Tokens and creates missing expected Tokens.
 - **Rebuild area** replaces module Tokens in one selected area.
-- **Rebuild Level** replaces all module Tokens for the selected level.
-- **Remove module Tokens** removes only Tokens owned by this module.
+- **Rebuild current map** replaces module Tokens on the resolved Scene only.
+- **Remove module Tokens** removes only Tokens owned by this module on the resolved Scene.
 
-Rebuild and removal actions require confirmation. Unmarked Scene Tokens are outside the module's ownership boundary.
+Rebuild and removal actions require confirmation. Unmarked Scene Tokens and all non-Token documents are outside the module's ownership boundary.
 
 ## Collision warnings
 
-The placement engine avoids walls, Scene bounds, and occupied Token rectangles. If it cannot find a safe grid position inside the encounter radius, it reports the placement as skipped. Move the conflicting existing Token, adjust the local Scene, or author an appropriate anchor, then refresh the review.
-
-The module does not place a creature at an arbitrary fallback coordinate.
+The placement engine avoids walls, padded Scene bounds, and unrelated occupied Token rectangles. If it cannot find a safe position inside the encounter radius, it reports the placement as skipped. Move the conflicting Token, adjust the local Scene, or author an appropriate anchor, then refresh the review.
 
 ## Recovery
 

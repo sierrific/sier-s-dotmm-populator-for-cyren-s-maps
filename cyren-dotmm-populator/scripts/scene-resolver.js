@@ -14,6 +14,16 @@ function sceneSourceId(scene) {
   return scene.flags?.["scene-packer"]?.sourceId ?? null;
 }
 
+export function levelSceneDefinitions(levelData) {
+  const definitions = Array.isArray(levelData?.scenes) && levelData.scenes.length
+    ? levelData.scenes
+    : levelData?.scene ? [{ key: "main", ...levelData.scene }] : [];
+  return definitions.map((definition, index) => ({
+    ...definition,
+    key: String(definition.key ?? (definitions.length === 1 ? "main" : `part-${index + 1}`))
+  }));
+}
+
 export function scoreScene(scene, expected) {
   const reasons = [];
   let score = 0;
@@ -63,8 +73,67 @@ export function resolveScene(expected, preferredScene = canvas?.scene) {
   return { status: "resolved", ...candidates[0], candidates };
 }
 
+export function scoreLevelScene(scene, levelData) {
+  const candidates = levelSceneDefinitions(levelData)
+    .map((definition) => ({ definition, ...scoreScene(scene, definition) }))
+    .sort((left, right) => right.score - left.score || left.definition.key.localeCompare(right.definition.key));
+  return candidates[0] ?? { definition: null, scene, score: 0, reasons: [], valid: false };
+}
+
+export function resolveLevelScene(levelData, preferredScene = canvas?.scene) {
+  const definitions = levelSceneDefinitions(levelData);
+  if (preferredScene) {
+    const preferred = scoreLevelScene(preferredScene, levelData);
+    if (preferred.valid) return { status: "resolved", ...preferred, candidates: [preferred] };
+  }
+
+  const candidates = definitions
+    .flatMap((definition) => game.scenes.contents.map((scene) => ({ definition, ...scoreScene(scene, definition) })))
+    .filter((candidate) => candidate.valid)
+    .sort((left, right) => right.score - left.score
+      || left.definition.key.localeCompare(right.definition.key)
+      || left.scene.name.localeCompare(right.scene.name));
+  if (!candidates.length) return { status: "unresolved", scene: null, definition: null, score: 0, reasons: [], candidates: [] };
+  if (candidates.length > 1 && candidates[0].score === candidates[1].score) {
+    return { status: "ambiguous", scene: null, definition: null, score: candidates[0].score, reasons: [], candidates };
+  }
+  return { status: "resolved", ...candidates[0], candidates };
+}
+
+export function scopeLevelData(levelData, sceneKey) {
+  const definitions = levelSceneDefinitions(levelData);
+  const definition = definitions.find((candidate) => candidate.key === sceneKey);
+  if (!definition) throw new Error(`Unknown Scene key for Level ${levelData.level}: ${sceneKey}`);
+  const defaultKey = definitions[0]?.key ?? "main";
+  const belongsToScene = (value) => String(value?.sceneKey ?? defaultKey) === sceneKey;
+  return {
+    ...levelData,
+    scene: definition,
+    activeSceneKey: sceneKey,
+    encounters: (levelData.encounters ?? []).filter(belongsToScene),
+    anchors: Object.fromEntries(Object.entries(levelData.anchors ?? {}).filter(([, anchor]) => belongsToScene(anchor)))
+  };
+}
+
 export function isExactSceneGeometry(scene, expected) {
   return scene.width === expected.width
     && scene.height === expected.height
     && (scene.grid?.size ?? scene.grid) === expected.grid;
+}
+
+export function expectedCanvasBounds(expected) {
+  const padding = Number(expected?.padding ?? 0);
+  return {
+    width: Number(expected?.canvasWidth ?? Number(expected?.width) * (1 + 2 * padding)),
+    height: Number(expected?.canvasHeight ?? Number(expected?.height) * (1 + 2 * padding))
+  };
+}
+
+export function sceneCanvasBounds(scene) {
+  const dimensions = scene?.dimensions ?? {};
+  const padding = Number(scene?.padding ?? 0);
+  return {
+    width: Number(dimensions.width ?? Number(scene?.width) * (1 + 2 * padding)),
+    height: Number(dimensions.height ?? Number(scene?.height) * (1 + 2 * padding))
+  };
 }

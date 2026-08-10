@@ -1,0 +1,3351 @@
+{
+  "schemaVersion": 1,
+  "level": 3,
+  "title": "Sargauth Level",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scenes": [
+    {
+      "key": "part-1",
+      "names": [
+        "Level 03 (1)",
+        "Level 03 (1) (Copy)"
+      ],
+      "sourceId": "Scene.MpHkgNMyjSZK7AOu",
+      "width": 8820,
+      "height": 13300,
+      "padding": 0.25,
+      "grid": 70
+    },
+    {
+      "key": "part-2",
+      "names": [
+        "Level 03 (2)",
+        "Level 03 (2) (Copy)"
+      ],
+      "sourceId": "Scene.3P6yzanCM778h2q9",
+      "width": 12320,
+      "height": 8610,
+      "padding": 0.25,
+      "grid": 70
+    },
+    {
+      "key": "part-3",
+      "names": [
+        "Level 03 (3)",
+        "Level 03 (3) (Copy)"
+      ],
+      "sourceId": "Scene.1SLuVgPegLWm0e6Y",
+      "width": 5670,
+      "height": 10290,
+      "padding": 0.25,
+      "grid": 70
+    }
+  ],
+  "anchors": {
+    "3": {
+      "sceneKey": "part-1",
+      "x": 4305,
+      "y": 5565
+    },
+    "6": {
+      "sceneKey": "part-1",
+      "x": 6160,
+      "y": 6580
+    },
+    "12": {
+      "sceneKey": "part-2",
+      "x": 8505,
+      "y": 10360
+    },
+    "18": {
+      "sceneKey": "part-1",
+      "x": 4760,
+      "y": 8050
+    },
+    "19": {
+      "sceneKey": "part-1",
+      "x": 6300,
+      "y": 9555
+    },
+    "20": {
+      "sceneKey": "part-1",
+      "x": 5565,
+      "y": 10500
+    },
+    "21": {
+      "sceneKey": "part-3",
+      "x": 5460,
+      "y": 10500
+    },
+    "22": {
+      "sceneKey": "part-3",
+      "x": 1925,
+      "y": 4480
+    },
+    "4a": {
+      "sceneKey": "part-1",
+      "x": 7630,
+      "y": 4970
+    },
+    "4b": {
+      "sceneKey": "part-1",
+      "x": 8295,
+      "y": 5390
+    },
+    "4c": {
+      "sceneKey": "part-1",
+      "x": 9170,
+      "y": 6475
+    },
+    "5a": {
+      "sceneKey": "part-1",
+      "x": 6860,
+      "y": 6440
+    },
+    "5b": {
+      "sceneKey": "part-1",
+      "x": 6580,
+      "y": 6580
+    },
+    "5c": {
+      "sceneKey": "part-1",
+      "x": 6440,
+      "y": 7490
+    },
+    "5d": {
+      "sceneKey": "part-1",
+      "x": 7000,
+      "y": 7140
+    },
+    "7c": {
+      "sceneKey": "part-1",
+      "x": 6580,
+      "y": 8470
+    },
+    "7d": {
+      "sceneKey": "part-1",
+      "x": 6020,
+      "y": 8750
+    },
+    "7e": {
+      "sceneKey": "part-1",
+      "x": 7000,
+      "y": 8715
+    },
+    "8a": {
+      "sceneKey": "part-1",
+      "x": 8050,
+      "y": 9450
+    },
+    "9b": {
+      "sceneKey": "part-1",
+      "x": 10640,
+      "y": 5320
+    },
+    "10a": {
+      "sceneKey": "part-1",
+      "x": 8365,
+      "y": 12670
+    },
+    "10b": {
+      "sceneKey": "part-1",
+      "x": 9310,
+      "y": 13580
+    },
+    "10c": {
+      "sceneKey": "part-1",
+      "x": 7280,
+      "y": 13510
+    },
+    "10e": {
+      "sceneKey": "part-1",
+      "x": 9030,
+      "y": 14385
+    },
+    "10g": {
+      "sceneKey": "part-1",
+      "x": 10360,
+      "y": 13125
+    },
+    "20a": {
+      "sceneKey": "part-1",
+      "x": 5775,
+      "y": 10920
+    },
+    "20b": {
+      "sceneKey": "part-1",
+      "x": 6300,
+      "y": 10955
+    },
+    "20c": {
+      "sceneKey": "part-1",
+      "x": 6335,
+      "y": 11725
+    },
+    "20g": {
+      "sceneKey": "part-1",
+      "x": 5600,
+      "y": 12915
+    },
+    "20h": {
+      "sceneKey": "part-1",
+      "x": 5180,
+      "y": 11830
+    },
+    "20j": {
+      "sceneKey": "part-1",
+      "x": 4550,
+      "y": 10990
+    },
+    "20k": {
+      "sceneKey": "part-1",
+      "x": 4270,
+      "y": 12180
+    },
+    "11b": {
+      "sceneKey": "part-2",
+      "x": 10010,
+      "y": 9380
+    },
+    "13b": {
+      "sceneKey": "part-2",
+      "x": 8785,
+      "y": 7105
+    },
+    "14a": {
+      "sceneKey": "part-2",
+      "x": 8190,
+      "y": 6965
+    },
+    "16a": {
+      "sceneKey": "part-2",
+      "x": 6160,
+      "y": 8575
+    },
+    "16b": {
+      "sceneKey": "part-2",
+      "x": 5530,
+      "y": 9695
+    },
+    "17a": {
+      "sceneKey": "part-2",
+      "x": 5215,
+      "y": 7350
+    },
+    "17b": {
+      "sceneKey": "part-2",
+      "x": 4935,
+      "y": 6055
+    },
+    "17c": {
+      "sceneKey": "part-2",
+      "x": 5355,
+      "y": 4620
+    },
+    "17d": {
+      "sceneKey": "part-2",
+      "x": 5705,
+      "y": 5565
+    },
+    "17e": {
+      "sceneKey": "part-2",
+      "x": 5250,
+      "y": 3360
+    },
+    "21a": {
+      "sceneKey": "part-3",
+      "x": 5320,
+      "y": 12425
+    },
+    "21b": {
+      "sceneKey": "part-3",
+      "x": 5110,
+      "y": 8960
+    },
+    "21c": {
+      "sceneKey": "part-3",
+      "x": 3640,
+      "y": 10395
+    },
+    "21d": {
+      "sceneKey": "part-3",
+      "x": 2940,
+      "y": 9590
+    },
+    "21e": {
+      "sceneKey": "part-3",
+      "x": 3150,
+      "y": 8750
+    },
+    "21f": {
+      "sceneKey": "part-3",
+      "x": 3290,
+      "y": 8400
+    },
+    "21g": {
+      "sceneKey": "part-3",
+      "x": 3885,
+      "y": 7665
+    },
+    "21h": {
+      "sceneKey": "part-3",
+      "x": 2870,
+      "y": 8190
+    },
+    "21k": {
+      "sceneKey": "part-3",
+      "x": 3150,
+      "y": 6580
+    },
+    "21m": {
+      "sceneKey": "part-3",
+      "x": 5740,
+      "y": 7140
+    },
+    "21n": {
+      "sceneKey": "part-3",
+      "x": 3780,
+      "y": 6580
+    },
+    "21o": {
+      "sceneKey": "part-3",
+      "x": 4830,
+      "y": 6055
+    },
+    "21p": {
+      "sceneKey": "part-3",
+      "x": 4200,
+      "y": 5460
+    },
+    "21q": {
+      "sceneKey": "part-3",
+      "x": 4480,
+      "y": 5180
+    },
+    "21r": {
+      "sceneKey": "part-3",
+      "x": 3290,
+      "y": 4970
+    },
+    "21s": {
+      "sceneKey": "part-3",
+      "x": 3290,
+      "y": 4620
+    },
+    "21t": {
+      "sceneKey": "part-3",
+      "x": 2695,
+      "y": 4620
+    },
+    "23a": {
+      "sceneKey": "part-3",
+      "x": 1470,
+      "y": 7000
+    },
+    "23b": {
+      "sceneKey": "part-3",
+      "x": 2345,
+      "y": 8120
+    }
+  },
+  "encounters": [
+    {
+      "id": "l03-p1-a3",
+      "area": "3",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 6790
+            }
+          ],
+          "tokenName": "Krenrak",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "grick",
+          "actor": "Grick",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4200,
+              "y": 5600
+            },
+            {
+              "x": 4410,
+              "y": 5670
+            },
+            {
+              "x": 3710,
+              "y": 5880
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a4a",
+      "area": "4a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "quaggoth",
+          "actor": "Quaggoth",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7770,
+              "y": 5040
+            },
+            {
+              "x": 7560,
+              "y": 5320
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a4b",
+      "area": "4b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "phase-spider",
+          "actor": "Phase Spider",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8400,
+              "y": 5530
+            },
+            {
+              "x": 8120,
+              "y": 5600
+            },
+            {
+              "x": 8470,
+              "y": 5670
+            },
+            {
+              "x": 7980,
+              "y": 5880
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a4c",
+      "area": "4c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8820,
+              "y": 6790
+            }
+          ],
+          "tokenName": "Greech",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a5a",
+      "area": "5a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "quaggoth",
+          "actor": "Quaggoth",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 5950
+            },
+            {
+              "x": 6790,
+              "y": 6510
+            },
+            {
+              "x": 6790,
+              "y": 6580
+            },
+            {
+              "x": 6790,
+              "y": 6650
+            },
+            {
+              "x": 6790,
+              "y": 6720
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a5b",
+      "area": "5b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 6720
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 6440
+            },
+            {
+              "x": 6580,
+              "y": 6510
+            },
+            {
+              "x": 6440,
+              "y": 6790
+            },
+            {
+              "x": 6510,
+              "y": 6930
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a5c",
+      "area": "5c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 7420
+            }
+          ],
+          "tokenName": "Geldax Breer"
+        },
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 7420
+            }
+          ],
+          "tokenName": "Narlros",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 7420
+            }
+          ],
+          "tokenName": "Quave",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 7420
+            },
+            {
+              "x": 5810,
+              "y": 7560
+            },
+            {
+              "x": 6020,
+              "y": 7560
+            },
+            {
+              "x": 6580,
+              "y": 7630
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 7420
+            }
+          ],
+          "tokenName": "Lurrash"
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a5d",
+      "area": "5d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 6790
+            }
+          ],
+          "tokenName": "Telenna"
+        },
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6930,
+              "y": 7350
+            }
+          ]
+        },
+        {
+          "actorKey": "marta-moonshadow",
+          "actor": "Marta Moonshadow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 7070
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 6860
+            }
+          ],
+          "tokenName": "Ardulace",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 6930
+            }
+          ],
+          "tokenName": "Dhessril",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-3",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 6720
+            }
+          ],
+          "tokenName": "Izzatlab",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-4",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 6790
+            }
+          ],
+          "tokenName": "Yriltorn",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 6720
+            }
+          ],
+          "tokenName": "Telenna"
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a7c",
+      "area": "7c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6440,
+              "y": 8470
+            }
+          ],
+          "tokenName": "Balwiira",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 8540
+            }
+          ],
+          "tokenName": "Olorgyl",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-3",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6510,
+              "y": 8470
+            }
+          ],
+          "tokenName": "Restryn",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-4",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 8750
+            }
+          ],
+          "tokenName": "Ulraelle",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a7d",
+      "area": "7d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 8680
+            }
+          ],
+          "tokenName": "Narizmar Do’ett",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 8610
+            }
+          ],
+          "tokenName": "Sylkress Auvryndar"
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a7e",
+      "area": "7e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 8680
+            }
+          ],
+          "tokenName": "Ghirith Nhilran",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 8750
+            }
+          ],
+          "tokenName": "Pellanonia Auvryndar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a8a",
+      "area": "8a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drider",
+          "actor": "Drider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7910,
+              "y": 9170
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a9b",
+      "area": "9b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "barlgura",
+          "actor": "Barlgura",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10290,
+              "y": 5390
+            },
+            {
+              "x": 10640,
+              "y": 5460
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a10a",
+      "area": "10a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9030,
+              "y": 12740
+            },
+            {
+              "x": 9170,
+              "y": 12810
+            },
+            {
+              "x": 8680,
+              "y": 13160
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a10b",
+      "area": "10b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8960,
+              "y": 13230
+            },
+            {
+              "x": 8960,
+              "y": 13370
+            },
+            {
+              "x": 9100,
+              "y": 13580
+            },
+            {
+              "x": 8820,
+              "y": 13650
+            },
+            {
+              "x": 9100,
+              "y": 13720
+            },
+            {
+              "x": 9100,
+              "y": 13860
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a10c",
+      "area": "10c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-crab",
+          "actor": "Giant Crab",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 13230
+            },
+            {
+              "x": 7350,
+              "y": 13440
+            },
+            {
+              "x": 7770,
+              "y": 13580
+            }
+          ]
+        },
+        {
+          "actorKey": "sea-hag",
+          "actor": "Sea Hag",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7630,
+              "y": 13230
+            },
+            {
+              "x": 7280,
+              "y": 13440
+            },
+            {
+              "x": 7700,
+              "y": 13580
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a10e",
+      "area": "10e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8820,
+              "y": 13860
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a10g",
+      "area": "10g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9870,
+              "y": 13370
+            }
+          ],
+          "tokenName": "Delvin Stormshore"
+        },
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 10080,
+              "y": 12670
+            }
+          ],
+          "tokenName": "Lerk",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a18",
+      "area": "18",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 7420
+            }
+          ],
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-priestess-of-lolth",
+          "actor": "Drow Priestess of Lolth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 6790
+            }
+          ],
+          "tokenName": "T’rissa Auvryndar"
+        },
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5530,
+              "y": 7630
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a19",
+      "area": "19",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "chimera",
+          "actor": "Chimera",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 10010
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20",
+      "area": "20",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 10010
+            },
+            {
+              "x": 5320,
+              "y": 10850
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20a",
+      "area": "20a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bugbear",
+          "actor": "Bugbear",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 10990
+            }
+          ],
+          "tokenName": "Blarg",
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 11270
+            }
+          ],
+          "tokenName": "Raelphar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 11340
+            }
+          ],
+          "tokenName": "Rizryn",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-3",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 11340
+            }
+          ],
+          "tokenName": "Xebyl",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 10710
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5530,
+              "y": 10920
+            }
+          ],
+          "tokenName": "Bootlick",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "goblin-2",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 11200
+            }
+          ],
+          "tokenName": "Earstabber",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "goblin-3",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 11130
+            }
+          ],
+          "tokenName": "Globby",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20b",
+      "area": "20b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 10640
+            }
+          ],
+          "tokenName": "Krivven",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 10710
+            }
+          ],
+          "tokenName": "Yazdriirn",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20c",
+      "area": "20c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6230,
+              "y": 11970
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "quaggoth",
+          "actor": "Quaggoth",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 11690
+            },
+            {
+              "x": 6160,
+              "y": 11830
+            }
+          ]
+        },
+        {
+          "actorKey": "quaggoth-thonot",
+          "actor": "Quaggoth Thonot",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 11690
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20g",
+      "area": "20g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 12880
+            }
+          ],
+          "tokenName": "Alybbrin",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 12810
+            }
+          ],
+          "tokenName": "Chasmas",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-3",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 12880
+            }
+          ],
+          "tokenName": "Jarkorl",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-4",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 12950
+            }
+          ],
+          "tokenName": "K’yordred",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-5",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 13020
+            }
+          ],
+          "tokenName": "Szorth",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-6",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 12810
+            }
+          ],
+          "tokenName": "Xebrek",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 12810
+            }
+          ],
+          "tokenName": "Ranaghax Auvryndar"
+        },
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 13090
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20h",
+      "area": "20h",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 11620
+            },
+            {
+              "x": 4760,
+              "y": 11690
+            },
+            {
+              "x": 5320,
+              "y": 12250
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20j",
+      "area": "20j",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 11130
+            }
+          ],
+          "tokenName": "Balok",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4690,
+              "y": 11060
+            },
+            {
+              "x": 4340,
+              "y": 11130
+            },
+            {
+              "x": 4410,
+              "y": 11130
+            },
+            {
+              "x": 4550,
+              "y": 11130
+            },
+            {
+              "x": 4270,
+              "y": 11270
+            },
+            {
+              "x": 4550,
+              "y": 11270
+            },
+            {
+              "x": 4410,
+              "y": 11340
+            },
+            {
+              "x": 4130,
+              "y": 11410
+            },
+            {
+              "x": 4620,
+              "y": 11410
+            },
+            {
+              "x": 4270,
+              "y": 11480
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p1-a20k",
+      "area": "20k",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 12460
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4410,
+              "y": 12110
+            },
+            {
+              "x": 4410,
+              "y": 12180
+            },
+            {
+              "x": 4480,
+              "y": 12180
+            }
+          ]
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 11620
+            },
+            {
+              "x": 4270,
+              "y": 11690
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-1"
+    },
+    {
+      "id": "l03-p2-a11b",
+      "area": "11b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drider-variant",
+          "actor": "Drider (variant)",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9940,
+              "y": 9170
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2,
+          "aliases": [
+            "Drider"
+          ],
+          "tokenName": "Drider (variant)"
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a12",
+      "area": "12",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ghost",
+          "actor": "Ghost",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8400,
+              "y": 10010
+            }
+          ],
+          "tokenName": "Algarr Grimtide"
+        },
+        {
+          "actorKey": "ghost-2",
+          "actor": "Ghost",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8190,
+              "y": 10220
+            }
+          ],
+          "tokenName": "Fishbone Jim"
+        },
+        {
+          "actorKey": "ghost-3",
+          "actor": "Ghost",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8470,
+              "y": 10220
+            }
+          ],
+          "tokenName": "Liddie “Slurtongue” Peddlekant"
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a13b",
+      "area": "13b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "skeleton",
+          "actor": "Skeleton",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8820,
+              "y": 6930
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a14a",
+      "area": "14a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "big-xorn",
+          "actor": "Big Xorn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7770,
+              "y": 6230
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a16a",
+      "area": "16a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 8470
+            }
+          ],
+          "tokenName": "Varaun",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 8680
+            }
+          ],
+          "tokenName": "Veszdar",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a16b",
+      "area": "16b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 9660
+            }
+          ],
+          "tokenName": "Molkoth",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        },
+        {
+          "actorKey": "drow-2",
+          "actor": "Drow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 9520
+            }
+          ],
+          "tokenName": "Quilolvir",
+          "resolutionNames": [
+            "Drow Warrior",
+            "Drow"
+          ]
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a17a",
+      "area": "17a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 11,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 6720
+            },
+            {
+              "x": 5250,
+              "y": 6790
+            },
+            {
+              "x": 5250,
+              "y": 6930
+            },
+            {
+              "x": 5390,
+              "y": 6930
+            },
+            {
+              "x": 5530,
+              "y": 7000
+            },
+            {
+              "x": 5390,
+              "y": 7070
+            },
+            {
+              "x": 5040,
+              "y": 7140
+            },
+            {
+              "x": 5110,
+              "y": 7140
+            },
+            {
+              "x": 5460,
+              "y": 7210
+            },
+            {
+              "x": 5110,
+              "y": 7280
+            },
+            {
+              "x": 5320,
+              "y": 7280
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 7210
+            }
+          ],
+          "tokenName": "Kliyuse the Skull Cleaver"
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a17b",
+      "area": "17b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 5810
+            },
+            {
+              "x": 4970,
+              "y": 5880
+            },
+            {
+              "x": 4970,
+              "y": 5950
+            },
+            {
+              "x": 5040,
+              "y": 5950
+            },
+            {
+              "x": 5040,
+              "y": 6020
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a17c",
+      "area": "17c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 4270
+            }
+          ],
+          "tokenName": "Dribblespit",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "goblin-2",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 4270
+            }
+          ],
+          "tokenName": "Zob",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a17d",
+      "area": "17d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gas-spore",
+          "actor": "Gas Spore",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5530,
+              "y": 5390
+            },
+            {
+              "x": 5320,
+              "y": 5600
+            },
+            {
+              "x": 5530,
+              "y": 5670
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "nerozar-the-defeated",
+          "actor": "Nerozar the Defeated",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 5530
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p2-a17e",
+      "area": "17e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "otyugh",
+          "actor": "Otyugh",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 3010
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-2"
+    },
+    {
+      "id": "l03-p3-a21",
+      "area": "21",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 9800
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 9800
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21a",
+      "area": "21a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5530,
+              "y": 12530
+            }
+          ],
+          "tokenName": "Kinrob"
+        },
+        {
+          "actorKey": "oni",
+          "actor": "Oni",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 12530
+            }
+          ],
+          "tokenName": "Kinrob",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21b",
+      "area": "21b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 8960
+            }
+          ],
+          "tokenName": "Huggybug",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 9730
+            },
+            {
+              "x": 5040,
+              "y": 9730
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21c",
+      "area": "21c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bugbear",
+          "actor": "Bugbear",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 10360
+            },
+            {
+              "x": 3920,
+              "y": 10430
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3570,
+              "y": 9660
+            },
+            {
+              "x": 3570,
+              "y": 9730
+            },
+            {
+              "x": 3570,
+              "y": 9870
+            },
+            {
+              "x": 3570,
+              "y": 10010
+            },
+            {
+              "x": 3570,
+              "y": 10080
+            },
+            {
+              "x": 3570,
+              "y": 10150
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3430,
+              "y": 10290
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21d",
+      "area": "21d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 9870
+            },
+            {
+              "x": 2940,
+              "y": 9870
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21e",
+      "area": "21e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 8610
+            },
+            {
+              "x": 3150,
+              "y": 8820
+            },
+            {
+              "x": 3430,
+              "y": 8820
+            },
+            {
+              "x": 3080,
+              "y": 8960
+            },
+            {
+              "x": 3080,
+              "y": 9100
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21f",
+      "area": "21f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 8330
+            },
+            {
+              "x": 3570,
+              "y": 8330
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "goblin-boss",
+          "actor": "Goblin Boss",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3430,
+              "y": 8330
+            }
+          ]
+        },
+        {
+          "actorKey": "intellect-devourer",
+          "actor": "Intellect Devourer",
+          "count": 5,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 8260
+            },
+            {
+              "x": 3325,
+              "y": 8330
+            },
+            {
+              "x": 3430,
+              "y": 8400
+            },
+            {
+              "x": 3500,
+              "y": 8400
+            },
+            {
+              "x": 3570,
+              "y": 8400
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21g",
+      "area": "21g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 7490
+            }
+          ],
+          "tokenName": "Ulquess"
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21h",
+      "area": "21h",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 8050
+            },
+            {
+              "x": 2870,
+              "y": 8050
+            },
+            {
+              "x": 2940,
+              "y": 8050
+            },
+            {
+              "x": 2940,
+              "y": 8050
+            },
+            {
+              "x": 2870,
+              "y": 8120
+            },
+            {
+              "x": 2870,
+              "y": 8120
+            },
+            {
+              "x": 2940,
+              "y": 8120
+            },
+            {
+              "x": 2940,
+              "y": 8120
+            },
+            {
+              "x": 2870,
+              "y": 8190
+            },
+            {
+              "x": 2870,
+              "y": 8190
+            },
+            {
+              "x": 2940,
+              "y": 8190
+            },
+            {
+              "x": 2940,
+              "y": 8190
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 8050
+            },
+            {
+              "x": 3150,
+              "y": 8050
+            },
+            {
+              "x": 3150,
+              "y": 8120
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 8120
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21k",
+      "area": "21k",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3360,
+              "y": 6440
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3010,
+              "y": 6370
+            },
+            {
+              "x": 3080,
+              "y": 6440
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21m",
+      "area": "21m",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 7910
+            },
+            {
+              "x": 5950,
+              "y": 7910
+            },
+            {
+              "x": 5950,
+              "y": 7980
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 7980
+            }
+          ]
+        },
+        {
+          "actorKey": "preeta-kreepa",
+          "actor": "Preeta Kreepa",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 7140
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21n",
+      "area": "21n",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bugbear",
+          "actor": "Bugbear",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 6090
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 6020
+            },
+            {
+              "x": 3640,
+              "y": 6230
+            },
+            {
+              "x": 3780,
+              "y": 6230
+            },
+            {
+              "x": 3850,
+              "y": 6230
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 6020
+            },
+            {
+              "x": 3920,
+              "y": 6160
+            },
+            {
+              "x": 3920,
+              "y": 6230
+            },
+            {
+              "x": 4060,
+              "y": 6650
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4200,
+              "y": 6160
+            }
+          ],
+          "tokenName": "Lurkana"
+        },
+        {
+          "actorKey": "hobgoblin-warlord",
+          "actor": "Hobgoblin Warlord",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 6230
+            }
+          ],
+          "tokenName": "Azrok"
+        },
+        {
+          "actorKey": "worg",
+          "actor": "Worg",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 6370
+            },
+            {
+              "x": 3640,
+              "y": 6510
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21o",
+      "area": "21o",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin-boss",
+          "actor": "Goblin Boss",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 5600
+            },
+            {
+              "x": 4620,
+              "y": 5740
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21p",
+      "area": "21p",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bugbear",
+          "actor": "Bugbear",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4060,
+              "y": 5880
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 5880
+            },
+            {
+              "x": 4130,
+              "y": 5950
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 5180
+            },
+            {
+              "x": 3920,
+              "y": 5180
+            },
+            {
+              "x": 3920,
+              "y": 5250
+            },
+            {
+              "x": 4060,
+              "y": 5740
+            },
+            {
+              "x": 4060,
+              "y": 6020
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 5250
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21q",
+      "area": "21q",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "zombie",
+          "actor": "Zombie",
+          "count": 9,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 5180
+            },
+            {
+              "x": 4620,
+              "y": 5180
+            },
+            {
+              "x": 4690,
+              "y": 5180
+            },
+            {
+              "x": 4760,
+              "y": 5180
+            },
+            {
+              "x": 4550,
+              "y": 5250
+            },
+            {
+              "x": 4620,
+              "y": 5250
+            },
+            {
+              "x": 4690,
+              "y": 5250
+            },
+            {
+              "x": 4760,
+              "y": 5250
+            },
+            {
+              "x": 4830,
+              "y": 5250
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21r",
+      "area": "21r",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 4970
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "goblin-2",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 5110
+            }
+          ],
+          "tokenName": "Salt Nose",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3640,
+              "y": 4690
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21s",
+      "area": "21s",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3640,
+              "y": 4200
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a21t",
+      "area": "21t",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 4340
+            },
+            {
+              "x": 2730,
+              "y": 4830
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a22",
+      "area": "22",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1960,
+              "y": 4130
+            },
+            {
+              "x": 1750,
+              "y": 4340
+            },
+            {
+              "x": 1960,
+              "y": 4620
+            }
+          ],
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a23a",
+      "area": "23a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1750,
+              "y": 6790
+            },
+            {
+              "x": 1610,
+              "y": 6860
+            },
+            {
+              "x": 1540,
+              "y": 7000
+            },
+            {
+              "x": 1750,
+              "y": 7000
+            },
+            {
+              "x": 1610,
+              "y": 7070
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    },
+    {
+      "id": "l03-p3-a23b",
+      "area": "23b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "shrieker",
+          "actor": "Shrieker",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1890,
+              "y": 8120
+            },
+            {
+              "x": 2310,
+              "y": 8470
+            },
+            {
+              "x": 1610,
+              "y": 8540
+            },
+            {
+              "x": 1960,
+              "y": 8750
+            }
+          ]
+        }
+      ],
+      "sceneKey": "part-3"
+    }
+  ]
+}

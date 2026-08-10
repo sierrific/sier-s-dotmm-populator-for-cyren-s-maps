@@ -1,0 +1,885 @@
+{
+  "schemaVersion": 1,
+  "level": 6,
+  "title": "Lost Level",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 06",
+      "Level 06 (Copy)"
+    ],
+    "sourceId": "Scene.ZpjlTOduMbqPwgbz",
+    "width": 7700,
+    "height": 9520,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "2": {
+      "x": 4550,
+      "y": 4270
+    },
+    "7": {
+      "x": 7910,
+      "y": 2730
+    },
+    "12": {
+      "x": 7210,
+      "y": 4970
+    },
+    "13": {
+      "x": 6300,
+      "y": 5040
+    },
+    "14": {
+      "x": 5390,
+      "y": 5950
+    },
+    "18": {
+      "x": 3570,
+      "y": 4760
+    },
+    "26": {
+      "x": 4830,
+      "y": 6230
+    },
+    "32": {
+      "x": 4550,
+      "y": 9450
+    },
+    "41": {
+      "x": 8470,
+      "y": 8050
+    },
+    "8a": {
+      "x": 7490,
+      "y": 3710
+    },
+    "8b": {
+      "x": 7350,
+      "y": 4410
+    },
+    "15a": {
+      "x": 5950,
+      "y": 6650
+    },
+    "15b": {
+      "x": 5950,
+      "y": 7910
+    },
+    "22a": {
+      "x": 4130,
+      "y": 2730
+    },
+    "29a": {
+      "x": 3360,
+      "y": 8890
+    },
+    "29b": {
+      "x": 3255,
+      "y": 9450
+    },
+    "29c": {
+      "x": 3255,
+      "y": 9765
+    },
+    "29d": {
+      "x": 3430,
+      "y": 10150
+    },
+    "29e": {
+      "x": 3395,
+      "y": 10430
+    },
+    "33a": {
+      "x": 5670,
+      "y": 9380
+    },
+    "34a": {
+      "x": 4690,
+      "y": 10150
+    },
+    "36c": {
+      "x": 6510,
+      "y": 10920
+    },
+    "37b": {
+      "x": 7910,
+      "y": 11550
+    },
+    "39b": {
+      "x": 6230,
+      "y": 8050
+    },
+    "47a": {
+      "x": 7770,
+      "y": 6370
+    },
+    "47b": {
+      "x": 7350,
+      "y": 6790
+    }
+  },
+  "encounters": [
+    {
+      "id": "l06-a2",
+      "area": "2",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "helmed-horror",
+          "actor": "Helmed Horror",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 4270
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cloaker",
+          "actor": "Cloaker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7840,
+              "y": 2940
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 2660
+            },
+            {
+              "x": 7770,
+              "y": 2800
+            },
+            {
+              "x": 8050,
+              "y": 2800
+            },
+            {
+              "x": 7700,
+              "y": 2940
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a8a",
+      "area": "8a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "wooden-donkey",
+          "actor": "Wooden Donkey",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7210,
+              "y": 3850
+            },
+            {
+              "x": 7420,
+              "y": 3850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a8b",
+      "area": "8b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "wooden-donkey",
+          "actor": "Wooden Donkey",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7210,
+              "y": 4060
+            },
+            {
+              "x": 7420,
+              "y": 4060
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a12",
+      "area": "12",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 4900
+            },
+            {
+              "x": 7000,
+              "y": 4900
+            },
+            {
+              "x": 7140,
+              "y": 4900
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "xorn",
+          "actor": "Xorn",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 4690
+            },
+            {
+              "x": 6930,
+              "y": 4690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 4900
+            },
+            {
+              "x": 6720,
+              "y": 4900
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 6440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a15a",
+      "area": "15a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cloaker",
+          "actor": "Cloaker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 6790
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 6370
+            },
+            {
+              "x": 6160,
+              "y": 6370
+            },
+            {
+              "x": 5670,
+              "y": 6440
+            },
+            {
+              "x": 6090,
+              "y": 6440
+            }
+          ]
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 6440
+            }
+          ],
+          "tokenName": "Skella Ironeye"
+        }
+      ]
+    },
+    {
+      "id": "l06-a15b",
+      "area": "15b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "clay-golem",
+          "actor": "Clay Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 7560
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a18",
+      "area": "18",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "helmed-horror",
+          "actor": "Helmed Horror",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 4270
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a22a",
+      "area": "22a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "xorn",
+          "actor": "Xorn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 2730
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a26",
+      "area": "26",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cloaker",
+          "actor": "Cloaker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 6790
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 6440
+            },
+            {
+              "x": 5110,
+              "y": 6510
+            },
+            {
+              "x": 5040,
+              "y": 6580
+            }
+          ]
+        },
+        {
+          "actorKey": "umber-hulk",
+          "actor": "Umber Hulk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 6160
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a29a",
+      "area": "29a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flying-sword",
+          "actor": "Flying Sword",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 8750
+            },
+            {
+              "x": 3290,
+              "y": 8750
+            },
+            {
+              "x": 2940,
+              "y": 8890
+            },
+            {
+              "x": 3290,
+              "y": 8890
+            },
+            {
+              "x": 2940,
+              "y": 9030
+            },
+            {
+              "x": 3290,
+              "y": 9030
+            }
+          ],
+          "tokenName": "Crystal Battleaxe"
+        }
+      ]
+    },
+    {
+      "id": "l06-a29b",
+      "area": "29b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flying-sword",
+          "actor": "Flying Sword",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 9170
+            },
+            {
+              "x": 3010,
+              "y": 9170
+            },
+            {
+              "x": 3220,
+              "y": 9170
+            },
+            {
+              "x": 3290,
+              "y": 9170
+            }
+          ],
+          "tokenName": "Crystal Battleaxe"
+        }
+      ]
+    },
+    {
+      "id": "l06-a29c",
+      "area": "29c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "barlgura",
+          "actor": "Barlgura",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 9800
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a29d",
+      "area": "29d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hezrou",
+          "actor": "Hezrou",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 9800
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a29e",
+      "area": "29e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "glabrezu",
+          "actor": "Glabrezu",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 10220
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "vrock",
+          "actor": "Vrock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3360,
+              "y": 10220
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a32",
+      "area": "32",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gray-slaad",
+          "actor": "Gray Slaad",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 9310
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a33a",
+      "area": "33a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "undead-bulette",
+          "actor": "Undead Bulette",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 9590
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a34a",
+      "area": "34a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "umber-hulk",
+          "actor": "Umber Hulk",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 10290
+            },
+            {
+              "x": 4480,
+              "y": 10780
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a36c",
+      "area": "36c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gray-slaad",
+          "actor": "Gray Slaad",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 10710
+            },
+            {
+              "x": 6510,
+              "y": 10850
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a37b",
+      "area": "37b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-elemental",
+          "actor": "Fire Elemental",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 11480
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l06-a39b",
+      "area": "39b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-poisonous-snake",
+          "actor": "Giant Poisonous Snake",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 8120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a41",
+      "area": "41",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7770,
+              "y": 7910
+            },
+            {
+              "x": 7770,
+              "y": 8050
+            }
+          ]
+        },
+        {
+          "actorKey": "gray-slaad",
+          "actor": "Gray Slaad",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8610,
+              "y": 8470
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a47a",
+      "area": "47a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "invisible-stalker",
+          "actor": "Invisible Stalker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7630,
+              "y": 6300
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l06-a47b",
+      "area": "47b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "invisible-stalker",
+          "actor": "Invisible Stalker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 7070
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

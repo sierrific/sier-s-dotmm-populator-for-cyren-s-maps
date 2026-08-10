@@ -1,4 +1,5 @@
 import { makeTokenFlag, populationKey, getPopulationFlag } from "./flags.js";
+import { sceneCanvasBounds } from "./scene-resolver.js";
 
 function rectFor(x, y, width, height, grid) {
   return { x, y, width: width * grid, height: height * grid };
@@ -71,8 +72,9 @@ function findPosition({ scene, anchor, actor, spec, radius, occupied, allowStack
   const grid = Number(scene.grid.size);
   const dims = tokenDimensions(actor, spec);
   const walls = wallSegments(scene);
-  const maxX = Number(scene.width) - dims.width * grid;
-  const maxY = Number(scene.height) - dims.height * grid;
+  const bounds = sceneCanvasBounds(scene);
+  const maxX = bounds.width - dims.width * grid;
+  const maxY = bounds.height - dims.height * grid;
   for (const offset of spiralOffsets(radius)) {
     const x = snap(anchor.x - (dims.width * grid) / 2 + offset.x * grid, grid);
     const y = snap(anchor.y - (dims.height * grid) / 2 + offset.y * grid, grid);
@@ -83,6 +85,25 @@ function findPosition({ scene, anchor, actor, spec, radius, occupied, allowStack
     return { x, y, width: dims.width, height: dims.height, rect };
   }
   return null;
+}
+
+function exactPosition({ scene, actor, spec, instance, occupied }) {
+  const requested = spec.positions?.[instance - 1];
+  if (!requested) return null;
+  const grid = Number(scene.grid.size);
+  const fallback = tokenDimensions(actor, spec);
+  const width = Number(requested.width ?? fallback.width);
+  const height = Number(requested.height ?? fallback.height);
+  const x = Number(requested.x);
+  const y = Number(requested.y);
+  const bounds = sceneCanvasBounds(scene);
+  const rect = rectFor(x, y, width, height, grid);
+  if (![x, y, width, height].every(Number.isFinite) || width <= 0 || height <= 0) return null;
+  if (x < 0 || y < 0 || x + rect.width > bounds.width || y + rect.height > bounds.height) return null;
+  // Preserve intentional overlaps from the curated source layout, but never
+  // place an exact-position token over a document that already existed.
+  if (!spec.allowStack && occupied.some((other) => !other.planned && overlaps(rect, other))) return null;
+  return { x, y, width, height, rect, exact: true };
 }
 
 export function expectedPopulationKeys(levelData) {
@@ -146,17 +167,19 @@ export function planPopulation(scene, levelData, actors, anchors, { areas = null
             continue;
           }
           position = { x: host.x, y: host.y, width: host.width, height: host.height, rect: host.rect };
+        } else if (Array.isArray(spec.positions)) {
+          position = exactPosition({ scene, actor: resolution.document, spec, instance, occupied });
         } else {
           position = findPosition({ scene, anchor, actor: resolution.document, spec, radius: encounter.radius ?? anchor.radius ?? 4, occupied, allowStack: spec.allowStack });
         }
         if (!position) {
-          skipped.push({ encounterId: encounter.id, area: encounter.area, actorKey: spec.actorKey, instance, reason: "no-collision-free-position" });
+          skipped.push({ encounterId: encounter.id, area: encounter.area, actorKey: spec.actorKey, instance, reason: Array.isArray(spec.positions) ? "exact-position-unavailable" : "no-collision-free-position" });
           continue;
         }
         const placement = { key, flag, encounter, spec, actor: resolution.document, actorResolution: resolution, anchor, instance, ...position };
         placements.push(placement);
         placedForActor.set(instance, placement);
-        if (!spec.stackWith) occupied.push(position.rect);
+        if (!spec.stackWith) occupied.push({ ...position.rect, planned: true });
       }
     }
     if (encounter.humanReview) warnings.push({ encounterId: encounter.id, area: encounter.area, reason: "human-review" });

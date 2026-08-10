@@ -56,6 +56,10 @@ function validateMarkdownLinks(file) {
 }
 
 if (manifest.version !== packageMetadata.version) errors.push("package.json and module.json versions differ.");
+if (JSON.stringify(manifest.languages?.map((entry) => entry.lang)) !== JSON.stringify(["en"])) {
+  errors.push("The release module must expose English localization only.");
+}
+if (fs.existsSync(path.join(moduleRoot, "lang", "pt-BR.json"))) errors.push("Obsolete Portuguese localization is still packaged.");
 const constantVersion = constants.match(/MODULE_VERSION\s*=\s*"([^"]+)"/)?.[1];
 if (constantVersion !== manifest.version) errors.push("MODULE_VERSION and module.json versions differ.");
 
@@ -101,14 +105,17 @@ for (const file of [
   path.join(root, "CHANGELOG.md"),
   path.join(root, "docs", "INSTALLATION.md"),
   path.join(root, "docs", "LEVEL-02.md"),
+  path.join(root, "docs", "LEVELS-03-23.md"),
   path.join(root, "docs", "TECHNICAL.md"),
   path.join(root, "docs", "USER-GUIDE.md"),
   path.join(root, "docs", "VALIDATION.md"),
+  path.join(root, "THIRD_PARTY_NOTICES.md"),
+  path.join(moduleRoot, "THIRD_PARTY_NOTICES.md"),
   path.join(moduleRoot, "README.md")
 ]) validateMarkdownLinks(file);
 
 const readme = fs.readFileSync(path.join(root, "README.md"), "utf8");
-if (!readme.includes("Levels 1–2")) errors.push("README does not state the supported Levels 1–2 scope.");
+if (!readme.includes("Levels 1–23")) errors.push("README does not state the supported Levels 1–23 scope.");
 if (!readme.includes(expectedArchiveName)) errors.push("README does not name the current installer ZIP.");
 if (!readme.includes(manifest.manifest)) errors.push("README does not contain the current manifest URL.");
 

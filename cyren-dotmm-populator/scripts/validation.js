@@ -1,4 +1,5 @@
 import { MODULE_ID, SUPPORTED_CORE_GENERATION } from "./constants.js";
+import { expectedCanvasBounds, levelSceneDefinitions } from "./scene-resolver.js";
 
 const AREA_PATTERN = /^\d{1,3}[a-z]?(?:-[a-z0-9]+)?$/i;
 
@@ -24,11 +25,20 @@ export function validateLevelData(data) {
   const warnings = [];
   const encounterIds = new Set();
   const instances = new Set();
-  const width = Number(data?.scene?.width);
-  const height = Number(data?.scene?.height);
+  const scenes = levelSceneDefinitions(data);
+  const sceneKeys = new Set();
+  const defaultSceneKey = scenes[0]?.key ?? "main";
 
   if (!Number.isInteger(data?.level) || data.level < 1) errors.push("Missing or invalid level number.");
   if (!Array.isArray(data?.encounters)) errors.push("encounters must be an array.");
+  if (!scenes.length) errors.push("At least one Scene definition is required.");
+  for (const scene of scenes) {
+    if (sceneKeys.has(scene.key)) errors.push(`Duplicate Scene key: ${scene.key}`);
+    sceneKeys.add(scene.key);
+    if (!Array.isArray(scene.names) || !scene.names.length) errors.push(`Scene ${scene.key} has no names.`);
+    if (!Number.isFinite(Number(scene.width)) || !Number.isFinite(Number(scene.height))) errors.push(`Scene ${scene.key} has invalid dimensions.`);
+    if (!Number.isFinite(Number(scene.grid)) || Number(scene.grid) <= 0) errors.push(`Scene ${scene.key} has an invalid grid.`);
+  }
 
   for (const encounter of data?.encounters ?? []) {
     if (!encounter.id) errors.push("Encounter without id.");
@@ -37,6 +47,8 @@ export function validateLevelData(data) {
 
     if (!AREA_PATTERN.test(encounter.area ?? "")) errors.push(`Malformed area id in ${encounter.id}: ${encounter.area}`);
     if (!Array.isArray(encounter.tokens) || !encounter.tokens.length) errors.push(`Encounter ${encounter.id} has no tokens.`);
+    const encounterSceneKey = String(encounter.sceneKey ?? defaultSceneKey);
+    if (!sceneKeys.has(encounterSceneKey)) errors.push(`Unknown Scene key in ${encounter.id}: ${encounterSceneKey}`);
 
     for (const token of encounter.tokens ?? []) {
       if (!token.actorKey) errors.push(`Missing actorKey in ${encounter.id}.`);
@@ -44,6 +56,12 @@ export function validateLevelData(data) {
       if (!Number.isInteger(token.count) || token.count < 1) errors.push(`Invalid count in ${encounter.id}/${token.actorKey}.`);
       if (token.tokenWidth !== undefined && (!Number.isFinite(token.tokenWidth) || token.tokenWidth <= 0)) errors.push(`Invalid tokenWidth in ${encounter.id}/${token.actorKey}.`);
       if (token.tokenHeight !== undefined && (!Number.isFinite(token.tokenHeight) || token.tokenHeight <= 0)) errors.push(`Invalid tokenHeight in ${encounter.id}/${token.actorKey}.`);
+      if (token.positions !== undefined && (!Array.isArray(token.positions) || token.positions.length !== token.count)) errors.push(`positions must contain exactly count entries in ${encounter.id}/${token.actorKey}.`);
+      for (const position of token.positions ?? []) {
+        if (!Number.isFinite(position?.x) || !Number.isFinite(position?.y)) errors.push(`Invalid exact position in ${encounter.id}/${token.actorKey}.`);
+        if (position?.width !== undefined && (!Number.isFinite(position.width) || position.width <= 0)) errors.push(`Invalid exact-position width in ${encounter.id}/${token.actorKey}.`);
+        if (position?.height !== undefined && (!Number.isFinite(position.height) || position.height <= 0)) errors.push(`Invalid exact-position height in ${encounter.id}/${token.actorKey}.`);
+      }
       for (let instance = 1; instance <= (token.count ?? 0); instance += 1) {
         const key = `${encounter.id}|${token.actorKey}|${instance}`;
         if (instances.has(key)) errors.push(`Duplicate token instance id: ${key}`);
@@ -56,8 +74,14 @@ export function validateLevelData(data) {
 
   for (const [area, anchor] of Object.entries(data?.anchors ?? {})) {
     if (!AREA_PATTERN.test(area)) errors.push(`Malformed anchor area id: ${area}`);
+    const anchorSceneKey = String(anchor?.sceneKey ?? defaultSceneKey);
+    const scene = scenes.find((candidate) => candidate.key === anchorSceneKey);
+    if (!scene) errors.push(`Unknown Scene key for anchor ${area}: ${anchorSceneKey}`);
     if (!Number.isFinite(anchor?.x) || !Number.isFinite(anchor?.y)) errors.push(`Invalid anchor coordinates: ${area}`);
-    else if (anchor.x < 0 || anchor.y < 0 || anchor.x > width || anchor.y > height) errors.push(`Out-of-bounds anchor: ${area}`);
+    else if (scene) {
+      const bounds = expectedCanvasBounds(scene);
+      if (anchor.x < 0 || anchor.y < 0 || anchor.x > bounds.width || anchor.y > bounds.height) errors.push(`Out-of-bounds anchor: ${area}`);
+    }
   }
 
   return { ok: errors.length === 0, errors, warnings };

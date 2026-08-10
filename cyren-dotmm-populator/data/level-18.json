@@ -1,0 +1,1166 @@
+{
+  "schemaVersion": 1,
+  "level": 18,
+  "title": "Vanrakdoom",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 18",
+      "Level 18 (Copy)"
+    ],
+    "sourceId": "Scene.wupTEJ0DgIxb2iM7",
+    "width": 7700,
+    "height": 10080,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "9": {
+      "x": 2310,
+      "y": 2450
+    },
+    "10": {
+      "x": 2590,
+      "y": 1785
+    },
+    "15": {
+      "x": 1470,
+      "y": 6895
+    },
+    "18": {
+      "x": 6790,
+      "y": 5145
+    },
+    "22": {
+      "x": 6160,
+      "y": 7350
+    },
+    "26": {
+      "x": 6790,
+      "y": 8540
+    },
+    "31": {
+      "x": 4830,
+      "y": 10290
+    },
+    "32": {
+      "x": 4795,
+      "y": 8505
+    },
+    "33": {
+      "x": 3815,
+      "y": 8470
+    },
+    "7a": {
+      "x": 3850,
+      "y": 1855
+    },
+    "7b": {
+      "x": 3290,
+      "y": 1680
+    },
+    "7c": {
+      "x": 3570,
+      "y": 2940
+    },
+    "12a": {
+      "x": 4445,
+      "y": 3360
+    },
+    "12c": {
+      "x": 4270,
+      "y": 3990
+    },
+    "13a": {
+      "x": 4200,
+      "y": 5390
+    },
+    "13b": {
+      "x": 4060,
+      "y": 6195
+    },
+    "25a": {
+      "x": 7770,
+      "y": 7630
+    },
+    "25b": {
+      "x": 8190,
+      "y": 7280
+    },
+    "28c": {
+      "x": 7910,
+      "y": 10220
+    },
+    "30a": {
+      "x": 5950,
+      "y": 9205
+    },
+    "30b": {
+      "x": 5670,
+      "y": 9940
+    }
+  },
+  "encounters": [
+    {
+      "id": "l18-a7a",
+      "area": "7a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cult-fanatic",
+          "actor": "Cult Fanatic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 1820
+            }
+          ],
+          "tokenName": "Jian"
+        },
+        {
+          "actorKey": "cultist",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 1750
+            }
+          ],
+          "tokenName": "Caradoc"
+        },
+        {
+          "actorKey": "cultist-2",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 1680
+            }
+          ],
+          "tokenName": "Feldar"
+        },
+        {
+          "actorKey": "cultist-3",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 1750
+            }
+          ],
+          "tokenName": "Hong"
+        },
+        {
+          "actorKey": "cultist-4",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 1890
+            }
+          ],
+          "tokenName": "Khafra"
+        },
+        {
+          "actorKey": "cultist-5",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 1960
+            }
+          ],
+          "tokenName": "Serenade"
+        },
+        {
+          "actorKey": "cultist-6",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 1890
+            }
+          ],
+          "tokenName": "Xandeval"
+        },
+        {
+          "actorKey": "swarm-of-rats",
+          "actor": "Swarm of Rats",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 1820
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a7b",
+      "area": "7b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cultist",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3220,
+              "y": 1820
+            }
+          ],
+          "tokenName": "Elthimar"
+        },
+        {
+          "actorKey": "cultist-2",
+          "actor": "Cultist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3150,
+              "y": 1890
+            }
+          ],
+          "tokenName": "Zelaya"
+        }
+      ]
+    },
+    {
+      "id": "l18-a7c",
+      "area": "7c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3570,
+              "y": 2800
+            }
+          ],
+          "tokenName": "Angelica"
+        },
+        {
+          "actorKey": "vampire-spawn-2",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3640,
+              "y": 2870
+            }
+          ],
+          "tokenName": "Yaveros"
+        }
+      ]
+    },
+    {
+      "id": "l18-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cultist",
+          "actor": "Cultist",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 2030
+            },
+            {
+              "x": 2240,
+              "y": 2030
+            },
+            {
+              "x": 2380,
+              "y": 2030
+            },
+            {
+              "x": 2170,
+              "y": 2100
+            },
+            {
+              "x": 2310,
+              "y": 2100
+            },
+            {
+              "x": 2380,
+              "y": 2100
+            },
+            {
+              "x": 2240,
+              "y": 2170
+            },
+            {
+              "x": 2310,
+              "y": 2170
+            },
+            {
+              "x": 2380,
+              "y": 2170
+            },
+            {
+              "x": 2170,
+              "y": 2240
+            },
+            {
+              "x": 2240,
+              "y": 2240
+            },
+            {
+              "x": 2310,
+              "y": 2240
+            }
+          ]
+        },
+        {
+          "actorKey": "swarm-of-rats",
+          "actor": "Swarm of Rats",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2310,
+              "y": 2030
+            },
+            {
+              "x": 2240,
+              "y": 2100
+            },
+            {
+              "x": 2170,
+              "y": 2170
+            },
+            {
+              "x": 2380,
+              "y": 2240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a10",
+      "area": "10",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cult-fanatic",
+          "actor": "Cult Fanatic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2030,
+              "y": 1400
+            }
+          ],
+          "tokenName": "Abberoch"
+        },
+        {
+          "actorKey": "cult-fanatic-2",
+          "actor": "Cult Fanatic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 1680
+            }
+          ],
+          "tokenName": "Belora"
+        },
+        {
+          "actorKey": "cult-fanatic-3",
+          "actor": "Cult Fanatic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 1400
+            }
+          ],
+          "tokenName": "Liana"
+        },
+        {
+          "actorKey": "cult-fanatic-4",
+          "actor": "Cult Fanatic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 1400
+            }
+          ],
+          "tokenName": "Shanzo"
+        },
+        {
+          "actorKey": "cult-fanatic-5",
+          "actor": "Cult Fanatic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 1400
+            }
+          ],
+          "tokenName": "Torfiana"
+        },
+        {
+          "actorKey": "cult-fanatic-6",
+          "actor": "Cult Fanatic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1960,
+              "y": 1680
+            }
+          ],
+          "tokenName": "Uzalyn"
+        },
+        {
+          "actorKey": "shadow-assassin",
+          "actor": "Shadow Assassin",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2030,
+              "y": 1330
+            },
+            {
+              "x": 2170,
+              "y": 1330
+            },
+            {
+              "x": 2380,
+              "y": 1330
+            },
+            {
+              "x": 2660,
+              "y": 1330
+            },
+            {
+              "x": 1890,
+              "y": 1680
+            },
+            {
+              "x": 2800,
+              "y": 1680
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a12a",
+      "area": "12a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "swarm-of-bats",
+          "actor": "Swarm of Bats",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 3080
+            },
+            {
+              "x": 4550,
+              "y": 3080
+            },
+            {
+              "x": 4340,
+              "y": 3500
+            },
+            {
+              "x": 4550,
+              "y": 3500
+            }
+          ]
+        },
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 5,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 3500
+            },
+            {
+              "x": 3990,
+              "y": 3500
+            },
+            {
+              "x": 4060,
+              "y": 3500
+            },
+            {
+              "x": 4130,
+              "y": 3500
+            },
+            {
+              "x": 4130,
+              "y": 3570
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a12c",
+      "area": "12c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 7,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 3570
+            },
+            {
+              "x": 3990,
+              "y": 3570
+            },
+            {
+              "x": 4060,
+              "y": 3570
+            },
+            {
+              "x": 3920,
+              "y": 3640
+            },
+            {
+              "x": 3990,
+              "y": 3640
+            },
+            {
+              "x": 4060,
+              "y": 3640
+            },
+            {
+              "x": 4130,
+              "y": 3640
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a13a",
+      "area": "13a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 5110
+            }
+          ],
+          "tokenName": "Brek"
+        }
+      ]
+    },
+    {
+      "id": "l18-a13b",
+      "area": "13b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 6020
+            }
+          ],
+          "tokenName": "Deviana"
+        },
+        {
+          "actorKey": "vampire-spawn-2",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 6230
+            }
+          ],
+          "tokenName": "Ezra"
+        },
+        {
+          "actorKey": "vampire-spawn-3",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 6370
+            }
+          ],
+          "tokenName": "Yuri"
+        }
+      ]
+    },
+    {
+      "id": "l18-a15",
+      "area": "15",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "shadow-assassin",
+          "actor": "Shadow Assassin",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1330,
+              "y": 7560
+            },
+            {
+              "x": 1540,
+              "y": 7560
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a18",
+      "area": "18",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "wraith",
+          "actor": "Wraith",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6440,
+              "y": 5250
+            },
+            {
+              "x": 6580,
+              "y": 5250
+            },
+            {
+              "x": 6650,
+              "y": 5250
+            },
+            {
+              "x": 6790,
+              "y": 5250
+            },
+            {
+              "x": 6860,
+              "y": 5250
+            },
+            {
+              "x": 7000,
+              "y": 5250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a22",
+      "area": "22",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 7910
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a25a",
+      "area": "25a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7490,
+              "y": 7700
+            }
+          ],
+          "tokenName": "Darvanos"
+        },
+        {
+          "actorKey": "vampire-spawn-2",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 7770
+            }
+          ],
+          "tokenName": "Hekella"
+        },
+        {
+          "actorKey": "vampire-spawn-3",
+          "actor": "Vampire Spawn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7630,
+              "y": 7840
+            }
+          ],
+          "tokenName": "Tozu"
+        }
+      ]
+    },
+    {
+      "id": "l18-a25b",
+      "area": "25b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "champion",
+          "actor": "Champion",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8190,
+              "y": 7350
+            }
+          ],
+          "tokenName": "Portia Dzuth"
+        }
+      ]
+    },
+    {
+      "id": "l18-a26",
+      "area": "26",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "abominable-yeti",
+          "actor": "Abominable Yeti",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6510,
+              "y": 8610
+            }
+          ],
+          "tokenName": "Thagor",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "giant-centipede",
+          "actor": "Giant Centipede",
+          "count": 8,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6300,
+              "y": 8470
+            },
+            {
+              "x": 6370,
+              "y": 8470
+            },
+            {
+              "x": 7140,
+              "y": 8470
+            },
+            {
+              "x": 7210,
+              "y": 8470
+            },
+            {
+              "x": 6300,
+              "y": 8540
+            },
+            {
+              "x": 6370,
+              "y": 8540
+            },
+            {
+              "x": 7140,
+              "y": 8540
+            },
+            {
+              "x": 7210,
+              "y": 8540
+            }
+          ]
+        },
+        {
+          "actorKey": "keresta-delvingstone",
+          "actor": "Keresta Delvingstone",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 8680
+            }
+          ]
+        },
+        {
+          "actorKey": "vampire-spawn",
+          "actor": "Vampire Spawn",
+          "count": 8,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 7910
+            },
+            {
+              "x": 6720,
+              "y": 8050
+            },
+            {
+              "x": 6510,
+              "y": 8120
+            },
+            {
+              "x": 6930,
+              "y": 8120
+            },
+            {
+              "x": 6580,
+              "y": 8260
+            },
+            {
+              "x": 6930,
+              "y": 8260
+            },
+            {
+              "x": 6930,
+              "y": 8750
+            },
+            {
+              "x": 6510,
+              "y": 8890
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a28c",
+      "area": "28c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "shadow-assassin",
+          "actor": "Shadow Assassin",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7630,
+              "y": 10080
+            },
+            {
+              "x": 7980,
+              "y": 10150
+            },
+            {
+              "x": 7840,
+              "y": 10290
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a30a",
+      "area": "30a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "shadow",
+          "actor": "Shadow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 9170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a30b",
+      "area": "30b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "adult-bronze-dragon",
+          "actor": "Adult Bronze Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 9660
+            }
+          ],
+          "tokenName": "Umbraxakar",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l18-a31",
+      "area": "31",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "umbraxakar",
+          "actor": "Umbraxakar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 9660
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l18-a32",
+      "area": "32",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "shadow",
+          "actor": "Shadow",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 8050
+            },
+            {
+              "x": 5180,
+              "y": 8050
+            },
+            {
+              "x": 4410,
+              "y": 8190
+            },
+            {
+              "x": 5180,
+              "y": 8260
+            },
+            {
+              "x": 5180,
+              "y": 8540
+            },
+            {
+              "x": 4410,
+              "y": 8610
+            },
+            {
+              "x": 5180,
+              "y": 8680
+            },
+            {
+              "x": 4410,
+              "y": 8750
+            },
+            {
+              "x": 5250,
+              "y": 8750
+            },
+            {
+              "x": 4410,
+              "y": 9170
+            }
+          ]
+        },
+        {
+          "actorKey": "shadow-assassin",
+          "actor": "Shadow Assassin",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 8120
+            },
+            {
+              "x": 5180,
+              "y": 8120
+            },
+            {
+              "x": 5180,
+              "y": 8610
+            },
+            {
+              "x": 4410,
+              "y": 8680
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l18-a33",
+      "area": "33",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cloaker",
+          "actor": "Cloaker",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3570,
+              "y": 8260
+            },
+            {
+              "x": 3710,
+              "y": 8260
+            },
+            {
+              "x": 3570,
+              "y": 8470
+            },
+            {
+              "x": 3710,
+              "y": 8470
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,19 @@
 
 All notable changes are documented here.
 
+## 0.3.0 — 2026-08-09
+
+- Added Levels 3–23, completing all 23 Undermountain floors across 25 map descriptors.
+- Added multi-Scene level resolution for the three Level 3 map segments.
+- Added 556 encounter groups and 2,364 deterministic Token instances for the remaining floors.
+- Added a GM-only helper that creates only missing safety copies for Levels 3–23.
+- Added optional import of unambiguous compendium Actors into a dedicated World folder.
+- Added official-equivalent aliases for named creatures and printed variants while preserving token names.
+- Extended placement to exact source coordinates and padded Scene canvases.
+- Confirmed complete Actor and anchor resolution on every remaining map copy.
+- Exercised create, identical second run, and owned-token cleanup on all 23 copies with zero duplicates and zero module Tokens left afterward.
+- Added full-scope documentation, validation coverage, and third-party attribution.
+
 ## 0.2.1 — 2026-08-09
 
 - Strengthened mutation fingerprints to detect content changes in Walls, Lights, Tiles, Notes, Sounds, Drawings, and Regions.

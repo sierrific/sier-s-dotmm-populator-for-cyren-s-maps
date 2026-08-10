@@ -1,0 +1,836 @@
+{
+  "schemaVersion": 1,
+  "level": 15,
+  "title": "Obstacle Course",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 15",
+      "Level 15 (Copy)"
+    ],
+    "sourceId": "Scene.SWiUDHWaKTtn3nGg",
+    "width": 7700,
+    "height": 10500,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "2": {
+      "x": 4690,
+      "y": 8190
+    },
+    "7": {
+      "x": 5390,
+      "y": 9800
+    },
+    "12": {
+      "x": 6090,
+      "y": 11620
+    },
+    "15": {
+      "x": 7770,
+      "y": 11410
+    },
+    "17": {
+      "x": 6930,
+      "y": 9240
+    },
+    "19": {
+      "x": 7770,
+      "y": 8750
+    },
+    "23": {
+      "x": 3500,
+      "y": 6720
+    },
+    "27": {
+      "x": 5110,
+      "y": 5040
+    },
+    "38": {
+      "x": 8050,
+      "y": 3535
+    },
+    "13a": {
+      "x": 6790,
+      "y": 11620
+    },
+    "14b": {
+      "x": 8960,
+      "y": 11550
+    },
+    "24c": {
+      "x": 2310,
+      "y": 5810
+    },
+    "29b": {
+      "x": 5880,
+      "y": 4830
+    },
+    "30a": {
+      "x": 6510,
+      "y": 3850
+    },
+    "30b": {
+      "x": 7210,
+      "y": 3990
+    },
+    "39c": {
+      "x": 7000,
+      "y": 5320
+    },
+    "40a": {
+      "x": 7350,
+      "y": 7210
+    },
+    "40b": {
+      "x": 8120,
+      "y": 8050
+    },
+    "40d": {
+      "x": 5915,
+      "y": 8575
+    }
+  },
+  "encounters": [
+    {
+      "id": "l15-a2",
+      "area": "2",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gelatinous-cube",
+          "actor": "Gelatinous Cube",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 7980
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l15-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ghost",
+          "actor": "Ghost",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 9940
+            }
+          ],
+          "tokenName": "Fidelio"
+        }
+      ]
+    },
+    {
+      "id": "l15-a12",
+      "area": "12",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "living-unseen-servant",
+          "actor": "Living Unseen Servant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 11690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a13a",
+      "area": "13a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ice-devil",
+          "actor": "Ice Devil",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 11620
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l15-a14b",
+      "area": "14b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8750,
+              "y": 11690
+            }
+          ],
+          "tokenName": "Lorlynn Zmirth"
+        },
+        {
+          "actorKey": "skeleton",
+          "actor": "Skeleton",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8680,
+              "y": 11340
+            },
+            {
+              "x": 8820,
+              "y": 11340
+            },
+            {
+              "x": 8750,
+              "y": 11410
+            },
+            {
+              "x": 8890,
+              "y": 11410
+            },
+            {
+              "x": 8680,
+              "y": 11480
+            },
+            {
+              "x": 8750,
+              "y": 11480
+            },
+            {
+              "x": 8820,
+              "y": 11480
+            },
+            {
+              "x": 8750,
+              "y": 11550
+            },
+            {
+              "x": 8890,
+              "y": 11550
+            },
+            {
+              "x": 8680,
+              "y": 11620
+            },
+            {
+              "x": 8680,
+              "y": 11690
+            },
+            {
+              "x": 8890,
+              "y": 11690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a15",
+      "area": "15",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "adult-white-dragon",
+          "actor": "Adult White Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 11410
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l15-a17",
+      "area": "17",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "roper",
+          "actor": "Roper",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 8960
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l15-a19",
+      "area": "19",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "roper",
+          "actor": "Roper",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 8820
+            },
+            {
+              "x": 7560,
+              "y": 9100
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l15-a23",
+      "area": "23",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "stone-golem",
+          "actor": "Stone Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3360,
+              "y": 6580
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l15-a24c",
+      "area": "24c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githzerai-zerth",
+          "actor": "Githzerai Zerth",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 5950
+            },
+            {
+              "x": 2240,
+              "y": 5950
+            },
+            {
+              "x": 2170,
+              "y": 6020
+            },
+            {
+              "x": 2240,
+              "y": 6020
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a27",
+      "area": "27",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "zorak-lightdrinker",
+          "actor": "Zorak Lightdrinker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 4970
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a29b",
+      "area": "29b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "thwad-underbrew",
+          "actor": "Thwad Underbrew",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 4830
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a30a",
+      "area": "30a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mage",
+          "actor": "Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 3780
+            }
+          ],
+          "tokenName": "Kavil Mereshanter"
+        }
+      ]
+    },
+    {
+      "id": "l15-a30b",
+      "area": "30b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "quadrone",
+          "actor": "Quadrone",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7140,
+              "y": 4200
+            }
+          ],
+          "tokenName": "Halaster Cube"
+        },
+        {
+          "actorKey": "zombie",
+          "actor": "Zombie",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 3990
+            },
+            {
+              "x": 7770,
+              "y": 4060
+            },
+            {
+              "x": 7770,
+              "y": 4130
+            },
+            {
+              "x": 7770,
+              "y": 4270
+            },
+            {
+              "x": 7840,
+              "y": 4340
+            },
+            {
+              "x": 7910,
+              "y": 4410
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a38",
+      "area": "38",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "zombie",
+          "actor": "Zombie",
+          "count": 34,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 3570
+            },
+            {
+              "x": 7840,
+              "y": 3640
+            },
+            {
+              "x": 7910,
+              "y": 3640
+            },
+            {
+              "x": 8050,
+              "y": 3640
+            },
+            {
+              "x": 8190,
+              "y": 3640
+            },
+            {
+              "x": 7910,
+              "y": 3710
+            },
+            {
+              "x": 8050,
+              "y": 3710
+            },
+            {
+              "x": 8120,
+              "y": 3710
+            },
+            {
+              "x": 8190,
+              "y": 3710
+            },
+            {
+              "x": 7770,
+              "y": 3780
+            },
+            {
+              "x": 7980,
+              "y": 3780
+            },
+            {
+              "x": 8050,
+              "y": 3780
+            },
+            {
+              "x": 8400,
+              "y": 3780
+            },
+            {
+              "x": 7700,
+              "y": 3850
+            },
+            {
+              "x": 7840,
+              "y": 3850
+            },
+            {
+              "x": 7910,
+              "y": 3850
+            },
+            {
+              "x": 8050,
+              "y": 3850
+            },
+            {
+              "x": 7770,
+              "y": 3920
+            },
+            {
+              "x": 7840,
+              "y": 3920
+            },
+            {
+              "x": 7980,
+              "y": 3920
+            },
+            {
+              "x": 8120,
+              "y": 3920
+            },
+            {
+              "x": 8400,
+              "y": 3920
+            },
+            {
+              "x": 7980,
+              "y": 3990
+            },
+            {
+              "x": 7910,
+              "y": 4060
+            },
+            {
+              "x": 8050,
+              "y": 4060
+            },
+            {
+              "x": 7980,
+              "y": 4130
+            },
+            {
+              "x": 8050,
+              "y": 4130
+            },
+            {
+              "x": 8120,
+              "y": 4130
+            },
+            {
+              "x": 8260,
+              "y": 4130
+            },
+            {
+              "x": 7910,
+              "y": 4200
+            },
+            {
+              "x": 7980,
+              "y": 4200
+            },
+            {
+              "x": 8120,
+              "y": 4200
+            },
+            {
+              "x": 8190,
+              "y": 4200
+            },
+            {
+              "x": 8260,
+              "y": 4270
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a39c",
+      "area": "39c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "death-tyrant",
+          "actor": "Death Tyrant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 5250
+            }
+          ],
+          "tokenName": "Netherskull",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l15-a40a",
+      "area": "40a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "magma-mephit",
+          "actor": "Magma Mephit",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 7070
+            },
+            {
+              "x": 7350,
+              "y": 7070
+            },
+            {
+              "x": 7280,
+              "y": 7140
+            },
+            {
+              "x": 7420,
+              "y": 7140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a40b",
+      "area": "40b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "lava-child",
+          "actor": "Lava Child",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 7630
+            },
+            {
+              "x": 7980,
+              "y": 7700
+            },
+            {
+              "x": 8120,
+              "y": 7700
+            },
+            {
+              "x": 8050,
+              "y": 7770
+            },
+            {
+              "x": 7980,
+              "y": 7840
+            },
+            {
+              "x": 8120,
+              "y": 7840
+            },
+            {
+              "x": 8190,
+              "y": 7840
+            },
+            {
+              "x": 8050,
+              "y": 7910
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l15-a40d",
+      "area": "40d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "lava-child",
+          "actor": "Lava Child",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 8260
+            },
+            {
+              "x": 6090,
+              "y": 8330
+            },
+            {
+              "x": 5950,
+              "y": 8400
+            },
+            {
+              "x": 6020,
+              "y": 8470
+            },
+            {
+              "x": 5950,
+              "y": 8540
+            },
+            {
+              "x": 6090,
+              "y": 8540
+            }
+          ]
+        },
+        {
+          "actorKey": "magma-mephit",
+          "actor": "Magma Mephit",
+          "count": 7,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 8260
+            },
+            {
+              "x": 5880,
+              "y": 8330
+            },
+            {
+              "x": 6020,
+              "y": 8330
+            },
+            {
+              "x": 6090,
+              "y": 8400
+            },
+            {
+              "x": 5810,
+              "y": 8470
+            },
+            {
+              "x": 6020,
+              "y": 8540
+            },
+            {
+              "x": 6020,
+              "y": 8680
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

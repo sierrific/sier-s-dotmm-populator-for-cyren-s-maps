@@ -1,0 +1,67 @@
+import { SUPPORTED_LEVELS } from "./constants.js";
+import { loadLevelData } from "./data-loader.js";
+import { actorSpecs, normalizeActorName, resolveActorSpec } from "./actor-resolver.js";
+import { assertGm } from "./validation.js";
+
+async function importFolder() {
+  return game.folders.find((folder) => folder.type === "Actor" && folder.name === "Sier's DotMM Populator Imports")
+    ?? Folder.create({ name: "Sier's DotMM Populator Imports", type: "Actor", sorting: "a" });
+}
+
+async function removeRedundantImports(folder) {
+  const groups = new Map();
+  for (const actor of game.actors) {
+    const key = normalizeActorName(actor.name);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(actor);
+  }
+  const remove = [];
+  for (const actors of groups.values()) {
+    if (actors.length < 2) continue;
+    const imported = actors.filter((actor) => actor.folder?.id === folder.id || actor.folder === folder.id);
+    const existing = actors.filter((actor) => !imported.includes(actor));
+    if (existing.length) remove.push(...imported);
+    else if (imported.length > 1) remove.push(...imported.toSorted((left, right) => left.id.localeCompare(right.id)).slice(1));
+  }
+  if (remove.length) await Actor.deleteDocuments(remove.map((actor) => actor.id));
+  return remove;
+}
+
+export async function importAvailableActors({ levels = SUPPORTED_LEVELS.filter((level) => level >= 3) } = {}) {
+  assertGm();
+  const folder = await importFolder();
+  const removedDuplicates = await removeRedundantImports(folder);
+  const created = [];
+  const alreadyResolved = [];
+  const blocked = [];
+  const processed = new Set();
+
+  for (const level of levels) {
+    const data = await loadLevelData(level);
+    for (const spec of actorSpecs(data).values()) {
+      const identity = JSON.stringify([spec.actor, spec.resolutionNames, spec.aliases]);
+      if (processed.has(identity)) continue;
+      processed.add(identity);
+      const result = await resolveActorSpec(spec);
+      if (result.status === "resolved") {
+        alreadyResolved.push(result.document);
+        continue;
+      }
+      if (result.status !== "requiresImport" || !result.uuid) {
+        blocked.push({ level, actor: spec.actor, actorKey: spec.actorKey, status: result.status, candidates: result.candidates?.length ?? 0 });
+        continue;
+      }
+      const source = await fromUuid(result.uuid);
+      if (!source || source.documentName !== "Actor") {
+        blocked.push({ level, actor: spec.actor, actorKey: spec.actorKey, status: "invalid-compendium-source", candidates: 0 });
+        continue;
+      }
+      const actorData = source.toObject();
+      delete actorData._id;
+      actorData.folder = folder.id;
+      created.push(await Actor.create(actorData, { renderSheet: false }));
+    }
+  }
+  removedDuplicates.push(...await removeRedundantImports(folder));
+  return { created, alreadyResolved, blocked, removedDuplicates, processed: processed.size, folder };
+}

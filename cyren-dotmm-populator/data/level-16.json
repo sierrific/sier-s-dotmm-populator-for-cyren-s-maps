@@ -1,0 +1,1236 @@
+{
+  "schemaVersion": 1,
+  "level": 16,
+  "title": "Crystal Labyrinth",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 16",
+      "Level 16 (Copy)"
+    ],
+    "sourceId": "Scene.9Uqluy7AbskxkC32",
+    "width": 7840,
+    "height": 15960,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 2940,
+      "y": 6020
+    },
+    "4": {
+      "x": 2450,
+      "y": 5040
+    },
+    "5": {
+      "x": 7000,
+      "y": 4620
+    },
+    "7": {
+      "x": 7980,
+      "y": 5390
+    },
+    "8": {
+      "x": 8820,
+      "y": 6160
+    },
+    "10": {
+      "x": 7350,
+      "y": 7525
+    },
+    "11": {
+      "x": 5110,
+      "y": 7140
+    },
+    "13": {
+      "x": 3885,
+      "y": 9660
+    },
+    "14": {
+      "x": 5880,
+      "y": 9240
+    },
+    "22": {
+      "x": 7350,
+      "y": 11130
+    },
+    "24": {
+      "x": 6545,
+      "y": 19040
+    },
+    "25": {
+      "x": 6650,
+      "y": 18270
+    },
+    "26": {
+      "x": 6510,
+      "y": 16520
+    },
+    "27": {
+      "x": 5285,
+      "y": 16380
+    },
+    "30": {
+      "x": 2800,
+      "y": 17500
+    },
+    "2a": {
+      "x": 3325,
+      "y": 7210
+    },
+    "2b": {
+      "x": 3780,
+      "y": 6300
+    },
+    "3a": {
+      "x": 4200,
+      "y": 5320
+    },
+    "3b": {
+      "x": 5670,
+      "y": 5740
+    },
+    "6a": {
+      "x": 7560,
+      "y": 6440
+    },
+    "12d": {
+      "x": 5460,
+      "y": 12320
+    },
+    "12f": {
+      "x": 4305,
+      "y": 9975
+    },
+    "15b": {
+      "x": 6370,
+      "y": 9415
+    },
+    "16a": {
+      "x": 7840,
+      "y": 15610
+    },
+    "16b": {
+      "x": 8330,
+      "y": 15960
+    },
+    "17a": {
+      "x": 8540,
+      "y": 10640
+    },
+    "17b": {
+      "x": 9100,
+      "y": 10850
+    },
+    "19a": {
+      "x": 7770,
+      "y": 18620
+    },
+    "21a": {
+      "x": 7980,
+      "y": 17710
+    },
+    "21b": {
+      "x": 7350,
+      "y": 17360
+    },
+    "28b": {
+      "x": 4340,
+      "y": 18130
+    },
+    "29b": {
+      "x": 3640,
+      "y": 16590
+    },
+    "29c": {
+      "x": 3570,
+      "y": 17010
+    },
+    "29d": {
+      "x": 2730,
+      "y": 16730
+    }
+  },
+  "encounters": [
+    {
+      "id": "l16-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "crystal-golem",
+          "actor": "Crystal Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 5950
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a2a",
+      "area": "2a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3430,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Ilmei"
+        },
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3010,
+              "y": 6930
+            },
+            {
+              "x": 3710,
+              "y": 7350
+            },
+            {
+              "x": 3080,
+              "y": 7490
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a2b",
+      "area": "2b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 6720
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a3a",
+      "area": "3a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4060,
+              "y": 5180
+            }
+          ],
+          "tokenName": "Arbez"
+        }
+      ]
+    },
+    {
+      "id": "l16-a3b",
+      "area": "3b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 5740
+            }
+          ],
+          "tokenName": "Surlock"
+        },
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 5390
+            }
+          ],
+          "tokenName": "Deslarr"
+        },
+        {
+          "actorKey": "young-red-dragon",
+          "actor": "Young Red Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 5320
+            }
+          ],
+          "tokenName": "Ashranthax",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a4",
+      "area": "4",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2100,
+              "y": 4690
+            },
+            {
+              "x": 2170,
+              "y": 4690
+            },
+            {
+              "x": 2380,
+              "y": 4690
+            },
+            {
+              "x": 2450,
+              "y": 4690
+            },
+            {
+              "x": 2100,
+              "y": 4900
+            },
+            {
+              "x": 2100,
+              "y": 4970
+            },
+            {
+              "x": 2100,
+              "y": 5180
+            },
+            {
+              "x": 2170,
+              "y": 5180
+            },
+            {
+              "x": 2380,
+              "y": 5180
+            },
+            {
+              "x": 2450,
+              "y": 5180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 4620
+            }
+          ],
+          "tokenName": "Marquox"
+        }
+      ]
+    },
+    {
+      "id": "l16-a6a",
+      "area": "6a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Mirrk"
+        }
+      ]
+    },
+    {
+      "id": "l16-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "crystal-golem",
+          "actor": "Crystal Golem",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7770,
+              "y": 5110
+            },
+            {
+              "x": 7980,
+              "y": 5460
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a8",
+      "area": "8",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8820,
+              "y": 6230
+            }
+          ],
+          "tokenName": "Theru"
+        },
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8750,
+              "y": 6160
+            }
+          ],
+          "tokenName": "Eshant"
+        }
+      ]
+    },
+    {
+      "id": "l16-a10",
+      "area": "10",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "crystal-golem",
+          "actor": "Crystal Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 7490
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 7420
+            }
+          ],
+          "tokenName": "Urlon"
+        }
+      ]
+    },
+    {
+      "id": "l16-a11",
+      "area": "11",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "crystal-golem",
+          "actor": "Crystal Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 7770
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a12d",
+      "area": "12d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "red-dragon-wyrmling",
+          "actor": "Red Dragon Wyrmling",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 12320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a12f",
+      "area": "12f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "young-red-dragon",
+          "actor": "Young Red Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4200,
+              "y": 10010
+            }
+          ],
+          "tokenName": "Blazutranc",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "young-red-dragon-2",
+          "actor": "Young Red Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 9870
+            }
+          ],
+          "tokenName": "Meteoranzym",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 9660
+            }
+          ],
+          "tokenName": "Jerath"
+        }
+      ]
+    },
+    {
+      "id": "l16-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "young-red-dragon",
+          "actor": "Young Red Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 9240
+            }
+          ],
+          "tokenName": "Infernexus",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a15b",
+      "area": "15b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6230,
+              "y": 9450
+            }
+          ],
+          "tokenName": "Kaaltav"
+        }
+      ]
+    },
+    {
+      "id": "l16-a16a",
+      "area": "16a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "astyrranthor",
+          "actor": "Astyrranthor",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 14210
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3,
+          "aliases": [
+            "Adult Red Dragon"
+          ],
+          "tokenName": "Astyrranthor"
+        }
+      ]
+    },
+    {
+      "id": "l16-a16b",
+      "area": "16b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8470,
+              "y": 16030
+            }
+          ],
+          "tokenName": "Ir’rigo"
+        },
+        {
+          "actorKey": "githyanki-knight-2",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 16030
+            }
+          ],
+          "tokenName": "Kritinaya"
+        }
+      ]
+    },
+    {
+      "id": "l16-a17a",
+      "area": "17a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8470,
+              "y": 10500
+            }
+          ],
+          "tokenName": "Vheza"
+        }
+      ]
+    },
+    {
+      "id": "l16-a17b",
+      "area": "17b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8960,
+              "y": 10710
+            }
+          ],
+          "tokenName": "Evir"
+        },
+        {
+          "actorKey": "githyanki-gish-2",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8960,
+              "y": 10780
+            }
+          ],
+          "tokenName": "Hraznin"
+        }
+      ]
+    },
+    {
+      "id": "l16-a19a",
+      "area": "19a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 18340
+            },
+            {
+              "x": 7560,
+              "y": 18480
+            },
+            {
+              "x": 7420,
+              "y": 18690
+            },
+            {
+              "x": 7910,
+              "y": 18690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a21a",
+      "area": "21a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7910,
+              "y": 17570
+            }
+          ],
+          "tokenName": "Raajna"
+        },
+        {
+          "actorKey": "young-red-dragon",
+          "actor": "Young Red Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 17500
+            }
+          ],
+          "tokenName": "Smoakcant",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a21b",
+      "area": "21b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 9,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 17010
+            },
+            {
+              "x": 7280,
+              "y": 17080
+            },
+            {
+              "x": 7210,
+              "y": 17150
+            },
+            {
+              "x": 7350,
+              "y": 17220
+            },
+            {
+              "x": 7490,
+              "y": 17290
+            },
+            {
+              "x": 7350,
+              "y": 17780
+            },
+            {
+              "x": 7140,
+              "y": 17850
+            },
+            {
+              "x": 7350,
+              "y": 17920
+            },
+            {
+              "x": 7350,
+              "y": 17990
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a22",
+      "area": "22",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 11200
+            }
+          ],
+          "tokenName": "Al’chaia"
+        },
+        {
+          "actorKey": "young-red-dragon",
+          "actor": "Young Red Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 11200
+            }
+          ],
+          "tokenName": "Zolcharrx",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l16-a24",
+      "area": "24",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 19040
+            }
+          ],
+          "tokenName": "Kr’rison"
+        },
+        {
+          "actorKey": "githyanki-knight-2",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6440,
+              "y": 19110
+            }
+          ],
+          "tokenName": "Vlaadric"
+        }
+      ]
+    },
+    {
+      "id": "l16-a25",
+      "area": "25",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7140,
+              "y": 17920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a26",
+      "area": "26",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 16240
+            },
+            {
+              "x": 6510,
+              "y": 16240
+            },
+            {
+              "x": 6370,
+              "y": 16310
+            },
+            {
+              "x": 6510,
+              "y": 16310
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a27",
+      "area": "27",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 16170
+            }
+          ]
+        },
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 16100
+            },
+            {
+              "x": 5110,
+              "y": 16100
+            },
+            {
+              "x": 5180,
+              "y": 16100
+            },
+            {
+              "x": 5040,
+              "y": 16170
+            },
+            {
+              "x": 5110,
+              "y": 16170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l16-a28b",
+      "area": "28b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 18200
+            }
+          ],
+          "tokenName": "Salarrl"
+        }
+      ]
+    },
+    {
+      "id": "l16-a29b",
+      "area": "29b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githzerai-zerth",
+          "actor": "Githzerai Zerth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3220,
+              "y": 16450
+            }
+          ],
+          "tokenName": "Ezria"
+        }
+      ]
+    },
+    {
+      "id": "l16-a29c",
+      "area": "29c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3430,
+              "y": 17150
+            }
+          ],
+          "tokenName": "Tel’zact"
+        },
+        {
+          "actorKey": "mind-flayer-2",
+          "actor": "Mind Flayer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 17150
+            }
+          ],
+          "tokenName": "Yeluit"
+        }
+      ]
+    },
+    {
+      "id": "l16-a29d",
+      "area": "29d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-gish",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 16520
+            }
+          ],
+          "tokenName": "Aruut"
+        },
+        {
+          "actorKey": "githyanki-gish-2",
+          "actor": "Githyanki Gish",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 16590
+            }
+          ],
+          "tokenName": "Yangol"
+        }
+      ]
+    },
+    {
+      "id": "l16-a30",
+      "area": "30",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 17290
+            }
+          ],
+          "tokenName": "Saziq"
+        },
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 17290
+            },
+            {
+              "x": 2730,
+              "y": 17360
+            },
+            {
+              "x": 2730,
+              "y": 17430
+            },
+            {
+              "x": 2590,
+              "y": 17500
+            },
+            {
+              "x": 2590,
+              "y": 17570
+            },
+            {
+              "x": 2660,
+              "y": 17570
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

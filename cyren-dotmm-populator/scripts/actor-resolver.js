@@ -68,9 +68,20 @@ function candidate(document, source, pack = null) {
     id: document.id,
     source,
     pack: pack?.collection ?? null,
+    folderName: document.folder?.name ?? "",
     sourceCode: sourceCode(document),
     document
   };
+}
+
+function preferWorldFolders(candidates) {
+  if (candidates.length < 2) return candidates;
+  const preferred = ["Sier's DotMM Populator Imports", "Monster Manual", "Creatures"];
+  for (const folder of preferred) {
+    const matches = candidates.filter((item) => item.folderName === folder);
+    if (matches.length) return matches;
+  }
+  return candidates;
 }
 
 function preferSources(candidates, sourcePreference = []) {
@@ -84,6 +95,7 @@ function preferSources(candidates, sourcePreference = []) {
 
 function decide(candidates, source, matchedName, sourcePreference = []) {
   candidates = preferSources(candidates, sourcePreference);
+  if (source === "world") candidates = preferWorldFolders(candidates);
   if (candidates.length === 1) {
     return { status: source === "world" ? "resolved" : "requiresImport", source, matchedName, ...candidates[0] };
   }

@@ -1,0 +1,826 @@
+{
+  "schemaVersion": 1,
+  "level": 17,
+  "title": "Seadeeps",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 17",
+      "Level 17 (Copy)"
+    ],
+    "sourceId": "Scene.qcq1M3OKA7zmLbkI",
+    "width": 7700,
+    "height": 10500,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "4": {
+      "x": 8120,
+      "y": 4130
+    },
+    "9": {
+      "x": 4410,
+      "y": 6650
+    },
+    "10": {
+      "x": 4480,
+      "y": 7420
+    },
+    "14": {
+      "x": 5040,
+      "y": 7140
+    },
+    "15": {
+      "x": 5775,
+      "y": 7840
+    },
+    "6a": {
+      "x": 2870,
+      "y": 5775
+    },
+    "6c": {
+      "x": 2310,
+      "y": 7105
+    },
+    "7a": {
+      "x": 1750,
+      "y": 6020
+    },
+    "7b": {
+      "x": 1190,
+      "y": 5740
+    },
+    "7c": {
+      "x": 1190,
+      "y": 6300
+    },
+    "8a": {
+      "x": 3920,
+      "y": 9310
+    },
+    "12f": {
+      "x": 5285,
+      "y": 4725
+    },
+    "12g": {
+      "x": 6160,
+      "y": 4340
+    },
+    "12h": {
+      "x": 8190,
+      "y": 5390
+    },
+    "16a": {
+      "x": 5880,
+      "y": 8890
+    },
+    "16b": {
+      "x": 6440,
+      "y": 10920
+    },
+    "16c": {
+      "x": 5880,
+      "y": 10465
+    }
+  },
+  "encounters": [
+    {
+      "id": "l17-a4",
+      "area": "4",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flumph",
+          "actor": "Flumph",
+          "count": 9,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 3920
+            },
+            {
+              "x": 8190,
+              "y": 3920
+            },
+            {
+              "x": 8050,
+              "y": 3990
+            },
+            {
+              "x": 7910,
+              "y": 4060
+            },
+            {
+              "x": 8190,
+              "y": 4060
+            },
+            {
+              "x": 7980,
+              "y": 4200
+            },
+            {
+              "x": 8120,
+              "y": 4200
+            },
+            {
+              "x": 7840,
+              "y": 4270
+            },
+            {
+              "x": 7910,
+              "y": 4340
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a6a",
+      "area": "6a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 5670
+            },
+            {
+              "x": 2940,
+              "y": 5670
+            },
+            {
+              "x": 3010,
+              "y": 5670
+            },
+            {
+              "x": 2940,
+              "y": 5740
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a6c",
+      "area": "6c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flumph",
+          "actor": "Flumph",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 7070
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a7a",
+      "area": "7a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1680,
+              "y": 5740
+            },
+            {
+              "x": 1890,
+              "y": 5740
+            },
+            {
+              "x": 1680,
+              "y": 6090
+            },
+            {
+              "x": 1890,
+              "y": 6090
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a7b",
+      "area": "7b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-warrior",
+          "actor": "Githyanki Warrior",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1050,
+              "y": 5320
+            },
+            {
+              "x": 1050,
+              "y": 5390
+            },
+            {
+              "x": 1050,
+              "y": 5530
+            },
+            {
+              "x": 1050,
+              "y": 5600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a7c",
+      "area": "7c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "githyanki-knight",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1190,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Lashiir"
+        },
+        {
+          "actorKey": "githyanki-knight-2",
+          "actor": "Githyanki Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1120,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Yaveklar"
+        }
+      ]
+    },
+    {
+      "id": "l17-a8a",
+      "area": "8a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "neothelid",
+          "actor": "Neothelid",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 9310
+            }
+          ],
+          "tokenWidth": 4,
+          "tokenHeight": 4
+        }
+      ]
+    },
+    {
+      "id": "l17-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6580
+            },
+            {
+              "x": 4340,
+              "y": 6650
+            }
+          ]
+        },
+        {
+          "actorKey": "orog",
+          "actor": "Orog",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 6510
+            },
+            {
+              "x": 4200,
+              "y": 6510
+            },
+            {
+              "x": 4130,
+              "y": 6580
+            },
+            {
+              "x": 4200,
+              "y": 6580
+            },
+            {
+              "x": 4130,
+              "y": 6650
+            },
+            {
+              "x": 4200,
+              "y": 6650
+            },
+            {
+              "x": 4130,
+              "y": 6720
+            },
+            {
+              "x": 4200,
+              "y": 6720
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a10",
+      "area": "10",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 7210
+            }
+          ],
+          "tokenName": "Ahpok"
+        },
+        {
+          "actorKey": "intellect-devourer",
+          "actor": "Intellect Devourer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 7210
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "troglodyte",
+          "actor": "Troglodyte",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 7070
+            }
+          ],
+          "tokenName": "Glorz"
+        },
+        {
+          "actorKey": "veteran",
+          "actor": "Veteran",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 7070
+            }
+          ],
+          "tokenName": "Ishan Toru"
+        }
+      ]
+    },
+    {
+      "id": "l17-a12f",
+      "area": "12f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grimlock",
+          "actor": "Grimlock",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 4480
+            }
+          ]
+        },
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 4480
+            },
+            {
+              "x": 5250,
+              "y": 4480
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a12g",
+      "area": "12g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ulitharid",
+          "actor": "Ulitharid",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 4480
+            }
+          ],
+          "tokenName": "Extremiton",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l17-a12h",
+      "area": "12h",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ettin",
+          "actor": "Ettin",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 4900
+            },
+            {
+              "x": 7980,
+              "y": 5040
+            },
+            {
+              "x": 7980,
+              "y": 5670
+            },
+            {
+              "x": 8120,
+              "y": 5670
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l17-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 6650
+            }
+          ],
+          "tokenName": "Daundarak Steelfist"
+        },
+        {
+          "actorKey": "commoner-2",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 6860
+            }
+          ],
+          "tokenName": "Falain Tlandrue"
+        },
+        {
+          "actorKey": "commoner-3",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Jagtar Uythrapp"
+        },
+        {
+          "actorKey": "commoner-4",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": 1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 6860
+            }
+          ],
+          "tokenName": "Jarana Hammerstone"
+        },
+        {
+          "actorKey": "commoner-5",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 7280
+            }
+          ],
+          "tokenName": "Lament"
+        },
+        {
+          "actorKey": "commoner-6",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 7350
+            }
+          ],
+          "tokenName": "Lander Hellwind"
+        },
+        {
+          "actorKey": "commoner-7",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 7000
+            }
+          ],
+          "tokenName": "Merrily Shadowstep"
+        },
+        {
+          "actorKey": "commoner-8",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 7280
+            }
+          ],
+          "tokenName": "Stormal Voss"
+        },
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 6790
+            },
+            {
+              "x": 4970,
+              "y": 6860
+            },
+            {
+              "x": 4970,
+              "y": 7280
+            },
+            {
+              "x": 5040,
+              "y": 7490
+            }
+          ]
+        },
+        {
+          "actorKey": "noble",
+          "actor": "Noble",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 7560
+            }
+          ],
+          "tokenName": "Selphorn Amcathra"
+        }
+      ]
+    },
+    {
+      "id": "l17-a15",
+      "area": "15",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 7770
+            },
+            {
+              "x": 5530,
+              "y": 7840
+            },
+            {
+              "x": 5810,
+              "y": 7910
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a16a",
+      "area": "16a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "scaladar",
+          "actor": "Scaladar",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 8610
+            },
+            {
+              "x": 5810,
+              "y": 9240
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l17-a16b",
+      "area": "16b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 10640
+            },
+            {
+              "x": 6510,
+              "y": 10640
+            },
+            {
+              "x": 6370,
+              "y": 10780
+            },
+            {
+              "x": 6510,
+              "y": 10780
+            },
+            {
+              "x": 6370,
+              "y": 10920
+            },
+            {
+              "x": 6510,
+              "y": 10920
+            },
+            {
+              "x": 6370,
+              "y": 11060
+            },
+            {
+              "x": 6510,
+              "y": 11060
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l17-a16c",
+      "area": "16c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer",
+          "actor": "Mind Flayer",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 10290
+            },
+            {
+              "x": 5740,
+              "y": 10360
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

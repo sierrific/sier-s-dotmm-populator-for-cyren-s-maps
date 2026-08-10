@@ -1,0 +1,734 @@
+{
+  "schemaVersion": 1,
+  "level": 19,
+  "title": "Caverns of Ooze",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 19",
+      "Level 19 (Copy)"
+    ],
+    "sourceId": "Scene.ujYwvEB97Ki3yKus",
+    "width": 7700,
+    "height": 10220,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "2": {
+      "x": 5215,
+      "y": 8610
+    },
+    "4": {
+      "x": 6930,
+      "y": 10675
+    },
+    "6": {
+      "x": 4760,
+      "y": 6650
+    },
+    "7": {
+      "x": 8295,
+      "y": 7140
+    },
+    "8": {
+      "x": 9310,
+      "y": 5250
+    },
+    "9": {
+      "x": 8400,
+      "y": 4970
+    },
+    "12": {
+      "x": 7210,
+      "y": 3430
+    },
+    "14": {
+      "x": 5180,
+      "y": 3745
+    },
+    "1c": {
+      "x": 2695,
+      "y": 10640
+    },
+    "5a": {
+      "x": 9240,
+      "y": 10430
+    },
+    "11a": {
+      "x": 8925,
+      "y": 3465
+    },
+    "11b": {
+      "x": 9450,
+      "y": 4200
+    },
+    "13a": {
+      "x": 4900,
+      "y": 5810
+    },
+    "13c": {
+      "x": 5005,
+      "y": 11900
+    },
+    "13h": {
+      "x": 3115,
+      "y": 12005
+    }
+  },
+  "encounters": [
+    {
+      "id": "l19-a1c",
+      "area": "1c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "marid",
+          "actor": "Marid",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 10290
+            }
+          ],
+          "tokenName": "Ichthyglug",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "swarm-of-quippers",
+          "actor": "Swarm of Quippers",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 10080
+            },
+            {
+              "x": 2940,
+              "y": 10080
+            },
+            {
+              "x": 2520,
+              "y": 10220
+            },
+            {
+              "x": 3010,
+              "y": 10430
+            },
+            {
+              "x": 2590,
+              "y": 10500
+            },
+            {
+              "x": 2870,
+              "y": 10570
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l19-a2",
+      "area": "2",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "intelligent-black-pudding",
+          "actor": "Intelligent Black Pudding",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 7490
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "orog",
+          "actor": "Orog",
+          "count": 17,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 7770
+            },
+            {
+              "x": 5110,
+              "y": 7770
+            },
+            {
+              "x": 5040,
+              "y": 7840
+            },
+            {
+              "x": 5110,
+              "y": 7840
+            },
+            {
+              "x": 5180,
+              "y": 7840
+            },
+            {
+              "x": 5180,
+              "y": 8400
+            },
+            {
+              "x": 5110,
+              "y": 8470
+            },
+            {
+              "x": 5250,
+              "y": 8470
+            },
+            {
+              "x": 5390,
+              "y": 8470
+            },
+            {
+              "x": 5040,
+              "y": 8540
+            },
+            {
+              "x": 5320,
+              "y": 8540
+            },
+            {
+              "x": 5040,
+              "y": 8610
+            },
+            {
+              "x": 5180,
+              "y": 8610
+            },
+            {
+              "x": 5320,
+              "y": 8610
+            },
+            {
+              "x": 5110,
+              "y": 8680
+            },
+            {
+              "x": 5180,
+              "y": 8680
+            },
+            {
+              "x": 5250,
+              "y": 8680
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l19-a4",
+      "area": "4",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mud-mephit",
+          "actor": "Mud Mephit",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6930,
+              "y": 10010
+            }
+          ],
+          "tokenName": "Urm"
+        }
+      ]
+    },
+    {
+      "id": "l19-a5a",
+      "area": "5a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "intelligent-black-pudding",
+          "actor": "Intelligent Black Pudding",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9170,
+              "y": 10080
+            },
+            {
+              "x": 9310,
+              "y": 10080
+            },
+            {
+              "x": 9240,
+              "y": 10220
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l19-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gray-slaad",
+          "actor": "Gray Slaad",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6160
+            },
+            {
+              "x": 4690,
+              "y": 6160
+            }
+          ]
+        },
+        {
+          "actorKey": "huge-gray-ooze",
+          "actor": "Huge Gray Ooze",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 7070
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "intelligent-black-pudding",
+          "actor": "Intelligent Black Pudding",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 7490
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "orog",
+          "actor": "Orog",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4410,
+              "y": 6230
+            },
+            {
+              "x": 4620,
+              "y": 6230
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l19-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gas-spore",
+          "actor": "Gas Spore",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 7000
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "nalfeshnee",
+          "actor": "Nalfeshnee",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 7140
+            },
+            {
+              "x": 8260,
+              "y": 7210
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l19-a8",
+      "area": "8",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gas-spore",
+          "actor": "Gas Spore",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8960,
+              "y": 4900
+            },
+            {
+              "x": 9100,
+              "y": 4900
+            },
+            {
+              "x": 9100,
+              "y": 5110
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "gas-spore-2",
+          "actor": "Gas Spore",
+          "count": 10,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9520,
+              "y": 4760
+            },
+            {
+              "x": 9450,
+              "y": 4830
+            },
+            {
+              "x": 9380,
+              "y": 4900
+            },
+            {
+              "x": 9520,
+              "y": 4900
+            },
+            {
+              "x": 9450,
+              "y": 4970
+            },
+            {
+              "x": 9380,
+              "y": 5040
+            },
+            {
+              "x": 9450,
+              "y": 5110
+            },
+            {
+              "x": 9450,
+              "y": 5250
+            },
+            {
+              "x": 9520,
+              "y": 5250
+            },
+            {
+              "x": 9380,
+              "y": 5320
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l19-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gargoyle",
+          "actor": "Gargoyle",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 4620
+            },
+            {
+              "x": 8190,
+              "y": 4690
+            },
+            {
+              "x": 8190,
+              "y": 4760
+            },
+            {
+              "x": 8120,
+              "y": 4830
+            },
+            {
+              "x": 7980,
+              "y": 4900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l19-a11a",
+      "area": "11a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "galeb-duhr",
+          "actor": "Galeb Duhr",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8890,
+              "y": 3290
+            },
+            {
+              "x": 9030,
+              "y": 3360
+            },
+            {
+              "x": 8750,
+              "y": 3430
+            },
+            {
+              "x": 9170,
+              "y": 3500
+            },
+            {
+              "x": 8890,
+              "y": 3570
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l19-a11b",
+      "area": "11b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "dao",
+          "actor": "Dao",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9310,
+              "y": 4200
+            }
+          ],
+          "tokenName": "Jarûk",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "medusa",
+          "actor": "Medusa",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9380,
+              "y": 3780
+            },
+            {
+              "x": 9450,
+              "y": 3780
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l19-a12",
+      "area": "12",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "intelligent-black-pudding",
+          "actor": "Intelligent Black Pudding",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7000,
+              "y": 3290
+            },
+            {
+              "x": 6930,
+              "y": 3500
+            },
+            {
+              "x": 7140,
+              "y": 3500
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l19-a13a",
+      "area": "13a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gray-slaad",
+          "actor": "Gray Slaad",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 5320
+            },
+            {
+              "x": 4480,
+              "y": 5880
+            }
+          ]
+        },
+        {
+          "actorKey": "orog",
+          "actor": "Orog",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 5250
+            },
+            {
+              "x": 4410,
+              "y": 5950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l19-a13c",
+      "area": "13c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "rat",
+          "actor": "Rat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 11865
+            }
+          ],
+          "tokenName": "Miniature giant space hamster",
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l19-a13h",
+      "area": "13h",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer-arcanist",
+          "actor": "Mind Flayer Arcanist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 11970
+            }
+          ],
+          "tokenName": "N’ghathrod"
+        }
+      ]
+    },
+    {
+      "id": "l19-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "huge-gray-ooze",
+          "actor": "Huge Gray Ooze",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 3430
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+{
+  "schemaVersion": 1,
+  "level": 22,
+  "title": "Shadowdusk Hold",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 22",
+      "Level 22 (Copy)"
+    ],
+    "sourceId": "Scene.vXXt7G8PcaVYgsfv",
+    "width": 7560,
+    "height": 9800,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 4550,
+      "y": 2450
+    },
+    "2": {
+      "x": 4900,
+      "y": 1470
+    },
+    "3": {
+      "x": 2940,
+      "y": 2660
+    },
+    "6": {
+      "x": 1960,
+      "y": 3710
+    },
+    "8": {
+      "x": 2100,
+      "y": 2450
+    },
+    "9": {
+      "x": 6160,
+      "y": 2590
+    },
+    "12": {
+      "x": 7000,
+      "y": 2450
+    },
+    "13": {
+      "x": 6720,
+      "y": 3570
+    },
+    "17": {
+      "x": 7560,
+      "y": 4690
+    },
+    "28": {
+      "x": 3360,
+      "y": 6440
+    },
+    "32": {
+      "x": 5320,
+      "y": 7980
+    },
+    "39": {
+      "x": 2520,
+      "y": 8540
+    },
+    "4a": {
+      "x": 2660,
+      "y": 2030
+    },
+    "4b": {
+      "x": 2660,
+      "y": 1260
+    },
+    "10b": {
+      "x": 6440,
+      "y": 1260
+    },
+    "16c": {
+      "x": 7140,
+      "y": 6580
+    },
+    "18b": {
+      "x": 7280,
+      "y": 5600
+    },
+    "20a": {
+      "x": 4690,
+      "y": 5180
+    },
+    "20b": {
+      "x": 3220,
+      "y": 5320
+    },
+    "24a": {
+      "x": 2660,
+      "y": 4550
+    },
+    "24b": {
+      "x": 2240,
+      "y": 5880
+    },
+    "24c": {
+      "x": 2240,
+      "y": 6580
+    },
+    "34a": {
+      "x": 7000,
+      "y": 8610
+    }
+  },
+  "encounters": [
+    {
+      "id": "l22-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grell",
+          "actor": "Grell",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 1890
+            },
+            {
+              "x": 4200,
+              "y": 1890
+            },
+            {
+              "x": 4410,
+              "y": 2100
+            },
+            {
+              "x": 4550,
+              "y": 2100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a2",
+      "area": "2",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grell",
+          "actor": "Grell",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 1890
+            },
+            {
+              "x": 5320,
+              "y": 1890
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a3",
+      "area": "3",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grell",
+          "actor": "Grell",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 2450
+            },
+            {
+              "x": 2590,
+              "y": 2450
+            },
+            {
+              "x": 2520,
+              "y": 2520
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a4a",
+      "area": "4a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 1680
+            },
+            {
+              "x": 2870,
+              "y": 1750
+            },
+            {
+              "x": 2940,
+              "y": 1750
+            },
+            {
+              "x": 3010,
+              "y": 1750
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a4b",
+      "area": "4b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "adult-blue-dracolich",
+          "actor": "Adult Blue Dracolich",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1540,
+              "y": 8960
+            }
+          ],
+          "tokenName": "Lynnorax",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2450,
+              "y": 1260
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "living-unseen-servant",
+          "actor": "Living Unseen Servant",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1820,
+              "y": 3500
+            },
+            {
+              "x": 1680,
+              "y": 3570
+            },
+            {
+              "x": 1680,
+              "y": 3640
+            },
+            {
+              "x": 1820,
+              "y": 3640
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a8",
+      "area": "8",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grell",
+          "actor": "Grell",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 2380
+            },
+            {
+              "x": 2450,
+              "y": 2380
+            },
+            {
+              "x": 2380,
+              "y": 2520
+            },
+            {
+              "x": 2450,
+              "y": 2590
+            }
+          ]
+        },
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1890,
+              "y": 2590
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "will-o-wisp",
+          "actor": "Will-o'-Wisp",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 2800
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l22-a10b",
+      "area": "10b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "derrion-shadowdusk",
+          "actor": "Derrion Shadowdusk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 1400
+            }
+          ],
+          "aliases": [
+            "Champion"
+          ],
+          "tokenName": "Derrion Shadowdusk"
+        }
+      ]
+    },
+    {
+      "id": "l22-a12",
+      "area": "12",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "melissara-shadowdusk",
+          "actor": "Melissara Shadowdusk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 2030
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "zombie",
+          "actor": "Zombie",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 3640
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a16c",
+      "area": "16c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "will-o-wisp",
+          "actor": "Will-o'-Wisp",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6930,
+              "y": 6370
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l22-a17",
+      "area": "17",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vertrand-shadowdusk",
+          "actor": "Vertrand Shadowdusk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 4690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a18b",
+      "area": "18b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "berlain-shadowdusk",
+          "actor": "Berlain Shadowdusk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 5530
+            }
+          ]
+        },
+        {
+          "actorKey": "grell",
+          "actor": "Grell",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 5390
+            },
+            {
+              "x": 7490,
+              "y": 5390
+            }
+          ]
+        },
+        {
+          "actorKey": "will-o-wisp",
+          "actor": "Will-o'-Wisp",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6930,
+              "y": 5110
+            },
+            {
+              "x": 6930,
+              "y": 5600
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l22-a20a",
+      "area": "20a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 5250
+            }
+          ]
+        },
+        {
+          "actorKey": "will-o-wisp",
+          "actor": "Will-o'-Wisp",
+          "count": 5,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 5040
+            },
+            {
+              "x": 4200,
+              "y": 5110
+            },
+            {
+              "x": 5110,
+              "y": 5180
+            },
+            {
+              "x": 5110,
+              "y": 5530
+            },
+            {
+              "x": 4200,
+              "y": 5600
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l22-a20b",
+      "area": "20b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 5250
+            },
+            {
+              "x": 3360,
+              "y": 5250
+            },
+            {
+              "x": 3710,
+              "y": 5250
+            },
+            {
+              "x": 3430,
+              "y": 5320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a24a",
+      "area": "24a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2240,
+              "y": 4550
+            },
+            {
+              "x": 2380,
+              "y": 4690
+            },
+            {
+              "x": 2520,
+              "y": 4690
+            },
+            {
+              "x": 2100,
+              "y": 4760
+            },
+            {
+              "x": 2240,
+              "y": 4760
+            },
+            {
+              "x": 2450,
+              "y": 4760
+            },
+            {
+              "x": 2240,
+              "y": 4830
+            },
+            {
+              "x": 2590,
+              "y": 4830
+            },
+            {
+              "x": 2380,
+              "y": 4900
+            },
+            {
+              "x": 2590,
+              "y": 4900
+            },
+            {
+              "x": 2240,
+              "y": 4970
+            },
+            {
+              "x": 2450,
+              "y": 4970
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a24b",
+      "area": "24b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 5810
+            },
+            {
+              "x": 2660,
+              "y": 5880
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a24c",
+      "area": "24c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "death-knight",
+          "actor": "Death Knight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 10430
+            }
+          ],
+          "tokenName": "Dezmyr Shadowdusk"
+        }
+      ]
+    },
+    {
+      "id": "l22-a28",
+      "area": "28",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "death-slaad",
+          "actor": "Death Slaad",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 6020
+            },
+            {
+              "x": 3570,
+              "y": 6020
+            },
+            {
+              "x": 3080,
+              "y": 6090
+            },
+            {
+              "x": 3570,
+              "y": 6090
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a32",
+      "area": "32",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "death-slaad",
+          "actor": "Death Slaad",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 8120
+            },
+            {
+              "x": 5460,
+              "y": 8190
+            },
+            {
+              "x": 5460,
+              "y": 8260
+            },
+            {
+              "x": 5460,
+              "y": 8330
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a34a",
+      "area": "34a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "zalthar-shadowdusk",
+          "actor": "Zalthar Shadowdusk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 8890
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l22-a39",
+      "area": "39",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "archmage",
+          "actor": "Archmage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 7700
+            }
+          ],
+          "tokenName": "Cassiok Shadowdusk"
+        },
+        {
+          "actorKey": "gray-slaad",
+          "actor": "Gray Slaad",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 7700
+            }
+          ]
+        },
+        {
+          "actorKey": "grick-alpha",
+          "actor": "Grick Alpha",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2450,
+              "y": 7700
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    }
+  ]
+}

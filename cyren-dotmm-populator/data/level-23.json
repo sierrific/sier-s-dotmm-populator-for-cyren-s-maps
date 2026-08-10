@@ -1,0 +1,754 @@
+{
+  "schemaVersion": 1,
+  "level": 23,
+  "title": "Mad Wizard's Lair",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 23",
+      "Level 23 (Copy)"
+    ],
+    "sourceId": "Scene.UBuhV4uk2IdqTPI3",
+    "width": 7700,
+    "height": 10500,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "3": {
+      "x": 7210,
+      "y": 5180
+    },
+    "4": {
+      "x": 8190,
+      "y": 5880
+    },
+    "5": {
+      "x": 9170,
+      "y": 4410
+    },
+    "13": {
+      "x": 6230,
+      "y": 7490
+    },
+    "14": {
+      "x": 3290,
+      "y": 3920
+    },
+    "15": {
+      "x": 2730,
+      "y": 3220
+    },
+    "17": {
+      "x": 3570,
+      "y": 6230
+    },
+    "24": {
+      "x": 3920,
+      "y": 11130
+    },
+    "31": {
+      "x": 5600,
+      "y": 12040
+    },
+    "33": {
+      "x": 8820,
+      "y": 11480
+    },
+    "35": {
+      "x": 8260,
+      "y": 12110
+    },
+    "36": {
+      "x": 9240,
+      "y": 12110
+    },
+    "6b": {
+      "x": 7210,
+      "y": 3290
+    },
+    "10b": {
+      "x": 5110,
+      "y": 5810
+    },
+    "11b": {
+      "x": 5810,
+      "y": 5110
+    },
+    "21a": {
+      "x": 6440,
+      "y": 8960
+    },
+    "21b": {
+      "x": 7000,
+      "y": 9100
+    }
+  },
+  "encounters": [
+    {
+      "id": "l23-a3",
+      "area": "3",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "living-unseen-servant",
+          "actor": "Living Unseen Servant",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 11970
+            },
+            {
+              "x": 2870,
+              "y": 11970
+            },
+            {
+              "x": 2730,
+              "y": 12040
+            },
+            {
+              "x": 2520,
+              "y": 12110
+            },
+            {
+              "x": 2660,
+              "y": 12110
+            },
+            {
+              "x": 2730,
+              "y": 12180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a4",
+      "area": "4",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "helmed-horror",
+          "actor": "Helmed Horror",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 5810
+            },
+            {
+              "x": 7910,
+              "y": 6020
+            },
+            {
+              "x": 8400,
+              "y": 6090
+            },
+            {
+              "x": 7980,
+              "y": 6230
+            },
+            {
+              "x": 8330,
+              "y": 6230
+            },
+            {
+              "x": 8190,
+              "y": 6300
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "invisible-stalker",
+          "actor": "Invisible Stalker",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8820,
+              "y": 4130
+            },
+            {
+              "x": 8960,
+              "y": 4130
+            },
+            {
+              "x": 8750,
+              "y": 4200
+            },
+            {
+              "x": 8890,
+              "y": 4200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a6b",
+      "area": "6b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "pit-fiend",
+          "actor": "Pit Fiend",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6930,
+              "y": 3570
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l23-a10b",
+      "area": "10b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flameskull",
+          "actor": "Flameskull",
+          "count": 7,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4690,
+              "y": 6020
+            },
+            {
+              "x": 4830,
+              "y": 6020
+            },
+            {
+              "x": 4970,
+              "y": 6020
+            },
+            {
+              "x": 4690,
+              "y": 6160
+            },
+            {
+              "x": 4830,
+              "y": 6160
+            },
+            {
+              "x": 4900,
+              "y": 6160
+            },
+            {
+              "x": 4830,
+              "y": 6300
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l23-a11b",
+      "area": "11b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "archmage",
+          "actor": "Archmage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 5040
+            }
+          ],
+          "tokenName": "Trobriand"
+        },
+        {
+          "actorKey": "scaladar",
+          "actor": "Scaladar",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 4830
+            },
+            {
+              "x": 5600,
+              "y": 4830
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l23-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "trobriand",
+          "actor": "Trobriand",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 7070
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l23-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3150,
+              "y": 3780
+            }
+          ],
+          "tokenName": "Rabbithead"
+        }
+      ]
+    },
+    {
+      "id": "l23-a15",
+      "area": "15",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "deva",
+          "actor": "Deva",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3010,
+              "y": 3220
+            }
+          ],
+          "tokenName": "Aryx"
+        }
+      ]
+    },
+    {
+      "id": "l23-a17",
+      "area": "17",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "arcturia",
+          "actor": "Arcturia",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 6580
+            }
+          ]
+        },
+        {
+          "actorKey": "champion",
+          "actor": "Champion",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 6090
+            }
+          ],
+          "tokenName": "Dingohead"
+        },
+        {
+          "actorKey": "champion-2",
+          "actor": "Champion",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Iguanahead"
+        },
+        {
+          "actorKey": "champion-3",
+          "actor": "Champion",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3360,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Storkhead"
+        },
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 6020
+            }
+          ],
+          "tokenName": "Aardvarkhead"
+        },
+        {
+          "actorKey": "commoner-2",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3360,
+              "y": 6090
+            }
+          ]
+        },
+        {
+          "actorKey": "commoner-3",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Mothhead"
+        },
+        {
+          "actorKey": "commoner-4",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Shrewhead"
+        },
+        {
+          "actorKey": "mimic",
+          "actor": "Mimic",
+          "count": 12,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 6160
+            },
+            {
+              "x": 2800,
+              "y": 6160
+            },
+            {
+              "x": 3290,
+              "y": 6160
+            },
+            {
+              "x": 2660,
+              "y": 6230
+            },
+            {
+              "x": 2800,
+              "y": 6230
+            },
+            {
+              "x": 3290,
+              "y": 6230
+            },
+            {
+              "x": 3360,
+              "y": 6230
+            },
+            {
+              "x": 3430,
+              "y": 6230
+            },
+            {
+              "x": 2870,
+              "y": 6580
+            },
+            {
+              "x": 3220,
+              "y": 6580
+            },
+            {
+              "x": 2870,
+              "y": 6720
+            },
+            {
+              "x": 3220,
+              "y": 6720
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a21a",
+      "area": "21a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ultroloth",
+          "actor": "Ultroloth",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 8820
+            },
+            {
+              "x": 6650,
+              "y": 8820
+            },
+            {
+              "x": 6160,
+              "y": 9590
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a21b",
+      "area": "21b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ultroloth",
+          "actor": "Ultroloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 9590
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a24",
+      "area": "24",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "demilich",
+          "actor": "Demilich",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3675,
+              "y": 10885
+            }
+          ],
+          "tokenName": "Branta Myntion",
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l23-a31",
+      "area": "31",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "living-unseen-servant",
+          "actor": "Living Unseen Servant",
+          "count": 8,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 11900
+            },
+            {
+              "x": 5390,
+              "y": 11900
+            },
+            {
+              "x": 5460,
+              "y": 11900
+            },
+            {
+              "x": 5320,
+              "y": 11970
+            },
+            {
+              "x": 5250,
+              "y": 12040
+            },
+            {
+              "x": 5460,
+              "y": 12040
+            },
+            {
+              "x": 5530,
+              "y": 12040
+            },
+            {
+              "x": 5320,
+              "y": 12110
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a33",
+      "area": "33",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "empyrean",
+          "actor": "Empyrean",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8470,
+              "y": 11480
+            }
+          ],
+          "tokenName": "Nalkara",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l23-a35",
+      "area": "35",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flesh-golem",
+          "actor": "Flesh Golem",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7910,
+              "y": 11970
+            },
+            {
+              "x": 8120,
+              "y": 12180
+            }
+          ]
+        },
+        {
+          "actorKey": "halaster-blackcloak",
+          "actor": "Halaster Blackcloak",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8540,
+              "y": 12250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l23-a36",
+      "area": "36",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "raven",
+          "actor": "Raven",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8925,
+              "y": 12005
+            }
+          ],
+          "tokenName": "Crow",
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    }
+  ]
+}
