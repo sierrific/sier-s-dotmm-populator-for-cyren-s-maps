@@ -1,13 +1,15 @@
 import { MODULE_ID, SETTINGS, SUPPORTED_LEVELS } from "./constants.js";
 import { loadLevelData } from "./data-loader.js";
 import { validateEnvironment, validateLevelData, assertGm } from "./validation.js";
-import { resolveScene, scoreScene } from "./scene-resolver.js";
+import { resolveLevelScene, scoreLevelScene, scopeLevelData } from "./scene-resolver.js";
 import { resolveActors, actorResolutionSummary, actorSpecs } from "./actor-resolver.js";
 import { resolveAnchors } from "./anchor-resolver.js";
 import { planPopulation } from "./placement-engine.js";
 import { populateMissing, removeCreated, reconcile, rebuild, moduleTokenCounts } from "./populator.js";
 import { authorAnchor, cancelAnchorAuthoring } from "./anchor-authoring.js";
 import { openPlutoniumCreatureImporter, plutoniumStatus } from "./plutonium-helper.js";
+import { createMissingSafetyCopies } from "./safety-copies.js";
+import { importAvailableActors } from "./actor-importer.js";
 
 let previewContainer = null;
 
@@ -37,7 +39,7 @@ function drawPreview(scene, plan) {
 function displayStatus(result) {
   const created = result?.created?.length ?? 0;
   const removed = result?.removed?.length ?? 0;
-  ui.notifications.info(`Sier's DotMM Populator: ${created} criado(s), ${removed} removido(s).`);
+  ui.notifications.info(`Sier's DotMM Populator: ${created} created, ${removed} removed.`);
 }
 
 async function confirmAction(title, content) {
@@ -66,7 +68,7 @@ export class CyrenPopulatorApp extends FormApplication {
     const activeScene = canvas?.scene;
     if (activeScene) {
       const ranked = levels
-        .map((data) => ({ data, ...scoreScene(activeScene, data.scene) }))
+        .map((data) => ({ data, ...scoreLevelScene(activeScene, data) }))
         .sort((left, right) => right.score - left.score);
       if (ranked[0]?.score >= 180 && ranked[0].score > (ranked[1]?.score ?? 0)) {
         this.selectedLevel = ranked[0].data.level;
@@ -81,15 +83,16 @@ export class CyrenPopulatorApp extends FormApplication {
 
   async _buildContext() {
     assertGm();
-    const data = await this._selectedLevelData();
-    this.selectedLevel = data.level;
-    this.options.title = `Sier's DotMM Populator for Cyren's Maps — Level ${data.level}`;
+    const levelData = await this._selectedLevelData();
+    this.selectedLevel = levelData.level;
+    this.options.title = `Sier's DotMM Populator for Cyren's Maps — Level ${levelData.level}`;
     const environment = validateEnvironment();
-    const dataValidation = validateLevelData(data);
-    const sceneResolution = resolveScene(data.scene);
+    const dataValidation = validateLevelData(levelData);
+    const sceneResolution = resolveLevelScene(levelData);
     if (sceneResolution.status !== "resolved") {
-      return { data, environment, dataValidation, sceneResolution, blocked: true };
+      return { data: levelData, levelData, environment, dataValidation, sceneResolution, blocked: true };
     }
+    const data = scopeLevelData(levelData, sceneResolution.definition.key);
     const scene = sceneResolution.scene;
     const actors = await resolveActors(data);
     const anchors = resolveAnchors(scene, data);
@@ -97,7 +100,7 @@ export class CyrenPopulatorApp extends FormApplication {
     const actorBlockers = Array.from(actors.values()).filter((result) => result.status !== "resolved");
     const anchorBlockers = Array.from(anchors.values()).filter((result) => result.status !== "resolved");
     const blocked = !environment.ok || !dataValidation.ok || actorBlockers.length > 0 || anchorBlockers.length > 0;
-    return { data, environment, dataValidation, sceneResolution, scene, actors, anchors, plan, actorBlockers, anchorBlockers, blocked };
+    return { data, levelData, environment, dataValidation, sceneResolution, scene, actors, anchors, plan, actorBlockers, anchorBlockers, blocked };
   }
 
   async getData() {
@@ -132,6 +135,8 @@ export class CyrenPopulatorApp extends FormApplication {
       ...context,
       level: context.data.level,
       levelTitle: context.data.title,
+      scenePart: context.sceneResolution.definition?.label ?? context.sceneResolution.definition?.key ?? "main",
+      splitLevel: Array.isArray(context.levelData?.scenes) && context.levelData.scenes.length > 1,
       supportedLevels: SUPPORTED_LEVELS.map((level) => ({ level, selected: level === context.data.level })),
       sceneName: context.scene?.name ?? "—",
       sceneStatus: context.sceneResolution.status,
@@ -188,11 +193,27 @@ export class CyrenPopulatorApp extends FormApplication {
         await openPlutoniumCreatureImporter();
         return;
       }
+      if (action === "create-safety-copies") {
+        if (!await confirmAction("Create safety copies", "Create only the missing copies of the original maps for Levels 3–23?")) return;
+        const result = await createMissingSafetyCopies();
+        if (result.missingSources.length) throw new Error(`Missing source maps: ${result.missingSources.map((item) => item.name).join(", ")}.`);
+        ui.notifications.info(`Safety copies: ${result.created.length} created, ${result.existing.length} already existed.`);
+        await this._refreshContext();
+        return;
+      }
+      if (action === "import-available-actors") {
+        if (!await confirmAction("Import Actors", "Import only unambiguous Actor matches into the World, respecting the XMM → MPMM → MM preference?")) return;
+        const result = await importAvailableActors();
+        const blocked = result.blocked.length ? ` ${result.blocked.length} name(s) still require review.` : "";
+        ui.notifications.info(`Actors: ${result.created.length} imported, ${result.alreadyResolved.length} already available, ${result.removedDuplicates.length} redundant import(s) removed.${blocked}`);
+        await this._refreshContext();
+        return;
+      }
       const context = this.context ?? await this._buildContext();
-      if (!context.scene || !context.plan) throw new Error(`No unambiguous Level ${context.data.level} Scene is available.`);
+      if (!context.scene || !context.plan) throw new Error(`No unambiguous Level ${context.data.level} map is available.`);
       if (action === "preview") {
         drawPreview(context.scene, context.plan);
-        return ui.notifications.info(`Preview: ${context.plan.placements.length} token(s) planejado(s).`);
+        return ui.notifications.info(`Preview: ${context.plan.placements.length} token(s) planned.`);
       }
       if (action === "clear-preview") return clearPreview();
       if (action === "author-anchor") {
@@ -206,18 +227,18 @@ export class CyrenPopulatorApp extends FormApplication {
       if (action === "populate") displayStatus(await populateMissing(context.scene, context.plan));
       if (action === "reconcile") displayStatus(await reconcile(context.scene, context.plan, { level: context.data.level }));
       if (action === "remove") {
-        if (!await confirmAction("Remover Tokens", `Remover somente Tokens com flags deste módulo no Level ${context.data.level}?`)) return;
+        if (!await confirmAction("Remove Tokens", `Remove only Tokens flagged by this module on Level ${context.data.level}?`)) return;
         displayStatus(await removeCreated(context.scene, { level: context.data.level }));
       }
       if (action === "rebuild-level") {
-        if (!await confirmAction(`Reconstruir Level ${context.data.level}`, "Remover e recriar somente os Tokens marcados por este módulo?")) return;
+        if (!await confirmAction(`Rebuild Level ${context.data.level}`, "Remove and recreate only Tokens flagged by this module?")) return;
         const fresh = planPopulation(context.scene, context.data, context.actors, context.anchors, { ignoreExisting: true });
         displayStatus(await rebuild(context.scene, fresh, { level: context.data.level }));
       }
       if (action === "rebuild-area") {
         const area = String(this.element.find('[name="selectedArea"]').val() ?? "").trim().toLowerCase();
         if (!area) throw new Error("Choose an area.");
-        if (!await confirmAction(`Reconstruir área ${area}`, "Somente Tokens deste módulo nessa área serão removidos e recriados.")) return;
+        if (!await confirmAction(`Rebuild area ${area}`, "Only Tokens owned by this module in this area will be removed and recreated.")) return;
         const fresh = planPopulation(context.scene, context.data, context.actors, context.anchors, { areas: [area], ignoreExisting: true });
         displayStatus(await rebuild(context.scene, fresh, { level: context.data.level, areas: [area] }));
       }

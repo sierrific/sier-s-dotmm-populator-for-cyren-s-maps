@@ -1,0 +1,1588 @@
+{
+  "schemaVersion": 1,
+  "level": 14,
+  "title": "Arcturiadoom",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 14",
+      "Level 14 (Copy)"
+    ],
+    "sourceId": "Scene.SSFx6ygqzT0LlkLn",
+    "width": 7840,
+    "height": 10360,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "3": {
+      "x": 4830,
+      "y": 8400
+    },
+    "11": {
+      "x": 2310,
+      "y": 4200
+    },
+    "14": {
+      "x": 4690,
+      "y": 6475
+    },
+    "16": {
+      "x": 3850,
+      "y": 5740
+    },
+    "18": {
+      "x": 3850,
+      "y": 4340
+    },
+    "20": {
+      "x": 5390,
+      "y": 5740
+    },
+    "24": {
+      "x": 6650,
+      "y": 3920
+    },
+    "25": {
+      "x": 7490,
+      "y": 4200
+    },
+    "26": {
+      "x": 8330,
+      "y": 3325
+    },
+    "29": {
+      "x": 7525,
+      "y": 6510
+    },
+    "30": {
+      "x": 7840,
+      "y": 5670
+    },
+    "31": {
+      "x": 8190,
+      "y": 6020
+    },
+    "33": {
+      "x": 6650,
+      "y": 8260
+    },
+    "34": {
+      "x": 6090,
+      "y": 9030
+    },
+    "36": {
+      "x": 4830,
+      "y": 9240
+    },
+    "1a": {
+      "x": 3990,
+      "y": 8925
+    },
+    "2a": {
+      "x": 1680,
+      "y": 10220
+    },
+    "2c": {
+      "x": 2730,
+      "y": 10955
+    },
+    "9c": {
+      "x": 2030,
+      "y": 5180
+    },
+    "12a": {
+      "x": 2520,
+      "y": 3220
+    },
+    "12b": {
+      "x": 2100,
+      "y": 2310
+    },
+    "12c": {
+      "x": 2940,
+      "y": 2310
+    },
+    "12d": {
+      "x": 3780,
+      "y": 2310
+    },
+    "23a": {
+      "x": 6370,
+      "y": 2520
+    },
+    "23b": {
+      "x": 7490,
+      "y": 2520
+    },
+    "23c": {
+      "x": 6510,
+      "y": 1960
+    },
+    "23d": {
+      "x": 7070,
+      "y": 1960
+    },
+    "32a": {
+      "x": 5075,
+      "y": 7140
+    },
+    "32b": {
+      "x": 5670,
+      "y": 7280
+    },
+    "32c": {
+      "x": 5810,
+      "y": 7840
+    },
+    "39a": {
+      "x": 8050,
+      "y": 10080
+    },
+    "39c": {
+      "x": 7770,
+      "y": 10850
+    },
+    "40b": {
+      "x": 7945,
+      "y": 8820
+    }
+  },
+  "encounters": [
+    {
+      "id": "l14-a1a",
+      "area": "1a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bore-worm",
+          "actor": "Bore Worm",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 8960
+            }
+          ],
+          "tokenWidth": 4,
+          "tokenHeight": 4
+        },
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 8680
+            }
+          ],
+          "tokenName": "Hulziin"
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 8750
+            }
+          ]
+        },
+        {
+          "actorKey": "quasit",
+          "actor": "Quasit",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 8680
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l14-a2a",
+      "area": "2a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "deformed-duergar",
+          "actor": "Deformed Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1470,
+              "y": 10360
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l14-a2c",
+      "area": "2c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "carrion-crawler",
+          "actor": "Carrion Crawler",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 10640
+            },
+            {
+              "x": 2800,
+              "y": 10780
+            },
+            {
+              "x": 2870,
+              "y": 10990
+            },
+            {
+              "x": 2660,
+              "y": 11060
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l14-a3",
+      "area": "3",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-giant",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4690,
+              "y": 8680
+            }
+          ],
+          "tokenName": "Druvax",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "fire-giant-2",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 8120
+            }
+          ],
+          "tokenName": "Zelzzarf",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 13,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 7700
+            },
+            {
+              "x": 4830,
+              "y": 7770
+            },
+            {
+              "x": 4970,
+              "y": 7770
+            },
+            {
+              "x": 5040,
+              "y": 7770
+            },
+            {
+              "x": 4830,
+              "y": 7840
+            },
+            {
+              "x": 4970,
+              "y": 7840
+            },
+            {
+              "x": 5040,
+              "y": 7840
+            },
+            {
+              "x": 4480,
+              "y": 8470
+            },
+            {
+              "x": 4620,
+              "y": 8470
+            },
+            {
+              "x": 4830,
+              "y": 8470
+            },
+            {
+              "x": 4900,
+              "y": 8470
+            },
+            {
+              "x": 4410,
+              "y": 8540
+            },
+            {
+              "x": 4900,
+              "y": 8540
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a9c",
+      "area": "9c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 13,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2030,
+              "y": 4690
+            },
+            {
+              "x": 2030,
+              "y": 4760
+            },
+            {
+              "x": 2100,
+              "y": 4760
+            },
+            {
+              "x": 2030,
+              "y": 4830
+            },
+            {
+              "x": 2100,
+              "y": 4830
+            },
+            {
+              "x": 2030,
+              "y": 4900
+            },
+            {
+              "x": 2100,
+              "y": 4900
+            },
+            {
+              "x": 2030,
+              "y": 4970
+            },
+            {
+              "x": 2100,
+              "y": 4970
+            },
+            {
+              "x": 2030,
+              "y": 5040
+            },
+            {
+              "x": 2100,
+              "y": 5040
+            },
+            {
+              "x": 2030,
+              "y": 5110
+            },
+            {
+              "x": 2100,
+              "y": 5110
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2240,
+              "y": 4830
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a11",
+      "area": "11",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-giant",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 3780
+            }
+          ],
+          "tokenName": "Hrossk",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "giant-fire-beetle",
+          "actor": "Giant Fire Beetle",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 3850
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 21,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2170,
+              "y": 3850
+            },
+            {
+              "x": 2030,
+              "y": 4480
+            },
+            {
+              "x": 2100,
+              "y": 4480
+            },
+            {
+              "x": 2030,
+              "y": 4550
+            },
+            {
+              "x": 2100,
+              "y": 4550
+            },
+            {
+              "x": 2030,
+              "y": 4620
+            },
+            {
+              "x": 2100,
+              "y": 4620
+            },
+            {
+              "x": 2100,
+              "y": 4690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a12a",
+      "area": "12a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hell-hound",
+          "actor": "Hell Hound",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 2940
+            },
+            {
+              "x": 2940,
+              "y": 2940
+            },
+            {
+              "x": 1820,
+              "y": 3080
+            },
+            {
+              "x": 3500,
+              "y": 3150
+            },
+            {
+              "x": 2730,
+              "y": 3290
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a12b",
+      "area": "12b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-giant",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1820,
+              "y": 2240
+            }
+          ],
+          "tokenName": "Dralkana",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l14-a12c",
+      "area": "12c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-giant",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 2240
+            }
+          ],
+          "tokenName": "Ingritt",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l14-a12d",
+      "area": "12d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-giant",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 2240
+            }
+          ],
+          "tokenName": "Yarshoss",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l14-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-giant",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6230
+            }
+          ],
+          "tokenName": "Hrossk",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l14-a16",
+      "area": "16",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 5530
+            },
+            {
+              "x": 3780,
+              "y": 5530
+            },
+            {
+              "x": 3430,
+              "y": 5600
+            },
+            {
+              "x": 3570,
+              "y": 5600
+            },
+            {
+              "x": 3640,
+              "y": 5600
+            },
+            {
+              "x": 3710,
+              "y": 5600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a18",
+      "area": "18",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fire-giant",
+          "actor": "Fire Giant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4270,
+              "y": 4340
+            }
+          ],
+          "tokenName": "Emberosa",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3570,
+              "y": 4410
+            },
+            {
+              "x": 3640,
+              "y": 4410
+            },
+            {
+              "x": 3710,
+              "y": 4410
+            },
+            {
+              "x": 3710,
+              "y": 4550
+            }
+          ]
+        },
+        {
+          "actorKey": "smoke-mephit",
+          "actor": "Smoke Mephit",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4200,
+              "y": 4060
+            },
+            {
+              "x": 4480,
+              "y": 4200
+            },
+            {
+              "x": 4130,
+              "y": 4480
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a20",
+      "area": "20",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "animated-stove",
+          "actor": "Animated Stove",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 5390
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 5810
+            },
+            {
+              "x": 5880,
+              "y": 5880
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a23a",
+      "area": "23a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "scorpion",
+          "actor": "Scorpion",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6230,
+              "y": 2625
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "umber-hulk",
+          "actor": "Umber Hulk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 2450
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l14-a23b",
+      "area": "23b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "animated-armor",
+          "actor": "Animated Armor",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7350,
+              "y": 2590
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a23c",
+      "area": "23c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "death-dog",
+          "actor": "Death Dog",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 2030
+            }
+          ],
+          "tokenName": "Two Headed Rat"
+        }
+      ]
+    },
+    {
+      "id": "l14-a23d",
+      "area": "23d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "deep-gnome-svirfneblin",
+          "actor": "Deep Gnome (Svirfneblin)",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7140,
+              "y": 2030
+            }
+          ],
+          "tokenName": "Guffaw Gravelstock"
+        }
+      ]
+    },
+    {
+      "id": "l14-a24",
+      "area": "24",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 4340
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a25",
+      "area": "25",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 4480
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a26",
+      "area": "26",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 3430
+            }
+          ],
+          "tokenName": "Jarrk"
+        },
+        {
+          "actorKey": "hook-horror",
+          "actor": "Hook Horror",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 3430
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l14-a29",
+      "area": "29",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7210,
+              "y": 6300
+            }
+          ],
+          "tokenName": "Vanar Freth"
+        },
+        {
+          "actorKey": "shadow-demon",
+          "actor": "Shadow Demon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 6440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a30",
+      "area": "30",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "carrion-ogre",
+          "actor": "Carrion Ogre",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7490,
+              "y": 5670
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l14-a31",
+      "area": "31",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mage",
+          "actor": "Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8330,
+              "y": 6230
+            }
+          ],
+          "tokenName": "Ellix Gaspar"
+        }
+      ]
+    },
+    {
+      "id": "l14-a32a",
+      "area": "32a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 25,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 7070
+            },
+            {
+              "x": 4970,
+              "y": 7070
+            },
+            {
+              "x": 5040,
+              "y": 7070
+            },
+            {
+              "x": 4830,
+              "y": 7140
+            },
+            {
+              "x": 4970,
+              "y": 7140
+            },
+            {
+              "x": 5040,
+              "y": 7140
+            },
+            {
+              "x": 4830,
+              "y": 7210
+            },
+            {
+              "x": 4970,
+              "y": 7210
+            },
+            {
+              "x": 5040,
+              "y": 7210
+            },
+            {
+              "x": 4830,
+              "y": 7280
+            },
+            {
+              "x": 4970,
+              "y": 7280
+            },
+            {
+              "x": 5040,
+              "y": 7280
+            },
+            {
+              "x": 4830,
+              "y": 7350
+            },
+            {
+              "x": 4970,
+              "y": 7350
+            },
+            {
+              "x": 5180,
+              "y": 7350
+            },
+            {
+              "x": 4830,
+              "y": 7420
+            },
+            {
+              "x": 5180,
+              "y": 7420
+            },
+            {
+              "x": 5040,
+              "y": 7490
+            },
+            {
+              "x": 4970,
+              "y": 7560
+            },
+            {
+              "x": 5040,
+              "y": 7560
+            },
+            {
+              "x": 4830,
+              "y": 7630
+            },
+            {
+              "x": 4970,
+              "y": 7630
+            },
+            {
+              "x": 5040,
+              "y": 7630
+            },
+            {
+              "x": 4970,
+              "y": 7700
+            },
+            {
+              "x": 5040,
+              "y": 7700
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a32b",
+      "area": "32b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 7490
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a32c",
+      "area": "32c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 7560
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 7630
+            },
+            {
+              "x": 5950,
+              "y": 7630
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l14-a33",
+      "area": "33",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flumph",
+          "actor": "Flumph",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6510,
+              "y": 8540
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-warlord",
+          "actor": "Hobgoblin Warlord",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 8540
+            }
+          ],
+          "tokenName": "Doomcrown"
+        }
+      ]
+    },
+    {
+      "id": "l14-a34",
+      "area": "34",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gas-spore",
+          "actor": "Gas Spore",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 8960
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l14-a36",
+      "area": "36",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 9170
+            }
+          ],
+          "tokenName": "Yrrprek"
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 9310
+            },
+            {
+              "x": 4970,
+              "y": 9310
+            },
+            {
+              "x": 4900,
+              "y": 9380
+            },
+            {
+              "x": 4970,
+              "y": 9380
+            },
+            {
+              "x": 4900,
+              "y": 9450
+            },
+            {
+              "x": 4970,
+              "y": 9450
+            },
+            {
+              "x": 4900,
+              "y": 9520
+            },
+            {
+              "x": 4970,
+              "y": 9520
+            },
+            {
+              "x": 4900,
+              "y": 9590
+            },
+            {
+              "x": 4970,
+              "y": 9590
+            },
+            {
+              "x": 4900,
+              "y": 9660
+            },
+            {
+              "x": 4970,
+              "y": 9660
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 9310
+            }
+          ]
+        },
+        {
+          "actorKey": "quasit",
+          "actor": "Quasit",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 9240
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l14-a39a",
+      "area": "39a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8330,
+              "y": 9730
+            }
+          ],
+          "tokenName": "Alussiarr"
+        },
+        {
+          "actorKey": "rakshasa",
+          "actor": "Rakshasa",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8330,
+              "y": 9800
+            }
+          ],
+          "tokenName": "Alussiarr"
+        }
+      ]
+    },
+    {
+      "id": "l14-a39c",
+      "area": "39c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 10920
+            }
+          ],
+          "tokenName": "Nystalancer"
+        },
+        {
+          "actorKey": "commoner-2",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 10990
+            }
+          ],
+          "tokenName": "Venasorrn"
+        },
+        {
+          "actorKey": "living-unseen-servant",
+          "actor": "Living Unseen Servant",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8330,
+              "y": 11200
+            }
+          ]
+        },
+        {
+          "actorKey": "young-blue-dragon",
+          "actor": "Young Blue Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 10780
+            }
+          ],
+          "tokenName": "Nystalancer",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "young-blue-dragon-2",
+          "actor": "Young Blue Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 10920
+            }
+          ],
+          "tokenName": "Venasorrn",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l14-a40b",
+      "area": "40b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nalfeshnee",
+          "actor": "Nalfeshnee",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 8960
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    }
+  ]
+}

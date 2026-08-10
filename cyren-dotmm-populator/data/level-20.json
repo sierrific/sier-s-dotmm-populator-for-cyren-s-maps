@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "level": 20,
+  "title": "Runestone Caverns",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 20",
+      "Level 20 (Copy)"
+    ],
+    "sourceId": "Scene.udZhvp0gzWnpQzss",
+    "width": 7700,
+    "height": 10220,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 3710,
+      "y": 3920
+    },
+    "2": {
+      "x": 5390,
+      "y": 3850
+    },
+    "3": {
+      "x": 3500,
+      "y": 5040
+    },
+    "7": {
+      "x": 3920,
+      "y": 10290
+    },
+    "15": {
+      "x": 9065,
+      "y": 11830
+    },
+    "16": {
+      "x": 8540,
+      "y": 11585
+    },
+    "17": {
+      "x": 8470,
+      "y": 12460
+    },
+    "4a": {
+      "x": 2835,
+      "y": 6405
+    },
+    "4b": {
+      "x": 3430,
+      "y": 6300
+    },
+    "4c": {
+      "x": 2695,
+      "y": 7840
+    },
+    "6c": {
+      "x": 2800,
+      "y": 12215
+    },
+    "8a": {
+      "x": 4410,
+      "y": 11620
+    },
+    "8b": {
+      "x": 5110,
+      "y": 11410
+    },
+    "8d": {
+      "x": 5670,
+      "y": 11970
+    },
+    "9a": {
+      "x": 6160,
+      "y": 10010
+    },
+    "9b": {
+      "x": 6930,
+      "y": 10360
+    },
+    "11a": {
+      "x": 8610,
+      "y": 5880
+    },
+    "13b": {
+      "x": 6020,
+      "y": 8330
+    },
+    "13d": {
+      "x": 4970,
+      "y": 5110
+    },
+    "22b": {
+      "x": 8260,
+      "y": 9380
+    }
+  },
+  "encounters": [
+    {
+      "id": "l20-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-fire-beetle",
+          "actor": "Giant Fire Beetle",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 4200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a2",
+      "area": "2",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mad-golem",
+          "actor": "Mad Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 3850
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l20-a3",
+      "area": "3",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-fire-beetle",
+          "actor": "Giant Fire Beetle",
+          "count": 11,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 4340
+            },
+            {
+              "x": 3220,
+              "y": 4480
+            },
+            {
+              "x": 3430,
+              "y": 4690
+            },
+            {
+              "x": 3640,
+              "y": 4830
+            },
+            {
+              "x": 3080,
+              "y": 5040
+            },
+            {
+              "x": 3010,
+              "y": 5180
+            },
+            {
+              "x": 3150,
+              "y": 5180
+            },
+            {
+              "x": 3220,
+              "y": 5180
+            },
+            {
+              "x": 3290,
+              "y": 5250
+            },
+            {
+              "x": 3430,
+              "y": 5320
+            },
+            {
+              "x": 3920,
+              "y": 5530
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a4a",
+      "area": "4a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-centipede",
+          "actor": "Giant Centipede",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 6860
+            },
+            {
+              "x": 2940,
+              "y": 6860
+            },
+            {
+              "x": 2450,
+              "y": 7000
+            },
+            {
+              "x": 2800,
+              "y": 7070
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-fire-beetle",
+          "actor": "Giant Fire Beetle",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 6930
+            },
+            {
+              "x": 2590,
+              "y": 7000
+            },
+            {
+              "x": 2870,
+              "y": 7070
+            }
+          ]
+        },
+        {
+          "actorKey": "myconid-adult",
+          "actor": "Myconid Adult",
+          "count": 13,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 6440
+            },
+            {
+              "x": 2800,
+              "y": 6440
+            },
+            {
+              "x": 2590,
+              "y": 6510
+            },
+            {
+              "x": 2660,
+              "y": 6510
+            },
+            {
+              "x": 2730,
+              "y": 6510
+            },
+            {
+              "x": 2870,
+              "y": 6510
+            },
+            {
+              "x": 2590,
+              "y": 6580
+            },
+            {
+              "x": 2800,
+              "y": 6580
+            },
+            {
+              "x": 2660,
+              "y": 6650
+            },
+            {
+              "x": 2730,
+              "y": 6650
+            },
+            {
+              "x": 2660,
+              "y": 6720
+            },
+            {
+              "x": 2730,
+              "y": 6720
+            },
+            {
+              "x": 2800,
+              "y": 6720
+            }
+          ]
+        },
+        {
+          "actorKey": "myconid-sprout",
+          "actor": "Myconid Sprout",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 6370
+            },
+            {
+              "x": 2730,
+              "y": 6370
+            },
+            {
+              "x": 2660,
+              "y": 6440
+            },
+            {
+              "x": 2870,
+              "y": 6440
+            },
+            {
+              "x": 2800,
+              "y": 6510
+            },
+            {
+              "x": 2660,
+              "y": 6580
+            },
+            {
+              "x": 2730,
+              "y": 6580
+            },
+            {
+              "x": 2520,
+              "y": 6650
+            },
+            {
+              "x": 2590,
+              "y": 6650
+            },
+            {
+              "x": 2800,
+              "y": 6650
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a4b",
+      "area": "4b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "myconid-sovereign",
+          "actor": "Myconid Sovereign",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 6160
+            }
+          ],
+          "tokenName": "Floot",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l20-a4c",
+      "area": "4c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-centipede",
+          "actor": "Giant Centipede",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 7070
+            },
+            {
+              "x": 2800,
+              "y": 7210
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-fire-beetle",
+          "actor": "Giant Fire Beetle",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 7210
+            }
+          ]
+        },
+        {
+          "actorKey": "quaggoth-spore-servant",
+          "actor": "Quaggoth Spore Servant",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 7910
+            },
+            {
+              "x": 2590,
+              "y": 7980
+            },
+            {
+              "x": 2520,
+              "y": 8050
+            },
+            {
+              "x": 2660,
+              "y": 8050
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a6c",
+      "area": "6c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gorka-tharn",
+          "actor": "Gorka Tharn",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3150,
+              "y": 12180
+            }
+          ]
+        },
+        {
+          "actorKey": "mummy",
+          "actor": "Mummy",
+          "count": 8,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2450,
+              "y": 12110
+            },
+            {
+              "x": 2450,
+              "y": 12180
+            },
+            {
+              "x": 2520,
+              "y": 12180
+            },
+            {
+              "x": 2660,
+              "y": 12180
+            },
+            {
+              "x": 2660,
+              "y": 12250
+            },
+            {
+              "x": 2800,
+              "y": 12250
+            },
+            {
+              "x": 2520,
+              "y": 12320
+            },
+            {
+              "x": 2660,
+              "y": 12390
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 10500
+            }
+          ],
+          "tokenName": "Akith Xornbane"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 10430
+            }
+          ],
+          "tokenName": "Anchok Muzgardt"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 10500
+            }
+          ],
+          "tokenName": "Garlynth Ironhead"
+        },
+        {
+          "actorKey": "duergar-4",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 10360
+            }
+          ],
+          "tokenName": "Klom Xornbane"
+        },
+        {
+          "actorKey": "duergar-5",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 10360
+            }
+          ],
+          "tokenName": "Skrac Blackskull"
+        },
+        {
+          "actorKey": "duergar-6",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 10430
+            }
+          ],
+          "tokenName": "Xarta Muzgardt"
+        },
+        {
+          "actorKey": "gargoyle",
+          "actor": "Gargoyle",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 10150
+            },
+            {
+              "x": 4900,
+              "y": 10290
+            },
+            {
+              "x": 4830,
+              "y": 10360
+            },
+            {
+              "x": 4760,
+              "y": 10500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a8a",
+      "area": "8a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gargoyle",
+          "actor": "Gargoyle",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4060,
+              "y": 12040
+            },
+            {
+              "x": 4270,
+              "y": 12040
+            },
+            {
+              "x": 4060,
+              "y": 12110
+            }
+          ]
+        },
+        {
+          "actorKey": "stone-golem",
+          "actor": "Stone Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4060,
+              "y": 11690
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l20-a8b",
+      "area": "8b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gargoyle",
+          "actor": "Gargoyle",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 10360
+            },
+            {
+              "x": 4900,
+              "y": 10570
+            }
+          ]
+        },
+        {
+          "actorKey": "stone-golem",
+          "actor": "Stone Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4970,
+              "y": 10780
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l20-a8d",
+      "area": "8d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "haungharassk",
+          "actor": "Haungharassk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5530,
+              "y": 11970
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l20-a9a",
+      "area": "9a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "stone-golem",
+          "actor": "Stone Golem",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 9800
+            },
+            {
+              "x": 5880,
+              "y": 10150
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l20-a9b",
+      "area": "9b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "beholder",
+          "actor": "Beholder",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6510,
+              "y": 10850
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l20-a11a",
+      "area": "11a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hammer-handed-golem",
+          "actor": "Hammer-handed Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 5740
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2,
+          "aliases": [
+            "Stone Golem"
+          ],
+          "tokenName": "Hammer-handed Golem"
+        }
+      ]
+    },
+    {
+      "id": "l20-a13b",
+      "area": "13b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "gargoyle",
+          "actor": "Gargoyle",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 8050
+            },
+            {
+              "x": 6090,
+              "y": 8190
+            },
+            {
+              "x": 5880,
+              "y": 8470
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a13d",
+      "area": "13d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "archmage",
+          "actor": "Archmage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 4760
+            }
+          ],
+          "tokenName": "Akarrth Shadowdusk"
+        },
+        {
+          "actorKey": "beholder",
+          "actor": "Beholder",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 4760
+            }
+          ],
+          "tokenName": "Gz’zarp",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "grell",
+          "actor": "Grell",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 4760
+            },
+            {
+              "x": 4760,
+              "y": 4830
+            }
+          ]
+        },
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4830,
+              "y": 4760
+            },
+            {
+              "x": 4830,
+              "y": 4830
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l20-a15",
+      "area": "15",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "vampire",
+          "actor": "Vampire",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9100,
+              "y": 11900
+            }
+          ],
+          "tokenName": "Sabatene Xilzzrin"
+        },
+        {
+          "actorKey": "vampire-2",
+          "actor": "Vampire",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9100,
+              "y": 12110
+            }
+          ],
+          "tokenName": "Tebran Madannith"
+        }
+      ]
+    },
+    {
+      "id": "l20-a16",
+      "area": "16",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "animated-staff-of-frost",
+          "actor": "Animated Staff of Frost",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8680,
+              "y": 11690
+            }
+          ],
+          "aliases": [
+            "Animated Flying Sword",
+            "Flying Sword"
+          ],
+          "tokenName": "Animated Staff of Frost"
+        }
+      ]
+    },
+    {
+      "id": "l20-a17",
+      "area": "17",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "lich",
+          "actor": "Lich",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8750,
+              "y": 12320
+            }
+          ],
+          "tokenName": "Ezzat"
+        },
+        {
+          "actorKey": "pseudodragon",
+          "actor": "Pseudodragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8820,
+              "y": 12320
+            }
+          ],
+          "tokenName": "Ipses",
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l20-a22b",
+      "area": "22b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "marilith",
+          "actor": "Marilith",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 9450
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    }
+  ]
+}

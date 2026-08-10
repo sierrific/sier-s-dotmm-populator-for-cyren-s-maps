@@ -1,8 +1,8 @@
 <form class="cyren-populator" autocomplete="off">
   <header class="summary">
     <div><strong>Level:</strong> <select name="selectedLevel">{{#each supportedLevels}}<option value="{{level}}" {{#if selected}}selected{{/if}}>Level {{level}}</option>{{/each}}</select> — {{levelTitle}}</div>
-    <div><strong>Cena:</strong> {{sceneName}} <span class="status status-{{sceneStatus}}">{{sceneStatus}}</span></div>
-    <div><strong>Actors:</strong> {{actorResolved}}/{{actorTotal}} · <strong>Âncoras:</strong> {{anchorResolved}}/{{anchorTotal}} · <strong>Plano:</strong> {{planCount}} novos · {{moduleCounts.total}} já marcados</div>
+    <div><strong>Scene:</strong> {{sceneName}} <span class="status status-{{sceneStatus}}">{{sceneStatus}}</span>{{#if splitLevel}} · <strong>Part:</strong> {{scenePart}}{{/if}}</div>
+    <div><strong>Actors:</strong> {{actorResolved}}/{{actorTotal}} · <strong>Anchors:</strong> {{anchorResolved}}/{{anchorTotal}} · <strong>Plan:</strong> {{planCount}} new · {{moduleCounts.total}} already marked</div>
   </header>
 
   {{#if environmentErrors.length}}<div class="notice error">{{#each environmentErrors}}<p>{{this}}</p>{{/each}}</div>{{/if}}
@@ -10,76 +10,79 @@
   {{#if environmentWarnings.length}}<div class="notice warning">{{#each environmentWarnings}}<p>{{this}}</p>{{/each}}</div>{{/if}}
 
   <nav class="tabs" data-group="primary-tabs">
-    <a class="item" data-tab="review"><i class="fas fa-list-check"></i> Revisão</a>
+    <a class="item" data-tab="review"><i class="fas fa-list-check"></i> Review</a>
     <a class="item" data-tab="actors"><i class="fas fa-dragon"></i> Actors</a>
-    <a class="item" data-tab="anchors"><i class="fas fa-location-dot"></i> Âncoras</a>
-    <a class="item" data-tab="actions"><i class="fas fa-wand-magic-sparkles"></i> Executar</a>
+    <a class="item" data-tab="anchors"><i class="fas fa-location-dot"></i> Anchors</a>
+    <a class="item" data-tab="actions"><i class="fas fa-wand-magic-sparkles"></i> Execute</a>
   </nav>
 
   <section class="content">
     <div class="tab" data-group="primary-tabs" data-tab="review">
       <table>
-        <thead><tr><th>Área</th><th>Encontro</th><th>Tokens</th><th>Âncora</th><th>Revisão</th></tr></thead>
+        <thead><tr><th>Area</th><th>Encounter</th><th>Tokens</th><th>Anchor</th><th>Review</th></tr></thead>
         <tbody>{{#each encounterRows}}<tr>
           <td>{{area}}</td><td>{{id}}</td><td>{{total}}</td><td class="status-{{anchorStatus}}">{{anchorStatus}}</td>
-          <td>{{#if humanReview}}manual {{/if}}{{#if conditional}}condicional{{/if}}</td>
+          <td>{{#if humanReview}}manual {{/if}}{{#if conditional}}conditional{{/if}}</td>
         </tr>{{/each}}</tbody>
       </table>
       {{#if planIssues.length}}
-      <h3>Bloqueios e instâncias dispensadas</h3>
-      <table><thead><tr><th>Área</th><th>Encontro</th><th>Actor</th><th>Instância</th><th>Motivo</th></tr></thead>
+      <h3>Blockers and skipped instances</h3>
+      <table><thead><tr><th>Area</th><th>Encounter</th><th>Actor</th><th>Instance</th><th>Reason</th></tr></thead>
         <tbody>{{#each planIssues}}<tr><td>{{area}}</td><td>{{encounterId}}</td><td>{{actorKey}}</td><td>{{instance}}</td><td>{{reason}}</td></tr>{{/each}}</tbody>
       </table>
       {{/if}}
       {{#if planWarnings.length}}
-      <h3>Avisos de revisão</h3>
-      <table><thead><tr><th>Área</th><th>Encontro</th><th>Motivo</th></tr></thead>
+      <h3>Review warnings</h3>
+      <table><thead><tr><th>Area</th><th>Encounter</th><th>Reason</th></tr></thead>
         <tbody>{{#each planWarnings}}<tr><td>{{area}}</td><td>{{encounterId}}</td><td>{{reason}}</td></tr>{{/each}}</tbody>
       </table>
       {{/if}}
     </div>
 
     <div class="tab" data-group="primary-tabs" data-tab="actors">
-      <p class="hint">Preferência de fonte: XMM → MPMM → MM. O desempate só ocorre quando o Actor contém metadado de origem.</p>
+      <p class="hint">Source preference: XMM → MPMM → MM. A source tie-break is used only when the Actor includes origin metadata.</p>
       <div class="plutonium-box">
         <button type="button" data-action="open-plutonium" {{#unless plutonium.active}}disabled{{/unless}}>
-          <i class="fas fa-book-sparkles"></i> Abrir importador de criaturas do Plutonium
+          <i class="fas fa-book-sparkles"></i> Open Plutonium creature importer
         </button>
-        <span>Plutonium {{plutonium.version}} · faltantes: {{unresolvedActorNames}}</span>
+        <span>Plutonium {{plutonium.version}} · missing: {{unresolvedActorNames}}</span>
       </div>
-      <div class="form-group"><label>Compêndios preferidos</label><input type="text" name="preferredPacks" value="{{preferredPacks}}" placeholder="world.ddb-masmorra-ddb-monsters, dnd5e.monsters"></div>
+      <button type="button" data-action="import-available-actors"><i class="fas fa-file-import"></i> Import unambiguous matches into the World</button>
+      <div class="form-group"><label>Preferred compendiums</label><input type="text" name="preferredPacks" value="{{preferredPacks}}" placeholder="world.ddb-masmorra-ddb-monsters, dnd5e.monsters"></div>
       <table>
-        <thead><tr><th>Chave</th><th>Nome / fonte</th><th>Status</th><th>Override UUID</th></tr></thead>
+        <thead><tr><th>Key</th><th>Name / source</th><th>Status</th><th>Override UUID</th></tr></thead>
         <tbody>{{#each actorRows}}<tr>
           <td>{{actorKey}}</td><td>{{match}} <small>{{sourceCode}} · {{source}}</small></td><td class="status-{{status}}">{{status}}{{#if candidateCount}} ({{candidateCount}}){{/if}}</td>
           <td><input type="text" name="override.{{actorKey}}" value="{{uuid}}" placeholder="Actor.xxxxxxxxxxxxxxxx"></td>
         </tr>{{/each}}</tbody>
       </table>
-      <button type="button" data-action="save-settings"><i class="fas fa-floppy-disk"></i> Salvar mapeamentos</button>
+      <button type="button" data-action="save-settings"><i class="fas fa-floppy-disk"></i> Save mappings</button>
     </div>
 
     <div class="tab" data-group="primary-tabs" data-tab="anchors">
-      <p class="hint">Tiles numerados da Cyren têm prioridade; fallback só vale na geometria exata. A autoria manual grava apenas uma configuração deste módulo.</p>
-      <div class="form-group"><label>Área</label><select name="selectedArea">{{#each anchorRows}}<option value="{{area}}">{{area}} — {{status}} / {{source}}</option>{{/each}}</select></div>
-      <button type="button" data-action="author-anchor"><i class="fas fa-crosshairs"></i> Marcar âncora no canvas</button>
-      <table><thead><tr><th>Área</th><th>Status</th><th>Origem</th><th>X</th><th>Y</th></tr></thead>
+      <p class="hint">Numbered Cyren tiles take priority. Verified fallback coordinates require an exact geometry match. Manual authoring stores only a setting owned by this module.</p>
+      <div class="form-group"><label>Area</label><select name="selectedArea">{{#each anchorRows}}<option value="{{area}}">{{area}} — {{status}} / {{source}}</option>{{/each}}</select></div>
+      <button type="button" data-action="author-anchor"><i class="fas fa-crosshairs"></i> Mark anchor on canvas</button>
+      <table><thead><tr><th>Area</th><th>Status</th><th>Source</th><th>X</th><th>Y</th></tr></thead>
         <tbody>{{#each anchorRows}}<tr><td>{{area}}</td><td class="status-{{status}}">{{status}}</td><td>{{source}}</td><td>{{x}}</td><td>{{y}}</td></tr>{{/each}}</tbody>
       </table>
     </div>
 
     <div class="tab actions" data-group="primary-tabs" data-tab="actions">
-      <div class="notice warning"><p>Nenhuma ação altera Walls, Lights, Tiles, Notes, Sounds, Drawings, Regions, Actors ou configurações da Cyren. Remoção e rebuild alcançam somente Tokens com flags deste módulo.</p></div>
-      <button type="button" data-action="preview"><i class="fas fa-eye"></i> Preview sem salvar</button>
-      <button type="button" data-action="clear-preview"><i class="fas fa-eye-slash"></i> Limpar preview</button>
-      <button type="button" data-action="populate" {{#if blocked}}disabled{{/if}}><i class="fas fa-plus"></i> Criar faltantes</button>
-      <button type="button" data-action="reconcile" {{#if blocked}}disabled{{/if}}><i class="fas fa-scale-balanced"></i> Reconciliar</button>
+      <button type="button" data-action="create-safety-copies"><i class="fas fa-copy"></i> Create missing safety copies (Levels 3–23)</button>
       <hr>
-      <div class="form-group"><label>Área para rebuild</label><select name="selectedArea">{{#each anchorRows}}<option value="{{area}}">{{area}}</option>{{/each}}</select></div>
-      <button class="danger" type="button" data-action="rebuild-area" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild da área</button>
-      <button class="danger" type="button" data-action="rebuild-level" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild do Level {{level}}</button>
-      <button class="danger" type="button" data-action="remove"><i class="fas fa-trash-can"></i> Remover Tokens do módulo</button>
+      <div class="notice warning"><p>Population and Token maintenance never change Cyren Walls, Lights, Tiles, Notes, Sounds, Drawings, Regions, Actors, or settings. Removal and rebuild affect only Tokens flagged by this module.</p></div>
+      <button type="button" data-action="preview"><i class="fas fa-eye"></i> Preview without saving</button>
+      <button type="button" data-action="clear-preview"><i class="fas fa-eye-slash"></i> Clear preview</button>
+      <button type="button" data-action="populate" {{#if blocked}}disabled{{/if}}><i class="fas fa-plus"></i> Create missing</button>
+      <button type="button" data-action="reconcile" {{#if blocked}}disabled{{/if}}><i class="fas fa-scale-balanced"></i> Reconcile</button>
+      <hr>
+      <div class="form-group"><label>Area to rebuild</label><select name="selectedArea">{{#each anchorRows}}<option value="{{area}}">{{area}}</option>{{/each}}</select></div>
+      <button class="danger" type="button" data-action="rebuild-area" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild area</button>
+      <button class="danger" type="button" data-action="rebuild-level" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild current map (Level {{level}})</button>
+      <button class="danger" type="button" data-action="remove"><i class="fas fa-trash-can"></i> Remove module Tokens</button>
     </div>
   </section>
 
-  <footer><button type="button" data-action="refresh"><i class="fas fa-arrows-rotate"></i> Atualizar revisão</button></footer>
+  <footer><button type="button" data-action="refresh"><i class="fas fa-arrows-rotate"></i> Refresh review</button></footer>
 </form>

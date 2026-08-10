@@ -1,0 +1,1024 @@
+{
+  "schemaVersion": 1,
+  "level": 8,
+  "title": "Slitherswamp",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 08",
+      "Level 08 (Copy)"
+    ],
+    "sourceId": "Scene.U7HLx02AqQzluOAV",
+    "width": 7700,
+    "height": 10360,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "2": {
+      "x": 4130,
+      "y": 6230
+    },
+    "9": {
+      "x": 4830,
+      "y": 9520
+    },
+    "13": {
+      "x": 6930,
+      "y": 12285
+    },
+    "16": {
+      "x": 7980,
+      "y": 9870
+    },
+    "20": {
+      "x": 7980,
+      "y": 4970
+    },
+    "23": {
+      "x": 4900,
+      "y": 4830
+    },
+    "24": {
+      "x": 4480,
+      "y": 3290
+    },
+    "4b": {
+      "x": 3010,
+      "y": 7910
+    },
+    "8a": {
+      "x": 3220,
+      "y": 11270
+    },
+    "8b": {
+      "x": 3080,
+      "y": 12320
+    },
+    "11b": {
+      "x": 5810,
+      "y": 11970
+    },
+    "15c": {
+      "x": 9450,
+      "y": 12425
+    },
+    "15f": {
+      "x": 9170,
+      "y": 10150
+    },
+    "17b": {
+      "x": 8470,
+      "y": 7770
+    },
+    "19a": {
+      "x": 5950,
+      "y": 7385
+    },
+    "19c": {
+      "x": 5880,
+      "y": 6265
+    },
+    "19d": {
+      "x": 6370,
+      "y": 5040
+    },
+    "21a": {
+      "x": 8960,
+      "y": 3955
+    },
+    "21b": {
+      "x": 9240,
+      "y": 3360
+    },
+    "22a": {
+      "x": 5810,
+      "y": 3850
+    },
+    "22b": {
+      "x": 6440,
+      "y": 3500
+    }
+  },
+  "encounters": [
+    {
+      "id": "l08-a2",
+      "area": "2",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bullywug",
+          "actor": "Bullywug",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4690,
+              "y": 5670
+            },
+            {
+              "x": 4830,
+              "y": 5810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a4b",
+      "area": "4b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "shambling-mound",
+          "actor": "Shambling Mound",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3010,
+              "y": 7630
+            },
+            {
+              "x": 2730,
+              "y": 7840
+            },
+            {
+              "x": 2870,
+              "y": 7840
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l08-a8a",
+      "area": "8a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flesh-golem",
+          "actor": "Flesh Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 11130
+            }
+          ]
+        },
+        {
+          "actorKey": "wight",
+          "actor": "Wight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 11550
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a8b",
+      "area": "8b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mage",
+          "actor": "Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 12460
+            }
+          ],
+          "tokenName": "Karstis"
+        },
+        {
+          "actorKey": "minotaur-skeleton",
+          "actor": "Minotaur Skeleton",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 12180
+            },
+            {
+              "x": 2870,
+              "y": 12180
+            },
+            {
+              "x": 2730,
+              "y": 12320
+            },
+            {
+              "x": 3010,
+              "y": 12390
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "wight",
+          "actor": "Wight",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 11690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ghost",
+          "actor": "Ghost",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5250,
+              "y": 10010
+            }
+          ]
+        },
+        {
+          "actorKey": "swarm-of-insects",
+          "actor": "Swarm of Insects",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 9870
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a11b",
+      "area": "11b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 11760
+            }
+          ],
+          "tokenName": "Arachnafein Zaphrorzza"
+        },
+        {
+          "actorKey": "drow-elite-warrior-2",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 11760
+            }
+          ],
+          "tokenName": "Dirzanna Freth"
+        }
+      ]
+    },
+    {
+      "id": "l08-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-elite-warrior",
+          "actor": "Drow Elite Warrior",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 12320
+            }
+          ],
+          "tokenName": "Xirk Dezpeti’il"
+        }
+      ]
+    },
+    {
+      "id": "l08-a15c",
+      "area": "15c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9170,
+              "y": 12460
+            }
+          ],
+          "tokenName": "Agorra Duskaxe"
+        },
+        {
+          "actorKey": "spirit-naga",
+          "actor": "Spirit Naga",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9380,
+              "y": 12530
+            }
+          ],
+          "tokenName": "Excrutha",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "spirit-naga-2",
+          "actor": "Spirit Naga",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9310,
+              "y": 12670
+            }
+          ],
+          "tokenName": "Serakath",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l08-a15f",
+      "area": "15f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "troll",
+          "actor": "Troll",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9030,
+              "y": 10150
+            },
+            {
+              "x": 9030,
+              "y": 10290
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l08-a16",
+      "area": "16",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bone-naga",
+          "actor": "Bone Naga",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 9310
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2,
+          "aliases": [
+            "Bone Naga (Spirit)"
+          ],
+          "tokenName": "Bone Naga"
+        }
+      ]
+    },
+    {
+      "id": "l08-a17b",
+      "area": "17b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "spirit-naga",
+          "actor": "Spirit Naga",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8260,
+              "y": 7770
+            }
+          ],
+          "tokenName": "Hexacali",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "yuan-ti-pureblood",
+          "actor": "Yuan-ti Pureblood",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8120,
+              "y": 7770
+            },
+            {
+              "x": 8120,
+              "y": 7840
+            },
+            {
+              "x": 8120,
+              "y": 7910
+            },
+            {
+              "x": 8120,
+              "y": 7980
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a19a",
+      "area": "19a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bullywug",
+          "actor": "Bullywug",
+          "count": 8,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 7140
+            },
+            {
+              "x": 5740,
+              "y": 7210
+            },
+            {
+              "x": 6650,
+              "y": 7210
+            },
+            {
+              "x": 6370,
+              "y": 7350
+            },
+            {
+              "x": 6020,
+              "y": 7420
+            },
+            {
+              "x": 5810,
+              "y": 7490
+            },
+            {
+              "x": 6440,
+              "y": 7490
+            },
+            {
+              "x": 6160,
+              "y": 7560
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-frog",
+          "actor": "Giant Frog",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 7210
+            },
+            {
+              "x": 6020,
+              "y": 7280
+            },
+            {
+              "x": 6300,
+              "y": 7490
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a19c",
+      "area": "19c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "torbit",
+          "actor": "Torbit",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 6090
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a19d",
+      "area": "19d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "yuan-ti-abomination",
+          "actor": "Yuan-ti Abomination",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 5110
+            },
+            {
+              "x": 6230,
+              "y": 5110
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l08-a20",
+      "area": "20",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bullywug",
+          "actor": "Bullywug",
+          "count": 10,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7910,
+              "y": 4550
+            },
+            {
+              "x": 8120,
+              "y": 4620
+            },
+            {
+              "x": 8260,
+              "y": 4760
+            },
+            {
+              "x": 7700,
+              "y": 4970
+            },
+            {
+              "x": 8190,
+              "y": 4970
+            },
+            {
+              "x": 7980,
+              "y": 5180
+            },
+            {
+              "x": 8050,
+              "y": 5180
+            },
+            {
+              "x": 7840,
+              "y": 5250
+            },
+            {
+              "x": 7770,
+              "y": 5390
+            },
+            {
+              "x": 7910,
+              "y": 5390
+            }
+          ]
+        },
+        {
+          "actorKey": "bullywug-2",
+          "actor": "Bullywug",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 4270
+            },
+            {
+              "x": 7910,
+              "y": 4340
+            },
+            {
+              "x": 7910,
+              "y": 4410
+            },
+            {
+              "x": 8120,
+              "y": 4410
+            },
+            {
+              "x": 8050,
+              "y": 4480
+            },
+            {
+              "x": 7840,
+              "y": 4620
+            },
+            {
+              "x": 7560,
+              "y": 4760
+            },
+            {
+              "x": 8120,
+              "y": 4830
+            },
+            {
+              "x": 7770,
+              "y": 4900
+            },
+            {
+              "x": 7840,
+              "y": 4970
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-frog",
+          "actor": "Giant Frog",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 4620
+            },
+            {
+              "x": 7840,
+              "y": 4690
+            },
+            {
+              "x": 8120,
+              "y": 4760
+            },
+            {
+              "x": 7770,
+              "y": 5040
+            },
+            {
+              "x": 8050,
+              "y": 5040
+            },
+            {
+              "x": 7840,
+              "y": 5110
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a21a",
+      "area": "21a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hydra",
+          "actor": "Hydra",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8610,
+              "y": 3780
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l08-a21b",
+      "area": "21b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bullywug",
+          "actor": "Bullywug",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9310,
+              "y": 3500
+            }
+          ],
+          "tokenName": "Kuketh"
+        },
+        {
+          "actorKey": "death-slaad",
+          "actor": "Death Slaad",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9310,
+              "y": 3430
+            }
+          ],
+          "tokenName": "Kuketh"
+        }
+      ]
+    },
+    {
+      "id": "l08-a22a",
+      "area": "22a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bullywug",
+          "actor": "Bullywug",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 3710
+            },
+            {
+              "x": 6020,
+              "y": 3710
+            },
+            {
+              "x": 5880,
+              "y": 3780
+            },
+            {
+              "x": 5880,
+              "y": 3850
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-frog",
+          "actor": "Giant Frog",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 3640
+            },
+            {
+              "x": 5950,
+              "y": 3780
+            },
+            {
+              "x": 6020,
+              "y": 3780
+            },
+            {
+              "x": 5810,
+              "y": 3850
+            },
+            {
+              "x": 6090,
+              "y": 3850
+            },
+            {
+              "x": 5880,
+              "y": 3920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l08-a22b",
+      "area": "22b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "carrion-crawler",
+          "actor": "Carrion Crawler",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6090,
+              "y": 3500
+            },
+            {
+              "x": 6510,
+              "y": 3500
+            },
+            {
+              "x": 6300,
+              "y": 3570
+            },
+            {
+              "x": 6440,
+              "y": 3710
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l08-a23",
+      "area": "23",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bullywug",
+          "actor": "Bullywug",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 5600
+            }
+          ]
+        },
+        {
+          "actorKey": "bullywug-2",
+          "actor": "Bullywug",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 4550
+            },
+            {
+              "x": 5040,
+              "y": 4550
+            },
+            {
+              "x": 4970,
+              "y": 4620
+            },
+            {
+              "x": 5040,
+              "y": 4620
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-toad",
+          "actor": "Giant Toad",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 4270
+            },
+            {
+              "x": 5320,
+              "y": 4410
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l08-a24",
+      "area": "24",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bullywug",
+          "actor": "Bullywug",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4410,
+              "y": 3360
+            },
+            {
+              "x": 4060,
+              "y": 3430
+            },
+            {
+              "x": 4200,
+              "y": 3500
+            },
+            {
+              "x": 4410,
+              "y": 3570
+            },
+            {
+              "x": 4130,
+              "y": 3640
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-toad",
+          "actor": "Giant Toad",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 3710
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1200 @@
+{
+  "schemaVersion": 1,
+  "level": 5,
+  "title": "Wyllowwood",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 05",
+      "Level 05 (Copy)"
+    ],
+    "sourceId": "Scene.kZI3t8JfeR0VMP1g",
+    "width": 11760,
+    "height": 16240,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 11130,
+      "y": 3290
+    },
+    "5": {
+      "x": 6300,
+      "y": 9380
+    },
+    "6": {
+      "x": 3885,
+      "y": 7945
+    },
+    "8": {
+      "x": 5040,
+      "y": 10570
+    },
+    "9": {
+      "x": 9520,
+      "y": 11410
+    },
+    "14": {
+      "x": 7560,
+      "y": 16100
+    },
+    "17": {
+      "x": 8610,
+      "y": 17010
+    },
+    "20": {
+      "x": 7980,
+      "y": 14070
+    },
+    "2a": {
+      "x": 7910,
+      "y": 7140
+    },
+    "2b": {
+      "x": 7595,
+      "y": 5705
+    },
+    "2c": {
+      "x": 6160,
+      "y": 7560
+    },
+    "2d": {
+      "x": 7420,
+      "y": 4200
+    },
+    "2e": {
+      "x": 1960,
+      "y": 7630
+    },
+    "3a": {
+      "x": 6720,
+      "y": 6370
+    },
+    "4b": {
+      "x": 4130,
+      "y": 6440
+    },
+    "4d": {
+      "x": 3990,
+      "y": 5250
+    },
+    "6a": {
+      "x": 3080,
+      "y": 15820
+    },
+    "6b": {
+      "x": 2450,
+      "y": 16940
+    },
+    "6c": {
+      "x": 2450,
+      "y": 17500
+    },
+    "6d": {
+      "x": 2450,
+      "y": 15540
+    },
+    "6e": {
+      "x": 2450,
+      "y": 16100
+    },
+    "6f": {
+      "x": 2870,
+      "y": 16240
+    },
+    "6g": {
+      "x": 3185,
+      "y": 16240
+    },
+    "6j": {
+      "x": 2730,
+      "y": 14000
+    },
+    "6k": {
+      "x": 3290,
+      "y": 14140
+    },
+    "11a": {
+      "x": 10535,
+      "y": 8575
+    },
+    "12a": {
+      "x": 5845,
+      "y": 12810
+    },
+    "12b": {
+      "x": 5950,
+      "y": 13230
+    },
+    "12c": {
+      "x": 6230,
+      "y": 13790
+    },
+    "16a": {
+      "x": 9800,
+      "y": 15120
+    },
+    "16b": {
+      "x": 10010,
+      "y": 15680
+    },
+    "16c": {
+      "x": 9940,
+      "y": 16100
+    },
+    "16d": {
+      "x": 9555,
+      "y": 16695
+    },
+    "18a": {
+      "x": 7070,
+      "y": 11935
+    },
+    "23b": {
+      "x": 8960,
+      "y": 14630
+    },
+    "24b": {
+      "x": 8960,
+      "y": 15610
+    }
+  },
+  "encounters": [
+    {
+      "id": "l05-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "black-bear",
+          "actor": "Black Bear",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9660,
+              "y": 3920
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a2a",
+      "area": "2a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "black-bear",
+          "actor": "Black Bear",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7980,
+              "y": 7210
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a2b",
+      "area": "2b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ettercap",
+          "actor": "Ettercap",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7350,
+              "y": 5600
+            },
+            {
+              "x": 7350,
+              "y": 5810
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 5,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 5600
+            },
+            {
+              "x": 7490,
+              "y": 5670
+            },
+            {
+              "x": 7210,
+              "y": 5740
+            },
+            {
+              "x": 7210,
+              "y": 6020
+            },
+            {
+              "x": 7350,
+              "y": 6020
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a2c",
+      "area": "2c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "awakened-tree",
+          "actor": "Awakened Tree",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 7070
+            },
+            {
+              "x": 5530,
+              "y": 7140
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l05-a2d",
+      "area": "2d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "will-o-wisp",
+          "actor": "Will-o'-Wisp",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7140,
+              "y": 4200
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l05-a2e",
+      "area": "2e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "basilisk",
+          "actor": "Basilisk",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1610,
+              "y": 8330
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a3a",
+      "area": "3a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "ettercap",
+          "actor": "Ettercap",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 5740
+            },
+            {
+              "x": 7000,
+              "y": 5810
+            },
+            {
+              "x": 6580,
+              "y": 5950
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 5,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6580,
+              "y": 5600
+            },
+            {
+              "x": 6860,
+              "y": 5670
+            },
+            {
+              "x": 6580,
+              "y": 5810
+            },
+            {
+              "x": 6790,
+              "y": 5950
+            },
+            {
+              "x": 7000,
+              "y": 5950
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a4b",
+      "area": "4b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cloaker",
+          "actor": "Cloaker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 6230
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a4d",
+      "area": "4d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cloaker",
+          "actor": "Cloaker",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 5320
+            },
+            {
+              "x": 4480,
+              "y": 5740
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "awakened-tree",
+          "actor": "Awakened Tree",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 8750
+            },
+            {
+              "x": 7700,
+              "y": 10080
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "elk",
+          "actor": "Elk",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6510,
+              "y": 9030
+            },
+            {
+              "x": 6720,
+              "y": 9100
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "awakened-tree",
+          "actor": "Awakened Tree",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 8400
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l05-a6a",
+      "area": "6a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "awakened-tree",
+          "actor": "Awakened Tree",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3010,
+              "y": 17080
+            }
+          ],
+          "tokenName": "Halastree",
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "giant-bat",
+          "actor": "Giant Bat",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 15330
+            },
+            {
+              "x": 3360,
+              "y": 15470
+            },
+            {
+              "x": 3430,
+              "y": 15750
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6b",
+      "area": "6b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "displacer-beast",
+          "actor": "Displacer Beast",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 17080
+            }
+          ],
+          "tokenName": "Crissann",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6c",
+      "area": "6c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "wyllow",
+          "actor": "Wyllow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 17220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a6d",
+      "area": "6d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-bat",
+          "actor": "Giant Bat",
+          "count": 4,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 15260
+            },
+            {
+              "x": 2800,
+              "y": 15330
+            },
+            {
+              "x": 2380,
+              "y": 15400
+            },
+            {
+              "x": 2240,
+              "y": 15610
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6e",
+      "area": "6e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-bat",
+          "actor": "Giant Bat",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 15890
+            },
+            {
+              "x": 2380,
+              "y": 16100
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6f",
+      "area": "6f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-bat",
+          "actor": "Giant Bat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 16240
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6g",
+      "area": "6g",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-bat",
+          "actor": "Giant Bat",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3360,
+              "y": 15960
+            },
+            {
+              "x": 3220,
+              "y": 16170
+            },
+            {
+              "x": 3010,
+              "y": 16240
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6j",
+      "area": "6j",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-toad",
+          "actor": "Giant Toad",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 14000
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a6k",
+      "area": "6k",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-toad",
+          "actor": "Giant Toad",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3290,
+              "y": 14210
+            },
+            {
+              "x": 3290,
+              "y": 14490
+            },
+            {
+              "x": 2870,
+              "y": 14700
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a8",
+      "area": "8",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "brown-bear",
+          "actor": "Brown Bear",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 10220
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "giant-wasp",
+          "actor": "Giant Wasp",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 9730
+            },
+            {
+              "x": 5180,
+              "y": 9730
+            },
+            {
+              "x": 5110,
+              "y": 9800
+            },
+            {
+              "x": 5180,
+              "y": 9800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "young-green-dragon",
+          "actor": "Young Green Dragon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9240,
+              "y": 11200
+            }
+          ],
+          "tokenName": "Tearulai",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a11a",
+      "area": "11a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mimic",
+          "actor": "Mimic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10150,
+              "y": 8260
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a12a",
+      "area": "12a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 12530
+            },
+            {
+              "x": 6160,
+              "y": 12600
+            },
+            {
+              "x": 5950,
+              "y": 12740
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a12b",
+      "area": "12b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 13160
+            },
+            {
+              "x": 6230,
+              "y": 13230
+            },
+            {
+              "x": 6020,
+              "y": 13370
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a12c",
+      "area": "12c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6300,
+              "y": 13650
+            },
+            {
+              "x": 6510,
+              "y": 13720
+            },
+            {
+              "x": 6300,
+              "y": 13860
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7280,
+              "y": 16380
+            }
+          ],
+          "tokenName": "Mobar"
+        }
+      ]
+    },
+    {
+      "id": "l05-a16a",
+      "area": "16a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9520,
+              "y": 15050
+            },
+            {
+              "x": 9590,
+              "y": 15120
+            },
+            {
+              "x": 9520,
+              "y": 15190
+            },
+            {
+              "x": 9520,
+              "y": 15470
+            },
+            {
+              "x": 9660,
+              "y": 15470
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a16b",
+      "area": "16b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 9,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9730,
+              "y": 15540
+            },
+            {
+              "x": 9870,
+              "y": 15540
+            },
+            {
+              "x": 9520,
+              "y": 15610
+            },
+            {
+              "x": 9660,
+              "y": 15610
+            },
+            {
+              "x": 9800,
+              "y": 15610
+            },
+            {
+              "x": 9870,
+              "y": 15610
+            },
+            {
+              "x": 9520,
+              "y": 15680
+            },
+            {
+              "x": 9590,
+              "y": 15680
+            },
+            {
+              "x": 9800,
+              "y": 15680
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a16c",
+      "area": "16c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9520,
+              "y": 16030
+            },
+            {
+              "x": 9660,
+              "y": 16100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a16d",
+      "area": "16d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9450,
+              "y": 16450
+            },
+            {
+              "x": 9590,
+              "y": 16520
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a17",
+      "area": "17",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8680,
+              "y": 16940
+            }
+          ],
+          "tokenName": "Vool"
+        }
+      ]
+    },
+    {
+      "id": "l05-a18a",
+      "area": "18a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "awakened-tree",
+          "actor": "Awakened Tree",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6720,
+              "y": 10850
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l05-a20",
+      "area": "20",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "chimera",
+          "actor": "Chimera",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 14070
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l05-a23b",
+      "area": "23b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "boar",
+          "actor": "Boar",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8890,
+              "y": 14770
+            },
+            {
+              "x": 8890,
+              "y": 14980
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l05-a24b",
+      "area": "24b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "werebat",
+          "actor": "Werebat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9450,
+              "y": 15540
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

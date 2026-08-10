@@ -9,6 +9,8 @@ installer/              Optional local installation helpers
 tools/                  Validation, tests, and packaging
 ```
 
+`tools/generate-derived-levels.mjs` regenerates the Levels 3–23 metadata from locally supplied reference material. Its inputs belong under the ignored `.discovery-temp/` directory and must never be committed or packaged.
+
 ## Local checks
 
 Node.js 20 or newer is recommended.

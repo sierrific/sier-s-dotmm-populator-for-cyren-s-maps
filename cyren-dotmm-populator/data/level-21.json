@@ -1,0 +1,1780 @@
+{
+  "schemaVersion": 1,
+  "level": 21,
+  "title": "Terminus Level",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 21",
+      "Level 21 (Copy)"
+    ],
+    "sourceId": "Scene.92jrAitUbN2zglAm",
+    "width": 7700,
+    "height": 9800,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 2100,
+      "y": 3290
+    },
+    "13": {
+      "x": 3640,
+      "y": 6090
+    },
+    "14": {
+      "x": 3640,
+      "y": 5110
+    },
+    "15": {
+      "x": 2940,
+      "y": 5950
+    },
+    "24": {
+      "x": 7140,
+      "y": 6160
+    },
+    "4a": {
+      "x": 6860,
+      "y": 4025
+    },
+    "4b": {
+      "x": 6055,
+      "y": 3570
+    },
+    "6a": {
+      "x": 2520,
+      "y": 5180
+    },
+    "6b": {
+      "x": 2310,
+      "y": 5670
+    },
+    "6c": {
+      "x": 3360,
+      "y": 5110
+    },
+    "10b": {
+      "x": 4340,
+      "y": 5250
+    },
+    "11a": {
+      "x": 4480,
+      "y": 4970
+    },
+    "16a": {
+      "x": 1960,
+      "y": 6370
+    },
+    "16b": {
+      "x": 1960,
+      "y": 6930
+    },
+    "16c": {
+      "x": 2240,
+      "y": 6510
+    },
+    "16d": {
+      "x": 2800,
+      "y": 6930
+    },
+    "17a": {
+      "x": 3920,
+      "y": 7630
+    },
+    "17b": {
+      "x": 4900,
+      "y": 7630
+    },
+    "17c": {
+      "x": 4340,
+      "y": 7210
+    },
+    "17d": {
+      "x": 5180,
+      "y": 7210
+    },
+    "18b": {
+      "x": 1400,
+      "y": 8470
+    },
+    "18c": {
+      "x": 1435,
+      "y": 9450
+    },
+    "18d": {
+      "x": 3640,
+      "y": 9870
+    },
+    "19a": {
+      "x": 5600,
+      "y": 10430
+    },
+    "20a": {
+      "x": 6370,
+      "y": 9450
+    },
+    "20b": {
+      "x": 7350,
+      "y": 10220
+    },
+    "20c": {
+      "x": 6510,
+      "y": 8680
+    },
+    "23a": {
+      "x": 4620,
+      "y": 6090
+    },
+    "23b": {
+      "x": 6580,
+      "y": 6510
+    },
+    "23c": {
+      "x": 6510,
+      "y": 7910
+    }
+  },
+  "encounters": [
+    {
+      "id": "l21-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "beholder-zombie",
+          "actor": "Beholder Zombie",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1120,
+              "y": 3570
+            },
+            {
+              "x": 1260,
+              "y": 3570
+            },
+            {
+              "x": 1120,
+              "y": 3710
+            },
+            {
+              "x": 1260,
+              "y": 3710
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1470,
+              "y": 3570
+            },
+            {
+              "x": 1540,
+              "y": 3570
+            },
+            {
+              "x": 1470,
+              "y": 3640
+            },
+            {
+              "x": 1540,
+              "y": 3640
+            },
+            {
+              "x": 1470,
+              "y": 3710
+            },
+            {
+              "x": 1540,
+              "y": 3710
+            }
+          ]
+        },
+        {
+          "actorKey": "remorhaz",
+          "actor": "Remorhaz",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1120,
+              "y": 3920
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l21-a4a",
+      "area": "4a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 3780
+            },
+            {
+              "x": 7560,
+              "y": 3850
+            },
+            {
+              "x": 7420,
+              "y": 3990
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l21-a4b",
+      "area": "4b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "fomorian",
+          "actor": "Fomorian",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 3290
+            },
+            {
+              "x": 5740,
+              "y": 3360
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l21-a6a",
+      "area": "6a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 5250
+            }
+          ],
+          "tokenName": "Kavalra"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 5320
+            }
+          ],
+          "tokenName": "Nisha"
+        }
+      ]
+    },
+    {
+      "id": "l21-a6b",
+      "area": "6b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2310,
+              "y": 5740
+            }
+          ],
+          "tokenName": "Duldor"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2310,
+              "y": 5810
+            }
+          ],
+          "tokenName": "Grimdor"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 5740
+            }
+          ],
+          "tokenName": "Marna"
+        },
+        {
+          "actorKey": "duergar-4",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 5810
+            }
+          ],
+          "tokenName": "Ukzorra"
+        }
+      ]
+    },
+    {
+      "id": "l21-a6c",
+      "area": "6c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3150,
+              "y": 5110
+            }
+          ],
+          "tokenName": "Brona"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3220,
+              "y": 5110
+            }
+          ],
+          "tokenName": "Rojkarn Ironhead"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3360,
+              "y": 5110
+            }
+          ],
+          "tokenName": "Ubrix"
+        }
+      ]
+    },
+    {
+      "id": "l21-a10b",
+      "area": "10b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4410,
+              "y": 5180
+            }
+          ],
+          "tokenName": "Malgorn"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4410,
+              "y": 5390
+            }
+          ],
+          "tokenName": "Zelk"
+        }
+      ]
+    },
+    {
+      "id": "l21-a11a",
+      "area": "11a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 4900
+            }
+          ],
+          "tokenName": "Lorga"
+        }
+      ]
+    },
+    {
+      "id": "l21-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "champion",
+          "actor": "Champion",
+          "count": 10,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3500,
+              "y": 5950
+            },
+            {
+              "x": 3500,
+              "y": 6020
+            },
+            {
+              "x": 3500,
+              "y": 6090
+            },
+            {
+              "x": 3500,
+              "y": 6160
+            },
+            {
+              "x": 3500,
+              "y": 6230
+            },
+            {
+              "x": 3500,
+              "y": 6300
+            },
+            {
+              "x": 3500,
+              "y": 6370
+            },
+            {
+              "x": 3500,
+              "y": 6440
+            },
+            {
+              "x": 3500,
+              "y": 6510
+            },
+            {
+              "x": 3500,
+              "y": 6580
+            }
+          ],
+          "tokenName": "Dwarfen Spirit Warrior"
+        }
+      ]
+    },
+    {
+      "id": "l21-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "arcanaloth",
+          "actor": "Arcanaloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 4900
+            }
+          ],
+          "tokenName": "Aximus"
+        },
+        {
+          "actorKey": "arcanaloth-2",
+          "actor": "Arcanaloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 4900
+            }
+          ],
+          "tokenName": "Exekarus"
+        },
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 4900
+            }
+          ],
+          "tokenName": "Aximus"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3850,
+              "y": 4900
+            }
+          ],
+          "tokenName": "Exekarus"
+        }
+      ]
+    },
+    {
+      "id": "l21-a15",
+      "area": "15",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "iron-golem",
+          "actor": "Iron Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 6230
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "valtagar-steelshadow",
+          "actor": "Valtagar Steelshadow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 6090
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l21-a16a",
+      "area": "16a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1680,
+              "y": 6370
+            }
+          ],
+          "tokenName": "Brok"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1890,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Fumira"
+        },
+        {
+          "actorKey": "fire-elemental",
+          "actor": "Fire Elemental",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1750,
+              "y": 6300
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l21-a16b",
+      "area": "16b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1750,
+              "y": 7000
+            }
+          ],
+          "tokenName": "Krinxa"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1890,
+              "y": 7070
+            }
+          ],
+          "tokenName": "Wolthra"
+        },
+        {
+          "actorKey": "fire-elemental",
+          "actor": "Fire Elemental",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 1750,
+              "y": 7140
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l21-a16c",
+      "area": "16c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2310,
+              "y": 6440
+            }
+          ],
+          "tokenName": "Ghorso"
+        }
+      ]
+    },
+    {
+      "id": "l21-a16d",
+      "area": "16d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 7210
+            }
+          ],
+          "tokenName": "Azgra"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 6930
+            }
+          ],
+          "tokenName": "Bulborm"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2940,
+              "y": 6930
+            }
+          ],
+          "tokenName": "Daarsh"
+        },
+        {
+          "actorKey": "duergar-4",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 7000
+            }
+          ],
+          "tokenName": "Krod"
+        },
+        {
+          "actorKey": "duergar-5",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 7070
+            }
+          ],
+          "tokenName": "Mranhaim"
+        },
+        {
+          "actorKey": "duergar-6",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Muzdrok"
+        },
+        {
+          "actorKey": "duergar-7",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 7210
+            }
+          ],
+          "tokenName": "Narlith"
+        },
+        {
+          "actorKey": "duergar-8",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2800,
+              "y": 7350
+            }
+          ],
+          "tokenName": "Roxinda"
+        },
+        {
+          "actorKey": "duergar-9",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 7280
+            }
+          ],
+          "tokenName": "Sorka"
+        },
+        {
+          "actorKey": "duergar-10",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 7280
+            }
+          ],
+          "tokenName": "Svilla"
+        }
+      ]
+    },
+    {
+      "id": "l21-a17a",
+      "area": "17a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 7490
+            }
+          ],
+          "tokenName": "Kalrog"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 7560
+            }
+          ],
+          "tokenName": "Klang"
+        }
+      ]
+    },
+    {
+      "id": "l21-a17b",
+      "area": "17b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4690,
+              "y": 7560
+            }
+          ],
+          "tokenName": "Prax"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 7560
+            }
+          ],
+          "tokenName": "Torga"
+        }
+      ]
+    },
+    {
+      "id": "l21-a17c",
+      "area": "17c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "champion",
+          "actor": "Champion",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 6580
+            }
+          ],
+          "tokenName": "Dwarfen Spirit Warrior"
+        },
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4340,
+              "y": 6930
+            }
+          ],
+          "tokenName": "Falthra"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 7000
+            }
+          ],
+          "tokenName": "Helgra"
+        }
+      ]
+    },
+    {
+      "id": "l21-a17d",
+      "area": "17d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 6930
+            }
+          ],
+          "tokenName": "Forn"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 7000
+            }
+          ],
+          "tokenName": "Wulluk"
+        }
+      ]
+    },
+    {
+      "id": "l21-a18b",
+      "area": "18b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1120,
+              "y": 8610
+            }
+          ],
+          "tokenName": "Awmok"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1190,
+              "y": 8470
+            }
+          ],
+          "tokenName": "Greorx"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1400,
+              "y": 8470
+            }
+          ],
+          "tokenName": "Hwahl"
+        },
+        {
+          "actorKey": "duergar-4",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1400,
+              "y": 8610
+            }
+          ],
+          "tokenName": "Nezza"
+        },
+        {
+          "actorKey": "duergar-5",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1120,
+              "y": 8750
+            }
+          ],
+          "tokenName": "Proxna"
+        },
+        {
+          "actorKey": "duergar-6",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1260,
+              "y": 8890
+            }
+          ],
+          "tokenName": "Uzwurn"
+        },
+        {
+          "actorKey": "duergar-7",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1330,
+              "y": 8750
+            }
+          ],
+          "tokenName": "Warda"
+        },
+        {
+          "actorKey": "duergar-8",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1190,
+              "y": 8470
+            }
+          ],
+          "tokenName": "Wolthra"
+        }
+      ]
+    },
+    {
+      "id": "l21-a18c",
+      "area": "18c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1260,
+              "y": 9730
+            }
+          ],
+          "tokenName": "Brakka",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1610,
+              "y": 9590
+            }
+          ],
+          "tokenName": "Hax"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1330,
+              "y": 9590
+            }
+          ],
+          "tokenName": "Korla",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "duergar-4",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1750,
+              "y": 9590
+            }
+          ],
+          "tokenName": "Mruuzdain"
+        },
+        {
+          "actorKey": "duergar-5",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1470,
+              "y": 10150
+            }
+          ],
+          "tokenName": "Nura"
+        },
+        {
+          "actorKey": "duergar-6",
+          "actor": "Duergar",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1820,
+              "y": 9520
+            },
+            {
+              "x": 1890,
+              "y": 9590
+            }
+          ],
+          "tokenName": "Oznur"
+        },
+        {
+          "actorKey": "duergar-7",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1820,
+              "y": 10150
+            }
+          ],
+          "tokenName": "Speleosa"
+        },
+        {
+          "actorKey": "duergar-8",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1820,
+              "y": 9730
+            }
+          ],
+          "tokenName": "Tarnvur"
+        },
+        {
+          "actorKey": "duergar-9",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1820,
+              "y": 9940
+            }
+          ],
+          "tokenName": "Yarox"
+        },
+        {
+          "actorKey": "duergar-10",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 1470,
+              "y": 9450
+            }
+          ],
+          "tokenName": "Zagra",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l21-a18d",
+      "area": "18d",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 9660
+            }
+          ],
+          "tokenName": "Stalagma Steelshadow"
+        },
+        {
+          "actorKey": "gorgon",
+          "actor": "Gorgon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 9590
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "stalagma-steelshadow",
+          "actor": "Stalagma Steelshadow",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3570,
+              "y": 9100
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        },
+        {
+          "actorKey": "xorn",
+          "actor": "Xorn",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 9660
+            },
+            {
+              "x": 4130,
+              "y": 9800
+            },
+            {
+              "x": 3920,
+              "y": 9870
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l21-a19a",
+      "area": "19a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mezzoloth",
+          "actor": "Mezzoloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 9940
+            }
+          ]
+        },
+        {
+          "actorKey": "nycaloth",
+          "actor": "Nycaloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 9870
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "ultroloth",
+          "actor": "Ultroloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 9940
+            }
+          ],
+          "tokenName": "Xindulus"
+        }
+      ]
+    },
+    {
+      "id": "l21-a20a",
+      "area": "20a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 9100
+            }
+          ],
+          "tokenName": "Norl"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 9170
+            }
+          ],
+          "tokenName": "Sunmerva"
+        },
+        {
+          "actorKey": "ultroloth",
+          "actor": "Ultroloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5880,
+              "y": 9800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l21-a20b",
+      "area": "20b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 10010
+            }
+          ],
+          "tokenName": "Durundra"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7210,
+              "y": 10010
+            }
+          ],
+          "tokenName": "Orn"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7140,
+              "y": 10360
+            }
+          ],
+          "tokenName": "Thumrok"
+        },
+        {
+          "actorKey": "fazrian",
+          "actor": "Fazrian",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 6230
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "nycaloth",
+          "actor": "Nycaloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 6300
+            }
+          ],
+          "tokenName": "Raxxus",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l21-a20c",
+      "area": "20c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6230,
+              "y": 8750
+            }
+          ],
+          "tokenName": "Bralith"
+        },
+        {
+          "actorKey": "duergar-2",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 8260
+            }
+          ],
+          "tokenName": "Hrok"
+        },
+        {
+          "actorKey": "duergar-3",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 8470
+            }
+          ],
+          "tokenName": "Jarazk"
+        },
+        {
+          "actorKey": "duergar-4",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6510,
+              "y": 8820
+            }
+          ],
+          "tokenName": "Krod"
+        },
+        {
+          "actorKey": "duergar-5",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 8750
+            }
+          ],
+          "tokenName": "Mraginar"
+        },
+        {
+          "actorKey": "duergar-6",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 8820
+            }
+          ],
+          "tokenName": "Rok"
+        }
+      ]
+    },
+    {
+      "id": "l21-a23a",
+      "area": "23a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "champion",
+          "actor": "Champion",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 6020
+            },
+            {
+              "x": 4130,
+              "y": 6510
+            }
+          ],
+          "tokenName": "Dwarfen Spirit Warrior"
+        }
+      ]
+    },
+    {
+      "id": "l21-a23b",
+      "area": "23b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "marilith",
+          "actor": "Marilith",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6230,
+              "y": 5600
+            },
+            {
+              "x": 6370,
+              "y": 5600
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l21-a23c",
+      "area": "23c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "otyugh",
+          "actor": "Otyugh",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6230,
+              "y": 7700
+            },
+            {
+              "x": 6230,
+              "y": 7980
+            },
+            {
+              "x": 6370,
+              "y": 7980
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l21-a24",
+      "area": "24",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6440,
+              "y": 5600
+            }
+          ],
+          "tokenName": "Hrok"
+        }
+      ]
+    }
+  ]
+}

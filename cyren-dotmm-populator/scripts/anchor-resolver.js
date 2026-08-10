@@ -46,10 +46,18 @@ export function resolveAnchors(scene, levelData) {
   const usedAreas = new Set(levelData.encounters.map((encounter) => encounter.area.toLowerCase()));
   for (const area of usedAreas) {
     if (ambiguous.has(area)) {
+      if (manual[area]) {
+        results.set(area, { status: "resolved", area, ...manual[area], source: "manual" });
+        continue;
+      }
+      if (isExactSceneGeometry(scene, levelData.scene) && levelData.anchors?.[area]) {
+        results.set(area, { status: "resolved", area, ...levelData.anchors[area], radius: null, source: "verified-fallback" });
+        continue;
+      }
       results.set(area, { status: "ambiguous", area, candidates: ambiguous.get(area) });
       continue;
     }
-    if (discovered.has(area)) {
+    if (discovered.get(area)?.status !== "ambiguous" && discovered.has(area)) {
       results.set(area, { status: "resolved", area, ...discovered.get(area) });
       continue;
     }
@@ -59,6 +67,10 @@ export function resolveAnchors(scene, levelData) {
     }
     if (isExactSceneGeometry(scene, levelData.scene) && levelData.anchors?.[area]) {
       results.set(area, { status: "resolved", area, ...levelData.anchors[area], radius: null, source: "verified-fallback" });
+      continue;
+    }
+    if (discovered.has(area)) {
+      results.set(area, { status: "ambiguous", area, ...discovered.get(area) });
       continue;
     }
     results.set(area, { status: "unresolved", area });

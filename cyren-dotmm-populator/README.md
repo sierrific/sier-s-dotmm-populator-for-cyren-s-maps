@@ -1,12 +1,14 @@
 # Sier's DotMM Populator for Cyren's Maps
 
-Foundry VTT module that prepares the static Level 1 and Level 2 encounters from *Dungeon of the Mad Mage* on maps supplied by CyrensMaps for Undermountain.
+Foundry VTT module that prepares static encounters for all 23 levels of *Dungeon of the Mad Mage* on maps supplied by CyrensMaps for Undermountain. Level 3 is supported across its three map segments.
 
-The module contains placement metadata only. It does not include maps, artwork, adventure text, journals, or creature stat blocks. Creature Actors must already exist in the World and can optionally be imported with Plutonium.
+The module contains placement metadata only. It does not include maps, artwork, adventure text, journals, or creature stat blocks. Creature Actors must already exist in the World and can optionally be imported from available compendiums or with Plutonium.
 
-For installation instructions and the full user guide, visit the project repository:
+For installation instructions and the full user guide, visit:
 
 https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps
+
+Third-party attribution is included in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Compatibility
 
@@ -17,7 +19,7 @@ https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps
 
 ## Current scope
 
-Version 0.2.1 covers Levels 1 and 2.
+Version 0.3.0 covers Levels 1–23, 25 map descriptors, 637 encounter groups, and 2,680 intended Token instances.
 
 ## Disclaimer
 

@@ -1,11 +1,13 @@
 import { MODULE_ID, SETTINGS } from "./constants.js";
 import { CyrenPopulatorApp, openPopulator } from "./ui.js";
 import { loadLevelData, clearDataCache } from "./data-loader.js";
-import { resolveScene } from "./scene-resolver.js";
+import { resolveLevelScene, resolveScene, scopeLevelData } from "./scene-resolver.js";
 import { resolveActors } from "./actor-resolver.js";
 import { resolveAnchors } from "./anchor-resolver.js";
 import { planPopulation } from "./placement-engine.js";
 import { populateMissing, reconcile, removeCreated, rebuild } from "./populator.js";
+import { createMissingSafetyCopies, safetyCopyStatus } from "./safety-copies.js";
+import { importAvailableActors } from "./actor-importer.js";
 
 Hooks.once("init", () => {
   game.settings.register(MODULE_ID, SETTINGS.preferredPacks, {
@@ -54,13 +56,18 @@ Hooks.once("ready", () => {
     loadLevelData,
     clearDataCache,
     resolveScene,
+    resolveLevelScene,
+    scopeLevelData,
     resolveActors,
     resolveAnchors,
     planPopulation,
     populateMissing,
     reconcile,
     removeCreated,
-    rebuild
+    rebuild,
+    createMissingSafetyCopies,
+    safetyCopyStatus,
+    importAvailableActors
   };
   console.info(`${MODULE_ID} | Ready. GM review is required before population.`);
 });

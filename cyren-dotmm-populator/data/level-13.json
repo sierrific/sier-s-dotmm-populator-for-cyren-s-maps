@@ -1,0 +1,745 @@
+{
+  "schemaVersion": 1,
+  "level": 13,
+  "title": "Trobriand's Graveyard",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 13",
+      "Level 13 (Copy)"
+    ],
+    "sourceId": "Scene.R4Rj98549R3BJJXb",
+    "width": 9940,
+    "height": 13720,
+    "padding": 0.1,
+    "grid": 70
+  },
+  "anchors": {
+    "1": {
+      "x": 6090,
+      "y": 7770
+    },
+    "3": {
+      "x": 10080,
+      "y": 7280
+    },
+    "5": {
+      "x": 5810,
+      "y": 4970
+    },
+    "6": {
+      "x": 1890,
+      "y": 2940
+    },
+    "8": {
+      "x": 3150,
+      "y": 11970
+    },
+    "9": {
+      "x": 2975,
+      "y": 14350
+    },
+    "2a": {
+      "x": 7070,
+      "y": 8890
+    },
+    "2b": {
+      "x": 8190,
+      "y": 10220
+    },
+    "7b": {
+      "x": 2240,
+      "y": 8050
+    },
+    "7c": {
+      "x": 3080,
+      "y": 9030
+    },
+    "11a": {
+      "x": 7490,
+      "y": 12670
+    },
+    "11b": {
+      "x": 6790,
+      "y": 10920
+    },
+    "12c": {
+      "x": 9800,
+      "y": 10640
+    }
+  },
+  "encounters": [
+    {
+      "id": "l13-a1",
+      "area": "1",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "azer",
+          "actor": "Azer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 11550
+            }
+          ]
+        },
+        {
+          "actorKey": "bore-worm",
+          "actor": "Bore Worm",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 8750
+            }
+          ],
+          "tokenWidth": 4,
+          "tokenHeight": 4
+        },
+        {
+          "actorKey": "quadrone",
+          "actor": "Quadrone",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 7910
+            },
+            {
+              "x": 6440,
+              "y": 8120
+            },
+            {
+              "x": 6090,
+              "y": 8540
+            }
+          ],
+          "tokenName": "Arbalest"
+        }
+      ]
+    },
+    {
+      "id": "l13-a2a",
+      "area": "2a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "quadrone",
+          "actor": "Quadrone",
+          "count": 9,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 7770
+            },
+            {
+              "x": 7280,
+              "y": 8050
+            },
+            {
+              "x": 6860,
+              "y": 8330
+            },
+            {
+              "x": 7420,
+              "y": 8330
+            },
+            {
+              "x": 7140,
+              "y": 8610
+            },
+            {
+              "x": 6930,
+              "y": 8750
+            },
+            {
+              "x": 6370,
+              "y": 8820
+            },
+            {
+              "x": 6650,
+              "y": 8960
+            },
+            {
+              "x": 6930,
+              "y": 9170
+            }
+          ],
+          "tokenName": "Arbalest"
+        },
+        {
+          "actorKey": "scaladar",
+          "actor": "Scaladar",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7630,
+              "y": 8050
+            },
+            {
+              "x": 6370,
+              "y": 8330
+            },
+            {
+              "x": 7210,
+              "y": 8750
+            },
+            {
+              "x": 6090,
+              "y": 9240
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l13-a2b",
+      "area": "2b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 10080
+            },
+            {
+              "x": 7770,
+              "y": 10150
+            },
+            {
+              "x": 7700,
+              "y": 10220
+            },
+            {
+              "x": 7700,
+              "y": 10290
+            },
+            {
+              "x": 7630,
+              "y": 10360
+            },
+            {
+              "x": 7700,
+              "y": 10360
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-captain",
+          "actor": "Hobgoblin Captain",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 10150
+            }
+          ],
+          "tokenName": "Kurlog"
+        }
+      ]
+    },
+    {
+      "id": "l13-a3",
+      "area": "3",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-wasp",
+          "actor": "Giant Wasp",
+          "count": 5,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 10080,
+              "y": 6860
+            },
+            {
+              "x": 10360,
+              "y": 7070
+            },
+            {
+              "x": 10640,
+              "y": 7210
+            },
+            {
+              "x": 10010,
+              "y": 7420
+            },
+            {
+              "x": 10290,
+              "y": 7490
+            }
+          ]
+        },
+        {
+          "actorKey": "rust-monster",
+          "actor": "Rust Monster",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 10150,
+              "y": 7000
+            },
+            {
+              "x": 10080,
+              "y": 7140
+            },
+            {
+              "x": 10220,
+              "y": 7140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l13-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "lava-child",
+          "actor": "Lava Child",
+          "count": 10,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 4690
+            },
+            {
+              "x": 5670,
+              "y": 4690
+            },
+            {
+              "x": 5810,
+              "y": 4690
+            },
+            {
+              "x": 6020,
+              "y": 4760
+            },
+            {
+              "x": 5460,
+              "y": 4900
+            },
+            {
+              "x": 5460,
+              "y": 4970
+            },
+            {
+              "x": 6090,
+              "y": 5040
+            },
+            {
+              "x": 5950,
+              "y": 5110
+            },
+            {
+              "x": 5740,
+              "y": 5180
+            },
+            {
+              "x": 5880,
+              "y": 5180
+            }
+          ]
+        },
+        {
+          "actorKey": "rust-monster",
+          "actor": "Rust Monster",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 4200
+            },
+            {
+              "x": 6440,
+              "y": 4480
+            },
+            {
+              "x": 4620,
+              "y": 4900
+            },
+            {
+              "x": 7070,
+              "y": 5670
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l13-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "scaladar",
+          "actor": "Scaladar",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 2520
+            },
+            {
+              "x": 2730,
+              "y": 2660
+            },
+            {
+              "x": 1890,
+              "y": 3430
+            }
+          ],
+          "tokenWidth": 3,
+          "tokenHeight": 3
+        }
+      ]
+    },
+    {
+      "id": "l13-a7b",
+      "area": "7b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-badger",
+          "actor": "Giant Badger",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2100,
+              "y": 8120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l13-a7c",
+      "area": "7c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "shield-guardian",
+          "actor": "Shield Guardian",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2660,
+              "y": 8820
+            }
+          ],
+          "tokenName": "Rex",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "zox-clammersham",
+          "actor": "Zox Clammersham",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 8960
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l13-a8",
+      "area": "8",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "azer",
+          "actor": "Azer",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2030,
+              "y": 11340
+            },
+            {
+              "x": 2030,
+              "y": 12460
+            },
+            {
+              "x": 2590,
+              "y": 12950
+            }
+          ]
+        },
+        {
+          "actorKey": "lava-child",
+          "actor": "Lava Child",
+          "count": 9,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3080,
+              "y": 11620
+            },
+            {
+              "x": 3290,
+              "y": 11690
+            },
+            {
+              "x": 3080,
+              "y": 11760
+            },
+            {
+              "x": 3290,
+              "y": 11830
+            },
+            {
+              "x": 3080,
+              "y": 11970
+            },
+            {
+              "x": 2940,
+              "y": 12040
+            },
+            {
+              "x": 3290,
+              "y": 12040
+            },
+            {
+              "x": 2940,
+              "y": 12180
+            },
+            {
+              "x": 3080,
+              "y": 12180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l13-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "azer",
+          "actor": "Azer",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 13160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l13-a11a",
+      "area": "11a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "death-dog",
+          "actor": "Death Dog",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7840,
+              "y": 13230
+            },
+            {
+              "x": 7630,
+              "y": 13300
+            },
+            {
+              "x": 7910,
+              "y": 13300
+            },
+            {
+              "x": 7630,
+              "y": 13440
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7700,
+              "y": 13440
+            },
+            {
+              "x": 7840,
+              "y": 13440
+            },
+            {
+              "x": 7700,
+              "y": 13510
+            },
+            {
+              "x": 7770,
+              "y": 13510
+            }
+          ]
+        },
+        {
+          "actorKey": "hobgoblin-warlord",
+          "actor": "Hobgoblin Warlord",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7770,
+              "y": 13370
+            }
+          ],
+          "tokenName": "Yargoth the Breaker"
+        }
+      ]
+    },
+    {
+      "id": "l13-a11b",
+      "area": "11b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "hobgoblin",
+          "actor": "Hobgoblin",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6860,
+              "y": 10850
+            },
+            {
+              "x": 6930,
+              "y": 10850
+            },
+            {
+              "x": 6860,
+              "y": 10990
+            },
+            {
+              "x": 6720,
+              "y": 11550
+            },
+            {
+              "x": 6790,
+              "y": 11550
+            },
+            {
+              "x": 6860,
+              "y": 11620
+            }
+          ]
+        },
+        {
+          "actorKey": "rust-monster",
+          "actor": "Rust Monster",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6510,
+              "y": 11060
+            },
+            {
+              "x": 6510,
+              "y": 11200
+            },
+            {
+              "x": 6510,
+              "y": 11270
+            },
+            {
+              "x": 6510,
+              "y": 11340
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l13-a12c",
+      "area": "12c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "myconid-sovereign",
+          "actor": "Myconid Sovereign",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 9800,
+              "y": 10710
+            }
+          ],
+          "tokenName": "Chanterella",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": 1,
+  "level": 9,
+  "title": "Dweomercore",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Level 09",
+      "Level 09 (Copy)"
+    ],
+    "sourceId": "Scene.3D8szkkuH1XXvQYh",
+    "width": 7700,
+    "height": 10080,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "5": {
+      "x": 2590,
+      "y": 5670
+    },
+    "6": {
+      "x": 2240,
+      "y": 6020
+    },
+    "7": {
+      "x": 2520,
+      "y": 7420
+    },
+    "14": {
+      "x": 5740,
+      "y": 4480
+    },
+    "16": {
+      "x": 5600,
+      "y": 5460
+    },
+    "18": {
+      "x": 6370,
+      "y": 4900
+    },
+    "22": {
+      "x": 7350,
+      "y": 6370
+    },
+    "25": {
+      "x": 7910,
+      "y": 7350
+    },
+    "29": {
+      "x": 5390,
+      "y": 8680
+    },
+    "30": {
+      "x": 5110,
+      "y": 7910
+    },
+    "31": {
+      "x": 4830,
+      "y": 7770
+    },
+    "34": {
+      "x": 2310,
+      "y": 9170
+    },
+    "35": {
+      "x": 2380,
+      "y": 10220
+    },
+    "38": {
+      "x": 3570,
+      "y": 10290
+    },
+    "44": {
+      "x": 7980,
+      "y": 11130
+    },
+    "1a": {
+      "x": 2730,
+      "y": 4690
+    },
+    "11c": {
+      "x": 3920,
+      "y": 5110
+    },
+    "11e": {
+      "x": 3920,
+      "y": 5530
+    },
+    "11f": {
+      "x": 4340,
+      "y": 5530
+    },
+    "13a": {
+      "x": 5110,
+      "y": 4970
+    },
+    "13b": {
+      "x": 5250,
+      "y": 5390
+    },
+    "15a": {
+      "x": 6405,
+      "y": 3850
+    },
+    "15b": {
+      "x": 6580,
+      "y": 4340
+    },
+    "23a": {
+      "x": 8750,
+      "y": 5390
+    },
+    "23b": {
+      "x": 9450,
+      "y": 5530
+    },
+    "23c": {
+      "x": 8330,
+      "y": 5320
+    },
+    "26b": {
+      "x": 8470,
+      "y": 8505
+    },
+    "27a": {
+      "x": 6370,
+      "y": 6825
+    },
+    "27b": {
+      "x": 6685,
+      "y": 7350
+    },
+    "45a": {
+      "x": 8610,
+      "y": 9590
+    },
+    "46a": {
+      "x": 5600,
+      "y": 10990
+    },
+    "47a": {
+      "x": 4760,
+      "y": 11340
+    }
+  },
+  "encounters": [
+    {
+      "id": "l09-a1a",
+      "area": "1a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "left-hand-of-manshoon",
+          "actor": "Left Hand of Manshoon",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2870,
+              "y": 4655
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l09-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "oni",
+          "actor": "Oni",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2450,
+              "y": 5880
+            }
+          ],
+          "tokenName": "Dumara",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l09-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "archmage",
+          "actor": "Archmage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2380,
+              "y": 5880
+            }
+          ],
+          "tokenName": "Spite Harrowdale"
+        },
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2170,
+              "y": 5950
+            }
+          ],
+          "tokenName": "Dumara",
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "commoner-2",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2310,
+              "y": 5950
+            }
+          ],
+          "tokenName": "Spite Harrowdale"
+        }
+      ]
+    },
+    {
+      "id": "l09-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mind-flayer-arcanist",
+          "actor": "Mind Flayer Arcanist",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2730,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Cephalossk"
+        }
+      ]
+    },
+    {
+      "id": "l09-a11c",
+      "area": "11c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "spider",
+          "actor": "Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3990,
+              "y": 5320
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l09-a11e",
+      "area": "11e",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mezzoloth",
+          "actor": "Mezzoloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 5740
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a11f",
+      "area": "11f",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mezzoloth",
+          "actor": "Mezzoloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4130,
+              "y": 5740
+            }
+          ]
+        },
+        {
+          "actorKey": "ogre-zombie",
+          "actor": "Ogre Zombie",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4480,
+              "y": 5460
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l09-a13a",
+      "area": "13a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "drow-mage",
+          "actor": "Drow Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 4970
+            }
+          ],
+          "tokenName": "Elan Tanor’thal"
+        }
+      ]
+    },
+    {
+      "id": "l09-a13b",
+      "area": "13b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nycaloth",
+          "actor": "Nycaloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 5460
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l09-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "violence",
+          "actor": "Violence",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 4480
+            }
+          ],
+          "aliases": [
+            "Mage"
+          ],
+          "tokenName": "Violence"
+        }
+      ]
+    },
+    {
+      "id": "l09-a15a",
+      "area": "15a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "arcanaloth",
+          "actor": "Arcanaloth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 3640
+            }
+          ],
+          "tokenName": "Halaster Blackcloak"
+        },
+        {
+          "actorKey": "halaster-blackcloak",
+          "actor": "Halaster Blackcloak",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6160,
+              "y": 3710
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a15b",
+      "area": "15b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "slaad-tadpole",
+          "actor": "Slaad Tadpole",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7140,
+              "y": 4480
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l09-a16",
+      "area": "16",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mage",
+          "actor": "Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 5950
+            }
+          ]
+        },
+        {
+          "actorKey": "will-o-wisp",
+          "actor": "Will-o'-Wisp",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 5950
+            },
+            {
+              "x": 5845,
+              "y": 6020
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "l09-a18",
+      "area": "18",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "animated-statue",
+          "actor": "Animated Statue",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6790,
+              "y": 4830
+            },
+            {
+              "x": 6510,
+              "y": 5180
+            },
+            {
+              "x": 6790,
+              "y": 5180
+            }
+          ],
+          "aliases": [
+            "Archmage"
+          ],
+          "tokenName": "Animated Statue"
+        },
+        {
+          "actorKey": "turbulence",
+          "actor": "Turbulence",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 5040
+            }
+          ],
+          "aliases": [
+            "Mage"
+          ],
+          "tokenName": "Turbulence"
+        }
+      ]
+    },
+    {
+      "id": "l09-a22",
+      "area": "22",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "poison-weird",
+          "actor": "Poison Weird",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7070,
+              "y": 6160
+            },
+            {
+              "x": 7210,
+              "y": 6160
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l09-a23a",
+      "area": "23a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flesh-golem",
+          "actor": "Flesh Golem",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8470,
+              "y": 5390
+            },
+            {
+              "x": 8470,
+              "y": 5530
+            },
+            {
+              "x": 8470,
+              "y": 5670
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a23b",
+      "area": "23b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9380,
+              "y": 5740
+            }
+          ],
+          "tokenName": "Medley"
+        },
+        {
+          "actorKey": "night-hag",
+          "actor": "Night Hag",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9380,
+              "y": 5810
+            }
+          ],
+          "tokenName": "Wormriddle"
+        }
+      ]
+    },
+    {
+      "id": "l09-a23c",
+      "area": "23c",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "flesh-golem",
+          "actor": "Flesh Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8470,
+              "y": 5250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a25",
+      "area": "25",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "spectator",
+          "actor": "Spectator",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8050,
+              "y": 7140
+            },
+            {
+              "x": 8330,
+              "y": 7140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a26b",
+      "area": "26b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "cloaker",
+          "actor": "Cloaker",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8470,
+              "y": 8470
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l09-a27a",
+      "area": "27a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "barbed-devil",
+          "actor": "Barbed Devil",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6650,
+              "y": 6580
+            },
+            {
+              "x": 6580,
+              "y": 6930
+            }
+          ]
+        },
+        {
+          "actorKey": "living-unseen-servant",
+          "actor": "Living Unseen Servant",
+          "count": 3,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6440,
+              "y": 6650
+            },
+            {
+              "x": 6790,
+              "y": 6720
+            },
+            {
+              "x": 6440,
+              "y": 6860
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a27b",
+      "area": "27b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "violence",
+          "actor": "Violence",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6720,
+              "y": 7350
+            }
+          ],
+          "aliases": [
+            "Mage"
+          ],
+          "tokenName": "Violence"
+        }
+      ]
+    },
+    {
+      "id": "l09-a29",
+      "area": "29",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "helmed-horror",
+          "actor": "Helmed Horror",
+          "count": 3,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 8540
+            },
+            {
+              "x": 5390,
+              "y": 8820
+            },
+            {
+              "x": 5180,
+              "y": 9100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a30",
+      "area": "30",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "efreeti",
+          "actor": "Efreeti",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5180,
+              "y": 7770
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "helmed-horror",
+          "actor": "Helmed Horror",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 8190
+            }
+          ]
+        },
+        {
+          "actorKey": "living-unseen-servant",
+          "actor": "Living Unseen Servant",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 7630
+            },
+            {
+              "x": 5320,
+              "y": 7630
+            },
+            {
+              "x": 5530,
+              "y": 7630
+            },
+            {
+              "x": 5110,
+              "y": 7910
+            },
+            {
+              "x": 5250,
+              "y": 7910
+            },
+            {
+              "x": 5460,
+              "y": 7910
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a31",
+      "area": "31",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nothic",
+          "actor": "Nothic",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4620,
+              "y": 7840
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a34",
+      "area": "34",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "wyvern",
+          "actor": "Wyvern",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 8960
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l09-a35",
+      "area": "35",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "nester",
+          "actor": "Nester",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2590,
+              "y": 10150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a38",
+      "area": "38",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "grell",
+          "actor": "Grell",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3780,
+              "y": 10220
+            }
+          ]
+        },
+        {
+          "actorKey": "mage",
+          "actor": "Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 10220
+            }
+          ],
+          "tokenName": "Skrianna Shadowdusk"
+        }
+      ]
+    },
+    {
+      "id": "l09-a44",
+      "area": "44",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mezzoloth",
+          "actor": "Mezzoloth",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 7560,
+              "y": 10780
+            },
+            {
+              "x": 8330,
+              "y": 10780
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a45a",
+      "area": "45a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "stone-golem",
+          "actor": "Stone Golem",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8540,
+              "y": 9660
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "l09-a46a",
+      "area": "46a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "goblin",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 10780
+            }
+          ],
+          "tokenName": "Evilfinger",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "goblin-2",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5670,
+              "y": 10780
+            }
+          ],
+          "tokenName": "Pulk",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        },
+        {
+          "actorKey": "goblin-3",
+          "actor": "Goblin",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 10850
+            }
+          ],
+          "tokenName": "Tobble",
+          "resolutionNames": [
+            "Goblin Warrior",
+            "Goblin"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l09-a47a",
+      "area": "47a",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bone-devil-polearm-variant",
+          "actor": "Bone Devil (Polearm Variant)",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4550,
+              "y": 10990
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2,
+          "aliases": [
+            "Bone Devil"
+          ],
+          "tokenName": "Bone Devil (Polearm Variant)"
+        }
+      ]
+    }
+  ]
+}
