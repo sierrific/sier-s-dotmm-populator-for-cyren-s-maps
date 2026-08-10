@@ -27,6 +27,31 @@ if [[ ! -f "$package_path" || "${package_path##*.}" != "zip" ]]; then
   exit 2
 fi
 
+checksum_file="$package_path.sha256"
+if [[ -f "$checksum_file" ]]; then
+  read -r expected_hash _ < "$checksum_file"
+  if [[ ! "$expected_hash" =~ ^[[:xdigit:]]{64}$ ]]; then
+    echo "The checksum file is malformed: $checksum_file" >&2
+    exit 4
+  fi
+  actual_hash="$(sha256sum -- "$package_path" | cut -d ' ' -f 1)"
+  if [[ "${actual_hash,,}" != "${expected_hash,,}" ]]; then
+    echo "The release ZIP failed SHA-256 verification." >&2
+    exit 4
+  fi
+  echo "Verified SHA-256 checksum."
+else
+  echo "Warning: no sibling .sha256 file was found; package integrity was not verified." >&2
+fi
+
+while IFS= read -r entry; do
+  normalized="${entry//\\//}"
+  if [[ "$normalized" == /* || "$normalized" =~ ^[A-Za-z]:/ || "$normalized" == ../* || "$normalized" == */../* || "$normalized" == */.. ]]; then
+    echo "The ZIP contains an unsafe path: $entry" >&2
+    exit 4
+  fi
+done < <(unzip -Z1 -- "$package_path")
+
 modules_directory="$foundry_data/Data/modules"
 target="$modules_directory/$module_id"
 mkdir -p "$modules_directory"

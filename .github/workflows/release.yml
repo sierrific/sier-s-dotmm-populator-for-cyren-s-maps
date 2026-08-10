@@ -20,6 +20,14 @@ jobs:
         with:
           node-version: 20
 
+      - name: Enable pnpm
+        run: corepack enable
+
+      - name: Install and audit development dependencies
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm audit
+
       - name: Validate module
         run: npm run validate
 

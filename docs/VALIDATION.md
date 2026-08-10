@@ -1,11 +1,11 @@
 # Validation
 
-Version 0.3.1 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
+Version 0.3.2 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
 
 ## Automated checks
 
 - valid Foundry manifest and stable module ID;
-- release URLs and package names match version 0.3.1;
+- release URLs and package names match version 0.3.2;
 - 637 unique encounter groups and 2,680 deterministic Token instance keys across Levels 1–23;
 - 25 supported map descriptors, including three Level 3 segments;
 - complete Actor names, logical keys, scene assignments, and area identifiers;
@@ -16,7 +16,10 @@ Version 0.3.1 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and
 - partial stacked-token recovery and deliberate exact-placement overlap;
 - manual anchors override verified fallbacks when numbered tiles are ambiguous or unavailable;
 - unrelated embedded collections are compared by document content as well as IDs;
-- release ZIP contents, documentation links, installer targets, and SHA-256 checksum are audited;
+- pre-existing Token contents are verified and partial creation failures are rolled back;
+- managed Actor cleanup requires an explicit ownership marker and the dedicated import folder;
+- release ZIP contents are compared byte for byte with canonicalized source, and documentation links, installer targets, and SHA-256 checksum are audited;
+- release ZIPs use deterministic store mode, fixed timestamps, and explicit UTF-8 entry names;
 - release ZIP entries carry Unix `0644` file permissions for direct extraction on Linux hosts.
 
 Run locally with:
@@ -63,4 +66,4 @@ Levels 1 and 2 retain the previously validated workflows documented in the 0.2.x
 
 ## Installer checks
 
-Both helper installers are tested for a clean installation, forced upgrade with timestamped backup, and restoration of the previous module after an invalid package. The Linux script also passes shell syntax validation. The release archive is verified for a root-level `module.json`, readable module assets, and a matching SHA-256 checksum.
+Both helper installers are tested for a clean installation, forced upgrade with timestamped backup, and restoration of the previous module after an invalid package. They verify an adjacent SHA-256 checksum and reject unsafe archive paths before extraction. The Linux script also passes shell syntax validation. The release archive is verified for a root-level `module.json`, readable module assets, and a matching SHA-256 checksum.

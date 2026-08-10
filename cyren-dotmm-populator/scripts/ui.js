@@ -123,6 +123,9 @@ export class CyrenPopulatorApp extends FormApplication {
       }
     }
     const anchorRows = context.anchors ? Array.from(context.anchors.values()).sort((a, b) => a.area.localeCompare(b.area, undefined, { numeric: true })) : [];
+    const availableAreas = new Set(anchorRows.map((row) => row.area));
+    if (!availableAreas.has(this.selectedAnchorArea)) this.selectedAnchorArea = anchorRows[0]?.area ?? null;
+    if (!availableAreas.has(this.selectedRebuildArea)) this.selectedRebuildArea = anchorRows[0]?.area ?? null;
     const encounterRows = (context.data.encounters ?? []).map((encounter) => ({
       id: encounter.id,
       area: encounter.area,
@@ -146,7 +149,11 @@ export class CyrenPopulatorApp extends FormApplication {
       dataWarnings: context.dataValidation.warnings,
       actorRows,
       actorSummary: context.actors ? actorResolutionSummary(context.actors) : {},
-      anchorRows,
+      anchorRows: anchorRows.map((row) => ({
+        ...row,
+        anchorSelected: row.area === this.selectedAnchorArea,
+        rebuildSelected: row.area === this.selectedRebuildArea
+      })),
       encounterRows,
       unresolvedActorNames: actorRows.filter((row) => row.status !== "resolved").map((row) => row.actor).join(", "),
       planCount: context.plan?.placements.length ?? 0,
@@ -167,12 +174,16 @@ export class CyrenPopulatorApp extends FormApplication {
     super.activateListeners(html);
     html.find("[data-action]").on("click", (event) => this._onAction(event));
     html.find('[name="selectedLevel"]').on("change", (event) => this._onLevelChange(event));
+    html.find('[name="anchorArea"]').on("change", (event) => { this.selectedAnchorArea = String(event.currentTarget.value); });
+    html.find('[name="rebuildArea"]').on("change", (event) => { this.selectedRebuildArea = String(event.currentTarget.value); });
   }
 
   async _onLevelChange(event) {
     const level = Number(event.currentTarget.value);
     if (!SUPPORTED_LEVELS.includes(level)) return;
     this.selectedLevel = level;
+    this.selectedAnchorArea = null;
+    this.selectedRebuildArea = null;
     await game.settings.set(MODULE_ID, SETTINGS.selectedLevel, level);
     await this._refreshContext();
   }
@@ -185,6 +196,9 @@ export class CyrenPopulatorApp extends FormApplication {
 
   async _onAction(event) {
     event.preventDefault();
+    if (this._actionInFlight) return;
+    this._actionInFlight = true;
+    event.currentTarget.disabled = true;
     const action = event.currentTarget.dataset.action;
     try {
       if (action === "refresh") return this._refreshContext();
@@ -246,6 +260,9 @@ export class CyrenPopulatorApp extends FormApplication {
     } catch (error) {
       if (!String(error.message).includes("cancelled")) ui.notifications.error(`Sier's DotMM Populator: ${error.message}`);
       console.error(`${MODULE_ID} |`, error);
+    } finally {
+      this._actionInFlight = false;
+      if (event.currentTarget?.isConnected) event.currentTarget.disabled = false;
     }
   }
 

@@ -36,7 +36,7 @@ The panel reports every required Actor and its selected source. Resolution check
 
 When multiple World Actors have the same name, the dedicated `Sier's DotMM Populator Imports` folder is preferred, followed by `Monster Manual` and `Creatures`. Other ambiguous matches remain blocked.
 
-**Import unambiguous matches** copies only clear compendium matches into the dedicated World folder. It preserves the XMM → MPMM → MM source preference and removes only redundant Actors previously created in that folder. It never deletes user-managed Actors elsewhere.
+**Import unambiguous matches** copies only clear compendium matches into the dedicated World folder. It preserves the XMM → MPMM → MM source preference and marks every Actor it creates. Duplicate cleanup requires both that ownership marker and membership in the dedicated folder, so unmarked or moved Actors are never claimed.
 
 If Plutonium is active, **Open Plutonium** opens its creature importer for unresolved entries. Close the importer and refresh the review afterward. Named creatures and adventure variants keep their token names while using a compatible official base Actor where one is defined.
 
@@ -58,12 +58,14 @@ Select **Preview without saving** to draw temporary placement boxes. The preview
 
 Rebuild and removal actions require confirmation. Unmarked Scene Tokens and all non-Token documents are outside the module's ownership boundary.
 
+The panel remembers the selected anchor and rebuild areas when its review refreshes. It also prevents a second action from starting while the first action is still running.
+
 ## Collision warnings
 
 The placement engine avoids walls, padded Scene bounds, and unrelated occupied Token rectangles. If it cannot find a safe position inside the encounter radius, it reports the placement as skipped. Move the conflicting Token, adjust the local Scene, or author an appropriate anchor, then refresh the review.
 
 ## Recovery
 
-If a creation operation reports an error, inspect the notification and refresh the review. The module verifies unrelated Scene collections before and after mutations and attempts to roll back its own Token changes when verification fails.
+If a creation operation reports an error, inspect the notification and refresh the review. The module removes partially created owned Tokens, restores Tokens removed by an interrupted operation, and verifies both existing Token contents and unrelated Scene collections before and after mutations.
 
 For a clean reset, use **Remove module Tokens**, confirm that the marked count reaches zero, and run the review again. Restore the World backup if unrelated changes are observed.

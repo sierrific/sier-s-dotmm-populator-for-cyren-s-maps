@@ -1,5 +1,5 @@
 export const MODULE_ID = "cyren-dotmm-populator";
-export const MODULE_VERSION = "0.3.1";
+export const MODULE_VERSION = "0.3.2";
 export const CYREN_MODULE_ID = "cyrensmaps-wdmm";
 export const CYREN_TESTED_VERSION = "1.0.0";
 export const SUPPORTED_CORE_GENERATION = 12;

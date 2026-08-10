@@ -24,8 +24,8 @@ Foundry must be able to access the repository and release without signing into G
 
 ## Install from the release ZIP
 
-1. Download `cyren-dotmm-populator-0.3.1.zip` from the GitHub release.
-2. Optionally download the adjacent `.sha256` file and verify the package before installation.
+1. Download `cyren-dotmm-populator-0.3.2.zip` and its adjacent `.sha256` file from the GitHub release.
+2. Verify the package checksum before installation. The helper installers do this automatically when the checksum file is beside the ZIP.
 3. Stop Foundry.
 4. Locate the Foundry user-data directory.
 5. Extract the archive so `module.json` is located at:
@@ -45,7 +45,7 @@ Run PowerShell from the repository or place the installer beside the downloaded 
 ```powershell
 .\installer\install.ps1 `
   -FoundryUserData "C:\FoundryData" `
-  -PackagePath ".\cyren-dotmm-populator-0.3.1.zip"
+  -PackagePath ".\cyren-dotmm-populator-0.3.2.zip"
 ```
 
 Use `-Force` only when replacing an existing installation. The script moves the current module into a timestamped backup directory instead of deleting it.
@@ -56,10 +56,10 @@ Use `-Force` only when replacing an existing installation. The script moves the 
 chmod +x installer/install.sh
 ./installer/install.sh \
   /home/foundry/.local/share/FoundryVTT \
-  ./cyren-dotmm-populator-0.3.1.zip
+  ./cyren-dotmm-populator-0.3.2.zip
 ```
 
-Add `--force` as the third argument to replace an existing installation. The prior module directory is retained as a timestamped backup. If extraction or validation fails, the installer restores that prior directory automatically.
+Add `--force` as the third argument to replace an existing installation. The prior module directory is retained as a timestamped backup. Both installers reject unsafe archive paths; if extraction or validation fails, the installer restores that prior directory automatically.
 
 Run the script as the operating-system account that owns the Foundry user-data directory. Restart the Foundry service after installation.
 
