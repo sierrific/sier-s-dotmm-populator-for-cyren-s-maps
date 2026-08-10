@@ -47,13 +47,25 @@ export function validateLevelData(data) {
 
     if (!AREA_PATTERN.test(encounter.area ?? "")) errors.push(`Malformed area id in ${encounter.id}: ${encounter.area}`);
     if (!Array.isArray(encounter.tokens) || !encounter.tokens.length) errors.push(`Encounter ${encounter.id} has no tokens.`);
+    if (encounter.radius !== undefined && (!Number.isInteger(encounter.radius) || encounter.radius < 0)) errors.push(`Invalid radius in ${encounter.id}.`);
     const encounterSceneKey = String(encounter.sceneKey ?? defaultSceneKey);
     if (!sceneKeys.has(encounterSceneKey)) errors.push(`Unknown Scene key in ${encounter.id}: ${encounterSceneKey}`);
 
+    const actorKeys = new Set();
     for (const token of encounter.tokens ?? []) {
       if (!token.actorKey) errors.push(`Missing actorKey in ${encounter.id}.`);
+      else if (actorKeys.has(token.actorKey)) errors.push(`Duplicate actorKey in ${encounter.id}: ${token.actorKey}`);
       if (!token.actor) errors.push(`Missing actor name in ${encounter.id}/${token.actorKey ?? "unknown"}.`);
       if (!Number.isInteger(token.count) || token.count < 1) errors.push(`Invalid count in ${encounter.id}/${token.actorKey}.`);
+      for (const field of ["aliases", "resolutionNames"]) {
+        if (token[field] !== undefined && (!Array.isArray(token[field]) || token[field].some((value) => typeof value !== "string" || !value.trim()))) {
+          errors.push(`${field} must contain non-empty strings in ${encounter.id}/${token.actorKey}.`);
+        }
+      }
+      if (token.stackWith && !actorKeys.has(token.stackWith)) errors.push(`stackWith must reference an earlier actorKey in ${encounter.id}/${token.actorKey}.`);
+      if (token.disposition !== undefined && ![-1, 0, 1].includes(token.disposition)) errors.push(`Invalid disposition in ${encounter.id}/${token.actorKey}.`);
+      if (token.hidden !== undefined && typeof token.hidden !== "boolean") errors.push(`Invalid hidden flag in ${encounter.id}/${token.actorKey}.`);
+      if (token.tokenName !== undefined && (typeof token.tokenName !== "string" || !token.tokenName.trim())) errors.push(`Invalid tokenName in ${encounter.id}/${token.actorKey}.`);
       if (token.tokenWidth !== undefined && (!Number.isFinite(token.tokenWidth) || token.tokenWidth <= 0)) errors.push(`Invalid tokenWidth in ${encounter.id}/${token.actorKey}.`);
       if (token.tokenHeight !== undefined && (!Number.isFinite(token.tokenHeight) || token.tokenHeight <= 0)) errors.push(`Invalid tokenHeight in ${encounter.id}/${token.actorKey}.`);
       if (token.positions !== undefined && (!Array.isArray(token.positions) || token.positions.length !== token.count)) errors.push(`positions must contain exactly count entries in ${encounter.id}/${token.actorKey}.`);
@@ -67,6 +79,7 @@ export function validateLevelData(data) {
         if (instances.has(key)) errors.push(`Duplicate token instance id: ${key}`);
         instances.add(key);
       }
+      actorKeys.add(token.actorKey);
     }
 
     if (encounter.humanReview) warnings.push(`${encounter.id} is marked for human review.`);
@@ -96,6 +109,7 @@ export function fingerprintScene(scene) {
   return {
     sceneId: scene.id,
     tokens: ids(scene.tokens),
+    tokenSnapshots: snapshots(scene.tokens),
     walls: snapshots(scene.walls),
     lights: snapshots(scene.lights),
     tiles: snapshots(scene.tiles),
@@ -126,7 +140,13 @@ export function verifyTokenOnlyMutation(before, after, { created = [], removed =
     errors.push(`Unexpected token removal set: ${actualRemoved.join(", ") || "none"}.`);
   }
 
-  return { ok: errors.length === 0, errors, actualCreated, actualRemoved };
+  const beforeSnapshots = new Map((before.tokenSnapshots ?? []).map((entry) => [entry.id, entry.data]));
+  const afterSnapshots = new Map((after.tokenSnapshots ?? []).map((entry) => [entry.id, entry.data]));
+  const changed = [...beforeSnapshots.keys()].filter((id) => afterSnapshots.has(id)
+    && JSON.stringify(beforeSnapshots.get(id)) !== JSON.stringify(afterSnapshots.get(id)));
+  if (changed.length) errors.push(`Existing Tokens changed unexpectedly: ${changed.sort().join(", ")}.`);
+
+  return { ok: errors.length === 0, errors, actualCreated, actualRemoved, changed };
 }
 
 export function assertGm() {

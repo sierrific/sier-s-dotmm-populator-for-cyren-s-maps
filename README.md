@@ -19,9 +19,12 @@ The module reviews Scene compatibility, resolves creature Actors, previews deter
 - Prefers newer equivalent creature sources in the order XMM, MPMM, then MM.
 - Opens Plutonium's creature importer when Plutonium is available.
 - Previews placements without saving documents.
+- Pans the canvas to an encounter when its name or review warning is clicked.
 - Creates, reconciles, rebuilds, and removes only module-owned Tokens.
 - Uses deterministic instance keys, so repeated runs are idempotent.
 - Verifies that Walls, Lights, Tiles, Notes, Sounds, Drawings, and Regions remain unchanged.
+- Rolls back module Token changes after partial creation failures and detects unexpected changes to existing Tokens.
+- Marks imported Actors explicitly so cleanup cannot claim unmarked World content.
 - Blocks persistence while a Scene, Actor, or area anchor is unresolved.
 
 ## Install
@@ -36,7 +39,7 @@ https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-m
 
 ### Release ZIP
 
-Download `cyren-dotmm-populator-0.3.1.zip` from the latest release and extract it into:
+Download `cyren-dotmm-populator-0.3.2.zip` from the latest release and extract it into:
 
 ```text
 <FoundryUserData>/Data/modules/cyren-dotmm-populator
@@ -84,7 +87,7 @@ npm run build
 npm run audit
 ```
 
-The build command creates a reproducible Foundry-ready ZIP and SHA-256 checksum in `dist/`. Release tags named `v<version>` are validated, packaged, audited, and published by GitHub Actions.
+The build command creates a cross-platform deterministic Foundry-ready ZIP and SHA-256 checksum in `dist/`. Release tags named `v<version>` are validated, packaged, audited, and published by GitHub Actions.
 
 See [Development and releases](docs/DEVELOPMENT.md).
 

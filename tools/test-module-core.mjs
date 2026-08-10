@@ -7,6 +7,9 @@ const { expectedPopulationKeys, planPopulation } = await import("../cyren-dotmm-
 const { resolveAnchors } = await import("../cyren-dotmm-populator/scripts/anchor-resolver.js");
 const { levelSceneDefinitions, scopeLevelData, sceneCanvasBounds } = await import("../cyren-dotmm-populator/scripts/scene-resolver.js");
 const { validateLevelData, fingerprintScene, verifyTokenOnlyMutation } = await import("../cyren-dotmm-populator/scripts/validation.js");
+const { populateMissing } = await import("../cyren-dotmm-populator/scripts/populator.js");
+const { isManagedImport } = await import("../cyren-dotmm-populator/scripts/actor-importer.js");
+const { encounterFocusPoint } = await import("../cyren-dotmm-populator/scripts/encounter-navigation.js");
 
 assert.equal(normalizeActorName("Kélim—the Weasel"), "kelim the weasel");
 
@@ -62,6 +65,55 @@ const unsafe = verifyTokenOnlyMutation(
   { tokens: [], walls: [], lights: [], tiles: [], notes: [], sounds: [], drawings: [], regions: [] }
 );
 assert.equal(unsafe.ok, false);
+
+const changedToken = verifyTokenOnlyMutation(
+  { tokens: ["a"], tokenSnapshots: [{ id: "a", data: { _id: "a", x: 0 } }], walls: [], lights: [], tiles: [], notes: [], sounds: [], drawings: [], regions: [] },
+  { tokens: ["a"], tokenSnapshots: [{ id: "a", data: { _id: "a", x: 70 } }], walls: [], lights: [], tiles: [], notes: [], sounds: [], drawings: [], regions: [] }
+);
+assert.equal(changedToken.ok, false);
+assert.deepEqual(changedToken.changed, ["a"]);
+
+const importFolder = { id: "imports" };
+assert.equal(isManagedImport({ folder: importFolder, flags: { "cyren-dotmm-populator": { importedActor: { sourceUuid: "Compendium.test.Actor.one" } } } }, importFolder), true);
+assert.equal(isManagedImport({ folder: importFolder, flags: {} }, importFolder), false);
+assert.equal(isManagedImport({ folder: { id: "elsewhere" }, flags: { "cyren-dotmm-populator": { importedActor: { sourceUuid: "Compendium.test.Actor.one" } } } }, importFolder), false);
+
+const navigationEncounter = {
+  id: "navigation-test",
+  tokens: [{ actorKey: "host", actor: "Host", count: 1, positions: [{ x: 70, y: 140 }] }]
+};
+const navigationScene = {
+  grid: { size: 70 },
+  tokens: [{
+    id: "navigation-token",
+    x: 140,
+    y: 210,
+    width: 2,
+    height: 1,
+    flags: { "cyren-dotmm-populator": { level: 99, encounterId: "navigation-test" } }
+  }]
+};
+assert.deepEqual(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: navigationEncounter }), {
+  x: 210,
+  y: 245,
+  count: 1,
+  source: "existing-tokens"
+});
+navigationScene.tokens = [];
+const navigationPlan = { encounterPlacements: new Map([["navigation-test", new Map([["host", new Map([[1, { x: 280, y: 350, width: 1, height: 2 }]])]])]]) };
+assert.deepEqual(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: navigationEncounter, plan: navigationPlan }), {
+  x: 315,
+  y: 420,
+  count: 1,
+  source: "planned-tokens"
+});
+assert.equal(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: navigationEncounter }).source, "exact-positions");
+assert.deepEqual(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: { id: "anchor-only", tokens: [] }, anchor: { status: "resolved", x: 490, y: 560 } }), {
+  x: 490,
+  y: 560,
+  count: 1,
+  source: "area-anchor"
+});
 
 const partialLevel = {
   level: 99,
@@ -140,4 +192,42 @@ assert.deepEqual(sceneCanvasBounds(paddedScene), { width: 1050, height: 1050 });
 const paddedPlan = planPopulation(paddedScene, eastData, new Map([["host", partialActors.get("host")]]), new Map([["2", { status: "resolved", area: "2", x: 840, y: 350 }]]));
 assert.equal(paddedPlan.placements.length, 1);
 
-console.log(JSON.stringify({ ok: true, plans, partialRecovery: true, manualAnchorOverride: true, contentFingerprint: true, multiScene: true, paddedCanvas: true }, null, 2));
+globalThis.game = { user: { isGM: true } };
+const partialCreateScene = {
+  id: "partial-create",
+  tokens: [],
+  walls: [],
+  lights: [],
+  tiles: [],
+  notes: [],
+  sounds: [],
+  drawings: [],
+  regions: [],
+  async createEmbeddedDocuments(_type, rows) {
+    const created = rows.map((row, index) => ({
+      ...row,
+      id: row._id ?? `created-${index + 1}`,
+      parent: partialCreateScene,
+      toObject() { return { ...row, _id: this.id }; }
+    }));
+    this.tokens.push(...created);
+    if (!rows.some((row) => row._id)) throw new Error("simulated partial create");
+    return created;
+  },
+  async deleteEmbeddedDocuments(_type, ids) {
+    this.tokens = this.tokens.filter((token) => !ids.includes(token.id));
+  }
+};
+const partialCreatePlan = {
+  placements: [{
+    x: 0,
+    y: 0,
+    spec: {},
+    flag: { level: 99, area: "1", encounterId: "partial", actorKey: "host", instance: 1 },
+    actor: { async getTokenDocument() { return { toObject: () => ({ name: "Host", width: 1, height: 1 }) }; } }
+  }]
+};
+await assert.rejects(populateMissing(partialCreateScene, partialCreatePlan), /Partial changes were rolled back/);
+assert.equal(partialCreateScene.tokens.length, 0);
+
+console.log(JSON.stringify({ ok: true, plans, partialRecovery: true, partialCreateRollback: true, managedActorImports: true, encounterNavigation: true, manualAnchorOverride: true, contentFingerprint: true, tokenContentFingerprint: true, multiScene: true, paddedCanvas: true }, null, 2));

@@ -21,6 +21,21 @@ if ([IO.Path]::GetExtension($resolvedPackage) -ne ".zip") {
     throw "PackagePath must point to a release ZIP."
 }
 
+$checksumFile = "$resolvedPackage.sha256"
+if (Test-Path -LiteralPath $checksumFile) {
+    $expectedHash = ((Get-Content -Raw -LiteralPath $checksumFile).Trim() -split "\s+")[0]
+    if ($expectedHash -notmatch "^[a-fA-F0-9]{64}$") {
+        throw "The checksum file is malformed: $checksumFile"
+    }
+    $actualHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $resolvedPackage).Hash
+    if ($actualHash -ne $expectedHash) {
+        throw "The release ZIP failed SHA-256 verification."
+    }
+    Write-Host "Verified SHA-256 checksum."
+} else {
+    Write-Warning "No sibling .sha256 file was found; package integrity was not verified."
+}
+
 New-Item -ItemType Directory -Force -Path $modulesDirectory | Out-Null
 
 if ((Test-Path -LiteralPath $target) -and -not $Force) {
@@ -36,6 +51,21 @@ try {
         $backup = Join-Path $modulesDirectory "$moduleId.backup-$stamp"
         Move-Item -LiteralPath $target -Destination $backup
         Write-Host "Existing module moved to $backup"
+    }
+
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $archive = [IO.Compression.ZipFile]::OpenRead($resolvedPackage)
+    try {
+        $stagingPrefix = [IO.Path]::GetFullPath($stagingRoot + [IO.Path]::DirectorySeparatorChar)
+        foreach ($entry in $archive.Entries) {
+            $entryPath = $entry.FullName.Replace('/', [IO.Path]::DirectorySeparatorChar)
+            $destination = [IO.Path]::GetFullPath((Join-Path $stagingRoot $entryPath))
+            if ([IO.Path]::IsPathRooted($entry.FullName) -or -not $destination.StartsWith($stagingPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+                throw "The ZIP contains an unsafe path: $($entry.FullName)"
+            }
+        }
+    } finally {
+        $archive.Dispose()
     }
 
     Expand-Archive -LiteralPath $resolvedPackage -DestinationPath $stagingRoot

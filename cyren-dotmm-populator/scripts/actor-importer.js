@@ -1,4 +1,4 @@
-import { SUPPORTED_LEVELS } from "./constants.js";
+import { MODULE_ID, MODULE_VERSION, SUPPORTED_LEVELS } from "./constants.js";
 import { loadLevelData } from "./data-loader.js";
 import { actorSpecs, normalizeActorName, resolveActorSpec } from "./actor-resolver.js";
 import { assertGm } from "./validation.js";
@@ -6,6 +6,13 @@ import { assertGm } from "./validation.js";
 async function importFolder() {
   return game.folders.find((folder) => folder.type === "Actor" && folder.name === "Sier's DotMM Populator Imports")
     ?? Folder.create({ name: "Sier's DotMM Populator Imports", type: "Actor", sorting: "a" });
+}
+
+export function isManagedImport(actor, folder = null) {
+  const marker = actor?.flags?.[MODULE_ID]?.importedActor;
+  if (!marker?.sourceUuid) return false;
+  if (!folder) return true;
+  return (actor.folder?.id ?? actor.folder) === folder.id;
 }
 
 async function removeRedundantImports(folder) {
@@ -18,7 +25,7 @@ async function removeRedundantImports(folder) {
   const remove = [];
   for (const actors of groups.values()) {
     if (actors.length < 2) continue;
-    const imported = actors.filter((actor) => actor.folder?.id === folder.id || actor.folder === folder.id);
+    const imported = actors.filter((actor) => isManagedImport(actor, folder));
     const existing = actors.filter((actor) => !imported.includes(actor));
     if (existing.length) remove.push(...imported);
     else if (imported.length > 1) remove.push(...imported.toSorted((left, right) => left.id.localeCompare(right.id)).slice(1));
@@ -59,6 +66,14 @@ export async function importAvailableActors({ levels = SUPPORTED_LEVELS.filter((
       const actorData = source.toObject();
       delete actorData._id;
       actorData.folder = folder.id;
+      actorData.flags ??= {};
+      actorData.flags[MODULE_ID] = {
+        ...(actorData.flags[MODULE_ID] ?? {}),
+        importedActor: {
+          sourceUuid: source.uuid,
+          version: MODULE_VERSION
+        }
+      };
       created.push(await Actor.create(actorData, { renderSheet: false }));
     }
   }

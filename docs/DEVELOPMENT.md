@@ -23,7 +23,7 @@ npm run build
 npm run audit
 ```
 
-`npm run build` creates `dist/cyren-dotmm-populator-<version>.zip` and its `.sha256` checksum. The archive is reproducible and contains the contents of the module directory at its root, including `module.json`. `npm run audit` checks version consistency, archive contents, checksum, documentation links, installer targeting, and release assets.
+`npm run build` creates `dist/cyren-dotmm-populator-<version>.zip` and its `.sha256` checksum. The archive uses canonical LF text, deterministic store mode, fixed timestamps, stable permissions, and contains the contents of the module directory at its root, including `module.json`. `npm run audit` compares every archived byte with the canonicalized source and also checks version consistency, checksum, documentation links, installer targeting, and release assets.
 
 ## Release procedure
 

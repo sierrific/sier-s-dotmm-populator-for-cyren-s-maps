@@ -37,29 +37,47 @@ async function deleteModuleTokens(scene, tokens) {
   return safe;
 }
 
+async function rollbackPartialMutation(scene, before) {
+  const errors = [];
+  const beforeIds = new Set(before.tokens ?? []);
+  try {
+    const created = Array.from(scene.tokens ?? []).filter((token) => !beforeIds.has(token.id) && isModuleToken(token));
+    if (created.length) await scene.deleteEmbeddedDocuments("Token", created.map((token) => token.id));
+  } catch (error) {
+    errors.push(`created-token rollback failed: ${error.message}`);
+  }
+
+  try {
+    const currentIds = new Set(Array.from(scene.tokens ?? [], (token) => token.id));
+    const missing = (before.tokenSnapshots ?? []).filter((entry) => !currentIds.has(entry.id));
+    if (missing.length) {
+      const data = missing.map((entry) => ({ ...entry.data, _id: entry.id }));
+      await scene.createEmbeddedDocuments("Token", data, { keepId: true });
+    }
+  } catch (error) {
+    errors.push(`removed-token restore failed: ${error.message}`);
+  }
+  return errors;
+}
+
 async function verifiedMutation(scene, operation) {
   assertGm();
   const before = fingerprintScene(scene);
-  const result = await operation();
+  let result;
+  try {
+    result = await operation();
+  } catch (error) {
+    const rollbackErrors = await rollbackPartialMutation(scene, before);
+    const detail = rollbackErrors.length ? ` Rollback: ${rollbackErrors.join(" ")}` : " Partial changes were rolled back.";
+    throw new Error(`${error.message}${detail}`, { cause: error });
+  }
   const after = fingerprintScene(scene);
   const verification = verifyTokenOnlyMutation(before, after, {
     created: result.created?.map((token) => token.id) ?? [],
     removed: result.removed?.map((token) => token.id) ?? []
   });
   if (!verification.ok) {
-    const rollbackErrors = [];
-    try {
-      const created = (result.created ?? []).filter((token) => isModuleToken(token));
-      if (created.length) await scene.deleteEmbeddedDocuments("Token", created.map((token) => token.id));
-    } catch (error) {
-      rollbackErrors.push(`created-token rollback failed: ${error.message}`);
-    }
-    try {
-      const removed = result.removed ?? [];
-      if (removed.length) await scene.createEmbeddedDocuments("Token", removed.map((token) => token.toObject()), { keepId: true });
-    } catch (error) {
-      rollbackErrors.push(`removed-token restore failed: ${error.message}`);
-    }
+    const rollbackErrors = await rollbackPartialMutation(scene, before);
     throw new Error(`Safety verification failed: ${verification.errors.join(" ")}${rollbackErrors.length ? ` Rollback: ${rollbackErrors.join(" ")}` : " Changes were rolled back."}`);
   }
   return { ...result, verification };

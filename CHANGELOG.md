@@ -2,6 +2,19 @@
 
 All notable changes are documented here.
 
+## 0.3.2 — 2026-08-09
+
+- Added rollback for partially completed Token creation when Foundry throws before returning created documents.
+- Added content verification for pre-existing Tokens so unexpected updates are detected in addition to unexpected creation or removal.
+- Marked module-imported Actors explicitly and restricted duplicate cleanup to marked Actors that remain in the dedicated import folder.
+- Displayed dataset review warnings in the panel and preserved the selected anchor and rebuild areas across refreshes.
+- Made encounter names and human-review warnings clickable, panning the canvas to existing Tokens, planned placements, exact positions, or the area anchor.
+- Prevented overlapping panel actions while an earlier action is still running.
+- Switched release archives to deterministic ZIP store mode and added byte-for-byte source verification, fixed-timestamp checks, and UTF-8 entry checks.
+- Added SHA-256 verification and unsafe-path rejection to both helper installers.
+- Added dependency auditing and full package validation on pushes, pull requests, and releases.
+- Expanded runtime metadata validation for Actor lists, stacking order, Token options, encounter radii, and duplicate Actor keys.
+
 ## 0.3.1 — 2026-08-09
 
 - Fixed **Rebuild area** reading the selector from the Anchors tab instead of the selected **Area to rebuild** value.

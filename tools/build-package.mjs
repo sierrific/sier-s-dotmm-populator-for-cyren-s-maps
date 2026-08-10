@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import zlib from "node:zlib";
 import crypto from "node:crypto";
 
 const moduleDirectory = path.resolve("cyren-dotmm-populator");
@@ -9,6 +8,13 @@ const outputDirectory = path.resolve("dist");
 const outputPath = path.join(outputDirectory, `${manifest.id}-${manifest.version}.zip`);
 const checksumPath = `${outputPath}.sha256`;
 const archiveDate = new Date(Date.UTC(1980, 0, 1, 0, 0, 0));
+const textExtensions = new Set([".css", ".hbs", ".js", ".json", ".md"]);
+
+function archiveBytes(file) {
+  const source = fs.readFileSync(file);
+  if (!textExtensions.has(path.extname(file).toLowerCase())) return source;
+  return Buffer.from(source.toString("utf8").replace(/\r\n?/g, "\n"), "utf8");
+}
 
 function crc32(buffer) {
   let crc = 0xffffffff;
@@ -44,8 +50,7 @@ let offset = 0;
 
 for (const file of listFiles(moduleDirectory)) {
   const name = Buffer.from(file.relative.replaceAll("\\", "/"), "utf8");
-  const source = fs.readFileSync(file.absolute);
-  const compressed = zlib.deflateRawSync(source, { level: 9 });
+  const source = archiveBytes(file.absolute);
   const checksum = crc32(source);
   const { time, day } = dosTimestamp(archiveDate);
 
@@ -53,26 +58,26 @@ for (const file of listFiles(moduleDirectory)) {
   localHeader.writeUInt32LE(0x04034b50, 0);
   localHeader.writeUInt16LE(20, 4);
   localHeader.writeUInt16LE(0x0800, 6);
-  localHeader.writeUInt16LE(8, 8);
+  localHeader.writeUInt16LE(0, 8);
   localHeader.writeUInt16LE(time, 10);
   localHeader.writeUInt16LE(day, 12);
   localHeader.writeUInt32LE(checksum, 14);
-  localHeader.writeUInt32LE(compressed.length, 18);
+  localHeader.writeUInt32LE(source.length, 18);
   localHeader.writeUInt32LE(source.length, 22);
   localHeader.writeUInt16LE(name.length, 26);
   localHeader.writeUInt16LE(0, 28);
-  localRecords.push(localHeader, name, compressed);
+  localRecords.push(localHeader, name, source);
 
   const centralHeader = Buffer.alloc(46);
   centralHeader.writeUInt32LE(0x02014b50, 0);
   centralHeader.writeUInt16LE(0x0314, 4);
   centralHeader.writeUInt16LE(20, 6);
   centralHeader.writeUInt16LE(0x0800, 8);
-  centralHeader.writeUInt16LE(8, 10);
+  centralHeader.writeUInt16LE(0, 10);
   centralHeader.writeUInt16LE(time, 12);
   centralHeader.writeUInt16LE(day, 14);
   centralHeader.writeUInt32LE(checksum, 16);
-  centralHeader.writeUInt32LE(compressed.length, 20);
+  centralHeader.writeUInt32LE(source.length, 20);
   centralHeader.writeUInt32LE(source.length, 24);
   centralHeader.writeUInt16LE(name.length, 28);
   centralHeader.writeUInt16LE(0, 30);
@@ -83,7 +88,7 @@ for (const file of listFiles(moduleDirectory)) {
   centralHeader.writeUInt32LE(offset, 42);
   centralRecords.push(centralHeader, name);
 
-  offset += localHeader.length + name.length + compressed.length;
+  offset += localHeader.length + name.length + source.length;
 }
 
 const centralDirectory = Buffer.concat(centralRecords);

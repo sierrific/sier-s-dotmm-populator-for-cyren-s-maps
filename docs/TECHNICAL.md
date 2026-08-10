@@ -41,7 +41,7 @@ XMM → MPMM → MM
 
 Explicit World Actor UUID overrides take precedence. World duplicates use a narrow folder tie-breaker; otherwise ambiguous matches remain blockers.
 
-The optional importer copies only unambiguous compendium Actors into `Sier's DotMM Populator Imports`. Duplicate cleanup is restricted to redundant Actors created in that folder. The module does not package or synthesize creature stat blocks.
+The optional importer copies only unambiguous compendium Actors into `Sier's DotMM Populator Imports`. Each imported Actor receives a module ownership marker containing its source UUID and importer version. Duplicate cleanup requires both that marker and continued membership in the dedicated folder. The module does not package or synthesize creature stat blocks.
 
 ## Placement
 
@@ -54,10 +54,11 @@ When exact coordinates are unavailable, placement starts from an area anchor and
 Before a persistent operation, the module fingerprints Tokens and the unrelated embedded collections. After the operation it verifies:
 
 - created and removed Token IDs match the operation result;
+- pre-existing Token document contents remain unchanged;
 - non-Token collections have identical content fingerprints;
 - no unowned Token was removed.
 
-The module attempts to revert its own changes if verification fails.
+The module attempts to revert its own changes if verification fails. The same rollback runs when Foundry throws during a mutation, including failures that occur after only part of a bulk Token creation completed.
 
 ## Public API
 
