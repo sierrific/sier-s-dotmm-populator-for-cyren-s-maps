@@ -48,6 +48,8 @@ Exact placements from the level dataset are retained. Deterministic fallback pla
 
 Select **Preview without saving** to draw temporary placement boxes. The preview does not create Scene documents and disappears when cleared or when the panel closes.
 
+Click any encounter name in the Review tables or in a **marked for human review** warning to pan the canvas to that encounter. Navigation prefers existing module Tokens, then current planned placements, exact dataset positions, and finally the resolved area anchor. It does not create or modify documents.
+
 ## Create and maintain Tokens
 
 - **Create missing** creates only deterministic module Tokens that do not already exist.

@@ -8,6 +8,7 @@ All notable changes are documented here.
 - Added content verification for pre-existing Tokens so unexpected updates are detected in addition to unexpected creation or removal.
 - Marked module-imported Actors explicitly and restricted duplicate cleanup to marked Actors that remain in the dedicated import folder.
 - Displayed dataset review warnings in the panel and preserved the selected anchor and rebuild areas across refreshes.
+- Made encounter names and human-review warnings clickable, panning the canvas to existing Tokens, planned placements, exact positions, or the area anchor.
 - Prevented overlapping panel actions while an earlier action is still running.
 - Switched release archives to deterministic ZIP store mode and added byte-for-byte source verification, fixed-timestamp checks, and UTF-8 entry checks.
 - Added SHA-256 verification and unsafe-path rejection to both helper installers.

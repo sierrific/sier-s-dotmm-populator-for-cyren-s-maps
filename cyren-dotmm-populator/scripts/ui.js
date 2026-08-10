@@ -10,6 +10,7 @@ import { authorAnchor, cancelAnchorAuthoring } from "./anchor-authoring.js";
 import { openPlutoniumCreatureImporter, plutoniumStatus } from "./plutonium-helper.js";
 import { createMissingSafetyCopies } from "./safety-copies.js";
 import { importAvailableActors } from "./actor-importer.js";
+import { panToEncounter } from "./encounter-navigation.js";
 
 let previewContainer = null;
 
@@ -134,6 +135,17 @@ export class CyrenPopulatorApp extends FormApplication {
       conditional: Boolean(encounter.conditional),
       anchorStatus: context.anchors?.get(encounter.area.toLowerCase())?.status ?? "unresolved"
     }));
+    const currentEncounterIds = new Set(encounterRows.map((row) => row.id));
+    const allEncounterIds = new Set((context.levelData?.encounters ?? []).map((encounter) => encounter.id));
+    const dataWarningRows = (context.dataValidation.warnings ?? []).flatMap((message) => {
+      const encounterId = String(message).split(" ", 1)[0];
+      if (allEncounterIds.has(encounterId) && !currentEncounterIds.has(encounterId)) return [];
+      return [{
+        message,
+        encounterId: currentEncounterIds.has(encounterId) ? encounterId : null,
+        suffix: currentEncounterIds.has(encounterId) ? String(message).slice(encounterId.length) : null
+      }];
+    });
     return {
       ...context,
       level: context.data.level,
@@ -147,6 +159,7 @@ export class CyrenPopulatorApp extends FormApplication {
       environmentWarnings: context.environment.warnings,
       dataErrors: context.dataValidation.errors,
       dataWarnings: context.dataValidation.warnings,
+      dataWarningRows,
       actorRows,
       actorSummary: context.actors ? actorResolutionSummary(context.actors) : {},
       anchorRows: anchorRows.map((row) => ({
@@ -224,7 +237,21 @@ export class CyrenPopulatorApp extends FormApplication {
         return;
       }
       const context = this.context ?? await this._buildContext();
-      if (!context.scene || !context.plan) throw new Error(`No unambiguous Level ${context.data.level} map is available.`);
+      if (!context.scene) throw new Error(`No unambiguous Level ${context.data.level} map is available.`);
+      if (action === "pan-encounter") {
+        const encounterId = String(event.currentTarget.dataset.encounterId ?? "");
+        const encounter = context.data.encounters.find((candidate) => candidate.id === encounterId);
+        if (!encounter) throw new Error(`Unknown encounter: ${encounterId || "none"}.`);
+        await panToEncounter({
+          scene: context.scene,
+          level: context.data.level,
+          encounter,
+          plan: context.plan,
+          anchor: context.anchors?.get(encounter.area.toLowerCase())
+        });
+        return;
+      }
+      if (!context.plan) throw new Error(`No placement plan is available for Level ${context.data.level}.`);
       if (action === "preview") {
         drawPreview(context.scene, context.plan);
         return ui.notifications.info(`Preview: ${context.plan.placements.length} token(s) planned.`);

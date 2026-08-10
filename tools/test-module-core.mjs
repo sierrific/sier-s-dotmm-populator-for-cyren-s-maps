@@ -9,6 +9,7 @@ const { levelSceneDefinitions, scopeLevelData, sceneCanvasBounds } = await impor
 const { validateLevelData, fingerprintScene, verifyTokenOnlyMutation } = await import("../cyren-dotmm-populator/scripts/validation.js");
 const { populateMissing } = await import("../cyren-dotmm-populator/scripts/populator.js");
 const { isManagedImport } = await import("../cyren-dotmm-populator/scripts/actor-importer.js");
+const { encounterFocusPoint } = await import("../cyren-dotmm-populator/scripts/encounter-navigation.js");
 
 assert.equal(normalizeActorName("Kélim—the Weasel"), "kelim the weasel");
 
@@ -76,6 +77,43 @@ const importFolder = { id: "imports" };
 assert.equal(isManagedImport({ folder: importFolder, flags: { "cyren-dotmm-populator": { importedActor: { sourceUuid: "Compendium.test.Actor.one" } } } }, importFolder), true);
 assert.equal(isManagedImport({ folder: importFolder, flags: {} }, importFolder), false);
 assert.equal(isManagedImport({ folder: { id: "elsewhere" }, flags: { "cyren-dotmm-populator": { importedActor: { sourceUuid: "Compendium.test.Actor.one" } } } }, importFolder), false);
+
+const navigationEncounter = {
+  id: "navigation-test",
+  tokens: [{ actorKey: "host", actor: "Host", count: 1, positions: [{ x: 70, y: 140 }] }]
+};
+const navigationScene = {
+  grid: { size: 70 },
+  tokens: [{
+    id: "navigation-token",
+    x: 140,
+    y: 210,
+    width: 2,
+    height: 1,
+    flags: { "cyren-dotmm-populator": { level: 99, encounterId: "navigation-test" } }
+  }]
+};
+assert.deepEqual(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: navigationEncounter }), {
+  x: 210,
+  y: 245,
+  count: 1,
+  source: "existing-tokens"
+});
+navigationScene.tokens = [];
+const navigationPlan = { encounterPlacements: new Map([["navigation-test", new Map([["host", new Map([[1, { x: 280, y: 350, width: 1, height: 2 }]])]])]]) };
+assert.deepEqual(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: navigationEncounter, plan: navigationPlan }), {
+  x: 315,
+  y: 420,
+  count: 1,
+  source: "planned-tokens"
+});
+assert.equal(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: navigationEncounter }).source, "exact-positions");
+assert.deepEqual(encounterFocusPoint({ scene: navigationScene, level: 99, encounter: { id: "anchor-only", tokens: [] }, anchor: { status: "resolved", x: 490, y: 560 } }), {
+  x: 490,
+  y: 560,
+  count: 1,
+  source: "area-anchor"
+});
 
 const partialLevel = {
   level: 99,
@@ -192,4 +230,4 @@ const partialCreatePlan = {
 await assert.rejects(populateMissing(partialCreateScene, partialCreatePlan), /Partial changes were rolled back/);
 assert.equal(partialCreateScene.tokens.length, 0);
 
-console.log(JSON.stringify({ ok: true, plans, partialRecovery: true, partialCreateRollback: true, managedActorImports: true, manualAnchorOverride: true, contentFingerprint: true, tokenContentFingerprint: true, multiScene: true, paddedCanvas: true }, null, 2));
+console.log(JSON.stringify({ ok: true, plans, partialRecovery: true, partialCreateRollback: true, managedActorImports: true, encounterNavigation: true, manualAnchorOverride: true, contentFingerprint: true, tokenContentFingerprint: true, multiScene: true, paddedCanvas: true }, null, 2));

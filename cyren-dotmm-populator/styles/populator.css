@@ -17,4 +17,6 @@
 .cyren-populator .plutonium-box { display: grid; grid-template-columns: minmax(260px, 0.6fr) 1fr; gap: 8px; align-items: center; margin: 8px 0; }
 .cyren-populator .actions button { margin: 4px; width: auto; }
 .cyren-populator button.danger { border-color: #a61b1b; }
+.cyren-populator button.encounter-link { width: auto; height: auto; min-height: 0; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; color: var(--color-text-hyperlink, #185aa9); font: inherit; line-height: inherit; text-align: left; text-decoration: underline; cursor: pointer; }
+.cyren-populator button.encounter-link:hover, .cyren-populator button.encounter-link:focus { color: var(--color-text-light-highlight, #000); text-shadow: 0 0 4px rgba(255, 255, 255, 0.7); }
 .cyren-populator footer { flex: 0 0 auto; }

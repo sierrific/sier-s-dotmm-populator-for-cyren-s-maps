@@ -18,6 +18,7 @@ Version 0.3.2 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and
 - unrelated embedded collections are compared by document content as well as IDs;
 - pre-existing Token contents are verified and partial creation failures are rolled back;
 - managed Actor cleanup requires an explicit ownership marker and the dedicated import folder;
+- encounter navigation resolves existing, planned, exact-position, and anchor targets in priority order;
 - release ZIP contents are compared byte for byte with canonicalized source, and documentation links, installer targets, and SHA-256 checksum are audited;
 - release ZIPs use deterministic store mode, fixed timestamps, and explicit UTF-8 entry names;
 - release ZIP entries carry Unix `0644` file permissions for direct extraction on Linux hosts.

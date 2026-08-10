@@ -19,6 +19,7 @@ The module reviews Scene compatibility, resolves creature Actors, previews deter
 - Prefers newer equivalent creature sources in the order XMM, MPMM, then MM.
 - Opens Plutonium's creature importer when Plutonium is available.
 - Previews placements without saving documents.
+- Pans the canvas to an encounter when its name or review warning is clicked.
 - Creates, reconciles, rebuilds, and removes only module-owned Tokens.
 - Uses deterministic instance keys, so repeated runs are idempotent.
 - Verifies that Walls, Lights, Tiles, Notes, Sounds, Drawings, and Regions remain unchanged.

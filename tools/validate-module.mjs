@@ -51,6 +51,7 @@ if (!manifest.relationships?.requires?.some((item) => item.id === "cyrensmaps-wd
 if (!templateSource.includes('name="anchorArea"') || !uiSource.includes('[name="anchorArea"]')) errors.push("Anchor authoring selector is not wired independently.");
 if (!templateSource.includes('name="rebuildArea"') || !uiSource.includes('[name="rebuildArea"]')) errors.push("Area rebuild selector is not wired independently.");
 if (templateSource.includes('name="selectedArea"') || uiSource.includes('[name="selectedArea"]')) errors.push("Legacy shared area selector must not be used.");
+if (!templateSource.includes('data-action="pan-encounter"') || !uiSource.includes('action === "pan-encounter"')) errors.push("Encounter navigation is not wired through the review panel.");
 
 const forbiddenKeys = new Set(["description", "entries", "statBlock", "statblock", "content", "html", "prose"]);
 function inspectDerivedData(value, pointer) {

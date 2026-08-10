@@ -8,7 +8,7 @@
   {{#if environmentErrors.length}}<div class="notice error">{{#each environmentErrors}}<p>{{this}}</p>{{/each}}</div>{{/if}}
   {{#if dataErrors.length}}<div class="notice error">{{#each dataErrors}}<p>{{this}}</p>{{/each}}</div>{{/if}}
   {{#if environmentWarnings.length}}<div class="notice warning">{{#each environmentWarnings}}<p>{{this}}</p>{{/each}}</div>{{/if}}
-  {{#if dataWarnings.length}}<div class="notice warning">{{#each dataWarnings}}<p>{{this}}</p>{{/each}}</div>{{/if}}
+  {{#if dataWarningRows.length}}<div class="notice warning">{{#each dataWarningRows}}<p>{{#if encounterId}}<button type="button" class="encounter-link" data-action="pan-encounter" data-encounter-id="{{encounterId}}" title="Pan to {{encounterId}}">{{encounterId}}</button>{{suffix}}{{else}}{{message}}{{/if}}</p>{{/each}}</div>{{/if}}
 
   <nav class="tabs" data-group="primary-tabs">
     <a class="item" data-tab="review"><i class="fas fa-list-check"></i> Review</a>
@@ -22,20 +22,20 @@
       <table>
         <thead><tr><th>Area</th><th>Encounter</th><th>Tokens</th><th>Anchor</th><th>Review</th></tr></thead>
         <tbody>{{#each encounterRows}}<tr>
-          <td>{{area}}</td><td>{{id}}</td><td>{{total}}</td><td class="status-{{anchorStatus}}">{{anchorStatus}}</td>
+          <td>{{area}}</td><td><button type="button" class="encounter-link" data-action="pan-encounter" data-encounter-id="{{id}}" title="Pan to {{id}}">{{id}}</button></td><td>{{total}}</td><td class="status-{{anchorStatus}}">{{anchorStatus}}</td>
           <td>{{#if humanReview}}manual {{/if}}{{#if conditional}}conditional{{/if}}</td>
         </tr>{{/each}}</tbody>
       </table>
       {{#if planIssues.length}}
       <h3>Blockers and skipped instances</h3>
       <table><thead><tr><th>Area</th><th>Encounter</th><th>Actor</th><th>Instance</th><th>Reason</th></tr></thead>
-        <tbody>{{#each planIssues}}<tr><td>{{area}}</td><td>{{encounterId}}</td><td>{{actorKey}}</td><td>{{instance}}</td><td>{{reason}}</td></tr>{{/each}}</tbody>
+        <tbody>{{#each planIssues}}<tr><td>{{area}}</td><td><button type="button" class="encounter-link" data-action="pan-encounter" data-encounter-id="{{encounterId}}" title="Pan to {{encounterId}}">{{encounterId}}</button></td><td>{{actorKey}}</td><td>{{instance}}</td><td>{{reason}}</td></tr>{{/each}}</tbody>
       </table>
       {{/if}}
       {{#if planWarnings.length}}
       <h3>Review warnings</h3>
       <table><thead><tr><th>Area</th><th>Encounter</th><th>Reason</th></tr></thead>
-        <tbody>{{#each planWarnings}}<tr><td>{{area}}</td><td>{{encounterId}}</td><td>{{reason}}</td></tr>{{/each}}</tbody>
+        <tbody>{{#each planWarnings}}<tr><td>{{area}}</td><td><button type="button" class="encounter-link" data-action="pan-encounter" data-encounter-id="{{encounterId}}" title="Pan to {{encounterId}}">{{encounterId}}</button></td><td>{{reason}}</td></tr>{{/each}}</tbody>
       </table>
       {{/if}}
     </div>
