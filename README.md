@@ -36,7 +36,7 @@ https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-m
 
 ### Release ZIP
 
-Download `cyren-dotmm-populator-0.3.0.zip` from the latest release and extract it into:
+Download `cyren-dotmm-populator-0.3.1.zip` from the latest release and extract it into:
 
 ```text
 <FoundryUserData>/Data/modules/cyren-dotmm-populator

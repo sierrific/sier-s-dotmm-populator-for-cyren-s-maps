@@ -217,7 +217,7 @@ export class CyrenPopulatorApp extends FormApplication {
       }
       if (action === "clear-preview") return clearPreview();
       if (action === "author-anchor") {
-        const area = String(this.element.find('[name="selectedArea"]').val() ?? "").trim().toLowerCase();
+        const area = String(this.element.find('[name="anchorArea"]').val() ?? "").trim().toLowerCase();
         if (!area) throw new Error("Choose an area.");
         await authorAnchor(context.scene, area);
         await this._refreshContext();
@@ -236,7 +236,7 @@ export class CyrenPopulatorApp extends FormApplication {
         displayStatus(await rebuild(context.scene, fresh, { level: context.data.level }));
       }
       if (action === "rebuild-area") {
-        const area = String(this.element.find('[name="selectedArea"]').val() ?? "").trim().toLowerCase();
+        const area = String(this.element.find('[name="rebuildArea"]').val() ?? "").trim().toLowerCase();
         if (!area) throw new Error("Choose an area.");
         if (!await confirmAction(`Rebuild area ${area}`, "Only Tokens owned by this module in this area will be removed and recreated.")) return;
         const fresh = planPopulation(context.scene, context.data, context.actors, context.anchors, { areas: [area], ignoreExisting: true });

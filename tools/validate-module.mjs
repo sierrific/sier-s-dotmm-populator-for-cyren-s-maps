@@ -6,6 +6,8 @@ const root = path.resolve("cyren-dotmm-populator");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "module.json"), "utf8"));
 const packageMetadata = JSON.parse(fs.readFileSync(path.resolve("package.json"), "utf8"));
 const constants = fs.readFileSync(path.join(root, "scripts", "constants.js"), "utf8");
+const uiSource = fs.readFileSync(path.join(root, "scripts", "ui.js"), "utf8");
+const templateSource = fs.readFileSync(path.join(root, "templates", "populator.hbs"), "utf8");
 const expectedLevels = new Map([
   [1, { encounters: 33, tokens: 133, anchors: 33 }],
   [2, { encounters: 48, tokens: 183, anchors: 47 }],
@@ -46,6 +48,9 @@ if (manifest.url !== repository) errors.push("Unexpected project URL.");
 if (manifest.manifest !== `${repository.replace("github.com", "raw.githubusercontent.com")}/main/cyren-dotmm-populator/module.json`) errors.push("Unexpected manifest URL.");
 if (manifest.download !== `${repository}/releases/download/v${manifest.version}/cyren-dotmm-populator-${manifest.version}.zip`) errors.push("Download URL must match the module version.");
 if (!manifest.relationships?.requires?.some((item) => item.id === "cyrensmaps-wdmm")) errors.push("Cyren dependency is missing.");
+if (!templateSource.includes('name="anchorArea"') || !uiSource.includes('[name="anchorArea"]')) errors.push("Anchor authoring selector is not wired independently.");
+if (!templateSource.includes('name="rebuildArea"') || !uiSource.includes('[name="rebuildArea"]')) errors.push("Area rebuild selector is not wired independently.");
+if (templateSource.includes('name="selectedArea"') || uiSource.includes('[name="selectedArea"]')) errors.push("Legacy shared area selector must not be used.");
 
 const forbiddenKeys = new Set(["description", "entries", "statBlock", "statblock", "content", "html", "prose"]);
 function inspectDerivedData(value, pointer) {

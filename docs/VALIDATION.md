@@ -1,11 +1,11 @@
 # Validation
 
-Version 0.3.0 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
+Version 0.3.1 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
 
 ## Automated checks
 
 - valid Foundry manifest and stable module ID;
-- release URLs and package names match version 0.3.0;
+- release URLs and package names match version 0.3.1;
 - 637 unique encounter groups and 2,680 deterministic Token instance keys across Levels 1–23;
 - 25 supported map descriptors, including three Level 3 segments;
 - complete Actor names, logical keys, scene assignments, and area identifiers;

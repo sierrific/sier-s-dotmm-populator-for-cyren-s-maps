@@ -19,7 +19,7 @@ Third-party attribution is included in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTI
 
 ## Current scope
 
-Version 0.3.0 covers Levels 1–23, 25 map descriptors, 637 encounter groups, and 2,680 intended Token instances.
+Version 0.3.1 covers Levels 1–23, 25 map descriptors, 637 encounter groups, and 2,680 intended Token instances.
 
 ## Disclaimer
 
