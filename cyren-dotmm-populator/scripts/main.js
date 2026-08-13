@@ -1,6 +1,6 @@
 import { MODULE_ID, SETTINGS } from "./constants.js";
 import { CyrenPopulatorApp, openPopulator } from "./ui.js";
-import { loadLevelData, clearDataCache } from "./data-loader.js";
+import { loadContentData, loadLevelData, clearDataCache } from "./data-loader.js";
 import { resolveLevelScene, resolveScene, scopeLevelData } from "./scene-resolver.js";
 import { resolveActors } from "./actor-resolver.js";
 import { resolveAnchors } from "./anchor-resolver.js";
@@ -39,6 +39,13 @@ Hooks.once("init", () => {
     type: Number,
     default: 1
   });
+  game.settings.register(MODULE_ID, SETTINGS.selectedContent, {
+    name: "Selected location",
+    scope: "client",
+    config: false,
+    type: String,
+    default: "level-01"
+  });
   game.settings.registerMenu(MODULE_ID, "controlPanel", {
     name: "Sier's DotMM Populator for Cyren's Maps",
     label: "Open Encounter Review",
@@ -53,6 +60,7 @@ Hooks.once("ready", () => {
   const module = game.modules.get(MODULE_ID);
   module.api = {
     open: openPopulator,
+    loadContentData,
     loadLevelData,
     clearDataCache,
     resolveScene,

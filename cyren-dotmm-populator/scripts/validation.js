@@ -1,7 +1,7 @@
 import { MODULE_ID, SUPPORTED_CORE_GENERATION } from "./constants.js";
 import { expectedCanvasBounds, levelSceneDefinitions } from "./scene-resolver.js";
 
-const AREA_PATTERN = /^\d{1,3}[a-z]?(?:-[a-z0-9]+)?$/i;
+const AREA_PATTERN = /^(?:\d{1,3}[a-z]?(?:-[a-z0-9]+)?|[a-z][a-z0-9-]{0,63})$/i;
 
 export function validateEnvironment() {
   const errors = [];
@@ -29,7 +29,10 @@ export function validateLevelData(data) {
   const sceneKeys = new Set();
   const defaultSceneKey = scenes[0]?.key ?? "main";
 
-  if (!Number.isInteger(data?.level) || data.level < 1) errors.push("Missing or invalid level number.");
+  const hasLevel = Number.isInteger(data?.level) && data.level >= 1;
+  const hasContentId = typeof data?.contentId === "string" && /^[a-z0-9][a-z0-9-]*$/.test(data.contentId);
+  if (!hasLevel && !hasContentId) errors.push("Missing a valid level number or content id.");
+  if (data?.level !== undefined && !hasLevel) errors.push("Invalid level number.");
   if (!Array.isArray(data?.encounters)) errors.push("encounters must be an array.");
   if (!scenes.length) errors.push("At least one Scene definition is required.");
   for (const scene of scenes) {

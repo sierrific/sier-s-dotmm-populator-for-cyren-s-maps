@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 1,
+  "contentId": "skullport-lower-middle",
+  "label": "Skullport — Lower & Middle",
+  "title": "Skullport Lower and Middle Levels",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Skullport - Lower & Middle",
+      "Skullport - Lower & Middle (Copy)"
+    ],
+    "sourceId": "Scene.OS9Sb2Gx9eefXd7J",
+    "width": 11900,
+    "height": 15260,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "12": {
+      "x": 3920,
+      "y": 18480
+    },
+    "13": {
+      "x": 5495,
+      "y": 16170
+    },
+    "14": {
+      "x": 4480,
+      "y": 15260
+    },
+    "15": {
+      "x": 5040,
+      "y": 15540
+    },
+    "16": {
+      "x": 6510,
+      "y": 16520
+    },
+    "19": {
+      "x": 9800,
+      "y": 15680
+    },
+    "20": {
+      "x": 11410,
+      "y": 16450
+    },
+    "21": {
+      "x": 13160,
+      "y": 16205
+    },
+    "22": {
+      "x": 10570,
+      "y": 6335
+    },
+    "23": {
+      "x": 10360,
+      "y": 14140
+    },
+    "24": {
+      "x": 13020,
+      "y": 5040
+    },
+    "26": {
+      "x": 5565,
+      "y": 7945
+    },
+    "27": {
+      "x": 7315,
+      "y": 6090
+    },
+    "28": {
+      "x": 7280,
+      "y": 7420
+    },
+    "29": {
+      "x": 8435,
+      "y": 7280
+    },
+    "30": {
+      "x": 8645,
+      "y": 5985
+    }
+  },
+  "encounters": [
+    {
+      "id": "skullport-lower-middle-a12",
+      "area": "12",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "sea-hag",
+          "actor": "Sea Hag",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3920,
+              "y": 18340
+            }
+          ],
+          "tokenName": "Olive Stillwater"
+        },
+        {
+          "actorKey": "zombie",
+          "actor": "Zombie",
+          "count": 12,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 3710,
+              "y": 18130
+            },
+            {
+              "x": 3710,
+              "y": 18200
+            },
+            {
+              "x": 3710,
+              "y": 18270
+            },
+            {
+              "x": 3710,
+              "y": 18340
+            },
+            {
+              "x": 3710,
+              "y": 18410
+            },
+            {
+              "x": 3780,
+              "y": 18410
+            },
+            {
+              "x": 3710,
+              "y": 18480
+            },
+            {
+              "x": 3780,
+              "y": 18480
+            },
+            {
+              "x": 3710,
+              "y": 18550
+            },
+            {
+              "x": 3780,
+              "y": 18550
+            },
+            {
+              "x": 3710,
+              "y": 18620
+            },
+            {
+              "x": 3780,
+              "y": 18620
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a13",
+      "area": "13",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 16170
+            }
+          ],
+          "tokenName": "Krystaleen"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a14",
+      "area": "14",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "minotaur",
+          "actor": "Minotaur",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 14980
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a15",
+      "area": "15",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 15330
+            }
+          ],
+          "tokenName": "Droon Stonedark"
+        },
+        {
+          "actorKey": "minotaur",
+          "actor": "Minotaur",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 15610
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "spectator",
+          "actor": "Spectator",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5110,
+              "y": 15260
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a16",
+      "area": "16",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6440,
+              "y": 7910
+            },
+            {
+              "x": 6300,
+              "y": 16450
+            }
+          ],
+          "tokenName": "Gyudd"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a19",
+      "area": "19",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9660,
+              "y": 15610
+            }
+          ],
+          "tokenName": "Cal’al Claddani"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a20",
+      "area": "20",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 11410,
+              "y": 16170
+            },
+            {
+              "x": 11480,
+              "y": 16170
+            },
+            {
+              "x": 11550,
+              "y": 16170
+            },
+            {
+              "x": 11410,
+              "y": 16240
+            },
+            {
+              "x": 11480,
+              "y": 16240
+            },
+            {
+              "x": 11550,
+              "y": 16240
+            }
+          ]
+        },
+        {
+          "actorKey": "wererat",
+          "actor": "Wererat",
+          "count": 6,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 11620,
+              "y": 16170
+            },
+            {
+              "x": 11690,
+              "y": 16170
+            },
+            {
+              "x": 11760,
+              "y": 16170
+            },
+            {
+              "x": 11620,
+              "y": 16240
+            },
+            {
+              "x": 11690,
+              "y": 16240
+            },
+            {
+              "x": 11760,
+              "y": 16240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a21",
+      "area": "21",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 13020,
+              "y": 16170
+            }
+          ],
+          "tokenName": "Oleander"
+        },
+        {
+          "actorKey": "commoner-2",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 13020,
+              "y": 16240
+            }
+          ],
+          "tokenName": "Will"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a22",
+      "area": "22",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10710,
+              "y": 6230
+            },
+            {
+              "x": 10850,
+              "y": 14490
+            }
+          ],
+          "tokenName": "Quietude"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a23",
+      "area": "23",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bat",
+          "actor": "Bat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10500,
+              "y": 14000
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "cat",
+          "actor": "Cat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10500,
+              "y": 14070
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10290,
+              "y": 13930
+            }
+          ],
+          "tokenName": "Ulvira Snowveins"
+        },
+        {
+          "actorKey": "frog",
+          "actor": "Frog",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10360,
+              "y": 13930
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "giant-fire-beetle",
+          "actor": "Giant Fire Beetle",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10430,
+              "y": 13930
+            }
+          ]
+        },
+        {
+          "actorKey": "giant-rat",
+          "actor": "Giant Rat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10500,
+              "y": 13930
+            }
+          ]
+        },
+        {
+          "actorKey": "lizard",
+          "actor": "Lizard",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10430,
+              "y": 14070
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "rat",
+          "actor": "Rat",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10430,
+              "y": 14000
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "spider",
+          "actor": "Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10430,
+              "y": 14140
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        },
+        {
+          "actorKey": "stirge",
+          "actor": "Stirge",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10500,
+              "y": 14140
+            }
+          ],
+          "tokenWidth": 0.5,
+          "tokenHeight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a24",
+      "area": "24",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 2,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 12950,
+              "y": 4900
+            },
+            {
+              "x": 13160,
+              "y": 13510
+            }
+          ],
+          "tokenName": "Thaglar Xundorn"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a26",
+      "area": "26",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "spy",
+          "actor": "Spy",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 7840
+            }
+          ],
+          "tokenName": "Bosskyn Gorrb"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a27",
+      "area": "27",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "archmage",
+          "actor": "Archmage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 6020
+            }
+          ],
+          "tokenName": "Tas"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a28",
+      "area": "28",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7420,
+              "y": 7280
+            }
+          ],
+          "tokenName": "Thorvin Twinbeard"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a29",
+      "area": "29",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8540,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Darum Ghaz"
+        },
+        {
+          "actorKey": "commoner-2",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8610,
+              "y": 7140
+            }
+          ],
+          "tokenName": "Duram Ghaz"
+        }
+      ]
+    },
+    {
+      "id": "skullport-lower-middle-a30",
+      "area": "30",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "commoner",
+          "actor": "Commoner",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8540,
+              "y": 5810
+            }
+          ],
+          "tokenName": "Anderian Dusk"
+        }
+      ]
+    }
+  ]
+}

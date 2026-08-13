@@ -29,7 +29,7 @@ The resolver uses multiple independent signals:
 
 Ambiguity blocks the operation. Geometry fallback is accepted only when the expected dimensions match.
 
-Datasets are loaded independently from `data/level-01.json` through `data/level-23.json`. Level 3 declares three Scene descriptors and assigns every anchor and encounter to a `sceneKey`. Other levels declare one Scene. The selected level is stored as a client setting, and a compatible active Scene updates that selection automatically.
+Datasets are loaded independently for the Yawning Portal, the three Skullport maps, and `data/level-01.json` through `data/level-23.json`. Level 3 declares three Scene descriptors and assigns every anchor and encounter to a `sceneKey`; every other location declares one Scene. The selected location is stored as a client setting, and a compatible active Scene updates that selection automatically.
 
 ## Actor resolution and import
 

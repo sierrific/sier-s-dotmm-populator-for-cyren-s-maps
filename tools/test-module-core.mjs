@@ -5,13 +5,33 @@ globalThis.foundry = { utils: { lineSegmentIntersects: () => false } };
 const { normalizeActorName, actorSpecs } = await import("../cyren-dotmm-populator/scripts/actor-resolver.js");
 const { expectedPopulationKeys, planPopulation } = await import("../cyren-dotmm-populator/scripts/placement-engine.js");
 const { resolveAnchors } = await import("../cyren-dotmm-populator/scripts/anchor-resolver.js");
-const { levelSceneDefinitions, scopeLevelData, sceneCanvasBounds } = await import("../cyren-dotmm-populator/scripts/scene-resolver.js");
+const { levelSceneDefinitions, scopeLevelData, sceneCanvasBounds, scoreScene } = await import("../cyren-dotmm-populator/scripts/scene-resolver.js");
 const { validateLevelData, fingerprintScene, verifyTokenOnlyMutation } = await import("../cyren-dotmm-populator/scripts/validation.js");
 const { populateMissing } = await import("../cyren-dotmm-populator/scripts/populator.js");
 const { isManagedImport } = await import("../cyren-dotmm-populator/scripts/actor-importer.js");
 const { encounterFocusPoint } = await import("../cyren-dotmm-populator/scripts/encounter-navigation.js");
+const { makeTokenFlag, populationKey, flagMatchesContent } = await import("../cyren-dotmm-populator/scripts/flags.js");
 
 assert.equal(normalizeActorName("Kélim—the Weasel"), "kelim the weasel");
+
+assert.equal(populationKey(makeTokenFlag({ contentId: "level-01", level: 1, area: "1", encounterId: "one", actorKey: "host", instance: 1 })), "1|1|one|host|1");
+assert.equal(populationKey(makeTokenFlag({ contentId: "yawning-portal", area: "bar", encounterId: "durnan", actorKey: "durnan", instance: 1 })), "yawning-portal|bar|durnan|durnan|1");
+assert.equal(flagMatchesContent({ contentId: "yawning-portal" }, { contentId: "yawning-portal" }), true);
+assert.equal(flagMatchesContent({ level: 1 }, { contentId: "level-01", level: 1 }), true);
+assert.equal(flagMatchesContent({ contentId: "skullport-upper" }, { contentId: "skullport-skull-island" }), false);
+
+const lowerMiddleGeometry = { sourceId: "Scene.lower", names: ["Skullport - Lower & Middle"], width: 11900, height: 15260, grid: 70 };
+const skullIslandGeometry = { sourceId: "Scene.island", names: ["Skullport - Skull Island"], width: 7980, height: 10080, grid: 70 };
+const lowerMiddleCopy = {
+  name: "Skullport - Lower & Middle (Copy)",
+  width: 11900,
+  height: 15260,
+  grid: { size: 70 },
+  flags: { "scene-packer": { "source-module": "cyrensmaps-wdmm", sourceId: "Scene.lower" }, "cyrensmaps-wdmm": {} }
+};
+assert.equal(scoreScene(lowerMiddleCopy, lowerMiddleGeometry).valid, true);
+assert.equal(scoreScene(lowerMiddleCopy, skullIslandGeometry).valid, false, "Cyren provenance must not make the wrong map valid.");
+assert.equal(scoreScene({ ...lowerMiddleCopy, width: 11800 }, lowerMiddleGeometry).valid, false, "Modified geometry must fail closed.");
 
 const expected = new Map([
   [1, 133], [2, 183], [3, 255], [4, 114], [5, 90], [6, 59], [7, 61], [8, 99],
@@ -52,6 +72,28 @@ for (const [levelNumber, tokenCount] of expected) {
   }
   assert.equal(complete, tokenCount);
   plans.push({ level: levelNumber, complete, guarded });
+}
+
+const locationExpected = new Map([
+  ["yawning-portal", 1],
+  ["skullport-lower-middle", 55],
+  ["skullport-skull-island", 145],
+  ["skullport-upper", 14]
+]);
+const locationPlans = [];
+for (const [contentId, tokenCount] of locationExpected) {
+  const data = JSON.parse(fs.readFileSync(`cyren-dotmm-populator/data/${contentId}.json`, "utf8"));
+  assert.equal(validateLevelData(data).ok, true, `${contentId} should validate.`);
+  assert.equal(expectedPopulationKeys(data).size, tokenCount);
+  const actors = new Map();
+  for (const spec of actorSpecs(data).values()) actors.set(spec.actorKey, { status: "resolved", document: { prototypeToken: { width: 1, height: 1 } } });
+  const definition = levelSceneDefinitions(data)[0];
+  const anchors = new Map(Object.entries(data.anchors).map(([area, anchor]) => [area, { status: "resolved", area, ...anchor }]));
+  const scene = { width: definition.width, height: definition.height, padding: definition.padding ?? 0, grid: { size: definition.grid }, tokens: [], walls: [] };
+  const plan = planPopulation(scene, data, actors, anchors);
+  assert.equal(plan.placements.length, tokenCount, `${contentId} should place every token on an empty wall-free Scene.`);
+  assert.deepEqual(plan.skipped, []);
+  locationPlans.push({ contentId, complete: plan.placements.length });
 }
 
 const safe = verifyTokenOnlyMutation(
@@ -230,4 +272,4 @@ const partialCreatePlan = {
 await assert.rejects(populateMissing(partialCreateScene, partialCreatePlan), /Partial changes were rolled back/);
 assert.equal(partialCreateScene.tokens.length, 0);
 
-console.log(JSON.stringify({ ok: true, plans, partialRecovery: true, partialCreateRollback: true, managedActorImports: true, encounterNavigation: true, manualAnchorOverride: true, contentFingerprint: true, tokenContentFingerprint: true, multiScene: true, paddedCanvas: true }, null, 2));
+console.log(JSON.stringify({ ok: true, plans, locationPlans, partialRecovery: true, partialCreateRollback: true, managedActorImports: true, encounterNavigation: true, manualAnchorOverride: true, contentFingerprint: true, tokenContentFingerprint: true, multiScene: true, paddedCanvas: true }, null, 2));

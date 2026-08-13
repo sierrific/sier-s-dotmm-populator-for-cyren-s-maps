@@ -1,10 +1,10 @@
 # Sier's DotMM Populator for Cyren's Maps
 
-A safety-first Foundry VTT module for preparing the static encounters on all 23 levels of *Dungeon of the Mad Mage* using **CyrensMaps for Undermountain**.
+A safety-first Foundry VTT module for preparing the Yawning Portal, all three Skullport maps, and the static encounters on all 23 levels of *Dungeon of the Mad Mage* using **CyrensMaps for Undermountain**.
 
 The module reviews Scene compatibility, resolves creature Actors, previews deterministic placement, and creates only explicitly flagged Tokens. It does not distribute maps, artwork, adventure prose, journals, or creature stat blocks.
 
-> **Current scope:** Levels 1–23, including all three Level 3 map segments. Foundry VTT 12.331 and D&D5e 3.1.2–3.2.1.
+> **Current scope:** The Yawning Portal, all three Skullport maps, and Levels 1–23, including all three Level 3 map segments. Foundry VTT 12.331 and D&D5e 3.1.2–3.2.1.
 
 ![Level 1 review panel](docs/images/level-01-review.png)
 
@@ -12,8 +12,8 @@ The module reviews Scene compatibility, resolves creature Actors, previews deter
 
 ## Features
 
-- Supports Levels 1–23 and resolves split floors by the active Scene; Level 3 uses three Cyren maps.
-- Creates any missing safety copies for Levels 3–23 without modifying the originals.
+- Supports the Yawning Portal, all three Skullport maps, and Levels 1–23; Level 3 uses three Cyren maps.
+- Creates any missing safety copies for the Yawning Portal, Skullport, and Levels 3–23 without modifying the originals.
 - Resolves World and compendium Actors without silently choosing ambiguous matches.
 - Can import unambiguous Actor matches into a dedicated World folder.
 - Prefers newer equivalent creature sources in the order XMM, MPMM, then MM.
@@ -39,7 +39,7 @@ https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-m
 
 ### Release ZIP
 
-Download `cyren-dotmm-populator-0.3.2.zip` from the latest release and extract it into:
+Download `cyren-dotmm-populator-0.4.0.zip` from the latest release and extract it into:
 
 ```text
 <FoundryUserData>/Data/modules/cyren-dotmm-populator
@@ -61,7 +61,7 @@ Actors are not distributed by this project. Import or create the required Actors
 ## Quick start
 
 1. Install and enable CyrensMaps for Undermountain, D&D5e, and this module.
-2. Back up the World. For Levels 3–23, the panel can create missing `(Copy)` Scenes for safe preparation.
+2. Back up the World. The panel can create missing `(Copy)` Scenes for the Yawning Portal, Skullport, and Levels 3–23 for safe preparation.
 3. In the Scenes directory, right-click the map or its test copy and choose **View Scene**. Level 3 is split across `Level 03 (1)`, `(2)`, and `(3)`.
 4. Open **Sier's DotMM Populator for Cyren's Maps** from the Token controls or Module Settings.
 5. Refresh the review and resolve every Actor or anchor warning. The active Scene selects the matching level and map segment.
@@ -96,6 +96,7 @@ See [Development and releases](docs/DEVELOPMENT.md).
 - [Installation](docs/INSTALLATION.md)
 - [User Guide](docs/USER-GUIDE.md)
 - [Levels 3–23](docs/LEVELS-03-23.md)
+- [Yawning Portal and Skullport](docs/YAWNING-PORTAL-SKULLPORT.md)
 - [Technical Notes](docs/TECHNICAL.md)
 - [Validation](docs/VALIDATION.md)
 - [Level 2 notes](docs/LEVEL-02.md)

@@ -1,13 +1,13 @@
 # Validation
 
-Version 0.3.2 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
+Version 0.4.0 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
 
 ## Automated checks
 
 - valid Foundry manifest and stable module ID;
-- release URLs and package names match version 0.3.2;
-- 637 unique encounter groups and 2,680 deterministic Token instance keys across Levels 1–23;
-- 25 supported map descriptors, including three Level 3 segments;
+- release URLs and package names match version 0.4.0;
+- 667 unique encounter groups and 2,895 deterministic Token instance keys across the Yawning Portal, Skullport, and Levels 1–23;
+- 29 supported map descriptors, including three Level 3 segments and four non-level locations;
 - complete Actor names, logical keys, scene assignments, and area identifiers;
 - exact positions remain inside each padded Scene canvas;
 - source preference order XMM, MPMM, then MM;
@@ -63,7 +63,21 @@ Exactly one safety copy was created for every remaining map: three copies for Le
 
 All 23 copy workflows completed the same lifecycle: create every planned Token, run **Create missing** again with zero duplicates, remove only module-owned Tokens, and return the copy to a clean state. The source Scenes were never selected for mutation.
 
-Levels 1 and 2 retain the previously validated workflows documented in the 0.2.x release history. Combined release coverage is 25 maps, 637 encounter groups, and 2,680 intended instances.
+Levels 1 and 2 retain the previously validated workflows documented in the 0.2.x release history. Combined release coverage is 29 maps, 667 encounter groups, and 2,895 intended instances.
+
+## Foundry integration test: Yawning Portal and Skullport
+
+Four additional safety copies were created and opened with **View Scene**. Each location resolved only its matching copy; selecting Skull Island while the Lower & Middle copy was active correctly returned an ambiguous/unresolved Scene and blocked mutation.
+
+| Location | Actors | Anchors | Tokens created | Second run | Cleanup remaining |
+|---|---:|---:|---:|---:|---:|
+| The Yawning Portal | 1/1 | 1/1 | 1 | 0 | 0 |
+| Skullport — Lower & Middle | 19/19 | 16/16 | 55 | 0 | 0 |
+| Skullport — Skull Island | 9/9 | 7/7 | 145 | 0 | 0 |
+| Skullport — Upper | 6/6 | 6/6 | 14 | 0 | 0 |
+| **Total** | — | **30/30** | **215** | **0** | **0** |
+
+Encounter links were exercised on every map and panned to the matching module Token. Durnan remains explicitly marked for human review and is positioned behind the taproom bar. Three otherwise missing standard creatures (Cat, Frog, and Lizard) were imported from an available D&D5e Actor compendium into the dedicated module import folder. Population verification reported no changes to Walls, Lights, Tiles, Notes, Sounds, Drawings, Regions, Actors, or Scene settings.
 
 ## Installer checks
 

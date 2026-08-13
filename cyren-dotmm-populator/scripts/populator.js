@@ -1,5 +1,5 @@
 import { MODULE_ID } from "./constants.js";
-import { getPopulationFlag, isModuleToken, populationKey } from "./flags.js";
+import { flagMatchesContent, getPopulationFlag, isModuleToken, populationKey } from "./flags.js";
 import { fingerprintScene, verifyTokenOnlyMutation, assertGm } from "./validation.js";
 
 async function tokenDataForPlacement(placement) {
@@ -87,22 +87,22 @@ export async function populateMissing(scene, plan) {
   return verifiedMutation(scene, async () => ({ created: await createPlacements(scene, plan.placements), removed: [] }));
 }
 
-export async function removeCreated(scene, { level = null, areas = null } = {}) {
+export async function removeCreated(scene, { contentId = null, level = null, areas = null } = {}) {
   const selected = areas ? new Set(Array.from(areas, (area) => String(area).toLowerCase())) : null;
   const tokens = Array.from(scene.tokens ?? []).filter((token) => {
     const flag = getPopulationFlag(token);
     if (!flag) return false;
-    if (level !== null && Number(flag.level) !== Number(level)) return false;
+    if ((contentId || level !== null) && !flagMatchesContent(flag, { contentId, level })) return false;
     return !selected || selected.has(String(flag.area).toLowerCase());
   });
   return verifiedMutation(scene, async () => ({ created: [], removed: await deleteModuleTokens(scene, tokens) }));
 }
 
-export async function reconcile(scene, plan, { level }) {
+export async function reconcile(scene, plan, { contentId = null, level = null } = {}) {
   const expected = plan.expectedKeys;
   const orphans = Array.from(scene.tokens ?? []).filter((token) => {
     const flag = getPopulationFlag(token);
-    return flag && Number(flag.level) === Number(level) && !expected.has(populationKey(flag));
+    return flagMatchesContent(flag, { contentId, level }) && !expected.has(populationKey(flag));
   });
   return verifiedMutation(scene, async () => {
     const removed = await deleteModuleTokens(scene, orphans);
@@ -119,11 +119,11 @@ export async function reconcile(scene, plan, { level }) {
   });
 }
 
-export async function rebuild(scene, plan, { level, areas = null }) {
+export async function rebuild(scene, plan, { contentId = null, level = null, areas = null } = {}) {
   const selected = areas ? new Set(Array.from(areas, (area) => String(area).toLowerCase())) : null;
   const old = Array.from(scene.tokens ?? []).filter((token) => {
     const flag = getPopulationFlag(token);
-    return flag && Number(flag.level) === Number(level) && (!selected || selected.has(String(flag.area).toLowerCase()));
+    return flagMatchesContent(flag, { contentId, level }) && (!selected || selected.has(String(flag.area).toLowerCase()));
   });
   return verifiedMutation(scene, async () => {
     const backups = old.map((token) => token.toObject());
@@ -138,10 +138,13 @@ export async function rebuild(scene, plan, { level, areas = null }) {
   });
 }
 
-export function moduleTokenCounts(scene, level = null) {
+export function moduleTokenCounts(scene, selector = {}) {
+  const { contentId = null, level = null } = Number.isInteger(Number(selector))
+    ? { level: Number(selector) }
+    : (selector ?? {});
   const tokens = Array.from(scene.tokens ?? []).filter((token) => {
     const flag = getPopulationFlag(token);
-    return flag && (level === null || Number(flag.level) === Number(level));
+    return flag && ((!contentId && level === null) || flagMatchesContent(flag, { contentId, level }));
   });
   const byArea = {};
   for (const token of tokens) {

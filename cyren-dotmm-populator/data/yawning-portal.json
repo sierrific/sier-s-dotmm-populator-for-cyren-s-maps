@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "contentId": "yawning-portal",
+  "label": "The Yawning Portal",
+  "title": "Yawning Portal Taproom",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "The Yawning Portal",
+      "The Yawning Portal (Copy)"
+    ],
+    "sourceId": "Scene.VWzK5SaVUL7lr4AC",
+    "width": 4200,
+    "height": 2800,
+    "padding": 0.25,
+    "grid": 140
+  },
+  "anchors": {
+    "bar": {
+      "x": 2590,
+      "y": 1890
+    }
+  },
+  "encounters": [
+    {
+      "id": "yawning-portal-durnan",
+      "area": "bar",
+      "radius": 2,
+      "humanReview": true,
+      "tokens": [
+        {
+          "actorKey": "durnan",
+          "actor": "Durnan",
+          "tokenName": "Durnan",
+          "count": 1,
+          "disposition": 1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 2520,
+              "y": 1820
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
