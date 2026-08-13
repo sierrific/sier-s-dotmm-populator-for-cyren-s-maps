@@ -2,6 +2,17 @@
 
 All notable changes are documented here.
 
+## 0.4.0 — 2026-08-12
+
+- Added the Yawning Portal and all three Skullport maps as first-class selectable locations.
+- Added Durnan to the Yawning Portal with an explicitly reviewed bar placement.
+- Added 29 Skullport encounter groups containing 214 intended Token instances across Lower & Middle, Skull Island, and Upper.
+- Added automatic safety-copy and Actor-import coverage for all four new maps.
+- Generalized ownership flags and UI selection without changing deterministic keys for existing Levels 1–23 Tokens.
+- Made Scene resolution fail closed unless both the expected geometry and a source/name identity match, preventing similarly branded maps from being selected for the wrong location.
+- Versioned data requests so an upgraded installation cannot reuse stale encounter JSON from a browser or service-worker cache.
+- Expanded validation, tests, documentation, and release coverage to 29 maps, 667 encounter groups, and 2,895 intended Token instances.
+
 ## 0.3.2 — 2026-08-09
 
 - Added rollback for partially completed Token creation when Foundry throws before returning created documents.

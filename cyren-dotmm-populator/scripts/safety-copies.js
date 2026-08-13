@@ -1,5 +1,5 @@
-import { SUPPORTED_LEVELS } from "./constants.js";
-import { loadLevelData } from "./data-loader.js";
+import { SUPPORTED_CONTENT } from "./constants.js";
+import { loadContentData } from "./data-loader.js";
 import { isExactSceneGeometry, levelSceneDefinitions } from "./scene-resolver.js";
 import { assertGm } from "./validation.js";
 
@@ -23,12 +23,14 @@ function findCopy(definition) {
   return game.scenes.contents.find((scene) => scene.name === wanted && isExactSceneGeometry(scene, definition)) ?? null;
 }
 
-export async function safetyCopyStatus({ levels = SUPPORTED_LEVELS.filter((level) => level >= 3) } = {}) {
+const DEFAULT_COPY_ENTRIES = SUPPORTED_CONTENT.filter((entry) => ![1, 2].includes(entry.level));
+
+export async function safetyCopyStatus({ contentIds = DEFAULT_COPY_ENTRIES.map((entry) => entry.id) } = {}) {
   const rows = [];
-  for (const level of levels) {
-    const data = await loadLevelData(level);
+  for (const contentId of contentIds) {
+    const data = await loadContentData(contentId);
     for (const definition of levelSceneDefinitions(data)) {
-      rows.push({ level, sceneKey: definition.key, source: findOriginal(definition), copy: findCopy(definition), copyName: copyName(definition), definition });
+      rows.push({ contentId, level: data.level ?? null, sceneKey: definition.key, source: findOriginal(definition), copy: findCopy(definition), copyName: copyName(definition), definition });
     }
   }
   return rows;
@@ -46,7 +48,7 @@ export async function createMissingSafetyCopies(options = {}) {
       continue;
     }
     if (!row.source) {
-      missingSources.push({ level: row.level, sceneKey: row.sceneKey, name: row.definition.names?.[0] ?? row.copyName });
+      missingSources.push({ contentId: row.contentId, level: row.level, sceneKey: row.sceneKey, name: row.definition.names?.[0] ?? row.copyName });
       continue;
     }
     const data = row.source.toObject();

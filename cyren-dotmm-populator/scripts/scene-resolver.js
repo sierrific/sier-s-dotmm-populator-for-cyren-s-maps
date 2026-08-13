@@ -27,12 +27,15 @@ export function levelSceneDefinitions(levelData) {
 export function scoreScene(scene, expected) {
   const reasons = [];
   let score = 0;
+  const sourceIdMatch = sceneSourceId(scene) === expected.sourceId;
+  const nameMatch = (expected.names ?? []).map(normalizeSceneName).includes(normalizeSceneName(scene.name));
+  const geometryMatch = isExactSceneGeometry(scene, expected);
 
   if (sceneSourceModule(scene) === CYREN_MODULE_ID) {
     score += 100;
     reasons.push("scene-packer source module");
   }
-  if (sceneSourceId(scene) === expected.sourceId) {
+  if (sourceIdMatch) {
     score += 80;
     reasons.push("scene-packer source id");
   }
@@ -40,7 +43,7 @@ export function scoreScene(scene, expected) {
     score += 40;
     reasons.push("Cyren flags");
   }
-  if ((expected.names ?? []).map(normalizeSceneName).includes(normalizeSceneName(scene.name))) {
+  if (nameMatch) {
     score += 30;
     reasons.push("normalized name");
   }
@@ -52,7 +55,10 @@ export function scoreScene(scene, expected) {
     score += 10;
     reasons.push("grid");
   }
-  return { scene, score, reasons, valid: score >= 60 };
+  // Cyren provenance alone identifies the module, not the specific map. Token
+  // placement is safe only when the Scene geometry matches and either its
+  // source identity or normalized name identifies this exact map.
+  return { scene, score, reasons, valid: geometryMatch && (sourceIdMatch || nameMatch) };
 }
 
 export function resolveScene(expected, preferredScene = canvas?.scene) {
@@ -103,7 +109,7 @@ export function resolveLevelScene(levelData, preferredScene = canvas?.scene) {
 export function scopeLevelData(levelData, sceneKey) {
   const definitions = levelSceneDefinitions(levelData);
   const definition = definitions.find((candidate) => candidate.key === sceneKey);
-  if (!definition) throw new Error(`Unknown Scene key for Level ${levelData.level}: ${sceneKey}`);
+  if (!definition) throw new Error(`Unknown Scene key for ${levelData.contentId ?? `Level ${levelData.level}`}: ${sceneKey}`);
   const defaultKey = definitions[0]?.key ?? "main";
   const belongsToScene = (value) => String(value?.sceneKey ?? defaultKey) === sceneKey;
   return {

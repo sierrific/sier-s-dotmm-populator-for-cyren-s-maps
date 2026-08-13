@@ -1,5 +1,5 @@
-import { MODULE_ID, SETTINGS, SUPPORTED_LEVELS } from "./constants.js";
-import { loadLevelData } from "./data-loader.js";
+import { MODULE_ID, SETTINGS, SUPPORTED_CONTENT, contentIdForData, contentIdForLevel, contentLabel } from "./constants.js";
+import { loadContentData } from "./data-loader.js";
 import { validateEnvironment, validateLevelData, assertGm } from "./validation.js";
 import { resolveLevelScene, scoreLevelScene, scopeLevelData } from "./scene-resolver.js";
 import { resolveActors, actorResolutionSummary, actorSpecs } from "./actor-resolver.js";
@@ -62,31 +62,34 @@ export class CyrenPopulatorApp extends FormApplication {
     });
   }
 
-  async _selectedLevelData() {
-    const levels = await Promise.all(SUPPORTED_LEVELS.map((level) => loadLevelData(level)));
-    if (this.selectedLevel) return levels.find((data) => data.level === this.selectedLevel) ?? levels[0];
+  async _selectedContentData() {
+    const entries = await Promise.all(SUPPORTED_CONTENT.map((entry) => loadContentData(entry.id)));
+    if (this.selectedContent) return entries.find((data) => contentIdForData(data) === this.selectedContent) ?? entries[0];
 
     const activeScene = canvas?.scene;
     if (activeScene) {
-      const ranked = levels
+      const ranked = entries
         .map((data) => ({ data, ...scoreLevelScene(activeScene, data) }))
         .sort((left, right) => right.score - left.score);
       if (ranked[0]?.score >= 180 && ranked[0].score > (ranked[1]?.score ?? 0)) {
-        this.selectedLevel = ranked[0].data.level;
+        this.selectedContent = contentIdForData(ranked[0].data);
         return ranked[0].data;
       }
     }
 
-    const saved = Number(game.settings.get(MODULE_ID, SETTINGS.selectedLevel));
-    this.selectedLevel = SUPPORTED_LEVELS.includes(saved) ? saved : SUPPORTED_LEVELS[0];
-    return levels.find((data) => data.level === this.selectedLevel) ?? levels[0];
+    const saved = String(game.settings.get(MODULE_ID, SETTINGS.selectedContent) ?? "");
+    const legacyLevel = Number(game.settings.get(MODULE_ID, SETTINGS.selectedLevel));
+    this.selectedContent = SUPPORTED_CONTENT.some((entry) => entry.id === saved)
+      ? saved
+      : SUPPORTED_CONTENT.some((entry) => entry.level === legacyLevel) ? contentIdForLevel(legacyLevel) : SUPPORTED_CONTENT[0].id;
+    return entries.find((data) => contentIdForData(data) === this.selectedContent) ?? entries[0];
   }
 
   async _buildContext() {
     assertGm();
-    const levelData = await this._selectedLevelData();
-    this.selectedLevel = levelData.level;
-    this.options.title = `Sier's DotMM Populator for Cyren's Maps — Level ${levelData.level}`;
+    const levelData = await this._selectedContentData();
+    this.selectedContent = contentIdForData(levelData);
+    this.options.title = `Sier's DotMM Populator for Cyren's Maps — ${contentLabel(levelData)}`;
     const environment = validateEnvironment();
     const dataValidation = validateLevelData(levelData);
     const sceneResolution = resolveLevelScene(levelData);
@@ -148,11 +151,13 @@ export class CyrenPopulatorApp extends FormApplication {
     });
     return {
       ...context,
+      contentId: contentIdForData(context.data),
+      contentLabel: contentLabel(context.data),
+      contentTitle: context.data.title,
       level: context.data.level,
-      levelTitle: context.data.title,
       scenePart: context.sceneResolution.definition?.label ?? context.sceneResolution.definition?.key ?? "main",
-      splitLevel: Array.isArray(context.levelData?.scenes) && context.levelData.scenes.length > 1,
-      supportedLevels: SUPPORTED_LEVELS.map((level) => ({ level, selected: level === context.data.level })),
+      splitContent: Array.isArray(context.levelData?.scenes) && context.levelData.scenes.length > 1,
+      supportedContent: SUPPORTED_CONTENT.map((entry) => ({ ...entry, selected: entry.id === contentIdForData(context.data) })),
       sceneName: context.scene?.name ?? "—",
       sceneStatus: context.sceneResolution.status,
       environmentErrors: context.environment.errors,
@@ -171,7 +176,7 @@ export class CyrenPopulatorApp extends FormApplication {
       unresolvedActorNames: actorRows.filter((row) => row.status !== "resolved").map((row) => row.actor).join(", "),
       planCount: context.plan?.placements.length ?? 0,
       skippedCount: context.plan?.skipped.length ?? 0,
-      moduleCounts: context.scene ? moduleTokenCounts(context.scene, context.data.level) : { total: 0, byArea: {} },
+      moduleCounts: context.scene ? moduleTokenCounts(context.scene, { contentId: contentIdForData(context.data), level: context.data.level ?? null }) : { total: 0, byArea: {} },
       actorTotal: actorRows.length,
       actorResolved: actorRows.filter((row) => row.status === "resolved").length,
       anchorTotal: anchorRows.length,
@@ -186,18 +191,18 @@ export class CyrenPopulatorApp extends FormApplication {
   activateListeners(html) {
     super.activateListeners(html);
     html.find("[data-action]").on("click", (event) => this._onAction(event));
-    html.find('[name="selectedLevel"]').on("change", (event) => this._onLevelChange(event));
+    html.find('[name="selectedContent"]').on("change", (event) => this._onContentChange(event));
     html.find('[name="anchorArea"]').on("change", (event) => { this.selectedAnchorArea = String(event.currentTarget.value); });
     html.find('[name="rebuildArea"]').on("change", (event) => { this.selectedRebuildArea = String(event.currentTarget.value); });
   }
 
-  async _onLevelChange(event) {
-    const level = Number(event.currentTarget.value);
-    if (!SUPPORTED_LEVELS.includes(level)) return;
-    this.selectedLevel = level;
+  async _onContentChange(event) {
+    const contentId = String(event.currentTarget.value);
+    if (!SUPPORTED_CONTENT.some((entry) => entry.id === contentId)) return;
+    this.selectedContent = contentId;
     this.selectedAnchorArea = null;
     this.selectedRebuildArea = null;
-    await game.settings.set(MODULE_ID, SETTINGS.selectedLevel, level);
+    await game.settings.set(MODULE_ID, SETTINGS.selectedContent, contentId);
     await this._refreshContext();
   }
 
@@ -221,7 +226,7 @@ export class CyrenPopulatorApp extends FormApplication {
         return;
       }
       if (action === "create-safety-copies") {
-        if (!await confirmAction("Create safety copies", "Create only the missing copies of the original maps for Levels 3–23?")) return;
+        if (!await confirmAction("Create safety copies", "Create only missing copies of the original maps for Yawning Portal, Skullport, and Levels 3–23?")) return;
         const result = await createMissingSafetyCopies();
         if (result.missingSources.length) throw new Error(`Missing source maps: ${result.missingSources.map((item) => item.name).join(", ")}.`);
         ui.notifications.info(`Safety copies: ${result.created.length} created, ${result.existing.length} already existed.`);
@@ -237,21 +242,23 @@ export class CyrenPopulatorApp extends FormApplication {
         return;
       }
       const context = this.context ?? await this._buildContext();
-      if (!context.scene) throw new Error(`No unambiguous Level ${context.data.level} map is available.`);
+      const contentId = contentIdForData(context.data);
+      const scope = { contentId, level: context.data.level ?? null };
+      if (!context.scene) throw new Error(`No unambiguous ${contentLabel(context.data)} map is available.`);
       if (action === "pan-encounter") {
         const encounterId = String(event.currentTarget.dataset.encounterId ?? "");
         const encounter = context.data.encounters.find((candidate) => candidate.id === encounterId);
         if (!encounter) throw new Error(`Unknown encounter: ${encounterId || "none"}.`);
         await panToEncounter({
           scene: context.scene,
-          level: context.data.level,
+          ...scope,
           encounter,
           plan: context.plan,
           anchor: context.anchors?.get(encounter.area.toLowerCase())
         });
         return;
       }
-      if (!context.plan) throw new Error(`No placement plan is available for Level ${context.data.level}.`);
+      if (!context.plan) throw new Error(`No placement plan is available for ${contentLabel(context.data)}.`);
       if (action === "preview") {
         drawPreview(context.scene, context.plan);
         return ui.notifications.info(`Preview: ${context.plan.placements.length} token(s) planned.`);
@@ -266,22 +273,22 @@ export class CyrenPopulatorApp extends FormApplication {
       }
       if (context.blocked) throw new Error("Resolve every Actor and area anchor before creating persistent Tokens.");
       if (action === "populate") displayStatus(await populateMissing(context.scene, context.plan));
-      if (action === "reconcile") displayStatus(await reconcile(context.scene, context.plan, { level: context.data.level }));
+      if (action === "reconcile") displayStatus(await reconcile(context.scene, context.plan, scope));
       if (action === "remove") {
-        if (!await confirmAction("Remove Tokens", `Remove only Tokens flagged by this module on Level ${context.data.level}?`)) return;
-        displayStatus(await removeCreated(context.scene, { level: context.data.level }));
+        if (!await confirmAction("Remove Tokens", `Remove only Tokens flagged by this module on ${contentLabel(context.data)}?`)) return;
+        displayStatus(await removeCreated(context.scene, scope));
       }
       if (action === "rebuild-level") {
-        if (!await confirmAction(`Rebuild Level ${context.data.level}`, "Remove and recreate only Tokens flagged by this module?")) return;
+        if (!await confirmAction(`Rebuild ${contentLabel(context.data)}`, "Remove and recreate only Tokens flagged by this module?")) return;
         const fresh = planPopulation(context.scene, context.data, context.actors, context.anchors, { ignoreExisting: true });
-        displayStatus(await rebuild(context.scene, fresh, { level: context.data.level }));
+        displayStatus(await rebuild(context.scene, fresh, scope));
       }
       if (action === "rebuild-area") {
         const area = String(this.element.find('[name="rebuildArea"]').val() ?? "").trim().toLowerCase();
         if (!area) throw new Error("Choose an area.");
         if (!await confirmAction(`Rebuild area ${area}`, "Only Tokens owned by this module in this area will be removed and recreated.")) return;
         const fresh = planPopulation(context.scene, context.data, context.actors, context.anchors, { areas: [area], ignoreExisting: true });
-        displayStatus(await rebuild(context.scene, fresh, { level: context.data.level, areas: [area] }));
+        displayStatus(await rebuild(context.scene, fresh, { ...scope, areas: [area] }));
       }
       await this._refreshContext();
     } catch (error) {
@@ -314,10 +321,12 @@ export class CyrenPopulatorApp extends FormApplication {
   }
 }
 
-export function openPopulator(level = null) {
+export function openPopulator(content = null) {
   assertGm();
   const app = new CyrenPopulatorApp();
-  if (SUPPORTED_LEVELS.includes(Number(level))) app.selectedLevel = Number(level);
+  const numericContent = content !== null && content !== "" && Number.isInteger(Number(content));
+  const requested = numericContent ? contentIdForLevel(Number(content)) : String(content ?? "");
+  if (SUPPORTED_CONTENT.some((entry) => entry.id === requested)) app.selectedContent = requested;
   return app.render(true);
 }
 

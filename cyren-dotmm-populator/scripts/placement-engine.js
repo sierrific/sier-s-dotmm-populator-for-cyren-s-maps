@@ -1,5 +1,6 @@
 import { makeTokenFlag, populationKey, getPopulationFlag } from "./flags.js";
 import { sceneCanvasBounds } from "./scene-resolver.js";
+import { contentIdForData } from "./constants.js";
 
 function rectFor(x, y, width, height, grid) {
   return { x, y, width: width * grid, height: height * grid };
@@ -108,10 +109,11 @@ function exactPosition({ scene, actor, spec, instance, occupied }) {
 
 export function expectedPopulationKeys(levelData) {
   const keys = new Set();
+  const contentId = contentIdForData(levelData);
   for (const encounter of levelData.encounters ?? []) {
     for (const token of encounter.tokens ?? []) {
       for (let instance = 1; instance <= token.count; instance += 1) {
-        keys.add(populationKey(makeTokenFlag({ level: levelData.level, area: encounter.area, encounterId: encounter.id, actorKey: token.actorKey, instance })));
+        keys.add(populationKey(makeTokenFlag({ contentId, level: levelData.level, area: encounter.area, encounterId: encounter.id, actorKey: token.actorKey, instance })));
       }
     }
   }
@@ -119,6 +121,7 @@ export function expectedPopulationKeys(levelData) {
 }
 
 export function planPopulation(scene, levelData, actors, anchors, { areas = null, ignoreExisting = false } = {}) {
+  const contentId = contentIdForData(levelData);
   const wantedAreas = areas ? new Set(Array.from(areas, (area) => String(area).toLowerCase())) : null;
   const existing = new Map();
   for (const token of scene.tokens ?? []) {
@@ -149,7 +152,7 @@ export function planPopulation(scene, levelData, actors, anchors, { areas = null
       const placedForActor = new Map();
       byActor.set(spec.actorKey, placedForActor);
       for (let instance = 1; instance <= spec.count; instance += 1) {
-        const flag = makeTokenFlag({ level: levelData.level, area: encounter.area, encounterId: encounter.id, actorKey: spec.actorKey, instance });
+        const flag = makeTokenFlag({ contentId, level: levelData.level, area: encounter.area, encounterId: encounter.id, actorKey: spec.actorKey, instance });
         const key = populationKey(flag);
         if (existing.has(key)) {
           const token = existing.get(key);

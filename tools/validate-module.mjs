@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { expectedCanvasBounds, levelSceneDefinitions } from "../cyren-dotmm-populator/scripts/scene-resolver.js";
+import { SUPPORTED_CONTENT } from "../cyren-dotmm-populator/scripts/constants.js";
 
 const root = path.resolve("cyren-dotmm-populator");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "module.json"), "utf8"));
@@ -36,6 +37,15 @@ const expectedLevels = new Map([
 const levels = [...expectedLevels.keys()].map((level) => JSON.parse(
   fs.readFileSync(path.join(root, "data", `level-${String(level).padStart(2, "0")}.json`), "utf8")
 ));
+const expectedLocations = new Map([
+  ["yawning-portal", { encounters: 1, tokens: 1, anchors: 1, maps: 1 }],
+  ["skullport-lower-middle", { encounters: 16, tokens: 55, anchors: 16, maps: 1 }],
+  ["skullport-skull-island", { encounters: 7, tokens: 145, anchors: 7, maps: 1 }],
+  ["skullport-upper", { encounters: 6, tokens: 14, anchors: 6, maps: 1 }]
+]);
+const locations = [...expectedLocations.keys()].map((contentId) => JSON.parse(
+  fs.readFileSync(path.join(root, "data", `${contentId}.json`), "utf8")
+));
 const errors = [];
 
 if (manifest.id !== "cyren-dotmm-populator") errors.push("Unexpected module id.");
@@ -43,6 +53,20 @@ if (manifest.title !== "Sier's DotMM Populator for Cyren's Maps") errors.push("U
 if (manifest.version !== packageMetadata.version) errors.push("package.json and module.json versions differ.");
 if (constants.match(/MODULE_VERSION\s*=\s*"([^"]+)"/)?.[1] !== manifest.version) errors.push("MODULE_VERSION and module.json versions differ.");
 if (manifest.compatibility?.verified !== "12.331") errors.push("Foundry verified version must be 12.331.");
+const expectedContentIds = [
+  "yawning-portal",
+  ...Array.from({ length: 3 }, (_value, index) => `level-${String(index + 1).padStart(2, "0")}`),
+  "skullport-lower-middle",
+  "skullport-skull-island",
+  "skullport-upper",
+  ...Array.from({ length: 20 }, (_value, index) => `level-${String(index + 4).padStart(2, "0")}`)
+];
+if (JSON.stringify(SUPPORTED_CONTENT.map((entry) => entry.id)) !== JSON.stringify(expectedContentIds)) errors.push("SUPPORTED_CONTENT is incomplete or out of order.");
+for (const entry of SUPPORTED_CONTENT) {
+  if (!fs.existsSync(path.join(root, "data", entry.file))) errors.push(`Missing configured dataset: ${entry.file}`);
+}
+if (!templateSource.includes('name="selectedContent"') || templateSource.includes('name="selectedLevel"')) errors.push("Location selector template wiring is invalid.");
+if (!uiSource.includes("_onContentChange") || !uiSource.includes("loadContentData")) errors.push("Location selector UI wiring is invalid.");
 const repository = "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps";
 if (manifest.url !== repository) errors.push("Unexpected project URL.");
 if (manifest.manifest !== `${repository.replace("github.com", "raw.githubusercontent.com")}/main/cyren-dotmm-populator/module.json`) errors.push("Unexpected manifest URL.");
@@ -136,6 +160,55 @@ for (const level of levels) {
   summaries.push({ level: level.level, maps: scenes.length, encounters: level.encounters.length, staticTokens: count, actorTypes: actorKeys.size, anchors: Object.keys(level.anchors).length, uniqueKeys: keys.size });
 }
 
+const locationSummaries = [];
+for (const location of locations) {
+  const expected = expectedLocations.get(location.contentId);
+  const scenes = levelSceneDefinitions(location);
+  const scene = scenes[0];
+  const bounds = scene ? expectedCanvasBounds(scene) : null;
+  const count = location.encounters.flatMap((encounter) => encounter.tokens).reduce((sum, token) => sum + token.count, 0);
+  if (!expected) errors.push(`Unexpected location dataset: ${location.contentId}`);
+  if (!String(location.label ?? "").trim()) errors.push(`${location.contentId}: missing label.`);
+  if (scenes.length !== expected?.maps) errors.push(`${location.contentId}: expected ${expected?.maps} Scene.`);
+  if (location.encounters.length !== expected?.encounters) errors.push(`${location.contentId}: expected ${expected?.encounters} encounter groups, got ${location.encounters.length}.`);
+  if (count !== expected?.tokens) errors.push(`${location.contentId}: expected ${expected?.tokens} static token instances, got ${count}.`);
+  if (Object.keys(location.anchors ?? {}).length !== expected?.anchors) errors.push(`${location.contentId}: expected ${expected?.anchors} fallback anchors.`);
+  if (JSON.stringify(location.actorSourcePreference) !== JSON.stringify(["XMM", "MPMM", "MM"])) errors.push(`${location.contentId}: unexpected modern-source preference.`);
+  const keys = new Set();
+  const actorKeys = new Set();
+  for (const encounter of location.encounters) {
+    if (!/^(?:\d+(?:[a-z]|-[a-z0-9]+)?|[a-z][a-z0-9-]*)$/i.test(encounter.area)) errors.push(`${location.contentId}: malformed area id ${encounter.area}.`);
+    if (!location.anchors[encounter.area]) errors.push(`${location.contentId}: unresolved static anchor ${encounter.area}.`);
+    for (const token of encounter.tokens) {
+      actorKeys.add(token.actorKey);
+      if (!String(token.actorKey ?? "").trim() || !String(token.actor ?? "").trim()) errors.push(`${location.contentId}: invalid actor in ${encounter.id}.`);
+      if (!Number.isInteger(token.count) || token.count < 1) errors.push(`${location.contentId}: invalid count in ${encounter.id}.`);
+      if (token.positions !== undefined && token.positions.length !== token.count) errors.push(`${location.contentId}: exact-position count mismatch in ${encounter.id}/${token.actorKey}.`);
+      for (const position of token.positions ?? []) {
+        const width = Number(position.width ?? token.tokenWidth ?? 1) * Number(scene?.grid ?? 0);
+        const height = Number(position.height ?? token.tokenHeight ?? 1) * Number(scene?.grid ?? 0);
+        if (!bounds || !Number.isFinite(position.x) || !Number.isFinite(position.y)
+          || position.x < 0 || position.y < 0 || position.x + width > bounds.width || position.y + height > bounds.height) {
+          errors.push(`${location.contentId}: out-of-bounds exact position in ${encounter.id}/${token.actorKey}.`);
+        }
+      }
+      for (let instance = 1; instance <= token.count; instance += 1) {
+        const key = `${location.contentId}|${encounter.area}|${encounter.id}|${token.actorKey}|${instance}`;
+        if (keys.has(key)) errors.push(`Duplicate population key: ${key}`);
+        keys.add(key);
+      }
+    }
+  }
+  for (const [area, anchor] of Object.entries(location.anchors)) {
+    if (!bounds || !Number.isFinite(anchor.x) || !Number.isFinite(anchor.y)
+      || anchor.x < 0 || anchor.y < 0 || anchor.x > bounds.width || anchor.y > bounds.height) {
+      errors.push(`${location.contentId}: out-of-bounds anchor ${area}.`);
+    }
+  }
+  inspectDerivedData(location, location.contentId);
+  locationSummaries.push({ contentId: location.contentId, maps: scenes.length, encounters: location.encounters.length, staticTokens: count, actorTypes: actorKeys.size, anchors: Object.keys(location.anchors).length, uniqueKeys: keys.size });
+}
+
 const forbiddenNames = [/adventure-wdmm/i, /5etools/i, /ddb-third-party/i, /\.ldb$/i, /\.(?:webp|png|jpe?g|pdf)$/i];
 for (const entry of fs.readdirSync(root, { recursive: true, withFileTypes: true })) {
   if (!entry.isFile()) continue;
@@ -146,5 +219,5 @@ if (errors.length) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
 } else {
-  console.log(JSON.stringify({ ok: true, levels: summaries }, null, 2));
+  console.log(JSON.stringify({ ok: true, levels: summaries, locations: locationSummaries }, null, 2));
 }

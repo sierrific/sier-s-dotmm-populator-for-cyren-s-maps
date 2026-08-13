@@ -1,4 +1,4 @@
-import { getPopulationFlag } from "./flags.js";
+import { flagMatchesContent, getPopulationFlag } from "./flags.js";
 
 function centerOfRect(x, y, width, height, grid) {
   return {
@@ -17,12 +17,12 @@ function centroid(points, source) {
   };
 }
 
-export function encounterFocusPoint({ scene, level, encounter, plan = null, anchor = null }) {
+export function encounterFocusPoint({ scene, contentId = null, level = null, encounter, plan = null, anchor = null }) {
   const grid = Number(scene.grid?.size ?? scene.grid);
   const existing = Array.from(scene.tokens ?? [])
     .filter((token) => {
       const flag = getPopulationFlag(token);
-      return flag && Number(flag.level) === Number(level) && flag.encounterId === encounter.id;
+      return flagMatchesContent(flag, { contentId, level }) && flag.encounterId === encounter.id;
     })
     .map((token) => centerOfRect(token.x, token.y, token.width, token.height, grid));
   const existingPoint = centroid(existing, "existing-tokens");
@@ -58,8 +58,8 @@ export function encounterFocusPoint({ scene, level, encounter, plan = null, anch
   return null;
 }
 
-export async function panToEncounter({ scene, level, encounter, plan = null, anchor = null }) {
-  const point = encounterFocusPoint({ scene, level, encounter, plan, anchor });
+export async function panToEncounter({ scene, contentId = null, level = null, encounter, plan = null, anchor = null }) {
+  const point = encounterFocusPoint({ scene, contentId, level, encounter, plan, anchor });
   if (!point) throw new Error(`No navigable position is available for ${encounter.id}.`);
 
   if (!canvas?.ready || canvas.scene?.id !== scene.id) await scene.view();

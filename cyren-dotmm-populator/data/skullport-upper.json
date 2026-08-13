@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "contentId": "skullport-upper",
+  "label": "Skullport — Upper",
+  "title": "Skullport Upper Level",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Skullport - Upper",
+      "Skullport - Upper (Copy)"
+    ],
+    "sourceId": "Scene.sFJ1P58anBVptp6S",
+    "width": 11060,
+    "height": 7000,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "31": {
+      "x": 11200,
+      "y": 5670
+    },
+    "32": {
+      "x": 6615,
+      "y": 4620
+    },
+    "33": {
+      "x": 5145,
+      "y": 5740
+    },
+    "34": {
+      "x": 7490,
+      "y": 5460
+    },
+    "35": {
+      "x": 9030,
+      "y": 3115
+    },
+    "36": {
+      "x": 10693,
+      "y": 6003
+    }
+  },
+  "encounters": [
+    {
+      "id": "skullport-upper-a31",
+      "area": "31",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mage",
+          "actor": "Mage",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 11200,
+              "y": 5670
+            }
+          ],
+          "tokenName": "Felrax"
+        }
+      ]
+    },
+    {
+      "id": "skullport-upper-a32",
+      "area": "32",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 6370,
+              "y": 4410
+            }
+          ],
+          "tokenName": "Ygarra Urmbaalt"
+        }
+      ]
+    },
+    {
+      "id": "skullport-upper-a33",
+      "area": "33",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "doppelganger",
+          "actor": "Doppelganger",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 5670
+            }
+          ],
+          "tokenName": "Garryth"
+        }
+      ]
+    },
+    {
+      "id": "skullport-upper-a34",
+      "area": "34",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "mummy",
+          "actor": "Mummy",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 7210,
+              "y": 5460
+            }
+          ],
+          "tokenName": "Nightshade"
+        }
+      ]
+    },
+    {
+      "id": "skullport-upper-a35",
+      "area": "35",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 9030,
+              "y": 2800
+            }
+          ],
+          "tokenName": "Gharz Stonedark"
+        },
+        {
+          "actorKey": "kobold",
+          "actor": "Kobold",
+          "count": 8,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 8960,
+              "y": 2730
+            },
+            {
+              "x": 9030,
+              "y": 2730
+            },
+            {
+              "x": 9100,
+              "y": 2730
+            },
+            {
+              "x": 8960,
+              "y": 2800
+            },
+            {
+              "x": 9100,
+              "y": 2800
+            },
+            {
+              "x": 8960,
+              "y": 2870
+            },
+            {
+              "x": 9030,
+              "y": 2870
+            },
+            {
+              "x": 9100,
+              "y": 2870
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-upper-a36",
+      "area": "36",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "giant-spider",
+          "actor": "Giant Spider",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 10360,
+              "y": 6090
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    }
+  ]
+}

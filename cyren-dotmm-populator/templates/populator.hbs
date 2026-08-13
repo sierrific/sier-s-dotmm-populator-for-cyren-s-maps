@@ -1,7 +1,7 @@
 <form class="cyren-populator" autocomplete="off">
   <header class="summary">
-    <div><strong>Level:</strong> <select name="selectedLevel">{{#each supportedLevels}}<option value="{{level}}" {{#if selected}}selected{{/if}}>Level {{level}}</option>{{/each}}</select> — {{levelTitle}}</div>
-    <div><strong>Scene:</strong> {{sceneName}} <span class="status status-{{sceneStatus}}">{{sceneStatus}}</span>{{#if splitLevel}} · <strong>Part:</strong> {{scenePart}}{{/if}}</div>
+    <div><strong>Location:</strong> <select name="selectedContent">{{#each supportedContent}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>{{#if contentTitle}} — {{contentTitle}}{{/if}}</div>
+    <div><strong>Scene:</strong> {{sceneName}} <span class="status status-{{sceneStatus}}">{{sceneStatus}}</span>{{#if splitContent}} · <strong>Part:</strong> {{scenePart}}{{/if}}</div>
     <div><strong>Actors:</strong> {{actorResolved}}/{{actorTotal}} · <strong>Anchors:</strong> {{anchorResolved}}/{{anchorTotal}} · <strong>Plan:</strong> {{planCount}} new · {{moduleCounts.total}} already marked</div>
   </header>
 
@@ -70,7 +70,7 @@
     </div>
 
     <div class="tab actions" data-group="primary-tabs" data-tab="actions">
-      <button type="button" data-action="create-safety-copies"><i class="fas fa-copy"></i> Create missing safety copies (Levels 3–23)</button>
+      <button type="button" data-action="create-safety-copies"><i class="fas fa-copy"></i> Create missing safety copies</button>
       <hr>
       <div class="notice warning"><p>Population and Token maintenance never change Cyren Walls, Lights, Tiles, Notes, Sounds, Drawings, Regions, Actors, or settings. Removal and rebuild affect only Tokens flagged by this module.</p></div>
       <button type="button" data-action="preview"><i class="fas fa-eye"></i> Preview without saving</button>
@@ -80,7 +80,7 @@
       <hr>
       <div class="form-group"><label>Area to rebuild</label><select name="rebuildArea">{{#each anchorRows}}<option value="{{area}}" {{#if rebuildSelected}}selected{{/if}}>{{area}}</option>{{/each}}</select></div>
       <button class="danger" type="button" data-action="rebuild-area" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild area</button>
-      <button class="danger" type="button" data-action="rebuild-level" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild current map (Level {{level}})</button>
+      <button class="danger" type="button" data-action="rebuild-level" {{#if blocked}}disabled{{/if}}><i class="fas fa-rotate"></i> Rebuild current map ({{contentLabel}})</button>
       <button class="danger" type="button" data-action="remove"><i class="fas fa-trash-can"></i> Remove module Tokens</button>
     </div>
   </section>

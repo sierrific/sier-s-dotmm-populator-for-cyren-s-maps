@@ -34,7 +34,7 @@ Level 3 token counts by segment are 114 on part 1, 34 on part 2, and 107 on part
 ## Safe preparation workflow
 
 1. Back up the World.
-2. Open the module panel and use **Create missing safety copies (Levels 3–23)**.
+2. Open the module panel and use **Create missing safety copies**.
 3. Right-click the desired `(Copy)` Scene and choose **View Scene**.
 4. Refresh the review and confirm that Actors and anchors are fully resolved.
 5. Preview, then create the missing Tokens.

@@ -1,5 +1,5 @@
-import { MODULE_ID, MODULE_VERSION, SUPPORTED_LEVELS } from "./constants.js";
-import { loadLevelData } from "./data-loader.js";
+import { MODULE_ID, MODULE_VERSION, SUPPORTED_CONTENT } from "./constants.js";
+import { loadContentData } from "./data-loader.js";
 import { actorSpecs, normalizeActorName, resolveActorSpec } from "./actor-resolver.js";
 import { assertGm } from "./validation.js";
 
@@ -34,7 +34,9 @@ async function removeRedundantImports(folder) {
   return remove;
 }
 
-export async function importAvailableActors({ levels = SUPPORTED_LEVELS.filter((level) => level >= 3) } = {}) {
+const DEFAULT_IMPORT_ENTRIES = SUPPORTED_CONTENT.filter((entry) => ![1, 2].includes(entry.level));
+
+export async function importAvailableActors({ contentIds = DEFAULT_IMPORT_ENTRIES.map((entry) => entry.id) } = {}) {
   assertGm();
   const folder = await importFolder();
   const removedDuplicates = await removeRedundantImports(folder);
@@ -43,8 +45,8 @@ export async function importAvailableActors({ levels = SUPPORTED_LEVELS.filter((
   const blocked = [];
   const processed = new Set();
 
-  for (const level of levels) {
-    const data = await loadLevelData(level);
+  for (const contentId of contentIds) {
+    const data = await loadContentData(contentId);
     for (const spec of actorSpecs(data).values()) {
       const identity = JSON.stringify([spec.actor, spec.resolutionNames, spec.aliases]);
       if (processed.has(identity)) continue;
@@ -55,12 +57,12 @@ export async function importAvailableActors({ levels = SUPPORTED_LEVELS.filter((
         continue;
       }
       if (result.status !== "requiresImport" || !result.uuid) {
-        blocked.push({ level, actor: spec.actor, actorKey: spec.actorKey, status: result.status, candidates: result.candidates?.length ?? 0 });
+        blocked.push({ contentId, level: data.level ?? null, actor: spec.actor, actorKey: spec.actorKey, status: result.status, candidates: result.candidates?.length ?? 0 });
         continue;
       }
       const source = await fromUuid(result.uuid);
       if (!source || source.documentName !== "Actor") {
-        blocked.push({ level, actor: spec.actor, actorKey: spec.actorKey, status: "invalid-compendium-source", candidates: 0 });
+        blocked.push({ contentId, level: data.level ?? null, actor: spec.actor, actorKey: spec.actorKey, status: "invalid-compendium-source", candidates: 0 });
         continue;
       }
       const actorData = source.toObject();

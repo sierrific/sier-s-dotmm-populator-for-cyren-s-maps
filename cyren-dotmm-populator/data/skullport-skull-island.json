@@ -1,0 +1,877 @@
+{
+  "schemaVersion": 1,
+  "contentId": "skullport-skull-island",
+  "label": "Skullport — Skull Island",
+  "title": "Skull Island",
+  "actorSourcePreference": [
+    "XMM",
+    "MPMM",
+    "MM"
+  ],
+  "scene": {
+    "key": "main",
+    "names": [
+      "Skullport - Skull Island",
+      "Skullport - Skull Island (Copy)"
+    ],
+    "sourceId": "Scene.GwwMx6QnKtiafBNa",
+    "width": 7980,
+    "height": 10080,
+    "padding": 0.25,
+    "grid": 70
+  },
+  "anchors": {
+    "4": {
+      "x": 4970,
+      "y": 5460
+    },
+    "5": {
+      "x": 5355,
+      "y": 6440
+    },
+    "6": {
+      "x": 5250,
+      "y": 7980
+    },
+    "7": {
+      "x": 6510,
+      "y": 8260
+    },
+    "8": {
+      "x": 5810,
+      "y": 8680
+    },
+    "9": {
+      "x": 4795,
+      "y": 9730
+    },
+    "10b": {
+      "x": 8960,
+      "y": 7735
+    }
+  },
+  "encounters": [
+    {
+      "id": "skullport-skull-island-a4",
+      "area": "4",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "duergar",
+          "actor": "Duergar",
+          "count": 10,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4200,
+              "y": 5460
+            },
+            {
+              "x": 4200,
+              "y": 5600
+            },
+            {
+              "x": 4200,
+              "y": 5740
+            },
+            {
+              "x": 4760,
+              "y": 5740
+            },
+            {
+              "x": 4200,
+              "y": 5880
+            },
+            {
+              "x": 4620,
+              "y": 5880
+            },
+            {
+              "x": 4550,
+              "y": 5950
+            },
+            {
+              "x": 4200,
+              "y": 6020
+            },
+            {
+              "x": 4410,
+              "y": 6020
+            },
+            {
+              "x": 4200,
+              "y": 6160
+            }
+          ]
+        },
+        {
+          "actorKey": "thug",
+          "actor": "Thug",
+          "count": 2,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 5670
+            },
+            {
+              "x": 5460,
+              "y": 5740
+            }
+          ],
+          "resolutionNames": [
+            "Tough",
+            "Thug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-skull-island-a5",
+      "area": "5",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "thug",
+          "actor": "Thug",
+          "count": 26,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5390,
+              "y": 5880
+            },
+            {
+              "x": 5810,
+              "y": 5880
+            },
+            {
+              "x": 5320,
+              "y": 5950
+            },
+            {
+              "x": 5180,
+              "y": 6020
+            },
+            {
+              "x": 5740,
+              "y": 6020
+            },
+            {
+              "x": 5320,
+              "y": 6090
+            },
+            {
+              "x": 5670,
+              "y": 6090
+            },
+            {
+              "x": 5040,
+              "y": 6160
+            },
+            {
+              "x": 5530,
+              "y": 6160
+            },
+            {
+              "x": 4970,
+              "y": 6230
+            },
+            {
+              "x": 5250,
+              "y": 6230
+            },
+            {
+              "x": 5320,
+              "y": 6230
+            },
+            {
+              "x": 5250,
+              "y": 6300
+            },
+            {
+              "x": 5460,
+              "y": 6300
+            },
+            {
+              "x": 4900,
+              "y": 6370
+            },
+            {
+              "x": 5320,
+              "y": 6370
+            },
+            {
+              "x": 4900,
+              "y": 6580
+            },
+            {
+              "x": 5320,
+              "y": 6650
+            },
+            {
+              "x": 4900,
+              "y": 6720
+            },
+            {
+              "x": 4900,
+              "y": 6860
+            },
+            {
+              "x": 5320,
+              "y": 6860
+            },
+            {
+              "x": 5320,
+              "y": 7000
+            },
+            {
+              "x": 5390,
+              "y": 7070
+            },
+            {
+              "x": 5390,
+              "y": 7070
+            },
+            {
+              "x": 5460,
+              "y": 7140
+            },
+            {
+              "x": 5460,
+              "y": 7140
+            }
+          ],
+          "resolutionNames": [
+            "Tough",
+            "Thug"
+          ]
+        },
+        {
+          "actorKey": "thug-2",
+          "actor": "Thug",
+          "count": 25,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5460,
+              "y": 5950
+            },
+            {
+              "x": 5460,
+              "y": 6020
+            },
+            {
+              "x": 4970,
+              "y": 6370
+            },
+            {
+              "x": 5040,
+              "y": 6440
+            },
+            {
+              "x": 5110,
+              "y": 6440
+            },
+            {
+              "x": 5040,
+              "y": 6510
+            },
+            {
+              "x": 5110,
+              "y": 6510
+            },
+            {
+              "x": 5250,
+              "y": 6510
+            },
+            {
+              "x": 5110,
+              "y": 6650
+            },
+            {
+              "x": 5250,
+              "y": 6650
+            },
+            {
+              "x": 4970,
+              "y": 6720
+            },
+            {
+              "x": 5040,
+              "y": 6720
+            },
+            {
+              "x": 5180,
+              "y": 6720
+            },
+            {
+              "x": 5180,
+              "y": 6790
+            },
+            {
+              "x": 4970,
+              "y": 6860
+            },
+            {
+              "x": 5250,
+              "y": 6860
+            },
+            {
+              "x": 4970,
+              "y": 6930
+            },
+            {
+              "x": 5110,
+              "y": 6930
+            },
+            {
+              "x": 5180,
+              "y": 6930
+            },
+            {
+              "x": 5110,
+              "y": 7000
+            },
+            {
+              "x": 5180,
+              "y": 7000
+            },
+            {
+              "x": 5250,
+              "y": 7000
+            },
+            {
+              "x": 4970,
+              "y": 7070
+            },
+            {
+              "x": 5110,
+              "y": 7070
+            },
+            {
+              "x": 5320,
+              "y": 7140
+            }
+          ],
+          "resolutionNames": [
+            "Tough",
+            "Thug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-skull-island-a6",
+      "area": "6",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bugbear",
+          "actor": "Bugbear",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 7700
+            },
+            {
+              "x": 5600,
+              "y": 7910
+            },
+            {
+              "x": 5600,
+              "y": 8050
+            },
+            {
+              "x": 5600,
+              "y": 8120
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "bugbear-2",
+          "actor": "Bugbear",
+          "count": 18,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5740,
+              "y": 7840
+            },
+            {
+              "x": 5740,
+              "y": 7840
+            },
+            {
+              "x": 5810,
+              "y": 7840
+            },
+            {
+              "x": 5810,
+              "y": 7840
+            },
+            {
+              "x": 5880,
+              "y": 7840
+            },
+            {
+              "x": 5880,
+              "y": 7840
+            },
+            {
+              "x": 5740,
+              "y": 7910
+            },
+            {
+              "x": 5740,
+              "y": 7910
+            },
+            {
+              "x": 5810,
+              "y": 7910
+            },
+            {
+              "x": 5810,
+              "y": 7910
+            },
+            {
+              "x": 5880,
+              "y": 7910
+            },
+            {
+              "x": 5880,
+              "y": 7910
+            },
+            {
+              "x": 5740,
+              "y": 7980
+            },
+            {
+              "x": 5740,
+              "y": 7980
+            },
+            {
+              "x": 5810,
+              "y": 7980
+            },
+            {
+              "x": 5810,
+              "y": 7980
+            },
+            {
+              "x": 5740,
+              "y": 8050
+            },
+            {
+              "x": 5740,
+              "y": 8050
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "thug",
+          "actor": "Thug",
+          "count": 6,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5040,
+              "y": 7210
+            },
+            {
+              "x": 5110,
+              "y": 7280
+            },
+            {
+              "x": 5600,
+              "y": 7280
+            },
+            {
+              "x": 5250,
+              "y": 7350
+            },
+            {
+              "x": 5390,
+              "y": 7420
+            },
+            {
+              "x": 5320,
+              "y": 7490
+            }
+          ],
+          "resolutionNames": [
+            "Tough",
+            "Thug"
+          ]
+        },
+        {
+          "actorKey": "thug-2",
+          "actor": "Thug",
+          "count": 1,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5320,
+              "y": 7210
+            }
+          ],
+          "resolutionNames": [
+            "Tough",
+            "Thug"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-skull-island-a7",
+      "area": "7",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bugbear",
+          "actor": "Bugbear",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 6020,
+              "y": 7770
+            },
+            {
+              "x": 6090,
+              "y": 7840
+            },
+            {
+              "x": 6160,
+              "y": 7910
+            },
+            {
+              "x": 6300,
+              "y": 7980
+            },
+            {
+              "x": 6440,
+              "y": 7980
+            },
+            {
+              "x": 6440,
+              "y": 8120
+            },
+            {
+              "x": 6510,
+              "y": 8190
+            },
+            {
+              "x": 6020,
+              "y": 8260
+            },
+            {
+              "x": 6090,
+              "y": 8260
+            },
+            {
+              "x": 6230,
+              "y": 8260
+            },
+            {
+              "x": 6370,
+              "y": 8260
+            },
+            {
+              "x": 6510,
+              "y": 8330
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "bugbear-2",
+          "actor": "Bugbear",
+          "count": 12,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5950,
+              "y": 7840
+            },
+            {
+              "x": 5950,
+              "y": 7840
+            },
+            {
+              "x": 5950,
+              "y": 7910
+            },
+            {
+              "x": 5950,
+              "y": 7910
+            },
+            {
+              "x": 5880,
+              "y": 7980
+            },
+            {
+              "x": 5880,
+              "y": 7980
+            },
+            {
+              "x": 5950,
+              "y": 7980
+            },
+            {
+              "x": 5950,
+              "y": 7980
+            },
+            {
+              "x": 5950,
+              "y": 8050
+            },
+            {
+              "x": 5950,
+              "y": 8050
+            },
+            {
+              "x": 5950,
+              "y": 8120
+            },
+            {
+              "x": 5950,
+              "y": 8120
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-skull-island-a8",
+      "area": "8",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "bugbear",
+          "actor": "Bugbear",
+          "count": 4,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 5600,
+              "y": 8260
+            },
+            {
+              "x": 5670,
+              "y": 8260
+            },
+            {
+              "x": 5810,
+              "y": 8260
+            },
+            {
+              "x": 5880,
+              "y": 8260
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "bugbear-2",
+          "actor": "Bugbear",
+          "count": 10,
+          "disposition": -1,
+          "hidden": true,
+          "positions": [
+            {
+              "x": 5810,
+              "y": 8050
+            },
+            {
+              "x": 5810,
+              "y": 8050
+            },
+            {
+              "x": 5880,
+              "y": 8050
+            },
+            {
+              "x": 5880,
+              "y": 8050
+            },
+            {
+              "x": 5740,
+              "y": 8120
+            },
+            {
+              "x": 5740,
+              "y": 8120
+            },
+            {
+              "x": 5810,
+              "y": 8120
+            },
+            {
+              "x": 5810,
+              "y": 8120
+            },
+            {
+              "x": 5880,
+              "y": 8120
+            },
+            {
+              "x": 5880,
+              "y": 8120
+            }
+          ],
+          "resolutionNames": [
+            "Bugbear Warrior",
+            "Bugbear"
+          ]
+        },
+        {
+          "actorKey": "gargoyle",
+          "actor": "Gargoyle",
+          "count": 12,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4410,
+              "y": 8540
+            },
+            {
+              "x": 4760,
+              "y": 8540
+            },
+            {
+              "x": 4970,
+              "y": 8540
+            },
+            {
+              "x": 5320,
+              "y": 8540
+            },
+            {
+              "x": 5530,
+              "y": 8540
+            },
+            {
+              "x": 5880,
+              "y": 8540
+            },
+            {
+              "x": 4410,
+              "y": 8890
+            },
+            {
+              "x": 4760,
+              "y": 8890
+            },
+            {
+              "x": 4970,
+              "y": 8890
+            },
+            {
+              "x": 5320,
+              "y": 8890
+            },
+            {
+              "x": 5530,
+              "y": 8890
+            },
+            {
+              "x": 5880,
+              "y": 8890
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skullport-skull-island-a9",
+      "area": "9",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "sundeth",
+          "actor": "Sundeth",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4900,
+              "y": 9450
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        },
+        {
+          "actorKey": "wyvern",
+          "actor": "Wyvern",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 4760,
+              "y": 9240
+            }
+          ],
+          "tokenWidth": 2,
+          "tokenHeight": 2
+        }
+      ]
+    },
+    {
+      "id": "skullport-skull-island-a10b",
+      "area": "10b",
+      "radius": 4,
+      "tokens": [
+        {
+          "actorKey": "kuo-toa",
+          "actor": "Kuo-toa",
+          "count": 1,
+          "disposition": -1,
+          "hidden": false,
+          "positions": [
+            {
+              "x": 8890,
+              "y": 7980
+            }
+          ],
+          "tokenName": "Hlool"
+        }
+      ]
+    }
+  ]
+}

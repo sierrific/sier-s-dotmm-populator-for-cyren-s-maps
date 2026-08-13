@@ -2,7 +2,7 @@
 
 ## Open the correct Scene
 
-The module supports Levels 1–23. In the Scenes directory, right-click the intended map or test copy and choose **View Scene** before opening the panel.
+The module supports the Yawning Portal, all three Skullport maps, and Levels 1–23. In the Scenes directory, right-click the intended map or test copy and choose **View Scene** before opening the panel.
 
 Level 3 is split across three maps:
 
@@ -10,11 +10,11 @@ Level 3 is split across three maps:
 - `Level 03 (2)`
 - `Level 03 (3)`
 
-All other supported levels use one Cyren map. The active Scene determines both the level and, when applicable, the map segment. The module checks source metadata, name, dimensions, padding, and grid, and blocks when multiple plausible Scenes remain.
+All other supported locations use one Cyren map. The active Scene determines the selected location and, when applicable, the map segment. The module checks source metadata, name, dimensions, padding, and grid, and blocks when multiple plausible Scenes remain.
 
 ## Create safety copies
 
-Back up the World before the first production run. From the **Execute** tab, **Create missing safety copies (Levels 3–23)** creates one `(Copy)` Scene for each source map that does not already have one. Existing copies and source Scenes are left unchanged.
+Back up the World before the first production run. From the **Execute** tab, **Create missing safety copies** creates one `(Copy)` Scene for each Yawning Portal, Skullport, or Level 3–23 source map that does not already have one. Existing copies and source Scenes are left unchanged.
 
 Open a copy with **View Scene** before testing. Population actions always target the currently resolved Scene; they do not batch-edit every map in the World.
 
