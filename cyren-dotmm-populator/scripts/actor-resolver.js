@@ -1,4 +1,5 @@
 import { MODULE_ID, SETTINGS } from "./constants.js";
+import { resolveUuid } from "./compatibility.js";
 
 export function normalizeActorName(value) {
   return String(value ?? "")
@@ -111,7 +112,7 @@ async function packCandidates(pack, name) {
 async function resolveOverride(actorKey, overrides) {
   const uuid = String(overrides?.[actorKey] ?? "").trim();
   if (!uuid) return null;
-  const document = await fromUuid(uuid);
+  const document = await resolveUuid(uuid);
   if (!document || document.documentName !== "Actor") {
     return { actorKey, status: "invalidOverride", source: "override", uuid };
   }

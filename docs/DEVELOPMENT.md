@@ -25,13 +25,16 @@ npm run audit
 
 `npm run build` creates `dist/cyren-dotmm-populator-<version>.zip` and its `.sha256` checksum. The archive uses canonical LF text, deterministic store mode, fixed timestamps, stable permissions, and contains the contents of the module directory at its root, including `module.json`. `npm run audit` compares every archived byte with the canonicalized source and also checks version consistency, checksum, documentation links, installer targeting, and release assets.
 
+`npm test` runs the full encounter/placement regressions and `tools/test-compatibility.mjs`. The latter uses API and DOM test doubles for v12–v14; it is not a real Foundry integration test. Record the runtime/core/system versions separately when completing the [v14 acceptance checklist](FOUNDRY-V14.md). Only then advance the manifest's `verified` value and its matching validator assertion.
+
 ## Release procedure
 
 1. Update `version` and `download` in `cyren-dotmm-populator/module.json`.
 2. Add the release notes to `CHANGELOG.md`.
+   Update `docs/RELEASE-NOTES.md` with the new release's highlights, compatibility status, and installation caveats; the release workflow uses it as the published description.
 3. Run validation, tests, the package build, and the release audit.
 4. Create and push a tag named `v<version>`.
-5. The release workflow repeats the checks, builds the package, and publishes the ZIP and installer scripts as GitHub release assets.
+5. The release workflow repeats the checks, builds the package, and publishes `module.json`, the ZIP, its checksum, and both installer scripts as GitHub release assets.
 
 The manifest version, tag, archive name, and download URL must match exactly.
 

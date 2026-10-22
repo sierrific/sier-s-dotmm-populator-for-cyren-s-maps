@@ -1,8 +1,8 @@
 export const MODULE_ID = "cyren-dotmm-populator";
-export const MODULE_VERSION = "0.4.0";
+export const MODULE_VERSION = "0.5.0";
 export const CYREN_MODULE_ID = "cyrensmaps-wdmm";
 export const CYREN_TESTED_VERSION = "1.0.0";
-export const SUPPORTED_CORE_GENERATION = 12;
+export const SUPPORTED_CORE_GENERATIONS = Object.freeze([12, 13, 14]);
 export const SUPPORTED_LEVELS = Object.freeze(Array.from({ length: 23 }, (_value, index) => index + 1));
 
 const levelEntry = (level) => ({

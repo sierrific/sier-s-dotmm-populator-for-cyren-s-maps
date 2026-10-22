@@ -50,7 +50,10 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           generate_release_notes: true
+          body_path: docs/RELEASE-NOTES.md
+          fail_on_unmatched_files: true
           files: |
+            cyren-dotmm-populator/module.json
             dist/cyren-dotmm-populator-*.zip
             dist/cyren-dotmm-populator-*.zip.sha256
             installer/install.ps1

@@ -1,11 +1,13 @@
 # Validation
 
-Version 0.4.0 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and CyrensMaps for Undermountain 1.0.0.
+Version 0.5.0 has automated data, regression, packaging, and mocked API-contract tests targeting Foundry v12–v14. A licensed v14 runtime was not available for this update: live v14 rendering, migration, third-party compatibility, and Token lifecycle tests remain pending. The available server remains on Foundry 12.331 with D&D5e 3.1.2 and was not upgraded or modified.
+
+The integration results below are historical results from earlier releases on Foundry 12.331, not new v14 results. The manifest's `verified` field remains at that historical baseline. Follow the [v14 acceptance checklist](FOUNDRY-V14.md) before using this build in a migrated production World.
 
 ## Automated checks
 
 - valid Foundry manifest and stable module ID;
-- release URLs and package names match version 0.4.0;
+- release URLs and package names match version 0.5.0;
 - 667 unique encounter groups and 2,895 deterministic Token instance keys across the Yawning Portal, Skullport, and Levels 1–23;
 - 29 supported map descriptors, including three Level 3 segments and four non-level locations;
 - complete Actor names, logical keys, scene assignments, and area identifiers;
@@ -19,6 +21,14 @@ Version 0.4.0 was validated against Foundry VTT 12.331, D&D5e 3.1.2–3.2.1, and
 - pre-existing Token contents are verified and partial creation failures are rolled back;
 - managed Actor cleanup requires an explicit ownership marker and the dedicated import folder;
 - encounter navigation resolves existing, planned, exact-position, and anchor targets in priority order;
+- v12 array-based controls and v13/v14 keyed controls retain their correct callbacks and GM restrictions;
+- ApplicationV2 action delegation, native form capture, independent area selectors, tab state, and asynchronous operation locks work without legacy UI globals in the test harness;
+- namespaced UUID resolution and configured document classes retain legacy fallbacks;
+- v14 Tile anchors preserve marker centers, including custom origins and rotation;
+- v14 Token construction passes the parent Scene and native Level, preserves exact dimensions, and keeps the dungeon ownership level separate;
+- ambiguous native multi-level layouts fail before writes, and Level content changes are detected by mutation verification;
+- v14 rebuild rollback restores original Token IDs, Level assignments, and unowned Tokens;
+- preview cleanup and anchor cancellation settle pending actions on teardown;
 - release ZIP contents are compared byte for byte with canonicalized source, and documentation links, installer targets, and SHA-256 checksum are audited;
 - release ZIPs use deterministic store mode, fixed timestamps, and explicit UTF-8 entry names;
 - release ZIP entries carry Unix `0644` file permissions for direct extraction on Linux hosts.

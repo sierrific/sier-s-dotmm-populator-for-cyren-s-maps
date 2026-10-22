@@ -1,5 +1,6 @@
 import { MODULE_ID, SETTINGS } from "./constants.js";
 import { isExactSceneGeometry } from "./scene-resolver.js";
+import { coreGeneration } from "./compatibility.js";
 
 const NUMBER_TILE_PATTERN = /(?:number%20tokens|number tokens)\/(?:numbered-_0001s_\d+_)?(\d{1,3}[a-z]?)\.webp(?:\?.*)?$/i;
 
@@ -9,9 +10,13 @@ export function areaFromTile(tile) {
 }
 
 export function tileAnchor(tile) {
+  const modern = coreGeneration() >= 14;
+  const dx = Number(tile.width) * (0.5 - (modern ? Number(tile.anchorX ?? 0.5) : 0));
+  const dy = Number(tile.height) * (0.5 - (modern ? Number(tile.anchorY ?? 0.5) : 0));
+  const angle = modern ? Number(tile.rotation ?? 0) * Math.PI / 180 : 0;
   return {
-    x: Number(tile.x) + Number(tile.width) / 2,
-    y: Number(tile.y) + Number(tile.height) / 2,
+    x: Number(tile.x) + dx * Math.cos(angle) - dy * Math.sin(angle),
+    y: Number(tile.y) + dx * Math.sin(angle) + dy * Math.cos(angle),
     radius: null,
     source: "cyren-tile",
     tileId: tile.id

@@ -4,7 +4,7 @@
 
 Encounter population creates embedded Token documents only. Each Token is tagged under `flags.cyren-dotmm-populator` with its level, map segment, area, encounter, and deterministic population key.
 
-Mutation functions select documents by those flags. They do not modify Actors, Walls, Lights, Tiles, Notes, Sounds, Drawings, Regions, or files belonging to CyrensMaps.
+Mutation functions select documents by those flags. They do not modify Actors, Walls, Lights, Tiles, Notes, Sounds, Drawings, Regions, native Scene Levels, or files belonging to CyrensMaps.
 
 Two separate opt-in helpers can create documents outside encounter population: the safety-copy helper creates missing Scene copies, and the Actor importer copies unambiguous compendium Actors into its dedicated World folder. The copy helper never overwrites an existing copy or changes the source Scene.
 
@@ -13,10 +13,20 @@ Two separate opt-in helpers can create documents outside encounter population: t
 Each intended instance has a stable key derived from:
 
 ```text
-level | sceneKey | area | encounter | actorKey | instance
+(dungeon level or contentId) | area | encounter | actorKey | instance
 ```
 
 Create operations compare expected keys with keys already present on the Scene. Running the same plan again creates no duplicates. Reconcile removes only flagged keys that no longer belong to the plan.
+
+Map segments are scoped before planning. Existing numeric dungeon keys remain unchanged; the native v14 Token `level` field is independent of the module's `flags.cyren-dotmm-populator.level` dungeon number.
+
+## Foundry version adapters
+
+`scripts/compatibility.js` isolates generation detection, legacy versus keyed scene controls, UUID namespaces, configured document classes, and native Scene Level checks. The panel uses `HandlebarsApplicationMixin(ApplicationV2)` and `DialogV2` on all supported generations. Event handlers use native elements and the explicit delegated action target, not jQuery or an event's transient `currentTarget` after awaiting.
+
+v12/v13 Tile positions are top-left coordinates; v14 origins use document-level `anchorX`/`anchorY` and rotation. Area-marker centers account for that difference. Preview graphics support the available PIXI drawing interface and are removed on close or canvas teardown.
+
+v14 Token construction supplies `{parent: scene}` and the one native Level's ID. Multi-level Scenes are rejected before creation, removal, reconciliation, or rebuild. This protects the existing one-map-per-Scene datasets from ambiguous vertical placement. Level documents are included in safety fingerprints. See [Foundry v14 compatibility](FOUNDRY-V14.md) for the scope and runtime acceptance checklist.
 
 ## Scene resolution
 

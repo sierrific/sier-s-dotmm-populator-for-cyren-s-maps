@@ -4,7 +4,7 @@ A safety-first Foundry VTT module for preparing the Yawning Portal, all three Sk
 
 The module reviews Scene compatibility, resolves creature Actors, previews deterministic placement, and creates only explicitly flagged Tokens. It does not distribute maps, artwork, adventure prose, journals, or creature stat blocks.
 
-> **Current scope:** The Yawning Portal, all three Skullport maps, and Levels 1–23, including all three Level 3 map segments. Foundry VTT 12.331 and D&D5e 3.1.2–3.2.1.
+> **Current scope:** The Yawning Portal, all three Skullport maps, and Levels 1–23, including all three Level 3 map segments. Version 0.5.0 targets Foundry VTT v12–v14. Live v14 verification is still pending; see [v14 compatibility and upgrade notes](docs/FOUNDRY-V14.md).
 
 ![Level 1 review panel](docs/images/level-01-review.png)
 
@@ -22,7 +22,8 @@ The module reviews Scene compatibility, resolves creature Actors, previews deter
 - Pans the canvas to an encounter when its name or review warning is clicked.
 - Creates, reconciles, rebuilds, and removes only module-owned Tokens.
 - Uses deterministic instance keys, so repeated runs are idempotent.
-- Verifies that Walls, Lights, Tiles, Notes, Sounds, Drawings, and Regions remain unchanged.
+- Verifies that Walls, Lights, Tiles, Notes, Sounds, Drawings, Regions, and native Scene Levels remain unchanged.
+- Uses ApplicationV2, modern scene controls, and v14-aware Tile anchors and Token creation.
 - Rolls back module Token changes after partial creation failures and detects unexpected changes to existing Tokens.
 - Marks imported Actors explicitly so cleanup cannot claim unmarked World content.
 - Blocks persistence while a Scene, Actor, or area anchor is unresolved.
@@ -33,28 +34,32 @@ The module reviews Scene compatibility, resolves creature Actors, previews deter
 
 In **Setup → Add-on Modules → Install Module**, paste:
 
+This method requires public access to both the manifest and release ZIP. If the repository is private, use the release-download method below instead; signing into GitHub in your browser does not authenticate Foundry's installer.
+
 ```text
 https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/main/cyren-dotmm-populator/module.json
 ```
 
 ### Release ZIP
 
-Download `cyren-dotmm-populator-0.4.0.zip` from the latest release and extract it into:
+Download `cyren-dotmm-populator-0.5.0.zip` from its release, or build it locally with `npm run build`, and extract it into:
 
 ```text
 <FoundryUserData>/Data/modules/cyren-dotmm-populator
 ```
 
-Windows and Linux helper scripts are provided in [`installer/`](installer/). Each release includes the ZIP, both installers, and a SHA-256 checksum. See [Installation](docs/INSTALLATION.md) for complete instructions.
+Windows and Linux helper scripts are provided in [`installer/`](installer/). Each release includes `module.json`, the ZIP, both installers, and a SHA-256 checksum. For a private repository, download these assets while signed into GitHub and install the ZIP manually or with a helper script. The standalone JSON is the same manifest embedded in the ZIP; it does not bypass private GitHub access. See [Installation](docs/INSTALLATION.md) for complete instructions.
 
 ## Requirements
 
 | Component | Supported version | Required |
 |---|---:|---:|
-| Foundry Virtual Tabletop | 12.331 | Yes |
-| D&D5e system | 3.1.2–3.2.1 | Yes |
-| CyrensMaps for Undermountain | 1.0.0 | Yes |
-| Plutonium | 2.1.3 | No, but recommended |
+| Foundry Virtual Tabletop | v12–v14; historical live baseline 12.331 | Yes |
+| D&D5e system | 3.1.2+; use a release compatible with your Foundry version | Yes |
+| CyrensMaps for Undermountain | 1.0.0+ with matching map geometry and compatible core support | Yes |
+| Plutonium | 2.1.3+ with compatible core/system support | No |
+
+This update does not upgrade Foundry or make third-party packages compatible. The manifest retains `verified: 12.331` until the new build has been tested in a real v14 World. In v14, use one native Scene Level per Cyren map; combined multi-level Scenes are deliberately blocked. Split dungeon floors remain separate Scenes.
 
 Actors are not distributed by this project. Import or create the required Actors in the World before populating a Scene.
 
@@ -94,6 +99,7 @@ See [Development and releases](docs/DEVELOPMENT.md).
 ## Documentation
 
 - [Installation](docs/INSTALLATION.md)
+- [Foundry v14 compatibility](docs/FOUNDRY-V14.md)
 - [User Guide](docs/USER-GUIDE.md)
 - [Levels 3–23](docs/LEVELS-03-23.md)
 - [Yawning Portal and Skullport](docs/YAWNING-PORTAL-SKULLPORT.md)

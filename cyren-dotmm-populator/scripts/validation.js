@@ -1,4 +1,5 @@
-import { MODULE_ID, SUPPORTED_CORE_GENERATION } from "./constants.js";
+import { MODULE_ID, SUPPORTED_CORE_GENERATIONS } from "./constants.js";
+import { coreGeneration } from "./compatibility.js";
 import { expectedCanvasBounds, levelSceneDefinitions } from "./scene-resolver.js";
 
 const AREA_PATTERN = /^(?:\d{1,3}[a-z]?(?:-[a-z0-9]+)?|[a-z][a-z0-9-]{0,63})$/i;
@@ -6,10 +7,10 @@ const AREA_PATTERN = /^(?:\d{1,3}[a-z]?(?:-[a-z0-9]+)?|[a-z][a-z0-9-]{0,63})$/i;
 export function validateEnvironment() {
   const errors = [];
   const warnings = [];
-  const generation = Number(game.release?.generation ?? game.version?.split?.(".")?.[0]);
+  const generation = coreGeneration();
 
-  if (generation !== SUPPORTED_CORE_GENERATION) {
-    errors.push(`Foundry generation ${generation || "unknown"} is unsupported; this build targets v12.`);
+  if (!SUPPORTED_CORE_GENERATIONS.includes(generation)) {
+    errors.push(`Foundry generation ${generation || "unknown"} is unsupported; this build supports v12–v14.`);
   }
   if (game.system?.id !== "dnd5e") errors.push("The active system is not dnd5e.");
   if (!game.modules.get("cyrensmaps-wdmm")?.active) errors.push("CyrensMaps for Undermountain is not active.");
@@ -119,13 +120,14 @@ export function fingerprintScene(scene) {
     notes: snapshots(scene.notes),
     sounds: snapshots(scene.sounds),
     drawings: snapshots(scene.drawings),
-    regions: snapshots(scene.regions)
+    regions: snapshots(scene.regions),
+    levels: snapshots(scene.levels)
   };
 }
 
 export function verifyTokenOnlyMutation(before, after, { created = [], removed = [] } = {}) {
   const errors = [];
-  for (const key of ["walls", "lights", "tiles", "notes", "sounds", "drawings", "regions"]) {
+  for (const key of ["walls", "lights", "tiles", "notes", "sounds", "drawings", "regions", "levels"]) {
     if (JSON.stringify(before[key]) !== JSON.stringify(after[key])) errors.push(`${key} changed unexpectedly.`);
   }
 

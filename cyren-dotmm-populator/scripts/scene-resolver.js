@@ -27,7 +27,7 @@ export function levelSceneDefinitions(levelData) {
 export function scoreScene(scene, expected) {
   const reasons = [];
   let score = 0;
-  const sourceIdMatch = sceneSourceId(scene) === expected.sourceId;
+  const sourceIdMatch = Boolean(expected.sourceId) && sceneSourceId(scene) === expected.sourceId;
   const nameMatch = (expected.names ?? []).map(normalizeSceneName).includes(normalizeSceneName(scene.name));
   const geometryMatch = isExactSceneGeometry(scene, expected);
 
@@ -124,7 +124,8 @@ export function scopeLevelData(levelData, sceneKey) {
 export function isExactSceneGeometry(scene, expected) {
   return scene.width === expected.width
     && scene.height === expected.height
-    && (scene.grid?.size ?? scene.grid) === expected.grid;
+    && (scene.grid?.size ?? scene.grid) === expected.grid
+    && (expected.padding === undefined || Number(scene.padding ?? 0) === Number(expected.padding));
 }
 
 export function expectedCanvasBounds(expected) {

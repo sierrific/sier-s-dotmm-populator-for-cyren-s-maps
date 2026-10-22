@@ -2,10 +2,11 @@ import { MODULE_ID, MODULE_VERSION, SUPPORTED_CONTENT } from "./constants.js";
 import { loadContentData } from "./data-loader.js";
 import { actorSpecs, normalizeActorName, resolveActorSpec } from "./actor-resolver.js";
 import { assertGm } from "./validation.js";
+import { documentClass, resolveUuid } from "./compatibility.js";
 
 async function importFolder() {
   return game.folders.find((folder) => folder.type === "Actor" && folder.name === "Sier's DotMM Populator Imports")
-    ?? Folder.create({ name: "Sier's DotMM Populator Imports", type: "Actor", sorting: "a" });
+    ?? documentClass("Folder").create({ name: "Sier's DotMM Populator Imports", type: "Actor", sorting: "a" });
 }
 
 export function isManagedImport(actor, folder = null) {
@@ -30,7 +31,7 @@ async function removeRedundantImports(folder) {
     if (existing.length) remove.push(...imported);
     else if (imported.length > 1) remove.push(...imported.toSorted((left, right) => left.id.localeCompare(right.id)).slice(1));
   }
-  if (remove.length) await Actor.deleteDocuments(remove.map((actor) => actor.id));
+  if (remove.length) await documentClass("Actor").deleteDocuments(remove.map((actor) => actor.id));
   return remove;
 }
 
@@ -60,7 +61,7 @@ export async function importAvailableActors({ contentIds = DEFAULT_IMPORT_ENTRIE
         blocked.push({ contentId, level: data.level ?? null, actor: spec.actor, actorKey: spec.actorKey, status: result.status, candidates: result.candidates?.length ?? 0 });
         continue;
       }
-      const source = await fromUuid(result.uuid);
+      const source = await resolveUuid(result.uuid);
       if (!source || source.documentName !== "Actor") {
         blocked.push({ contentId, level: data.level ?? null, actor: spec.actor, actorKey: spec.actorKey, status: "invalid-compendium-source", candidates: 0 });
         continue;
@@ -76,7 +77,7 @@ export async function importAvailableActors({ contentIds = DEFAULT_IMPORT_ENTRIE
           version: MODULE_VERSION
         }
       };
-      created.push(await Actor.create(actorData, { renderSheet: false }));
+      created.push(await documentClass("Actor").create(actorData, { renderSheet: false }));
     }
   }
   removedDuplicates.push(...await removeRedundantImports(folder));

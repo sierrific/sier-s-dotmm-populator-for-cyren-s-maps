@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { expectedCanvasBounds, levelSceneDefinitions } from "../cyren-dotmm-populator/scripts/scene-resolver.js";
-import { SUPPORTED_CONTENT } from "../cyren-dotmm-populator/scripts/constants.js";
+import { SUPPORTED_CONTENT, SUPPORTED_CORE_GENERATIONS } from "../cyren-dotmm-populator/scripts/constants.js";
 
 const root = path.resolve("cyren-dotmm-populator");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "module.json"), "utf8"));
@@ -53,6 +53,8 @@ if (manifest.title !== "Sier's DotMM Populator for Cyren's Maps") errors.push("U
 if (manifest.version !== packageMetadata.version) errors.push("package.json and module.json versions differ.");
 if (constants.match(/MODULE_VERSION\s*=\s*"([^"]+)"/)?.[1] !== manifest.version) errors.push("MODULE_VERSION and module.json versions differ.");
 if (manifest.compatibility?.verified !== "12.331") errors.push("Foundry verified version must be 12.331.");
+if (manifest.compatibility?.minimum !== "12" || manifest.compatibility?.maximum !== "14"
+  || JSON.stringify(SUPPORTED_CORE_GENERATIONS) !== "[12,13,14]") errors.push("Manifest and runtime must support Foundry v12–v14.");
 const expectedContentIds = [
   "yawning-portal",
   ...Array.from({ length: 3 }, (_value, index) => `level-${String(index + 1).padStart(2, "0")}`),

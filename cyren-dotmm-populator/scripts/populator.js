@@ -1,22 +1,26 @@
 import { MODULE_ID } from "./constants.js";
 import { flagMatchesContent, getPopulationFlag, isModuleToken, populationKey } from "./flags.js";
 import { fingerprintScene, verifyTokenOnlyMutation, assertGm } from "./validation.js";
+import { sceneLevelData } from "./compatibility.js";
 
-async function tokenDataForPlacement(placement) {
+async function tokenDataForPlacement(scene, placement) {
+  const levelData = sceneLevelData(scene);
   const token = await placement.actor.getTokenDocument({
     x: placement.x,
     y: placement.y,
     hidden: Boolean(placement.spec.hidden),
-    disposition: Number(placement.spec.disposition ?? -1)
-  });
+    disposition: Number(placement.spec.disposition ?? -1),
+    ...levelData
+  }, { parent: scene });
   const data = token.toObject();
   delete data._id;
+  Object.assign(data, levelData);
   data.x = placement.x;
   data.y = placement.y;
   data.hidden = Boolean(placement.spec.hidden);
   data.disposition = Number(placement.spec.disposition ?? -1);
-  if (placement.spec.tokenWidth) data.width = Number(placement.spec.tokenWidth);
-  if (placement.spec.tokenHeight) data.height = Number(placement.spec.tokenHeight);
+  data.width = Number(placement.width ?? placement.spec.tokenWidth ?? data.width);
+  data.height = Number(placement.height ?? placement.spec.tokenHeight ?? data.height);
   if (placement.spec.tokenName) data.name = placement.spec.tokenName;
   data.flags ??= {};
   data.flags[MODULE_ID] = placement.flag;
@@ -26,7 +30,7 @@ async function tokenDataForPlacement(placement) {
 async function createPlacements(scene, placements) {
   if (!placements.length) return [];
   const data = [];
-  for (const placement of placements) data.push(await tokenDataForPlacement(placement));
+  for (const placement of placements) data.push(await tokenDataForPlacement(scene, placement));
   return scene.createEmbeddedDocuments("Token", data);
 }
 
@@ -62,6 +66,7 @@ async function rollbackPartialMutation(scene, before) {
 
 async function verifiedMutation(scene, operation) {
   assertGm();
+  sceneLevelData(scene);
   const before = fingerprintScene(scene);
   let result;
   try {
