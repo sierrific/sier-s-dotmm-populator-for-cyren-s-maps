@@ -11,10 +11,10 @@
   {{#if dataWarningRows.length}}<div class="notice warning">{{#each dataWarningRows}}<p>{{#if encounterId}}<button type="button" class="encounter-link" data-action="pan-encounter" data-encounter-id="{{encounterId}}" title="Pan to {{encounterId}}">{{encounterId}}</button>{{suffix}}{{else}}{{message}}{{/if}}</p>{{/each}}</div>{{/if}}
 
   <nav class="tabs" data-group="primary-tabs">
-    <a class="item" data-tab="review"><i class="fas fa-list-check"></i> Review</a>
-    <a class="item" data-tab="actors"><i class="fas fa-dragon"></i> Actors</a>
-    <a class="item" data-tab="anchors"><i class="fas fa-location-dot"></i> Anchors</a>
-    <a class="item" data-tab="actions"><i class="fas fa-wand-magic-sparkles"></i> Execute</a>
+    <button type="button" class="item" data-action="select-tab" data-tab="review"><i class="fas fa-list-check"></i> Review</button>
+    <button type="button" class="item" data-action="select-tab" data-tab="actors"><i class="fas fa-dragon"></i> Actors</button>
+    <button type="button" class="item" data-action="select-tab" data-tab="anchors"><i class="fas fa-location-dot"></i> Anchors</button>
+    <button type="button" class="item" data-action="select-tab" data-tab="actions"><i class="fas fa-wand-magic-sparkles"></i> Execute</button>
   </nav>
 
   <section class="content">

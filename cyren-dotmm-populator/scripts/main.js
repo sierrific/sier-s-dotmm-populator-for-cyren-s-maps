@@ -1,5 +1,5 @@
 import { MODULE_ID, SETTINGS } from "./constants.js";
-import { CyrenPopulatorApp, openPopulator } from "./ui.js";
+import { CyrenPopulatorApp, openPopulator, clearPreview } from "./ui.js";
 import { loadContentData, loadLevelData, clearDataCache } from "./data-loader.js";
 import { resolveLevelScene, resolveScene, scopeLevelData } from "./scene-resolver.js";
 import { resolveActors } from "./actor-resolver.js";
@@ -8,6 +8,8 @@ import { planPopulation } from "./placement-engine.js";
 import { populateMissing, reconcile, removeCreated, rebuild } from "./populator.js";
 import { createMissingSafetyCopies, safetyCopyStatus } from "./safety-copies.js";
 import { importAvailableActors } from "./actor-importer.js";
+import { addPopulatorControl } from "./compatibility.js";
+import { cancelAnchorAuthoring } from "./anchor-authoring.js";
 
 Hooks.once("init", () => {
   game.settings.register(MODULE_ID, SETTINGS.preferredPacks, {
@@ -81,14 +83,10 @@ Hooks.once("ready", () => {
 });
 
 Hooks.on("getSceneControlButtons", (controls) => {
-  if (!game.user?.isGM) return;
-  const tokenControls = controls.find((control) => control.name === "token" || control.name === "tokens");
-  if (!tokenControls) return;
-  tokenControls.tools.push({
-    name: `${MODULE_ID}-open`,
-    title: "Sier's DotMM Populator for Cyren's Maps",
-    icon: "fas fa-users-viewfinder",
-    button: true,
-    onClick: () => openPopulator()
-  });
+  addPopulatorControl(controls, () => openPopulator());
+});
+
+Hooks.on("canvasTearDown", () => {
+  clearPreview();
+  cancelAnchorAuthoring();
 });

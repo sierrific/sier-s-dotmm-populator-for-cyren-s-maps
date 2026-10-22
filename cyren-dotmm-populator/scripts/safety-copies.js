@@ -2,6 +2,7 @@ import { SUPPORTED_CONTENT } from "./constants.js";
 import { loadContentData } from "./data-loader.js";
 import { isExactSceneGeometry, levelSceneDefinitions } from "./scene-resolver.js";
 import { assertGm } from "./validation.js";
+import { documentClass } from "./compatibility.js";
 
 function sourceId(scene) {
   return scene.flags?.["scene-packer"]?.sourceId ?? null;
@@ -55,7 +56,8 @@ export async function createMissingSafetyCopies(options = {}) {
     delete data._id;
     data.name = row.copyName;
     data.navigation = false;
-    created.push(await Scene.create(data, { renderSheet: false }));
+    data.active = false;
+    created.push(await documentClass("Scene").create(data, { renderSheet: false }));
   }
   return { created, existing, missingSources, expected: rows.length };
 }

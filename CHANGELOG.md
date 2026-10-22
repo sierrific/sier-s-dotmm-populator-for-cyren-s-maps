@@ -2,6 +2,20 @@
 
 All notable changes are documented here.
 
+## 0.5.0 — 2026-10-22
+
+- Added Foundry v12–v14 API compatibility; retained the historical `verified: 12.331` baseline pending live v14 verification.
+- Migrated the control panel and confirmation dialogs to ApplicationV2/DialogV2, with native DOM listeners instead of jQuery.
+- Supported both legacy array-based and modern keyed scene controls, namespaced UUID resolution, and configured document subclasses.
+- Corrected area-marker centers for v14 Tile origin/anchor changes, including rotated markers.
+- Added parent-aware Token construction and explicit native Scene Level assignment. Combined multi-level Scenes are blocked before any mutation; separate Cyren maps remain supported.
+- Included native Scene Levels in mutation fingerprints and preserved exact planned Token dimensions.
+- Preserved Actor overrides for other locations when saving mappings; kept controls locked until asynchronous actions finish.
+- Cancelled pending anchor authoring and cleared previews when the canvas is torn down.
+- Prevented safety copies from inheriting the source Scene's active state, and rejected changed padding when matching map geometry.
+- Removed obsolete dependency maximum pins; dependencies still need their own compatible releases.
+- Added cross-generation regression tests and an explicit v14 copy-only acceptance checklist. Encounter datasets and existing population keys are unchanged.
+
 ## 0.4.0 — 2026-08-12
 
 - Added the Yawning Portal and all three Skullport maps as first-class selectable locations.

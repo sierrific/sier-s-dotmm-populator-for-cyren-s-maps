@@ -11,11 +11,12 @@ import { openPlutoniumCreatureImporter, plutoniumStatus } from "./plutonium-help
 import { createMissingSafetyCopies } from "./safety-copies.js";
 import { importAvailableActors } from "./actor-importer.js";
 import { panToEncounter } from "./encounter-navigation.js";
+import { sceneLevelData } from "./compatibility.js";
 
 let previewContainer = null;
 
 function clearPreview() {
-  previewContainer?.destroy?.({ children: true });
+  if (previewContainer && !previewContainer.destroyed) previewContainer.destroy({ children: true });
   previewContainer = null;
 }
 
@@ -27,10 +28,15 @@ function drawPreview(scene, plan) {
   layer.eventMode = "none";
   for (const placement of plan.placements) {
     const graphic = new PIXI.Graphics();
-    graphic.lineStyle(3, 0x45d483, 0.95);
-    graphic.beginFill(0x45d483, 0.18);
-    graphic.drawRect(placement.x, placement.y, placement.rect.width, placement.rect.height);
-    graphic.endFill();
+    if (typeof graphic.rect === "function" && typeof graphic.stroke === "function") {
+      graphic.rect(placement.x, placement.y, placement.rect.width, placement.rect.height)
+        .fill({ color: 0x45d483, alpha: 0.18 }).stroke({ width: 3, color: 0x45d483, alpha: 0.95 });
+    } else {
+      graphic.lineStyle(3, 0x45d483, 0.95);
+      graphic.beginFill(0x45d483, 0.18);
+      graphic.drawRect(placement.x, placement.y, placement.rect.width, placement.rect.height);
+      graphic.endFill();
+    }
     layer.addChild(graphic);
   }
   canvas.stage.addChild(layer);
@@ -44,22 +50,31 @@ function displayStatus(result) {
 }
 
 async function confirmAction(title, content) {
-  return Dialog.confirm({ title, content, yes: () => true, no: () => false, defaultYes: false });
+  return foundry.applications.api.DialogV2.confirm({
+    window: { title }, content, rejectClose: false,
+    yes: { default: false }, no: { default: true }
+  });
 }
 
-export class CyrenPopulatorApp extends FormApplication {
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      id: `${MODULE_ID}-app`,
-      title: "Sier's DotMM Populator for Cyren's Maps",
-      template: `modules/${MODULE_ID}/templates/populator.hbs`,
-      width: 860,
-      height: 720,
-      resizable: true,
-      closeOnSubmit: false,
-      submitOnChange: false,
-      tabs: [{ navSelector: ".tabs", contentSelector: ".content", initial: "review" }]
-    });
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+export class CyrenPopulatorApp extends HandlebarsApplicationMixin(ApplicationV2) {
+  static DEFAULT_OPTIONS = {
+    id: `${MODULE_ID}-app`,
+    position: { width: 860, height: 720 },
+    window: { title: "Sier's DotMM Populator for Cyren's Maps", resizable: true },
+    actions: Object.fromEntries([
+      "refresh", "save-settings", "open-plutonium", "create-safety-copies", "import-available-actors",
+      "pan-encounter", "preview", "clear-preview", "author-anchor", "populate", "reconcile",
+      "remove", "rebuild-level", "rebuild-area", "select-tab"
+    ].map((action) => [action, function(event, target) { return this._onAction(event, target); }]))
+  };
+
+  static PARTS = { panel: { template: `modules/${MODULE_ID}/templates/populator.hbs`, scrollable: [".content"] } };
+
+  get title() {
+    const label = this.context?.data ? ` — ${contentLabel(this.context.data)}` : "";
+    return `Sier's DotMM Populator for Cyren's Maps${label}`;
   }
 
   async _selectedContentData() {
@@ -71,7 +86,7 @@ export class CyrenPopulatorApp extends FormApplication {
       const ranked = entries
         .map((data) => ({ data, ...scoreLevelScene(activeScene, data) }))
         .sort((left, right) => right.score - left.score);
-      if (ranked[0]?.score >= 180 && ranked[0].score > (ranked[1]?.score ?? 0)) {
+      if (ranked[0]?.valid && ranked[0]?.score >= 180 && ranked[0].score > (ranked[1]?.score ?? 0)) {
         this.selectedContent = contentIdForData(ranked[0].data);
         return ranked[0].data;
       }
@@ -89,7 +104,6 @@ export class CyrenPopulatorApp extends FormApplication {
     assertGm();
     const levelData = await this._selectedContentData();
     this.selectedContent = contentIdForData(levelData);
-    this.options.title = `Sier's DotMM Populator for Cyren's Maps — ${contentLabel(levelData)}`;
     const environment = validateEnvironment();
     const dataValidation = validateLevelData(levelData);
     const sceneResolution = resolveLevelScene(levelData);
@@ -98,6 +112,12 @@ export class CyrenPopulatorApp extends FormApplication {
     }
     const data = scopeLevelData(levelData, sceneResolution.definition.key);
     const scene = sceneResolution.scene;
+    try {
+      sceneLevelData(scene);
+    } catch (error) {
+      environment.errors.push(error.message);
+      environment.ok = false;
+    }
     const actors = await resolveActors(data);
     const anchors = resolveAnchors(scene, data);
     const plan = planPopulation(scene, data, actors, anchors);
@@ -107,7 +127,7 @@ export class CyrenPopulatorApp extends FormApplication {
     return { data, levelData, environment, dataValidation, sceneResolution, scene, actors, anchors, plan, actorBlockers, anchorBlockers, blocked };
   }
 
-  async getData() {
+  async _prepareContext(_options) {
     this.context = await this._buildContext();
     const context = this.context;
     const overrides = game.settings.get(MODULE_ID, SETTINGS.actorOverrides) ?? {};
@@ -188,39 +208,86 @@ export class CyrenPopulatorApp extends FormApplication {
     };
   }
 
-  activateListeners(html) {
-    super.activateListeners(html);
-    html.find("[data-action]").on("click", (event) => this._onAction(event));
-    html.find('[name="selectedContent"]').on("change", (event) => this._onContentChange(event));
-    html.find('[name="anchorArea"]').on("change", (event) => { this.selectedAnchorArea = String(event.currentTarget.value); });
-    html.find('[name="rebuildArea"]').on("change", (event) => { this.selectedRebuildArea = String(event.currentTarget.value); });
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+    const root = this.element;
+    root.querySelector('[name="selectedContent"]').addEventListener("change", (event) => {
+      this._onContentChange(event).catch((error) => ui.notifications.error(error.message));
+    });
+    root.querySelector('[name="anchorArea"]').addEventListener("change", (event) => { this.selectedAnchorArea = String(event.currentTarget.value); });
+    root.querySelector('[name="rebuildArea"]').addEventListener("change", (event) => { this.selectedRebuildArea = String(event.currentTarget.value); });
+    root.querySelector("form.cyren-populator").addEventListener("submit", (event) => {
+      event.preventDefault();
+      this._onAction(event, root.querySelector('[data-action="save-settings"]'));
+    });
+    this._selectTab(this.selectedTab ?? "review");
+    this._setBusy(Boolean(this._actionInFlight));
+  }
+
+  _selectTab(tab) {
+    if (!["review", "actors", "anchors", "actions"].includes(tab)) return;
+    this.selectedTab = tab;
+    for (const element of this.element.querySelectorAll("[data-tab]")) {
+      const active = element.dataset.tab === tab;
+      element.classList.toggle("active", active);
+      if (element.classList.contains("tab")) element.hidden = !active;
+      else element.setAttribute("aria-selected", String(active));
+    }
+  }
+
+  _setBusy(busy) {
+    // Keep semantic disabled states separate from the temporary operation lock.
+    for (const element of this.element?.querySelectorAll("button, select, input") ?? []) {
+      if (busy && !element.disabled) {
+        element.dataset.busyDisabled = "true";
+        element.disabled = true;
+      } else if (!busy && element.dataset.busyDisabled) {
+        element.disabled = false;
+        delete element.dataset.busyDisabled;
+      }
+    }
+  }
+
+  _formValue(selector) {
+    return this.element.querySelector(selector)?.value ?? "";
   }
 
   async _onContentChange(event) {
+    if (this._actionInFlight) return;
     const contentId = String(event.currentTarget.value);
     if (!SUPPORTED_CONTENT.some((entry) => entry.id === contentId)) return;
-    this.selectedContent = contentId;
-    this.selectedAnchorArea = null;
-    this.selectedRebuildArea = null;
-    await game.settings.set(MODULE_ID, SETTINGS.selectedContent, contentId);
-    await this._refreshContext();
+    this._actionInFlight = true;
+    this._setBusy(true);
+    try {
+      this.selectedContent = contentId;
+      this.selectedAnchorArea = null;
+      this.selectedRebuildArea = null;
+      await game.settings.set(MODULE_ID, SETTINGS.selectedContent, contentId);
+      await this._refreshContext();
+    } finally {
+      this._actionInFlight = false;
+      this._setBusy(false);
+    }
   }
 
   async _refreshContext() {
     clearPreview();
-    this.context = await this._buildContext();
-    await this.render(false);
+    await this.render({ force: false });
   }
 
-  async _onAction(event) {
+  async _onAction(event, target = event.currentTarget) {
     event.preventDefault();
     if (this._actionInFlight) return;
+    const action = target.dataset.action;
+    if (action === "select-tab") return this._selectTab(target.dataset.tab);
+    // Disabled controls are excluded from FormData, so capture mappings first.
+    const settings = action === "save-settings"
+      ? Object.fromEntries(new FormData(this.element.querySelector("form.cyren-populator"))) : null;
     this._actionInFlight = true;
-    event.currentTarget.disabled = true;
-    const action = event.currentTarget.dataset.action;
+    this._setBusy(true);
     try {
-      if (action === "refresh") return this._refreshContext();
-      if (action === "save-settings") return this.submit({ preventClose: true });
+      if (action === "refresh") return await this._refreshContext();
+      if (action === "save-settings") return await this._updateObject(event, settings);
       if (action === "open-plutonium") {
         await openPlutoniumCreatureImporter();
         return;
@@ -246,7 +313,7 @@ export class CyrenPopulatorApp extends FormApplication {
       const scope = { contentId, level: context.data.level ?? null };
       if (!context.scene) throw new Error(`No unambiguous ${contentLabel(context.data)} map is available.`);
       if (action === "pan-encounter") {
-        const encounterId = String(event.currentTarget.dataset.encounterId ?? "");
+        const encounterId = String(target.dataset.encounterId ?? "");
         const encounter = context.data.encounters.find((candidate) => candidate.id === encounterId);
         if (!encounter) throw new Error(`Unknown encounter: ${encounterId || "none"}.`);
         await panToEncounter({
@@ -265,7 +332,7 @@ export class CyrenPopulatorApp extends FormApplication {
       }
       if (action === "clear-preview") return clearPreview();
       if (action === "author-anchor") {
-        const area = String(this.element.find('[name="anchorArea"]').val() ?? "").trim().toLowerCase();
+        const area = String(this._formValue('[name="anchorArea"]')).trim().toLowerCase();
         if (!area) throw new Error("Choose an area.");
         await authorAnchor(context.scene, area);
         await this._refreshContext();
@@ -284,7 +351,7 @@ export class CyrenPopulatorApp extends FormApplication {
         displayStatus(await rebuild(context.scene, fresh, scope));
       }
       if (action === "rebuild-area") {
-        const area = String(this.element.find('[name="rebuildArea"]').val() ?? "").trim().toLowerCase();
+        const area = String(this._formValue('[name="rebuildArea"]')).trim().toLowerCase();
         if (!area) throw new Error("Choose an area.");
         if (!await confirmAction(`Rebuild area ${area}`, "Only Tokens owned by this module in this area will be removed and recreated.")) return;
         const fresh = planPopulation(context.scene, context.data, context.actors, context.anchors, { areas: [area], ignoreExisting: true });
@@ -296,18 +363,19 @@ export class CyrenPopulatorApp extends FormApplication {
       console.error(`${MODULE_ID} |`, error);
     } finally {
       this._actionInFlight = false;
-      if (event.currentTarget?.isConnected) event.currentTarget.disabled = false;
+      this._setBusy(false);
     }
   }
 
   async _updateObject(_event, formData) {
     assertGm();
     await game.settings.set(MODULE_ID, SETTINGS.preferredPacks, String(formData.preferredPacks ?? "").trim());
-    const overrides = {};
+    const overrides = { ...game.settings.get(MODULE_ID, SETTINGS.actorOverrides) };
     for (const [key, value] of Object.entries(formData)) {
       if (!key.startsWith("override.")) continue;
       const uuid = String(value ?? "").trim();
       if (uuid) overrides[key.slice("override.".length)] = uuid;
+      else delete overrides[key.slice("override.".length)];
     }
     await game.settings.set(MODULE_ID, SETTINGS.actorOverrides, overrides);
     ui.notifications.info("Sier's DotMM Populator settings saved.");
@@ -327,7 +395,7 @@ export function openPopulator(content = null) {
   const numericContent = content !== null && content !== "" && Number.isInteger(Number(content));
   const requested = numericContent ? contentIdForLevel(Number(content)) : String(content ?? "");
   if (SUPPORTED_CONTENT.some((entry) => entry.id === requested)) app.selectedContent = requested;
-  return app.render(true);
+  return app.render({ force: true });
 }
 
 export { clearPreview };

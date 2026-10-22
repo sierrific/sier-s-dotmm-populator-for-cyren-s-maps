@@ -21,7 +21,7 @@ export async function authorAnchor(scene, area, radius = null) {
       stage.off("pointerdown", onPointerDown);
       window.removeEventListener("keydown", onKeyDown);
       stage.eventMode = previousEventMode;
-      if (activeCleanup === cleanup) activeCleanup = null;
+      activeCleanup = null;
     };
     const onKeyDown = (event) => {
       if (event.key !== "Escape") return;
@@ -39,7 +39,10 @@ export async function authorAnchor(scene, area, radius = null) {
         reject(error);
       }
     };
-    activeCleanup = cleanup;
+    activeCleanup = () => {
+      cleanup();
+      reject(new Error("Anchor authoring cancelled."));
+    };
     stage.on("pointerdown", onPointerDown);
     window.addEventListener("keydown", onKeyDown);
   });

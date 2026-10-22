@@ -140,6 +140,7 @@ if (fs.existsSync(archivePath)) {
 }
 
 for (const requiredAsset of [
+  "cyren-dotmm-populator/module.json",
   "dist/cyren-dotmm-populator-*.zip",
   "dist/cyren-dotmm-populator-*.zip.sha256",
   "installer/install.ps1",
@@ -152,6 +153,9 @@ for (const file of [
   path.join(root, "README.md"),
   path.join(root, "CHANGELOG.md"),
   path.join(root, "docs", "INSTALLATION.md"),
+  path.join(root, "docs", "FOUNDRY-V14.md"),
+  path.join(root, "docs", "DEVELOPMENT.md"),
+  path.join(root, "docs", "RELEASE-NOTES.md"),
   path.join(root, "docs", "LEVEL-02.md"),
   path.join(root, "docs", "LEVELS-03-23.md"),
   path.join(root, "docs", "TECHNICAL.md"),
