@@ -52,7 +52,7 @@ if (manifest.id !== "cyren-dotmm-populator") errors.push("Unexpected module id."
 if (manifest.title !== "Sier's DotMM Populator for Cyren's Maps") errors.push("Unexpected public module title.");
 if (manifest.version !== packageMetadata.version) errors.push("package.json and module.json versions differ.");
 if (constants.match(/MODULE_VERSION\s*=\s*"([^"]+)"/)?.[1] !== manifest.version) errors.push("MODULE_VERSION and module.json versions differ.");
-if (manifest.compatibility?.verified !== "12.331") errors.push("Foundry verified version must be 12.331.");
+if (manifest.compatibility?.verified !== "14.368") errors.push("Foundry verified version must be 14.368.");
 if (manifest.compatibility?.minimum !== "12" || manifest.compatibility?.maximum !== "14"
   || JSON.stringify(SUPPORTED_CORE_GENERATIONS) !== "[12,13,14]") errors.push("Manifest and runtime must support Foundry v12–v14.");
 const expectedContentIds = [
@@ -73,7 +73,8 @@ const repository = "https://github.com/sierrific/sier-s-dotmm-populator-for-cyre
 if (manifest.url !== repository) errors.push("Unexpected project URL.");
 if (manifest.manifest !== `${repository.replace("github.com", "raw.githubusercontent.com")}/main/cyren-dotmm-populator/module.json`) errors.push("Unexpected manifest URL.");
 if (manifest.download !== `${repository}/releases/download/v${manifest.version}/cyren-dotmm-populator-${manifest.version}.zip`) errors.push("Download URL must match the module version.");
-if (!manifest.relationships?.requires?.some((item) => item.id === "cyrensmaps-wdmm")) errors.push("Cyren dependency is missing.");
+if (manifest.relationships?.requires?.some((item) => item.id === "cyrensmaps-wdmm")) errors.push("Cyren must not be a hard runtime dependency for previously imported Scenes.");
+if (!manifest.relationships?.recommends?.some((item) => item.id === "cyrensmaps-wdmm")) errors.push("Cyren content recommendation is missing.");
 if (!templateSource.includes('name="anchorArea"') || !uiSource.includes('[name="anchorArea"]')) errors.push("Anchor authoring selector is not wired independently.");
 if (!templateSource.includes('name="rebuildArea"') || !uiSource.includes('[name="rebuildArea"]')) errors.push("Area rebuild selector is not wired independently.");
 if (templateSource.includes('name="selectedArea"') || uiSource.includes('[name="selectedArea"]')) errors.push("Legacy shared area selector must not be used.");

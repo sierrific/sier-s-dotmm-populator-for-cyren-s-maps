@@ -1,13 +1,29 @@
 # Validation
 
-Version 0.5.0 has automated data, regression, packaging, and mocked API-contract tests targeting Foundry v12–v14. A licensed v14 runtime was not available for this update: live v14 rendering, migration, third-party compatibility, and Token lifecycle tests remain pending. The available server remains on Foundry 12.331 with D&D5e 3.1.2 and was not upgraded or modified.
+Version 0.5.1 was tested on licensed Foundry **14.368** with D&D5e **6.0.5** on 2026-10-22. Testing used an isolated loopback server, a migrated copy of the World, and 29 additional disposable Scene copies. Neither the normal local data directory nor the Oracle production server was modified.
 
-The integration results below are historical results from earlier releases on Foundry 12.331, not new v14 results. The manifest's `verified` field remains at that historical baseline. Follow the [v14 acceptance checklist](FOUNDRY-V14.md) before using this build in a migrated production World.
+## Live v14 results
+
+- The module was enabled through Module Management with the incompatible legacy Cyren package unavailable. Imported Scenes and their assets remained usable; no upstream manifest was falsified or old Cyren scripts forced to run.
+- All 29 map copies passed creation, repeated creation with zero duplicates, area-scoped rebuild, no-op reconciliation, and owned-Token removal. Native Level assignments and persisted Token dimensions were checked against the plan by deterministic population key.
+- An unowned sentinel Token survived each lifecycle. Fingerprints of the embedded documents in all 35 source Scenes remained unchanged. Cleanup restored each test copy to its pre-population document baseline.
+- All required Actor references and area anchors resolved using the copied World's existing Actors. No creature imports were necessary.
+- All 72 numbered Tiles on the Level 1 copy matched Foundry's prepared shape centers. A rotated custom-anchor Tile also matched, and its temporary fixture was removed. A two-native-Level fixture was rejected before Token writes and then removed.
+- The actual Token-controls button opened the ApplicationV2 panel. All four tabs rendered; preview drew 130 placements with zero saved Tokens, and the Execute control created 130. The independent anchor/rebuild selectors retained areas 2b and 5. Cancelling the area 5 confirmation released the controls; confirming it replaced exactly two Tokens. Both an encounter-row link and a human-review link panned the viewed copy. Clearing the preview left no preview graphics, and the unowned sentinel remained intact.
+- Closing during anchor selection now remains available and cancels the pending pick. The panel reopened normally afterward. UI removal deleted exactly the 130 owned Tokens, returning to zero marked Tokens. [View the final panel screenshot](images/v14-review.png).
+- The Windows helper installed the final 0.5.1 ZIP in a disposable directory after verifying its SHA-256 checksum. The final manifest reports `verified: 14.368`; automated package inspection confirmed 50 source-identical archive entries and valid documentation links.
+- After testing, the loopback server was stopped, its port was confirmed closed, and the isolated data directory (copied Worlds, map copies, migration backups, logs, and installer fixture) was deleted. The temporary runner, preparation script, and live harness were also removed. Production source data, release artifacts, regression tests, and this evidence were retained.
+
+The final-code sweep created **2,888 Tokens**, then removed them safely. Wall-collision checks conservatively skipped **7** intended instances: Level 1 area 14b (one Sahuagin Baron) and area 21 (two Shadows); Level 2 areas 22c (one Beholder Zombie), 25f (Troglodyte instance 5), 25j (one Constrictor Snake), and 25m (one Mind Flayer). These are safe omissions requiring GM review, not permission to force placement through walls. Level 1 created 130 Tokens and Level 2 created 179; every other map created its full intended count. The dataset still describes 2,895 intended instances.
+
+Scope limitations: the old Cyren import/teleport scripts were not certified for v14. Plutonium 2.19.5.v14, Monk's Active Tile Triggers 14.01, and libWrapper 1.13.5.1 were active, but their complete functionality was not audited. The isolated copy did not contain every custom portrait/token asset, so missing-art errors are not evidence of a complete artwork migration. Legacy campaign chat/Actor migration diagnostics are separate from this module's population tests. Keep pre-migration backups and test your own module combination.
+
+The later integration tables in this document are historical Foundry 12.331 results, retained separately from the new v14 evidence. See [v14 compatibility](FOUNDRY-V14.md) for deployment guidance.
 
 ## Automated checks
 
 - valid Foundry manifest and stable module ID;
-- release URLs and package names match version 0.5.0;
+- release URLs and package names match version 0.5.1;
 - 667 unique encounter groups and 2,895 deterministic Token instance keys across the Yawning Portal, Skullport, and Levels 1–23;
 - 29 supported map descriptors, including three Level 3 segments and four non-level locations;
 - complete Actor names, logical keys, scene assignments, and area identifiers;

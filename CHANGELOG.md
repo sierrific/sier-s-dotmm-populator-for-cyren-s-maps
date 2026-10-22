@@ -2,6 +2,16 @@
 
 All notable changes are documented here.
 
+## 0.5.1 — 2026-10-22
+
+- Fixed module activation on v14 when the legacy Cyren 1.0.0 content package cannot load. Previously imported Cyren Scenes and their original assets are supported without running that package; map identity and geometry checks remain enforced.
+- Kept the Cyren content package as a recommendation for map import, with an explicit warning about unavailable upstream import and automation features.
+- Fixed D&D5e 6 automatic token sizing overriding reviewed placement dimensions. Only newly created module Tokens receive the system's per-Token size-lock flag; Actors, prototype Tokens, and World settings are unchanged.
+- Matched Tile anchors to Foundry's prepared shape centers, including stable v14 texture anchors and rotation, while retaining legacy fallbacks.
+- Added regression coverage for missing/inactive Cyren packages, automatic token sizing, and stable v14 Tile geometry.
+- Kept window controls enabled while panel actions are busy, allowing a pending anchor pick to be cancelled by closing the window.
+- Passed the full population/rebuild/reconciliation/removal lifecycle on 29 disposable maps in Foundry 14.368 with D&D5e 6.0.5; preserved all 35 source Scenes and unowned test Tokens. See the validation notes for conservative collision skips and third-party limitations.
+
 ## 0.5.0 — 2026-10-22
 
 - Added Foundry v12–v14 API compatibility; retained the historical `verified: 12.331` baseline pending live v14 verification.

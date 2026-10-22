@@ -237,7 +237,8 @@ export class CyrenPopulatorApp extends HandlebarsApplicationMixin(ApplicationV2)
 
   _setBusy(busy) {
     // Keep semantic disabled states separate from the temporary operation lock.
-    for (const element of this.element?.querySelectorAll("button, select, input") ?? []) {
+    // Window controls must remain available so closing can cancel an anchor pick.
+    for (const element of this.element?.querySelectorAll("form.cyren-populator button, form.cyren-populator select, form.cyren-populator input") ?? []) {
       if (busy && !element.disabled) {
         element.dataset.busyDisabled = "true";
         element.disabled = true;

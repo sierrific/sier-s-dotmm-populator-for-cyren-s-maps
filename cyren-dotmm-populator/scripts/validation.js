@@ -13,7 +13,9 @@ export function validateEnvironment() {
     errors.push(`Foundry generation ${generation || "unknown"} is unsupported; this build supports v12–v14.`);
   }
   if (game.system?.id !== "dnd5e") errors.push("The active system is not dnd5e.");
-  if (!game.modules.get("cyrensmaps-wdmm")?.active) errors.push("CyrensMaps for Undermountain is not active.");
+  if (!game.modules.get("cyrensmaps-wdmm")?.active) {
+    warnings.push("CyrensMaps for Undermountain is inactive or unavailable. Use previously imported Cyren Scenes with their original map assets and geometry. Importing maps and Cyren automation require compatible upstream packages.");
+  }
   if (!game.modules.get("scene-packer")?.active) warnings.push("Scene Packer is not active; imported-scene flags may be incomplete.");
   if (!game.modules.get("monks-active-tiles")?.active) warnings.push("Monk's Active Tile Triggers is inactive; Cyren teleports may not operate.");
   if (!game.modules.get("plutonium")?.active) warnings.push("Plutonium is inactive; missing Actors must be imported by another method.");

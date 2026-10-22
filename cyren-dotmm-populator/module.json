@@ -2,7 +2,7 @@
   "id": "cyren-dotmm-populator",
   "title": "Sier's DotMM Populator for Cyren's Maps",
   "description": "Safely prepares static encounters for the Yawning Portal, Skullport, and Levels 1–23 on CyrensMaps for Undermountain using Actors already available in the World.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "authors": [
     {
       "name": "Sierrific",
@@ -24,23 +24,21 @@
   ],
   "compatibility": {
     "minimum": "12",
-    "verified": "12.331",
+    "verified": "14.368",
     "maximum": "14"
   },
   "url": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps",
   "manifest": "https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/main/cyren-dotmm-populator/module.json",
-  "download": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/releases/download/v0.5.0/cyren-dotmm-populator-0.5.0.zip",
+  "download": "https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/releases/download/v0.5.1/cyren-dotmm-populator-0.5.1.zip",
   "relationships": {
-    "requires": [
+    "recommends": [
       {
         "id": "cyrensmaps-wdmm",
         "type": "module",
         "compatibility": {
           "minimum": "1.0.0"
         }
-      }
-    ],
-    "recommends": [
+      },
       {
         "id": "plutonium",
         "type": "module",

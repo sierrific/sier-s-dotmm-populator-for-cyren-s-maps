@@ -4,7 +4,7 @@ A safety-first Foundry VTT module for preparing the Yawning Portal, all three Sk
 
 The module reviews Scene compatibility, resolves creature Actors, previews deterministic placement, and creates only explicitly flagged Tokens. It does not distribute maps, artwork, adventure prose, journals, or creature stat blocks.
 
-> **Current scope:** The Yawning Portal, all three Skullport maps, and Levels 1–23, including all three Level 3 map segments. Version 0.5.0 targets Foundry VTT v12–v14. Live v14 verification is still pending; see [v14 compatibility and upgrade notes](docs/FOUNDRY-V14.md).
+> **Current scope:** The Yawning Portal, all three Skullport maps, and Levels 1–23, including all three Level 3 map segments. Version 0.5.1 supports Foundry VTT v12–v14 and passed live lifecycle tests on 29 map copies in Foundry 14.368 / D&D5e 6.0.5. See [v14 compatibility and upgrade notes](docs/FOUNDRY-V14.md).
 
 ![Level 1 review panel](docs/images/level-01-review.png)
 
@@ -34,7 +34,7 @@ The module reviews Scene compatibility, resolves creature Actors, previews deter
 
 In **Setup → Add-on Modules → Install Module**, paste:
 
-This method requires public access to both the manifest and release ZIP. If the repository is private, use the release-download method below instead; signing into GitHub in your browser does not authenticate Foundry's installer.
+The manifest and release ZIP are public; no GitHub sign-in is required.
 
 ```text
 https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/main/cyren-dotmm-populator/module.json
@@ -42,30 +42,30 @@ https://raw.githubusercontent.com/sierrific/sier-s-dotmm-populator-for-cyren-s-m
 
 ### Release ZIP
 
-Download `cyren-dotmm-populator-0.5.0.zip` from its release, or build it locally with `npm run build`, and extract it into:
+Download [`cyren-dotmm-populator-0.5.1.zip`](https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/releases/download/v0.5.1/cyren-dotmm-populator-0.5.1.zip) from the [0.5.1 release](https://github.com/sierrific/sier-s-dotmm-populator-for-cyren-s-maps/releases/tag/v0.5.1), or build it locally with `npm run build`, and extract it into:
 
 ```text
 <FoundryUserData>/Data/modules/cyren-dotmm-populator
 ```
 
-Windows and Linux helper scripts are provided in [`installer/`](installer/). Each release includes `module.json`, the ZIP, both installers, and a SHA-256 checksum. For a private repository, download these assets while signed into GitHub and install the ZIP manually or with a helper script. The standalone JSON is the same manifest embedded in the ZIP; it does not bypass private GitHub access. See [Installation](docs/INSTALLATION.md) for complete instructions.
+Windows and Linux helper scripts are provided in [`installer/`](installer/). The release includes `module.json`, the ZIP, both installers, and a SHA-256 checksum. The standalone JSON is the same manifest embedded in the ZIP. See [Installation](docs/INSTALLATION.md) for complete instructions.
 
 ## Requirements
 
 | Component | Supported version | Required |
 |---|---:|---:|
-| Foundry Virtual Tabletop | v12–v14; historical live baseline 12.331 | Yes |
+| Foundry Virtual Tabletop | v12–v14; verified 14.368 | Yes |
 | D&D5e system | 3.1.2+; use a release compatible with your Foundry version | Yes |
-| CyrensMaps for Undermountain | 1.0.0+ with matching map geometry and compatible core support | Yes |
+| Imported CyrensMaps Scenes and assets | Original map geometry; Cyren module need not be active after import | Yes |
 | Plutonium | 2.1.3+ with compatible core/system support | No |
 
-This update does not upgrade Foundry or make third-party packages compatible. The manifest retains `verified: 12.331` until the new build has been tested in a real v14 World. In v14, use one native Scene Level per Cyren map; combined multi-level Scenes are deliberately blocked. Split dungeon floors remain separate Scenes.
+This update does not upgrade Foundry or make third-party packages compatible. The manifest records `verified: 14.368` following isolated live tests. In v14, use one native Scene Level per Cyren map; combined multi-level Scenes are deliberately blocked. Split dungeon floors remain separate Scenes. Seven instances were conservatively skipped by wall guards in the migrated test World; see [validation results](docs/VALIDATION.md) before population.
 
 Actors are not distributed by this project. Import or create the required Actors in the World before populating a Scene.
 
 ## Quick start
 
-1. Install and enable CyrensMaps for Undermountain, D&D5e, and this module.
+1. Use a compatible D&D5e system, enable this module, and import the Cyren maps through a compatible content package (or migrate a backed-up World containing them). Previously imported maps do not require the legacy Cyren module to be active; keep its asset files in place.
 2. Back up the World. The panel can create missing `(Copy)` Scenes for the Yawning Portal, Skullport, and Levels 3–23 for safe preparation.
 3. In the Scenes directory, right-click the map or its test copy and choose **View Scene**. Level 3 is split across `Level 03 (1)`, `(2)`, and `(3)`.
 4. Open **Sier's DotMM Populator for Cyren's Maps** from the Token controls or Module Settings.

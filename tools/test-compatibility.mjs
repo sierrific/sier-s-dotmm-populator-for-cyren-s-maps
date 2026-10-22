@@ -46,6 +46,16 @@ const { createMissingSafetyCopies } = await import("../cyren-dotmm-populator/scr
 const completed = [];
 async function check(name, fn) { await fn(); completed.push(name); }
 
+await check("imported Cyren Scenes do not require the legacy content module to be active", async () => {
+  game.modules.delete("cyrensmaps-wdmm");
+  const result = validateEnvironment();
+  assert.equal(result.ok, true);
+  assert.ok(result.warnings.some(message => message.includes("previously imported Cyren Scenes")));
+  game.modules.set("cyrensmaps-wdmm", { active: false });
+  assert.equal(validateEnvironment().ok, true);
+  game.modules.set("cyrensmaps-wdmm", { active: true });
+});
+
 await check("v12 array and v13/v14 keyed controls, deduplication and GM guard", async () => {
   for (const generation of [12, 13, 14]) {
     game.release.generation = generation;
@@ -101,6 +111,11 @@ await check("tile centers before and after v14 migration, including rotated cust
   const custom = tileAnchor({ ...tile, anchorX: 0, anchorY: 0, texture: { anchorX: 0.5, anchorY: 0.5 } });
   assert.equal(custom.x, 80);
   assert.equal(custom.y, 240);
+  const stable = tileAnchor({ ...tile, texture: { anchorX: 0, anchorY: 1 } });
+  assert.equal(stable.x, 120);
+  assert.equal(stable.y, 240);
+  assert.deepEqual(tileAnchor({ ...tile, shape: { center: { x: 123, y: 456 } } }),
+    { x: 123, y: 456, radius: null, source: "cyren-tile", tileId: "marker" });
   const expected = { names: ["Test"], width: 1000, height: 1000, grid: 100, padding: 0.25 };
   const scene = { name: "Test (Copy)", width: 1000, height: 1000, grid: { size: 100 }, padding: 0 };
   assert.equal(scoreScene(scene, expected).valid, false, "Changed padding must not reuse absolute coordinates.");
@@ -152,6 +167,8 @@ await check("parent-aware Token creation, exact dimensions and native Scene Leve
     assert.equal(result.created[0].level, generation === 14 ? "native-level" : undefined);
     assert.equal(result.created[0].flags[MODULE_ID].level, 1, "Dungeon identity must not become a Scene Level ID.");
     assert.deepEqual(result.created[0].flags.other, { keep: true });
+    assert.equal(result.created[0].flags.dnd5e?.lockSize, generation === 14 ? true : undefined,
+      "v14 D&D5e auto-size must not override the reviewed footprint.");
     assert.equal(actorCalls.at(-1).options.parent, scene);
     assert.notEqual(result.created[0].id, "prototype");
   }
@@ -173,6 +190,18 @@ await check("multi-level Scenes and non-GMs fail before mutation; Level content 
   const before = fingerprintScene(scene);
   scene.levels[0].toObject = () => ({ _id: "native-level", name: "Changed" });
   assert.deepEqual(verifyTokenOnlyMutation(before, fingerprintScene(scene)).errors, ["levels changed unexpectedly."]);
+});
+
+await check("D&D5e 6 automatic token sizing cannot replace the curated v14 footprint", async () => {
+  game.release.generation = 14;
+  const scene = makeScene();
+  const create = scene.createEmbeddedDocuments.bind(scene);
+  scene.createEmbeddedDocuments = (type, rows) => create(type, rows.map(row =>
+    row.flags?.dnd5e?.lockSize ? row : { ...row, width: 1, height: 1 }));
+  const result = await populateMissing(scene, { placements: [{ ...placement, width: 6, height: 6 }] });
+  assert.equal(result.created[0].width, 6);
+  assert.equal(result.created[0].height, 6);
+  assert.equal(actor.prototypeToken.width, 1, "World Actor prototype must remain untouched.");
 });
 
 await check("v14 rebuild rollback preserves original Token ID, native Level and unowned Tokens", async () => {
@@ -211,6 +240,7 @@ function appFixture() {
     element({ action: "select-tab", tab }), element({ tab, panel: true })
   ]);
   const form = element(); form.controls = controls;
+  const closeButton = element({ action: "close" });
   const app = new CyrenPopulatorApp();
   app.element = {
     querySelector(selector) {
@@ -219,9 +249,13 @@ function appFixture() {
       const action = selector.match(/^\[data-action="([^"]+)"\]$/)?.[1];
       return controls.find((control) => name ? control.name === name : control.dataset.action === action);
     },
-    querySelectorAll(selector) { return selector === "[data-tab]" ? tabs : [...controls, ...tabs.filter((entry) => !entry.classList.contains("tab"))]; }
+    querySelectorAll(selector) {
+      if (selector === "[data-tab]") return tabs;
+      const fields = [...controls, ...tabs.filter((entry) => !entry.classList.contains("tab"))];
+      return selector.includes("form.cyren-populator") ? fields : [...fields, closeButton];
+    }
   };
-  return { app, controls, form, tabs };
+  return { app, controls, form, tabs, closeButton };
 }
 const event = () => ({ preventDefault() {}, currentTarget: null });
 const action = (name, extra = {}) => ({ dataset: { action: name, ...extra } });
@@ -260,7 +294,7 @@ await check("ApplicationV2 without legacy globals: tab persistence, selectors, n
 
 await check("refresh and location-change locks remain held across asynchronous rendering", async () => {
   for (const changeLocation of [false, true]) {
-    const { app, controls } = appFixture();
+    const { app, controls, closeButton } = appFixture();
     let release;
     const pending = new Promise((resolve) => { release = resolve; });
     let renders = 0;
@@ -273,6 +307,7 @@ await check("refresh and location-change locks remain held across asynchronous r
     await app._onAction(event(), action("refresh"));
     assert.equal(renders, 1);
     assert(controls.every((control) => control.disabled));
+    assert.equal(closeButton.disabled, false, "Window close must remain available during pending operations.");
     release(); await operation;
     assert.equal(app._actionInFlight, false);
   }

@@ -11,12 +11,15 @@ export function areaFromTile(tile) {
 
 export function tileAnchor(tile) {
   const modern = coreGeneration() >= 14;
-  const dx = Number(tile.width) * (0.5 - (modern ? Number(tile.anchorX ?? 0.5) : 0));
-  const dy = Number(tile.height) * (0.5 - (modern ? Number(tile.anchorY ?? 0.5) : 0));
+  // Use the engine's prepared shape where available. Stable v14 stores its
+  // anchors under texture; some earlier API contracts exposed top-level fields.
+  const center = modern ? tile.shape?.center : null;
+  const dx = Number(tile.width) * (0.5 - (modern ? Number(tile.anchorX ?? tile.texture?.anchorX ?? 0.5) : 0));
+  const dy = Number(tile.height) * (0.5 - (modern ? Number(tile.anchorY ?? tile.texture?.anchorY ?? 0.5) : 0));
   const angle = modern ? Number(tile.rotation ?? 0) * Math.PI / 180 : 0;
   return {
-    x: Number(tile.x) + dx * Math.cos(angle) - dy * Math.sin(angle),
-    y: Number(tile.y) + dx * Math.sin(angle) + dy * Math.cos(angle),
+    x: Number.isFinite(center?.x) ? center.x : Number(tile.x) + dx * Math.cos(angle) - dy * Math.sin(angle),
+    y: Number.isFinite(center?.y) ? center.y : Number(tile.y) + dx * Math.sin(angle) + dy * Math.cos(angle),
     radius: null,
     source: "cyren-tile",
     tileId: tile.id

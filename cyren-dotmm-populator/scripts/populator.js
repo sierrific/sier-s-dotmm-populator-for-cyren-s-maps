@@ -1,7 +1,7 @@
 import { MODULE_ID } from "./constants.js";
 import { flagMatchesContent, getPopulationFlag, isModuleToken, populationKey } from "./flags.js";
 import { fingerprintScene, verifyTokenOnlyMutation, assertGm } from "./validation.js";
-import { sceneLevelData } from "./compatibility.js";
+import { coreGeneration, sceneLevelData } from "./compatibility.js";
 
 async function tokenDataForPlacement(scene, placement) {
   const levelData = sceneLevelData(scene);
@@ -23,6 +23,12 @@ async function tokenDataForPlacement(scene, placement) {
   data.height = Number(placement.height ?? placement.spec.tokenHeight ?? data.height);
   if (placement.spec.tokenName) data.name = placement.spec.tokenName;
   data.flags ??= {};
+  // D&D5e 6 on v14 derives Token size from the Actor unless this per-Token
+  // option is set. Preserve the reviewed footprint without changing the Actor
+  // or the World's automatic-size setting.
+  if (coreGeneration() >= 14 && game.system?.id === "dnd5e") {
+    data.flags.dnd5e = { ...data.flags.dnd5e, lockSize: true };
+  }
   data.flags[MODULE_ID] = placement.flag;
   return data;
 }
